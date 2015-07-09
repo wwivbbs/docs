@@ -16,4 +16,3 @@ INDEX
 [RegistrationCode430] Registration Code for 4.30 init (for 5.0)
 [WWIV BBS List]       List of WWIV BBSes
 [wwivnet]             Join WWIVnet
-[[members limit=20]]

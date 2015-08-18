@@ -31,6 +31,8 @@ configuration topics.
 
 ## [Init Settings](init)
 
+TODO: Link to the sub sections
+
 General System Configuration  
 System Paths  
 External Transfer Protocol Configuration  

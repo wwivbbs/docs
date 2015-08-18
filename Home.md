@@ -23,9 +23,9 @@ you're ready to go live and open up to users. After you complete these installat
 steps, see the full details on related INIT settings, WWIV.INI and other Advanced 
 configuration topics.
 
-[Windows](windowsinstall)
+[Windows WWIV 5.0 Installation](windowsinstall)
 
-[Linux](linuxinstall)
+[Linux WWIV 5.0 Installation](linuxinstall)
 
 ## [Upgrading Earlier WWIV BBSes](windowsupgrade)
 
@@ -53,17 +53,6 @@ Update Sub/Directory Maximums
 
 ## WWIV 5 Menus  
 ### [Main Menu](menumain)  
-Message Center  
-Miscellaneous  
-E-Mail  
-System Features  
-D> Change your Defaults  
-G> Read General Files  
-T> Transfer Section  
-.> Online Programs  
-$> Use Time Bank  
-CTRL-T
-
 ### [WWIV Slash Menu](menuslash)  
 
 //Commands  

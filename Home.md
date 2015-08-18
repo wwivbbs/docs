@@ -62,8 +62,8 @@ Update Sub/Directory Maximums
 [Dial-UP BBS Configuration]()  
 [WWIVNet]()  
 [Other Nets]()  
-[Chains & Doors](chains)
-[WWIV Mods]()
+[Chains & Doors](chains)  
+[WWIV Mods]()  
 
 ## [History of WWIV](wwivhistory)
 

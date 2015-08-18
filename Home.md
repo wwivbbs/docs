@@ -1,5 +1,5 @@
 
-# Welcome to the WWIV BBS Software wiki
+# WWIV 5.0 BBS Software wiki
 ***
 
 WWIV BBS SOFTWARE has a long [history](wwivhistory), this project is to give WWIV a strong future.
@@ -51,7 +51,7 @@ Update Sub/Directory Maximums
 
 ## [WWIV5 Telnet Server](wwwiv5telnetserver)
 
-## [Waiting for Caller (WFC) Screen](wfc)
+## [Waiting for Caller (WFC) & Top Screen](wfctop)
 
 ## WWIV 5 Menus  
 ### [WWIV BBS User Menus](menumain)  

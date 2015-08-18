@@ -9,6 +9,8 @@ Were working hard to bring you the best bbs software we can. This wiki is to sup
 Thank you,  
 The WWIV Dev Team 
 
+## [WWIV BBS List](http://wwivbbs.com/bbslist/)
+
 ## Download WWIV 5.0 Binaries
 
 WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from

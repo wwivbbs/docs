@@ -27,7 +27,7 @@ configuration topics.
 
 [Windows WWIV 5.0 Installation](windowsinstall)
 
-[Linux WWIV 5.0 Installation](linuxinstall)
+[Linux WWIV 5.0 Installation](installlinux)
 
 ## [Upgrading Earlier WWIV BBSes](windowsupgrade)
 

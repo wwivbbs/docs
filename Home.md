@@ -58,12 +58,12 @@ Update Sub/Directory Maximums
 ## Advanced Configuration
 
 [WWWIV.ini]()  
-[Multi Instance]()  
-[Dial-UP BBS Configuration]()  
-[WWIVNet]()  
-[Other Nets]()  
+[Multi Instance](multinode)  
+[Dial-UP BBS Configuration](dialup)  
+[WWIVNet](wwivnet)  
+[Other Nets](othernets)  
 [Chains & Doors](chains)  
-[WWIV Mods]()  
+[WWIV Mods](mods)  
 
 ## [History of WWIV](wwivhistory)
 

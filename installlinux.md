@@ -184,10 +184,12 @@ If you look at the TTY column, you will see that one of the active nodes has "pt
 
 so, we can use a shell script to clean these up:
 
-    for pid in `ps axu | grep "\./bbs\s" | grep -v grep | awk '{if($7 == "?") print $2}'`
-    do
-        kill $pid
-    done
+```shell
+for pid in `ps axu | grep "\./bbs\s" | grep -v grep | awk '{if($7 == "?") print $2}'`
+do
+    kill $pid
+done
+```
 
 This will find all the ps lines that match ./bbs and have "?" in column #7, loop through them and run a kill command on the process id in column #2. You can put this in a shell script and schedule it via cron if this is a big issue, otherwise, it's available for occasional cleanup.
 

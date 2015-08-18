@@ -54,13 +54,16 @@ Update Sub/Directory Maximums
 ## WWIV 5 Menus  
 ### [Main Menu](menumain)  
 ### [WWIV Slash Menu](menuslash)  
-## [Advanced Configuration](advanced)
+### [//SYSOP Menu](menusysop)
+## Advanced Configuration
 
-WWWIV.ini  
-Multi Instance  
-Modem Settings  
-WWIVNet  
-Other Nets  
+[WWWIV.ini]()  
+[Multi Instance]()  
+[Dial-UP BBS Configuration]()  
+[WWIVNet]()  
+[Other Nets]()  
+[Chains & Doors](chains)
+[WWIV Mods]()
 
 ## [History of WWIV](wwivhistory)
 

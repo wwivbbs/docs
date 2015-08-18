@@ -58,39 +58,40 @@ it will just cause issues during setup.
 
 _Where Stuff Goes_  
 This is some layout info so you have a handle on where everything belongs. 
-We will build up the associated structure as we go along. The items in 
-bold are the ones specific to WWIVnet.
-${WWIV_DIR}
-* .dosemurc
-* .fetchmailrc
-* .procmailrc
-* .wwivrc
-* in.nodemgr
-* network
-* network1 (link to network)
-* network2 (link to network)
-* network3 (link to network)
-* data
-* wwivnet
-* inbound
-* new
-* inbound-processed
-* mqueue
-* sent
-* bin
-* processmail.sh
-* inbound.sh
-* outbound.sh
-* callout.py
-* .dosemu
-* drive_c
-* autoexec.bat
-* network.bat
-* network1.bat
-* network2.bat
-* network3.bat
-* inbound.bat
-* outbound.bat
+We will build up the associated structure as we go along. The surrounded by 
+"** **" are the ones specific to WWIVnet.
+
+    ${WWIV_DIR}
+        .dosemurc
+        **.fetchmailrc**
+        **.procmailrc**
+        .wwivrc
+        in.nodemgr
+        **network**
+        **network1** (link to network)
+        **network2** (link to network)
+        **network3** (link to network)
+        data
+        **wwivnet**
+            **inbound**
+                **new**
+            **inbound-processed**
+            **mqueue**
+            **sent**
+    bin
+        **processmail.sh**
+        **inbound.sh**
+        **outbound.sh**
+        **callout.py**
+    .dosemu
+        drive_c
+            autoexec.bat
+            **network.bat**
+            **network1.bat**
+            **network2.bat**
+            **network3.bat**
+            **inbound.bat**
+            **outbound.bat**
 
 **Basic Mail Processing Workflow**  
 
@@ -161,34 +162,36 @@ multiple DOS batch files in dosemu. The core script looks like this
 and should be placed in your base WWIV directory saved as network 
 (not network.sh):
 
-    #!/bin/bash
-    #
-    # network[123]
-    #
-    # This sets the pathname separator in networks.bat before calling the appropriate
-    # DOS batch file with dosemu.  If we don't, the DOS version of the NETXX scripts
-    # get confused because they can't find the path.  Once it's done processing, we
-    # set it back so the linux binaries don't have the same problem.
-    #
-    # Symptoms that the path separator is wrong include the header in WWIVnet messages 
-    # missing node location info and show up as Unknown.
+```shell
+#!/bin/bash
+#
+# network[123]
+#
+# This sets the pathname separator in networks.bat before calling the appropriate
+# DOS batch file with dosemu.  If we don't, the DOS version of the NETXX scripts
+# get confused because they can't find the path.  Once it's done processing, we
+# set it back so the linux binaries don't have the same problem.
+#
+# Symptoms that the path separator is wrong include the header in WWIVnet messages 
+# missing node location info and show up as Unknown.
 
-    # Grab all our wwiv location info
-    source ~/.wwivrc
+# Grab all our wwiv location info
+source ~/.wwivrc
 
-    # Keep things like control-C from dropping out of the shell script
-    trap "echo" SIGHUP SIGINT SIGTERM
+# Keep things like control-C from dropping out of the shell script
+trap "echo" SIGHUP SIGINT SIGTERM
 
-    sed -i 's/\//\\/g' ${WWIVDATA_DIR}/networks.dat
+sed -i 's/\//\\/g' ${WWIVDATA_DIR}/networks.dat
 
-    #This one throws away error messages sent to STDERR, but still shows most activity
-    dosemu -dumb -quiet -E $(basename ${0}).bat 2>/dev/null
+#This one throws away error messages sent to STDERR, but still shows most activity
+dosemu -dumb -quiet -E $(basename ${0}).bat 2>/dev/null
 
-    # You may want to uncomment the below line and comment the above one if you
-    # want to make the output as quiet as possible.
-    #dosemu -dumb -quiet -E $(basename ${0}).bat >/dev/null 2>&1
+# You may want to uncomment the below line and comment the above one if you
+# want to make the output as quiet as possible.
+#dosemu -dumb -quiet -E $(basename ${0}).bat >/dev/null 2>&1
 
-    sed -i 's/\\/\//g' ${WWIVDATA_DIR}/networks.dat
+sed -i 's/\\/\//g' ${WWIVDATA_DIR}/networks.dat
+```   
 
 make it executable (chmod 755 network)  
 symbolic links to network should also be created for network1 network2 
@@ -228,18 +231,26 @@ ${WWIVNET_DIR}/inbound-processed | where stuff gets moved to when processed
 _**Getting mail config**_
 
 We use fetchmail+procmail to pull WWIVnet messages from 1@1. You will need the following:
+
 1. .fetchmailrc configured with your username and password for the POP3 server at 1@1 (skulls.wwivbbs.com)
 2. .procmailrc in the wwiv base configured to dump a copy of the messages
+
 Of these two, .procmailrc is already set up for you by the install.sh to dump to the PPP inbound, and the only change you need to make for .fetchmailrc is to add your credentials. for example, the poll line:
-poll skulls.wwivbbs.com with proto POP3
-user 'youruserid' there with password 'yourpassword' is 'wwiv' here
-replace youruserid with your login and yourpassword with your password.
+
+poll skulls.wwivbbs.com with proto POP3  
+user 'youruserid' there with password 'yourpassword' is 'wwiv' here  
+
+replace youruserid with your login and yourpassword with your password.  
 **NOTE:** This is NOT your login to the Skulls and Crossbones BBS, it's the separate id/password you got from Eli for the SMTP server.
-Sending mail config 
-there isn't much of anything special to do for sending mail; all the pieces you need are already in place if you have done everything above. Sending a message in the BBS will cause the system to prepare outbound mail when you log out.
+
+_**Sending mail config**_  
+
+There isn't much of anything special to do for sending mail; all the pieces you need are already in place if you have done everything above. Sending a message in the BBS will cause the system to prepare outbound mail when you log out.
+
 The only thing you can edit if you want is ${WWIV_DIR}/bin/callout.py. Change the line:
 tn.write("MAIL FROM: bbsname@skulls.wwivbbs.com\n")
 to reflect your SMTP login name. This isn't necessary, but it may help with troubleshooting.
+
 callout.py - is used to send WWIVnet messages to 1@1 right now. It basically 
 takes the place of a full-fledged MTA like postfix for sending mail.
 It currently assumes python 2.x, so if your system is python 3.x, you will have to make sure you are calling callout.py with the right version of python.
@@ -294,10 +305,11 @@ The important bit is the first and second field. This is the "Subtype" and host 
 **NOTE:** When putting in a filename (option B), use all lowercase. There is an issue where dosemu and WWIV get disagreeable about filename case. If you don't follow this, you will be dealing with the "Gotchas" section below and doing hard links (you really want to avoid this if possible).
 After you finish adding a new sub and the automated request is generated, it will take some time for the request to make it to the host node and for it to auto-subscribe your node. Assuming your net tossing is working, the BBS will attempt to run network1 when you log out. Once it has generated the necessary files, it will be sent as part of the callout process listed above. If you have already gotten it working for normal user netmail, this should "just work."
 
-_**Gotchas**_
+_**Gotchas**_  
+
 **NOTE:** You should not need this section unless you ignored the warning about using lowercase filenames.
 
-Now for some gotchas... the main one is an issue with filename mismatches. Sub files are in two places; the dat files are in ${WWIV_DIR}/data and the message contents are in ${WWIV_DIR}/msgs. Because of how PPP and DOSemu work, there is a conflict with the msgs/*dat files. You will need to create links between the files. You can get ahead of the issue by doing in the following:
+The Main issue is with filename mismatches. Sub files are in two places; the dat files are in ${WWIV_DIR}/data and the message contents are in ${WWIV_DIR}/msgs. Because of how PPP and DOSemu work, there is a conflict with the msgs/*dat files. You will need to create links between the files. You can get ahead of the issue by doing in the following:
 
 1. cd ${WWIV_DIR}/msgs
 2. touch lower.lower filename (e.g, touch genchat.dat)
@@ -318,6 +330,7 @@ This is information about exactly what the Network*.exe files are doing. You don
 The processing of the net files comes from page 38 of
 NET37TEC.DOC. Essentially what the steps are after the procmail
 rule picks up the files are:
+
 1. Convert network.dat's path separator with sed 
 2. uudecode the incoming file to SNN.NET, where NN is your node #
 where the file ultimately needs to end up is your wwivnet 

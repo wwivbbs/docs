@@ -52,7 +52,7 @@ Update Sub/Directory Maximums
 ## [Waiting for Caller (WFC) Screen](wfc)
 
 ## WWIV 5 Menus  
-### [Main Menu](menumain)  
+### [WWIV BBS User Menus](menumain)  
 ### [WWIV Slash Menu](menuslash)  
 ### [//SYSOP Menu](menusysop)
 ## Advanced Configuration

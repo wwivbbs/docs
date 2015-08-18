@@ -2,7 +2,7 @@
 # Welcome to the WWIV BBS Software wiki
 ***
 
-WWIV BBS SOFTWARE has a long [History](wwivhistory), this project is to give WWIV a strong future.
+WWIV BBS SOFTWARE has a long [history](wwivhistory), this project is to give WWIV a strong future.
 
 Were working hard to bring you the best bbs software we can. This wiki is to support the users of WWIV from install to customization.
 

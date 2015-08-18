@@ -54,44 +54,6 @@ Update Sub/Directory Maximums
 ## WWIV 5 Menus  
 ### [Main Menu](menumain)  
 ### [WWIV Slash Menu](menuslash)  
-
-//Commands  
-//SYSOP  
-//VER  
-//Net  
-//Who  
-//Upload  
-//Qscan  
-//CLS  
-//CM  
-//UNQSCAN  
-//COLORS  
-
-/commands  
-/Z  
-/O  
-/E  
-/N  
-/C  
-/A  
-
-//SYSOP  
-[A] Allow Editor  
-[C] Chain Editor  
-[E] Events Editor  
-[I] Instance Editor  
-[M] Menu Editor  
-[U] User Editor  
-[K] Print Votes  
-[?] Display Help  
-[B] Sub Editor  
-[D] Dir Editor  
-[G] Bulletin Editor  
-[J] Conference Editor  
-[T] Text Editor  
-[V] Voting Editor  
-[Q] Quit  
-
 ## [Advanced Configuration](advanced)
 
 WWWIV.ini  

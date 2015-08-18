@@ -1,6 +1,5 @@
 
 # Welcome to the WWIV BBS Software wiki
-
 ***
 
 WWIV BBS SOFTWARE has a long [History](wwivhistory), this project is to give WWIV a strong future.
@@ -10,14 +9,14 @@ Were working hard to bring you the best bbs software we can. This wiki is to sup
 Thank you,  
 The WWIV Dev Team 
 
-# Download WWIV 5.0 Binaries
+## Download WWIV 5.0 Binaries
 
 WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from
 the [WWIV build server](http://build.wwiv.us/job/wwiv/)
 
 [Building WWIV 5.0](buildwwiv5)
 
-# New Installations
+## New Installations
 
 The following steps will get you up and running quickly, but I would not say
 you're ready to go live and open up to users. After you complete these installation 
@@ -28,9 +27,9 @@ configuration topics.
 
 [Linux](linuxinstall)
 
-[Upgrading pre 5.0 Windows](windowsupgrade)
+## [Upgrading Earlier WWIV BBSes](windowsupgrade)
 
-[Init Settings](init)
+## [Init Settings](init)
 
 General System Configuration  
 System Paths  
@@ -46,12 +45,12 @@ Registration Information
 User Editor  
 Update Sub/Directory Maximums
 
-[WWIV5 Telnet Server](wwwiv5telnetserver)
+## [WWIV5 Telnet Server](wwwiv5telnetserver)
 
-[Waiting for Caller (WFC) Screen](wfc)
+## [Waiting for Caller (WFC) Screen](wfc)
 
-WWIV 5 Menus  
-[Main Menu](menumain)  
+## WWIV 5 Menus  
+### [Main Menu](menumain)  
 Message Center  
 Miscellaneous  
 E-Mail  
@@ -63,7 +62,7 @@ T> Transfer Section
 $> Use Time Bank  
 CTRL-T
 
-[WWIV Slash Menu](menuslash)  
+### [WWIV Slash Menu](menuslash)  
 
 //Commands  
 //SYSOP  
@@ -102,7 +101,7 @@ CTRL-T
 [V] Voting Editor  
 [Q] Quit  
 
-[Advanced Configuration](advanced)
+## [Advanced Configuration](advanced)
 
 WWWIV.ini  
 Multi Instance  
@@ -110,6 +109,6 @@ Modem Settings
 WWIVNet  
 Other Nets  
 
-[History of WWIV](wwivhistory)
+## [History of WWIV](wwivhistory)
 
-[Registration & License](license)
+## [Registration & License](license)

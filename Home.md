@@ -64,6 +64,8 @@ Update Sub/Directory Maximums
 [Other Nets](othernets)  
 [Chains & Doors](chains)  
 [WWIV Mods](mods)  
+[WWIV Edit](wwwivedit)  
+[Using ANSI in WWIV](ansi)
 
 ## [History of WWIV](wwivhistory)
 

@@ -135,7 +135,7 @@ DOSEMU is used for a number of things that can't be handled directly. Here are s
 [DOSEMU for system scripts] - specific settings for system scripts (wwivnet, etc)  
 [DOSEMU for doors] - specific settings for different doors  
 
-_**Additional DOSEMU Information**_
+_**Additional DOSEMU Information**_  
 [DOSEMU common settings](installlinusdosemusettings)  
 [DOSEMU for system scripts](installlinusdosemuscripts)  
 

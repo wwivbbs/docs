@@ -51,17 +51,18 @@ Registration Information
 User Editor  
 Update Sub/Directory Maximums
 
-## User Access Protocols for WWIV 5.0
+## User Access Protocols for WWIV 5.0  
 ### [WWIV5 Telnet Server](wwwiv5telnetserver)
 ### [Net2BBS Telnet Server by PCMicro](net2bbs)
 ### [Dial-Up Modem Access](dialup)
 
-## [Waiting for Caller (WFC) & Top Screen](wfctop)
-
 ## WWIV 5 Menus  
+
+### [Waiting for Caller (WFC) & Top Screen](wfctop)  
 ### [WWIV BBS User Menus](menumain)  
 ### [WWIV Slash Menu](menuslash)  
 ### [//SYSOP Menu](menusysop)
+
 ## Advanced Configuration
 
 [WWWIV.ini](wwivini)  

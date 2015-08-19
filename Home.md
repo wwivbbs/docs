@@ -74,6 +74,7 @@ Update Sub/Directory Maximums
 ### [WWIV Edit](wwwivedit)  
 ### [Using ANSI in WWIV](ansi)
 ### [Sub Fix Utility](fix)
+### [QWK and WWIVMail](qwkwwivmail)
 
 ## [History of WWIV](wwivhistory)
 ## [WWIV BBS Hall of Fame](wwivHOF)

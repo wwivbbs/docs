@@ -1,12 +1,12 @@
 # WWIVNet
 ***
 
-### Joining WWIVNet
+## Joining WWIVNet
 
 Thanks for your interest in WWIVnet,
 all you need to join is a WWIV bbs heres the application below.
 
-### WWIVnet Application for Membership
+## WWIVnet Application for Membership
 
 WWIVnet is a mail network for WWIV, and compatible bulletin board
 systems. If you would like to join, please fill out this application.
@@ -41,11 +41,11 @@ Coordinator, Eli Sanford 1@1 WWIVnet or email elisanford@gmail.com
 
     Signature/Name:                              Date:
     
-### Configuring WWIVNet on Windows
+## Configuring WWIVNet on Windows
 
 TODO: Peaboy - I have no idea. :-)
 
-### Configuring WWIVNet on Linux
+## Configuring WWIVNet on Linux
 
 Setting up WWIVnet and subscribing to Subs isn't hard, but there are a few 
 gotchas; mostly due to filename inconsistencies and having to use DOSEMU 
@@ -347,3 +347,7 @@ linux, it needs to be /. Example of how this affects you: if the separator is
 a /, then the NETXX EXE files can't find the path and fail on processing; if the 
 separator is a \, then parts of your message info (like where the message came from)
 will be missing.
+
+# Other WWIVNet Documenation
+***
+[WWIV Networking Technical Documentation October 1994](wwivnettech2.0)  

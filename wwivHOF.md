@@ -3,5 +3,5 @@
 
 HOF Member | Contributions
 -----------|---------------
-Wayne Bell | 
+Wayne Bell | The creator of WWIV.
            |

@@ -71,3 +71,6 @@ c:\WWIV\netcom.exe %1 %2 %3 %4 %5 %6 %7 %8 %9
 c:\WWIV\netfoss.com /u
 :end
 ```
+
+## Additional Net2BBS information
+[PC Micro Net2BBS User's Guide](http://pcmicro.com/netfoss/guide/NET2BBS.HTML)  

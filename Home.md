@@ -9,7 +9,6 @@ Were working hard to bring you the best bbs software we can. This wiki is to sup
 Thank you,  
 The WWIV Dev Team 
 
-## [WWIV BBS Hall of Fame](wwivHOF)
 ## [WWIV BBS List](http://wwivbbs.com/bbslist/)
 
 ## Download WWIV 5.0 Binaries
@@ -77,6 +76,7 @@ Update Sub/Directory Maximums
 ### [Sub Fix Utility](fix)
 
 ## [History of WWIV](wwivhistory)
+## [WWIV BBS Hall of Fame](wwivHOF)
 
 ## [Registration & License](license)
 

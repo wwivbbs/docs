@@ -135,6 +135,10 @@ DOSEMU is used for a number of things that can't be handled directly. Here are s
 [DOSEMU for system scripts] - specific settings for system scripts (wwivnet, etc)  
 [DOSEMU for doors] - specific settings for different doors  
 
+_**Additional DOSEMU Information**_
+[DOSEMU common settings](installlinusdosemusettings)  
+[DOSEMU for system scripts](installlinusdosemuscripts)  
+
 ### Configuring WWIVnet 
 See [WWIVnet Config on Linux] for details on configuring WWIVnet and subscribing to subs
 

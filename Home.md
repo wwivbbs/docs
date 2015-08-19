@@ -69,7 +69,7 @@ Update Sub/Directory Maximums
 ### [Multi Instance](multinode)  
 ### [WWIVNet](wwivnet)  
 ### [Other Nets](othernets)  
-### [Chains & Doors](chains)  
+### [Chains & Doors](doors)  
 ### [WWIV Mods](mods)  
 ### [WWIV Edit](wwwivedit)  
 ### [Using ANSI in WWIV](ansi)

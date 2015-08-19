@@ -29,7 +29,9 @@ configuration topics.
 
 [Linux WWIV 5.0 Installation](installlinux)
 
-## [Upgrading Earlier WWIV BBSes](windowsupgrade)
+## [Upgrading Earlier WWIV BBSes](wwivupgrade)
+Do you have your floppy disks with your 4.x WWIV BBS on it? We can get you upgraded to WWIC 5.0 
+and you can join the fold again!
 
 ## [Init Settings](init)
 

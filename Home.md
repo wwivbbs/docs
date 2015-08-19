@@ -51,7 +51,10 @@ Registration Information
 User Editor  
 Update Sub/Directory Maximums
 
-## [WWIV5 Telnet Server](wwwiv5telnetserver)
+## User Access Protocols for WWIV 5.0
+### [WWIV5 Telnet Server](wwwiv5telnetserver)
+### [Net2BBS Telnet Server by PCMicro](net2bbs)
+### [Dial-Up Modem Access](dialup)
 
 ## [Waiting for Caller (WFC) & Top Screen](wfctop)
 
@@ -63,7 +66,6 @@ Update Sub/Directory Maximums
 
 [WWWIV.ini]()  
 [Multi Instance](multinode)  
-[Dial-UP BBS Configuration](dialup)  
 [WWIVNet](wwivnet)  
 [Other Nets](othernets)  
 [Chains & Doors](chains)  

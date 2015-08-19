@@ -64,7 +64,7 @@ Update Sub/Directory Maximums
 ### [//SYSOP Menu](menusysop)
 ## Advanced Configuration
 
-[WWWIV.ini]()  
+[WWWIV.ini](wwivini)  
 [Multi Instance](multinode)  
 [WWIVNet](wwivnet)  
 [Other Nets](othernets)  

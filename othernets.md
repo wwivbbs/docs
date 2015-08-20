@@ -1,14 +1,25 @@
-# Other WWIV Compatible Nets
+# Other Nets
 ***
 A Net is a federation of BBSes which share content in Subs so messages or files posted on 
-one BBS are replicated to the others. WWIVNet is the official net of WWIV, but there are other 
-Nets you can join. Here is a list and additional information on how to join and get setup.
+one BBS are replicated to the others. 
 
-## FidoNet
+There are WWIVNet based Nets and FidoNet based nets. For the purpose of this this page that 
+refers not the instances of the Nets themselves (which can the same names), but to the 
+underlying technology they use and the many instances of Nets that use those formats. (Yeah, 
+it's a little confusing). :-)
 
-### WWIVTOSS
+## WWIVNet Based Networks
+### [WWIVNet](wwivnet)
+### FileNet
 
-## FileNET
 
+## Fido Technology Nets (FTN)
+This covers Nets based on the FidoNet standards
+
+### Tools to connect WWIV to FTNs
+#### WWIVTOSS
+
+# NOTES
 ## MicroNet
+[http://www.bbscorner.com/bbsnetworks/]
 

@@ -1,6 +1,15 @@
 # WWIVNet
 ***
 
+## What's a WWIVNet?
+WWIVNet refers to a WWIV BBS based Net that uses WWIV's message and network 
+packet system to share email and sub messages. There are and have been other 
+WWIVNet based networks, similiar to how there are more than one FidoNet 
+Technology based net. All of these nets are covered on the [Other Nets](othernets) page.
+
+For the purpose of this page, WWIVNet refers to the specific instance of a 
+WWIVNet that is the primary network for WWIV BBSes called WWIVNet.
+
 ## Joining WWIVNet
 
 Thanks for your interest in WWIVnet,

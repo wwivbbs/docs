@@ -47,6 +47,8 @@ TODO: Peaboy - I have no idea. :-)
 
 ## Configuring WWIVNet on Linux
 
+[Demo of beta level Setup for WWIVToss on Linux](http://aliens.free.net.ph/~xenos/wwivtoss-linux/)  
+
 Setting up WWIVnet and subscribing to Subs isn't hard, but there are a few 
 gotchas; mostly due to filename inconsistencies and having to use DOSEMU 
 for some of the tools (NET37 and PPP)

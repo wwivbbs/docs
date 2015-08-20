@@ -1,13 +1,11 @@
 # Legends of the Red Dragon (LORD)
 ***
-**NOTE:** These steps are also generally useful for any 
-[Robinson Technologies | RTSoft.com](http://www.rtsoft.com/index.php) Game.
 
 **NOTE:** This was documented using LORD 4.07
 
 * [Download LORD from GamePort](http://www.gameport.com/bbs/lord.html)
 Within the main zip file, there is another .zip file. Extract those files and place them into c:\wwiv\lord 
-* Create c:\wwiv\lod1.bat with the following code:
+* Create c:\wwiv\lord.bat with the following code:
 ```batch
 @echo off
 cd lord

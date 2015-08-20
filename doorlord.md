@@ -15,7 +15,7 @@ call start %1 /norip
 exit
 ```
 * Login into your bbs  and use chainedit //ce at the main menu 
-    OR a the Waiting for Call (WFC) type C
+    OR at the Waiting for Call (WFC) type C
 * Either way then select Insert door and configure it like this:
 
 ```ASCIIDOC

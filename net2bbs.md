@@ -1,12 +1,18 @@
 # Net2BBS Telnet Server by PCMicro
 ***
 
-From: Matt Munson 
-To: All 
-Date: 2011-05-22 17:54:02 
-Subject: How to use Net2bbs with WWIV 5 
-How to use WWIV 5 with Net2BBS
-By Matt Munson
+## Additional Net2BBS information
+NetFoss is a Fossile Driver and other utilities including Net2BBS which 
+provides a Telnet server for 32bit BBSes.  
+[NetFoss : A Freeware Telnet FOSSIL driver for Windows](http://pcmicro.com/NetFoss/)  
+[PC Micro Net2BBS User's Guide](http://pcmicro.com/netfoss/guide/NET2BBS.HTML)  
+
+From: Matt Munson  
+To: All  
+Date: 2011-05-22 17:54:02  
+Subject: How to use Net2bbs with WWIV 5  
+How to use WWIV 5 with Net2BBS  
+By Matt Munson  
 
 WWIV's Internal Telent Server may not be that perfect, but Net2BBS by 
 Mike Ehlert fits my need well.
@@ -71,6 +77,3 @@ c:\WWIV\netcom.exe %1 %2 %3 %4 %5 %6 %7 %8 %9
 c:\WWIV\netfoss.com /u
 :end
 ```
-
-## Additional Net2BBS information
-[PC Micro Net2BBS User's Guide](http://pcmicro.com/netfoss/guide/NET2BBS.HTML)  

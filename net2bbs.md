@@ -7,6 +7,7 @@ provides a Telnet server for 32bit BBSes.
 [NetFoss : A Freeware Telnet FOSSIL driver for Windows](http://pcmicro.com/NetFoss/)  
 [PC Micro Net2BBS User's Guide](http://pcmicro.com/netfoss/guide/NET2BBS.HTML)  
 
+## Installation Notes
 From: Matt Munson  
 To: All  
 Date: 2011-05-22 17:54:02  

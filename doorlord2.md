@@ -1,4 +1,4 @@
-# Legend of the Red Dragon 2 (LORD2)
+# LORD II - The New World
 ***
 
 * [Download Lord 2 from GamePort](http://www.gameport.com/bbs/lord2.html)
@@ -56,7 +56,8 @@ to do this for each node that accepts users.
   (]) Go forward a node
   (Q) Quit To Main
 ```
-* Edit c:\wwiv\lord2\lord2.bat and change the PATH near the top to c:\wwiv\lord2
+* Edit c:\wwiv\lord2\lord2.bat and change the drive and PATH near the top to c: & \wwiv\lord2. Also, uncomment 
+those two lines. (Remove the "REM " from the start of the lines).
 * Move c:\wwiv\lord2\lord2.bat to c:\wwiv\lord2.bat
 * Login into your bbs and use chainedit //ce at the main menu OR at the Waiting for Call (WFC) type C
 * Either way then select Insert door and configure it like this:
@@ -64,7 +65,7 @@ to do this for each node that accepts users.
 Editing Chain # 1
 
 A) Description  : LORD II - The New World
-B) Filename     : LORD2.BAT %N
+B) Filename     : c:\wwiv\lord2\LORD2.BAT %N
 C) SL           : 10
 D) AR           : None.
 E) ANSI         : Optional

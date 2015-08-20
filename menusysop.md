@@ -3,6 +3,16 @@
 
 These commands can be run while logged-on to the WWIV BBS. You will be prompted to enter the System Password when you use //SYSOP to access the SysOp Tools.
 
+```
+[A]       Allow Editor               [B]       Sub Editor
+[C]       Chain Editor               [D]       Dir Editor
+[E]       Events Editor              [G]       Bulletin Editor
+[I]       Instance Editor            [J]       Conference Editor
+[M]       Menu Editor                [T]       Text Editor
+[U]       User Editor                [V]       Voting Editor
+[K]       Print Votes                [Q]       Quit               
+```
+
 ### [A] Allow Editor  
 ### [C] Chain Editor  
 ### [E] Events Editor  

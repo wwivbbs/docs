@@ -15,6 +15,18 @@ WWIV 5 is compiled with MSVC 2015. Install the
 [Visual C++ Redistributable for Visual Studio 2015]
 (https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
+## Fossils Driver
+
+TODO: Add this.
+
+TODO: This needs to be in the packaged build.
+
+What works on my win7x86 install:
+a) sbbsexec.dll in \windows\system32
+b) dosxtrn.exe and dosxtrn.def in \wwiv
+
+q: What about sbbsexec.ini?
+
 ## Installation Steps
 
 Take the build of WWIV you downloaded and extract all the  files 

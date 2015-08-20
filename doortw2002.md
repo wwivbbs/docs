@@ -1,8 +1,9 @@
-# Tradewars 2002
+# TradeWars 2002
 ***
 
-* [Download TradeWares 200 form EISOnline](http://www.eisonline.com/downloads/)
-*
+[Download TradeWares 200 form EISOnline](http://www.eisonline.com/downloads/)  
+**NOTE: ** I am not sure that version works with WWIV 5.  
+
 First thing you need to make sure you do not have the dpmi version  
 extract Tradewars into a directory preferably c:\wwiv\tw  
 then in the bbs under chainedit //ce from the main menu or c from the wfc  

@@ -20,6 +20,6 @@ This covers Nets based on the FidoNet standards
 #### WWIVTOSS
 
 # NOTES
-## MicroNet
-[http://www.bbscorner.com/bbsnetworks/]
-
+MicroNet  
+http://www.bbscorner.com/bbsnetworks/  
+http://www.net229.org/dbridge.htm  

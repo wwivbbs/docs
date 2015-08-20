@@ -6,7 +6,7 @@ TODO: Bring over 4.3 stuff on Chains, especially why they're called Chains in WW
 Doors known to work on WWIV 5.0 and Installation Steps  
 [Legend of the Red Dragon](doorlord)  
 [LORD 2 - The New World](doorlord2)  
-[TradeWars 2002](doortw)  
+[TradeWars 2002](doortw2002)  
 [MechWars](doormw)  
 [Clans](doorclan)  
 [Ambrosia](dooramb)  

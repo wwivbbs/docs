@@ -67,12 +67,16 @@ builtin Telnet Server and Net2BBS from PCMicro.
 ### [WWIV Slash Menu](menuslash)  
 ### [//SYSOP Menu](menusysop)
 
+## Nets
+Nets are federation of BBSes which connect to share messages and\or files. 
+These pages will help you find WWIV 5.0 compatible utilities and installation instructions.
+### [WWIVNet](wwivnet)  
+### [Other Nets](othernets)  
+
 ## Advanced Configuration
 
 ### [WWWIV.ini](wwivini)  
 ### [Multi Instance](multinode)  
-### [WWIVNet](wwivnet)  
-### [Other Nets](othernets)  
 ### [Chains & Doors](doors)  
 ### [WWIV Mods](mods)  
 ### [WWIV Edit](wwwivedit)  

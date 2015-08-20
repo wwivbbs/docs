@@ -5,22 +5,21 @@
 
 * [Download LORD from GamePort](http://www.gameport.com/bbs/lord.html)
 Within the main zip file, there is another .zip file. Extract those files and place them into c:\wwiv\lord 
-* Create c:\wwiv\lord.bat with the following code:
+* Create c:\wwiv\lord\lord.bat with the following code:
 ```batch
 @echo off
-cd lord
+c:
+cd \wwiv\lord
 call start %1 /norip
 exit
 ```
-* Login into your bbs  and use chainedit //ce at the main menu 
-    OR at the Waiting for Call (WFC) type C
-* Either way then select Insert door and configure it like this:
+* Login into your bbs  and use chainedit //ce at the main menu OR at the Waiting for Call (WFC) type C. Either way then select Insert door and configure it like this:
 
 ```ASCIIDOC
 Editing Chain # 0
 
 A) Description  : Legend of the Red Dragon (LORD)
-B) Filename     : lod1.bat %N
+B) Filename     : c:\wwiv\lord\lord.bat %N
 C) SL           : 10
 D) AR           : None.
 E) ANSI         : Optional
@@ -111,7 +110,3 @@ Here are your choices:
 ```
 
 * You will do this for each node that users access.
-
-That should work for all the RT Games use the copy setup tool & reuse 
-the above steps be sure to change your bbsname & copy this setup in 
-lordcfg for every node

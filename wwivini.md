@@ -2,16 +2,15 @@
 ***
 
 # Overview
-
-# Default WWiV.INI
-
-**NOTE:** This is what a clean install WWIV.INI looks like as of [Build 5.0.1529](http://build.wwivbbs.org/job/wwiv/1529/)
-
 The INI is the home to many core WWIV settings and occasionally 3rd party add-ons append
 settings to the end of the file.
 
 The comments should be adequate to explain the usage of the settings and other pages may 
 also refer to specific settings in wwiv.ini.
+
+# Default WWiV.INI
+**NOTE:** This is what a clean install WWIV.INI looks like as of [Build 5.0.1529](http://build.wwivbbs.org/job/wwiv/1529/)
+
 
 ```INI
 ;=============================================================================

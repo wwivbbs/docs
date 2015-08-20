@@ -85,7 +85,7 @@ builtin Telnet Server and Net2BBS from PCMicro.
 
 ## [Registration & License](license)
 
-## Client Software for Users of BBSes
+## [Client Software for Users of BBSes](clients)
 This page will include information on Telnet clients, dial-up clients
 and other User helpers. We want to make this easy for the new BBS User.
 

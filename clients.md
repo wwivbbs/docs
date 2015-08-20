@@ -11,5 +11,5 @@ Client | Windows | Linux | Android | iOS | Windows Phone
 [Blank]() |  |  |  |  |
 
 Key:  
-X = Known to exist
-V = Verified to work
+X = Known to exist  
+V = Verified to work  

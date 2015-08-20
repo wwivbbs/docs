@@ -52,6 +52,10 @@ User Editor
 Update Sub/Directory Maximums
 
 ## User Access Protocols for WWIV 5.0  
+BBSes used to only be accessible by dialing them up on your phone line with a MODEM. When 
+the internet took off many BBSes added Telnet support to allow users to connect to the BBS
+over the internet. That is still in use today. These pages explain how to use the WWIV 5.0 
+builtin Telnet Server and Net2BBS from PCMicro.
 ### [WWIV5 Telnet Server](wwwiv5telnetserver)
 ### [Net2BBS Telnet Server by PCMicro](net2bbs)
 ### [Dial-Up Modem Access](dialup)

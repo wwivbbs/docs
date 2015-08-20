@@ -1,7 +1,10 @@
 # WWIV Chains and Doors
 ***
 
-TODO: Bring over 4.3 stuff on Chains, especially why they're called Chains in WWIV.
+## Guidelines
+If you are going to add a door and installation instructions, please include a link to 
+the official source of the game of the game. If the company no longer exists, please 
+direct everyone to a WWIVNet Node and Transfer Sub where it can be located.
 
 Doors known to work on WWIV 5.0 and Installation Steps  
 [Ambrosia](dooramb)  
@@ -12,3 +15,6 @@ Doors known to work on WWIV 5.0 and Installation Steps
 [MechWars](doormw)  
 [Planets: The Exploration of Space (TEOS)](doorteos)  
 [TradeWars 2002](doortw2002)  
+
+## History of Chains \ Doors
+TODO: Bring over 4.3 stuff on Chains, especially why they're called Chains in WWIV.

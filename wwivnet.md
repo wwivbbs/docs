@@ -43,4 +43,4 @@ Coordinator, Eli Sanford 1@1 WWIVnet or email elisanford@gmail.com
     
 ## [Configuring WWIVNet on Windows](wwivnetwin)
 
-## [Configuring WWIVNet on Linux[(wwivnetlinux)
+## [Configuring WWIVNet on Linux](wwivnetlinux)

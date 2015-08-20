@@ -1,4 +1,4 @@
-# WWIV Chains and Doors
+# WWIV Chains \ Doors
 ***
 
 ## Guidelines
@@ -6,7 +6,9 @@ If you are going to add a door and installation instructions, please include a l
 the official source of the game of the game. If the company no longer exists, please 
 direct everyone to a WWIVNet Node and Transfer Sub where it can be located.
 
-Doors known to work on WWIV 5.0 and Installation Steps  
+## Compatible Doors
+These doors are known to work on WWIV 5.0 and have installation instructions included.
+
 [Ambrosia](dooramb)  
 [Barron Realms Elite](doorbre)  
 [Clans](doorclan)  

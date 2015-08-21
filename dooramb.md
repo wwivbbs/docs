@@ -1,4 +1,6 @@
-# Ambrosia
+# Ambroshia - Test of Time
 ***
 
-TODO
+[Ambroshia from The.BBS.ORG](http://ambroshia.thebbs.org/)  
+**NOTE:** Site appears to be mostly broken. :-(
+

@@ -8,6 +8,7 @@ Client | Windows | Linux | Android | iOS | Windows Phone
 [SyncTerm](http://www.syncterm.net/) | V |  |  |  |
 [NetRunner](http://mysticbbs.com/downloads.html) | X | X |  |  |
 [Terminal IDE](https://play.google.com/store/apps/details?id=com.spartacusrex.spartacuside) |  |  | X |  |
+[AfterShock](https://play.google.com/store/apps/details?id=com.asvcorp.aftershock) |  |  | X |  |
 [Blank]() |  |  |  |  |
 
 Key:  

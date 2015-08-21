@@ -101,7 +101,7 @@ You will notice a few things in this script
 ### Parts of a dosemu call
 
 That last line:
-dosemu -f ~/.dosemurc -I "dosbanner 0" -E "tw2002.bat ${NODE}" 2>/dev/null 
+`dosemu -f ~/.dosemurc -I "dosbanner 0" -E "tw2002.bat ${NODE}" 2>/dev/null` 
 has a lot of stuff going on. Here is a breakdown of all the bits:
 
 1. dosemu - the binary itself
@@ -174,14 +174,16 @@ Now that we have covered the basics of setting up DOSEMU, we have a couple advan
 You may not want the same configuration for all instances of DOSEMU. Maybe you want a different set of DOS disks, maybe you want to run MS-DOS 5 for one door, or MS-DOS 6.22 for another, or the default FreeDOS for something else. The key to running different configurations lies in using a different .dosemurc file to point to different drives.
 
 In order to accomplish this, all you need to do is copy the standard .dosemurc to something else (e.g., .dosemurc_doors) and add a line that points to that directory. 
-$_hdimage = "/bbs/wwiv/.dosemu/drive_c_doors drives/d"
+`$_hdimage = "/bbs/wwiv/.dosemu/drive_c_doors drives/d"`
 
 The $_hdimage variable in the .rc file determines what "drives" the instance of DOSEMU will see, with the DOS drive letters being defined in order. The above example will end up with two drives:
 
 C: = /bbs/wwiv/.dosemu/drive_c_doors  
 D: = drives/d  
 
-DOSEMU will typically put the C: drive in .dosemu/drive_c by default. That references the FreeDOS startup files, but will use the D: drive to load command.com and all the utility binaries. If you want a separate C: drive, just copy the drive_c directory to another location (e.g., drive_c_doors) and edit the config.sys, autoexec.bat and any other batch files as you see fit. **NOTE:** There really shouldn't be a need to do this unless you have a case where a specific DOS application needs different startup parameters or a specific OS that conflicts with your defaults, but it is possible to do it. config.sys and autoexec.bat are usually generic enough and just hand off to your batch file for the specific invocation.
+DOSEMU will typically put the C: drive in .dosemu/drive_c by default. That references the FreeDOS startup files, but will use the D: drive to load command.com and all the utility binaries. If you want a separate C: drive, just copy the drive_c directory to another location (e.g., drive_c_doors) and edit the config.sys, autoexec.bat and any other batch files as you see fit. 
+
+**NOTE:** There really shouldn't be a need to do this unless you have a case where a specific DOS application needs different startup parameters or a specific OS that conflicts with your defaults, but it is possible to do it. config.sys and autoexec.bat are usually generic enough and just hand off to your batch file for the specific invocation.
 
 ### DOSEMU with real MS-DOS
 
@@ -192,7 +194,7 @@ To set up real MS-DOS, all you need to do is a few steps
 3. make sure config.sys, autoexec.bat and any other batch files are DOS formatted (i.e., convert with unix2dos)
 4. create a new .dosemurc file (e.g., .dosemurc622) that has an $_hdimage that points to .dosemu/msdos622 for C:
 
-To use it, just reference it in your dosemu call in your linux scripts:
-dosemu -f ~/.dosemurc622 -I "dosbanner 0" -E "tw2002.bat ${NODE}" 2>/dev/null
+To use it, just reference it in your dosemu call in your linux scripts:  
+`dosemu -f ~/.dosemurc622 -I "dosbanner 0" -E "tw2002.bat ${NODE}" 2>/dev/null`
 
 The main gotcha doing this is you still need the FreeDOS tools that will exit DOSEMU, so make sure you have access to the D: drive like usual.

@@ -2,12 +2,13 @@
 ***
 
 **NOTE:** This is just lazy notes and will go away probably
+
 Link | Comments
 ---- | --------
 [Eli's Official Home Page](http://wwivbbs.com/) | THE WWIV Site
 [SF Wiki](http://sourceforge.net/p/wwiv/wiki/Home/) | Old Site
 [SF Hosted Home Page](http://wwiv.sourceforge.net/) | old Site
-[THOUGHTS ON CO-SYSOPS FOR WWIV BOARDS AND SECURITY LEVELS IN GENERAL.. by Kent Stromsmoe](http://www.textfiles.com/bbs/cosysop.txt) | 
+[THOUGHTS ON CO-SYSOPS FOR WWIV BOARDS AND SECURITY LEVELS IN GENERAL.. by Kent Stromsmoe](http://www.textfiles.com/bbs/cosysop.txt) | Nice article on SL
 [WWIVNews Archive](http://www.textfiles.com/bbs/WWIVNEWS) | WWIVNet News Letters
 [WWIV Wikipedia](https://en.wikipedia.org/wiki/WWIV) |  Has out of date linkes
 [WWIVNet & WWIVLink split](http://www.bbsdocumentary.com/library/CONTROVERSY/EVENTS/WWIVWAR/) | Nice History Piece

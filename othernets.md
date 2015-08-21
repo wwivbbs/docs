@@ -45,11 +45,14 @@ The latest version of WWIVToss can be downloaded from [The Weather Station WWIVN
 ## Other Known FTNs with URLs
 [AdventureNet](http://www.kofobbs.dk/adventurenet/)  
 [AgoraNet](http://time.synchro.net:81/l10l.ssjs)  
+[AmigaNet]()
 [JustaXNet](http://www.justaxnet.com/)  
 [LinuxNet](http://www.kofobbs.dk/linuxnet/)  
 [MicroNet](http://outpostbbs.net/micronet.html) 
 [Pascal-Net](http://www.pascalnet.org)  
+SportNet  
 [SysOp Tech Net](http://www.sysoptech.net)  
+WhispNet  
 
 # Notes
 http://www.bbscorner.com/bbsnetworks/  

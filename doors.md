@@ -7,7 +7,7 @@ the official source of the game of the game. If the company no longer exists, pl
 direct everyone to a WWIVNet Node and Transfer Sub where it can be located.
 
 ## Compatible Doors
-These doors are known to work on WWIV 5.0 and have installation instructions included.
+These doors are known to work on WWIV 5.0 because one of the SysOps is running them. We'll provide linkes and installation instructions to get you going.
 
 [Ambroshia - Test of Time](dooramb)  
 [Barron Realms Elite](doorbre)  

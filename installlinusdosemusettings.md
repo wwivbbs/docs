@@ -16,15 +16,17 @@ distributions have it in their package repository in one form or another.
 This page won't cover getting it installed; what it covers is specific 
 configuration items related to how to use it with WWIV.
 
-The fundamental components of DOSEMU are:  
-dosemu - is actually a wrapper for the binary file dosemu.bin  
-dosemu.bin - the main binary  
-.dosemurc - a config file that's called when dosemu is invoked  
-dosdebug - a binary that allows for inspecting running dosemu processes. It 
-can be handy to use for killing a dosemu that has hung for some reason.  
-.dosemu directory - typically, the .dosemu directory will be created under 
-the home directory of the user running it.  
-dosemu.users - typically in /etc/dosemu. Defines user permissions  
+The fundamental components of DOSEMU are:
+
+Component | Comments
+--------- | --------
+dosemu | is actually a wrapper for the binary file dosemu.bin  
+dosemu.bin | the main binary  
+.dosemurc | a config file that's called when dosemu is invoked  
+dosdebug | a binary that allows for inspecting running dosemu processes. It can be handy to use for killing a dosemu that has hung for some reason.  
+.dosemu directory | typically, the .dosemu directory will be created under  the home directory of the user running it.  
+dosemu.users | typically in /etc/dosemu. Defines user permissions  
+
 DOSEMU typically comes with FreeDOS; a DOS implementation that works pretty 
 well. The only downside I've seen is that it's a bit wordy. You get a lot of 
 startup info when it's first called that can expose a bit more about your 

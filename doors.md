@@ -25,4 +25,3 @@ TODO: Bring over 4.3 stuff on Chains, especially why they're called Chains in WW
 We don't know if all the Doors on these lists work with WWIV 5.0 or not. But let's try 'em!
 
 [The BBS Corner](http://www.bbscorner.com/doorgames/doorgamesites.htm)  
-[John Dailey Software](http://www.johndaileysoftware.com/)  

@@ -9,24 +9,33 @@ are run as the wwiv user created in section 1. This ensures the
 permissions are correct.
 
 ### Prerequisites
-xinetd - service manager to start telnet. This doc assumes xinetd, but you can also use inetd or systemd. That will be at your own risk, though.  
-telnetd - telnet service to handle starting the BBS  
-fetchmail - to pull mail (needed for WWIVnet)  
-procmail - to drop files in the right places (needed for WWIVnet)  
-ncurses - any curses library, really. Needed for CLI tools display  
-dosemu - to run dos-based doors and utilities  
-dos2unix/unix2dos - for converting file types  
-uudecode - for processing WWIVnet files  
+
+Package | Comments
+------- | ----------
+xinetd | service manager to start telnet. This doc assumes xinetd, but you can also use inetd or systemd. That will be at your own risk, though.  
+telnetd | telnet service to handle starting the BBS  
+fetchmail | to pull mail (needed for WWIVnet)  
+procmail | to drop files in the right places (needed for WWIVnet)  
+ncurses | any curses library, really. Needed for CLI tools display  
+dosemu | to run dos|based doors and utilities  
+dos2unix/unix2dos | for converting file types  
+uudecode | for processing WWIVnet files  
 
 Compile things you will need  
-svn (subversion) - to grab the source code for compiling  
-cmake  
-make  
-gcc 4.8 or later  
 
-(really) Optional Linux Things  
-MTA (eg, postfix) - to process mail  
-fpc (FreePascal) - for building old Pascal things like WWIVedit  
+Package | Comments
+------- | ----------
+svn (subversion) |  to grab the source code for compiling  
+cmake | 
+make | 
+gcc 4.8 or later | 
+
+(really) Optional Linux Things
+
+Package | Comments
+------- | ----------
+MTA (eg, postfix) | to process mail  
+fpc (FreePascal) | for building old Pascal things like WWIVedit  
 
 ### Pre-install steps
 

@@ -10,9 +10,8 @@ Thank you,
 The WWIV Dev Team 
 
 ## [History of WWIV](wwivhistory)
-### [WWIV BBS Hall of Fame](wwivHOF)
-
-## [WWIV BBS List](http://wwivbbs.com/bbslist/)
+#### [WWIV BBS Hall of Fame](wwivHOF)
+#### [WWIV BBS List](http://wwivbbs.com/bbslist/)
 
 ## Download WWIV 5.0 Binaries
 

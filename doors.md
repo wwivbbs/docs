@@ -9,7 +9,7 @@ direct everyone to a WWIVNet Node and Transfer Sub where it can be located.
 ## Compatible Doors
 These doors are known to work on WWIV 5.0 and have installation instructions included.
 
-[Ambrosia](dooramb)  
+[Ambroshia - Test of Time](dooramb)  
 [Barron Realms Elite](doorbre)  
 [Clans](doorclan)  
 [Legend of the Red Dragon](doorlord)  

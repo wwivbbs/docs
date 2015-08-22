@@ -36,23 +36,6 @@ Do you have your floppy disks with your 4.x WWIV BBS on it? We can get you upgra
 and you can join the fold again!
 
 ## [Init Settings](init)
-
-TODO: Link to the sub sections
-
-General System Configuration  
-System Paths  
-External Transfer Protocol Configuration  
-External Editor Configuration  
-Security Level Configuration  
-Auto-Validation Level Configuration  
-Archiver Configuration  
-Instance Configuration  
-Language Configuration  
-Network Configuration  
-Registration Information  
-User Editor  
-Update Sub/Directory Maximums
-
 ## User Access Protocols for WWIV 5.0  
 BBSes used to only be accessible by dialing them up on your phone line with a MODEM. When 
 the internet took off many BBSes added Telnet support to allow users to connect to the BBS

@@ -9,6 +9,9 @@ will work on anything but 32bit x86 systems. We do not have code for
 all these other programs (yet?). Maybe down the road. So, for now 
 use a 32bit x86 version of Windows.
 
+We are also unsure if Windows Server will work. We have one failed attempt
+on Windows Server 2003 R2. Let us know if you try it and it works.
+
 ### Microsoft Visual Studio C++ Runtime
 
 WWIV 5 is compiled with MSVC 2015. Install the 

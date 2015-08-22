@@ -4,7 +4,7 @@
 ## Overview
 
 1. Get [WWIVNET.zip](http://wwivbbs.com/wwivnet/)
-2. Get NEt37.zip from a [WWIV BBS](http://wwivbbs.com/bbslist/) Transfer Section
+2. Get Net38b.zip **NOTE:** As part of the WWIV 5.0 Update this is not yet available.
 
 ## Installation & Configuration
 Within the Net37.zip there are two documents and I've also posted them on the wiki:  

@@ -10,8 +10,8 @@
 TODO: Where do we suggest people find these things?
 
 Download WWIVEdit 2.5  
-Extract all the files into c:\wwiv\WWIVEDIT\  
-From the command prompt and at c:\wwiv\WWIVEDIT\ run INSTALL.EXE
+Extract all the files into a temporary folder.
+From the command prompt in that temporary folder, run INSTALL.EXE
 
 The installer will copy all the files into the correct sub directories
 and make the neccessary config changes to WWIV (almos) **NOTE:** It will 

@@ -25,8 +25,9 @@ TODO: Add this.
 TODO: This needs to be in the packaged build.
 
 What works on my win7x86 install:
-a) sbbsexec.dll in \windows\system32
-b) dosxtrn.exe in \wwiv
+
+* sbbsexec.dll in \windows\system32
+* dosxtrn.exe in \wwiv
 
 q: What about sbbsexec.ini?
 

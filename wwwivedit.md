@@ -4,18 +4,21 @@
 ### History of WWIVEdit
 
 
-
 ### Installing WWIVEdit on Windows
 
-TODO: Where do we suggest people find these things?
-
-Download WWIVEdit 2.5  
-Extract all the files into a temporary folder.
+Download WWIVEdit25.zip & WEDIT25B.zip from a WWIV BBS.
+Extract all the files from WWIVEdit25.zip into a temporary folder.
 From the command prompt in that temporary folder, run INSTALL.EXE
 
 The installer will copy all the files into the correct sub directories
 and make the neccessary config changes to WWIV (almos) **NOTE:** It will 
 ask you about deleting files, say Yes.
+
+When that is complete, copy the WWIVEDIT.EXE from WEDIT25B.zip into c:\wwiv\wwivedit\
+and overwrite the existing file.
+
+Your install is done. To set WWIVEdit as your editor, at the Main Menu go to "D" defaults and using
+option "9" change your fullscreen editor.
 
 If you need to add the lines by hand to wwiv.ini, here they are
 

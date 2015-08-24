@@ -13,28 +13,34 @@ supports ANSI.
 When Displayed:  
 Purpose:  
 Sample:  
+Can be ANSI? (.ANS)  
 ## LOGON.MSG
 When Displayed:  
 Purpose:  
 Sample:  
+Can be ANSI? (.ANS)  
 ## LOGOFF.MSG
 When Displayed:  
 Purpose:  
 Sample:  
+Can be ANSI? (.ANS)  
 ## SYSTEM.MSG
 When Displayed:  
 Purpose:  
 Sample:  
+Can be ANSI? (.ANS)  
 ## NOANSI.MSG
 When Displayed:  
 Purpose:  
 Sample:  
+Can be ANSI? (.ANS)  
 ## FEEDBACK.MSG
 When Displayed:  
 Purpose:  
 Sample:  
+Can be ANSI? (.ANS)  
 ## NEWUSER.MSG
 When Displayed:  
 Purpose:  
 Sample:  
-
+Can be ANSI? (.ANS)  

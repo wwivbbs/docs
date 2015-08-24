@@ -7,6 +7,9 @@
 2. Get Net38b.zip **NOTE:** As part of the WWIV 5.0 Update this is not yet available.
 
 ## Installation & Configuration
+
+# **NOTE: This will all be revised shortly. Please hold.**
+
 Within the Net37.zip there are two documents and I've also posted them on the wiki:  
 
 * [NET37.DOC](net37doc) <- Has all the installation information (Must Read!)

@@ -3,7 +3,8 @@
 
 ## Additional Net2BBS information
 NetFoss is a Fossil Driver and other utilities including Net2BBS which 
-provides a Telnet server for 32bit BBSes.  
+provides a Telnet server for 32bit BBSes. Its Telnet Server is more feature rich than the WWIV5TelnetServer, but WWIV5TelnetServer is Open Source.  
+
 [NetFoss : A Freeware Telnet FOSSIL driver for Windows](http://pcmicro.com/NetFoss/)  
 [PC Micro Net2BBS User's Guide](http://pcmicro.com/netfoss/guide/NET2BBS.HTML)  
 

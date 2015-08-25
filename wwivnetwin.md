@@ -10,6 +10,11 @@
 
 # **NOTE: This will all be revised shortly. Please hold.**
 
+## NET.INI
+```INI
+Put it Here
+```
+
 Within the Net37.zip there are two documents and I've also posted them on the wiki:  
 
 * [NET37.DOC](net37doc) <- Has all the installation information (Must Read!)

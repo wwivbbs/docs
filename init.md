@@ -19,7 +19,7 @@ SynchroNet BBS's tools and maintained by it's author Rob Swindle.
 [read more](http://wiki.synchro.net/util:sexyz). Download sexyzNNN.zip where NNN is the 
 newest version from the [SynchroFTP Site}(ftp://ftp.synchro.net/).
 
-Once downloaded, extract sexXX.exe from sexyzNNN.zip into c:\wwiv\.  
+Once downloaded, extract SEXYZ.EXE from SEXYZNN.zip into c:\wwiv\.  
 From the command prompt, run INIT and to to the `External Transfer Protocol Configuration` screen.  
 Select INSERT and enter the highest number offered to place a new entry at the end of the list.  
 Fill in the next screen so it matches this one.  

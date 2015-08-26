@@ -9,7 +9,9 @@ Client | Windows | Linux | Android | iOS | Windows Phone
 [NetRunner](http://mysticbbs.com/downloads.html) | X | X |  |  |
 [Terminal IDE](https://play.google.com/store/apps/details?id=com.spartacusrex.spartacuside) |  |  | X |  |
 [AfterShock](https://play.google.com/store/apps/details?id=com.asvcorp.aftershock) |  |  | X |  |
+[EtherTerm](https://github.com/M-griffin/EtherTerm) | X | X |  |  |
 [Blank]() |  |  |  |  |
+
 
 Key:  
 X = Known to exist  

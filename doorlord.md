@@ -13,6 +13,7 @@ cd \wwiv\lord
 call start %1 /norip
 exit
 ```
+* You also need to edit ```START.BAT``` in the lord folder and set the path.
 * Login into your bbs  and use chainedit //ce at the main menu OR at the Waiting for Call (WFC) type C. Either way then select Insert door and configure it like this:
 
 ```ASCIIDOC
@@ -109,4 +110,6 @@ Here are your choices:
 ------------------------------------------------------------------------
 ```
 
-* You will do this for each node that users access.
+* You will do this for each node that users access. Use ```]``` to 
+go to the next NODE. Change the TEMP path. Everything else should be 
+handled automatically.

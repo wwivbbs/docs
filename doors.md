@@ -14,13 +14,12 @@ Doors Running on WWIV BBSes | Doors with Installation Steps
 [8Way Slots]() | [Ambroshia - Test of Time](dooramb)
 [Alpha Centauri VADV]() | [Barron Realms Elite](doorbre)
 [BarneySplat]() | [Clans](doorclan)
-[BBS Simulator]() | [Legend of the Red Dragon](doorlord)
-[BuZZ]() | [LORD II - The New World](doorlord2)
-[Chat]() | [MechWars](doormw)
-[Darkness]() | [Planets: The Exploration of Space (TEOS)](doorteos)
-[DoorMUD](doordoormud) | [TradeWars 2002](doortw2002)
-[Falcon's Eye]() | 
-[Food Fight]() | 
+[BBS Simulator]() |[DoorMUD](doordoormud) 
+[BuZZ]() |  [Legend of the Red Dragon](doorlord)
+[Chat]() | [LORD II - The New World](doorlord2)
+[Darkness]() | [MechWars](doormw)
+[Falcon's Eye]() | [Planets: The Exploration of Space (TEOS)](doorteos)
+[Food Fight]() | [TradeWars 2002](doortw2002)
 [Food Fite! (The Sequel!)]() | 
 [Freshwater Fishing Simulator]() | 
 [Global War]() | 

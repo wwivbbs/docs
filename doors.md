@@ -18,7 +18,7 @@ Doors Running on WWIV BBSes | Doors with Installation Steps
 [BuZZ]() | [LORD II - The New World](doorlord2)
 [Chat]() | [MechWars](doormw)
 [Darkness]() | [Planets: The Exploration of Space (TEOS)](doorteos)
-[DoorMUD]() | [TradeWars 2002](doortw2002)
+[DoorMUD](doordoormud) | [TradeWars 2002](doortw2002)
 [Falcon's Eye]() | 
 [Food Fight]() | 
 [Food Fite! (The Sequel!)]() | 

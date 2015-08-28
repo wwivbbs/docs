@@ -1,6 +1,16 @@
 # MechWars 1.9G
 ***
 
+## Known Issues
+
+
+Problem | OS | Fossil and Telnet Server
+--- | --- | ---
+NTVDM Crashes on the BBS Host after exiting door | Win7 32-bit | SYNCFOSS & WWIV5Telnet
+
+
+## Installation
+
 Mechwars is an old game but i like it so heres my setup  
 unzip mechwars into c:\wwiv\doors\mechwar\ (or similar) then in chainedit  
 //ce from the main menu or c from the wfc insert a new chain  

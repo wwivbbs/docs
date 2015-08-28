@@ -4,9 +4,10 @@
 ## Known Issues
 
 
-Problem | OS | Fossil and Telnet Server
---- | --- | ---
-NTVDM Crashes on the BBS Host after exiting door | Win7 32-bit | SYNCFOSS & WWIV5Telnet
+Problem | OS | Fossil and Telnet Server | Resolution
+--- | --- | --- | ---
+NTVDM Crashes on the BBS Host after exiting door | Win7 32-bit | SYNCFOSS & WWIV5Telnet | Set compatibility mode on MECHWARS.EXE (right click properties) to Windows 95
+
 
 
 ## Installation

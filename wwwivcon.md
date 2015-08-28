@@ -294,6 +294,10 @@ corporate participants, but you will save yourself money as well.
 See you there!
 ```
 
+## WWIVCon 96
+
+[Pic of Wayne Bell](https://en.wikipedia.org/wiki/File:Wwivcon.jpg)
+
 ## WWIVCON 98 Pigeon Forge
 
 http://www.ogle.org/wwivcon/wwivcon98.htm

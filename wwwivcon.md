@@ -1,7 +1,7 @@
 # WWIVCon
 ***
 
-## 95 WWIVCon New Orleans
+## 94 WWIVCon New Orleans 1-3 Jully
 
 Invite posted to COMP.BBS.MISC
 
@@ -294,12 +294,19 @@ corporate participants, but you will save yourself money as well.
 See you there!
 ```
 
-## WWIVCon 96
+## WWIVCon 95 Buffalo
+
+## WWIVCon 96 Minneapolis
 
 [Pic of Wayne Bell](https://en.wikipedia.org/wiki/File:Wwivcon.jpg)
 
-## WWIVCON 98 Pigeon Forge
+## WWIVCON 98 Pigeon Forge 21-23 August
 
-http://www.ogle.org/wwivcon/wwivcon98.htm
+http://www.ogle.org/wwivcon/wwivcon98.htm  
+https://groups.google.com/forum/#!msg/alt.bbs.wwiv/qIs3nkCMs44/65h_OKBDgqMJ  
+
+## WWIVCon 97 Washington DC
+
+## WWIVCon 98
 
 ## WWIVCon 99 Los Angeles

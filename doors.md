@@ -11,16 +11,15 @@ These doors are known to work on WWIV 5.0 because one of the SysOps is running t
 
 Doors Running on WWIV BBSes | Doors with Installation Steps
 --------------------------- | -----------------------------
-[Ambroshia - Test of Time](dooramb) | [DoorMUD](doordoormud) 
-[Barron Realms Elite](doorbre) | [Legend of the Red Dragon](doorlord)
-[8Way Slots]() | [LORD II - The New World](doorlord2)
-[Alpha Centauri VADV]() | [MechWars](doormw)
-[BarneySplat]() | [Planets: The Exploration of Space (TEOS)](doorteos)
-[BBS Simulator]() | [TradeWars 2002](doortw2002) 
-[BuZZ]() | 
+[Ambroshia - Test of Time](dooramb) | [Darkness](doordarkness)
+[Barron Realms Elite](doorbre) | [DoorMUD](doordoormud) 
+[8Way Slots]() | [Legend of the Red Dragon](doorlord)
+[Alpha Centauri VADV]() | [LORD II - The New World](doorlord2)
+[BarneySplat]() | [MechWars](doormw)
+[BBS Simulator]() | [Planets: The Exploration of Space (TEOS)](doorteos)
+[BuZZ]() | [TradeWars 2002](doortw2002) 
 [Chat]() | 
 [Clans](doorclan) | 
-[Darkness]() | 
 [Falcon's Eye]() | 
 [Food Fight]() | 
 [Food Fite! (The Sequel!)]() | 

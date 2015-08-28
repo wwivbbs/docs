@@ -294,4 +294,8 @@ corporate participants, but you will save yourself money as well.
 See you there!
 ```
 
+## WWIVCON 98 Pigeon Forge
+
+http://www.ogle.org/wwivcon/wwivcon98.htm
+
 ## WWIVCon 99 Los Angeles

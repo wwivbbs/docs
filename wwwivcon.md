@@ -1,7 +1,7 @@
 # WWIVCon
 ***
 
-## 95 WWIVCon
+## 95 WWIVCon New Orleans
 
 Invite posted to COMP.BBS.MISC
 
@@ -294,4 +294,4 @@ corporate participants, but you will save yourself money as well.
 See you there!
 ```
 
-## WWIVCon 99
+## WWIVCon 99 Los Angeles

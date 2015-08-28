@@ -1,6 +1,13 @@
 # Net2BBS Telnet Server by PCMicro
 ***
 
+## Known Issues
+
+Issue | Comments
+--- | ---
+You must also run SyncFoss and DOSXtrn | There are internal functions of WWIV 5.0 that rely on DOSXTRN
+Issues with Doors | There are some issues with launching doors while using NetFoss that do not happen with SynFoss
+
 ## Additional Net2BBS information
 NetFoss is a Fossil Driver and other utilities including Net2BBS which 
 provides a Telnet server for 32bit BBSes

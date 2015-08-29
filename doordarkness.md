@@ -30,4 +30,4 @@ L) Registered by: AVAILABLE
 M) Usage        : 0
 N) Age limit    : 0 - 255                                           
 ```
-* **NOTE:** I the setting to NOT use FOSSIL. I don't know why this works. ;-)
+* **NOTE:** That the setting to NOT use FOSSIL. I don't know why this works. ;-)

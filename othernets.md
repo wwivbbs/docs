@@ -57,3 +57,33 @@ WhispNet
 # Notes
 http://www.bbscorner.com/bbsnetworks/  
 http://www.net229.org/dbridge.htm  
+
+```
+P> SO... if you use the .MSG version of D'Bridge, do you need to set your
+P> WWIV Subs to have the multi-file storage type? OR, will WWIVTOss stuff
+P> them into the .DAT file?
+
+Actually, it is much easier than that unless you wanted to run a D'Bridge hub
+instance.
+
+To get up and running, you disable the D'Bridge message processing completely.
+D'Bridge will receive the packet as a *.pkt file from your uplink.  It will sit
+in the INBOUND directory once received.
+
+With D'Bridge message processing / tossing disabled, it will just stay there
+and do nothing with the packet.  You then run WWIVTOSS /I /O to take the file
+from the INBOUND directory and toss it to your BBS.  Then run the NETWORK
+software after that to move it into the proper subs.
+
+WWIVTOSS will write directly to the message areas if you set it up that way and
+I believe that also works.
+
+D'Bridge is just the mechanism to receive the *.PKT files and to sent the *.PKT
+files from your BBS.  It does not tossing in this type of setup.
+
+I run two instances - one as a hub, which does toss.  It then sends to my
+D'Bridge BBS instance - which doesn't toss and lets packets sit for WWIVTOSS
+processing
+
+-Mark
+```

@@ -120,6 +120,187 @@ Doors Running on WWIV BBSes | Doors with Installation Steps
 [WWIVMail/QWK Mail Packets]() | 
 [Yankees & Rednecks]() | 
 
+
+
+##Frequently Asked Questions concerning Chains:
+The designation of chains originated in Turbo Pascal
+versions of WWIV when the BBS literally "chained" to the
+program.  Although WWIV no longer operates in that
+fashion and is no longer written in Pascal, the CHAINEDIT
+terminology has remained.
+
+Not all files can be run as external programs from
+WWIV. Only those files that do all I/O through DOS calls
+can be run. This means that Wordstar, WordPerfect, the
+Norton Utilities, and most other graphics programs can
+NOT be run from WWIV.
+
+Games can be characterized as WWIV games if one of two
+conditions occur.  First, if the game is written to
+specifically make use of the drop file known as
+CHAIN.TXT. By drop file, is meant a file that is created
+by the BBS software either at the time of logon or when a
+door (chain) is entered.  This file typically contains
+information about the user and/or the system.  A
+commented CHAIN.TXT, written by MrBill is included later
+in this document.  Some games are written to make
+specific use of the information contained in the
+CHAIN.TXT file.  These games, although perhaps not
+specifically written for WWIV alone, are discussed in the
+category of WWIV games because they have been written to
+work with WWIV.
+
+The second condition that causes a game to be known as
+a WWIV game is that it makes use of the special dos color
+codes contained in the WWIV software.  These games are
+characterize by use of the DOS color commands
+(pseudo-ansi) found in WWIV.  These colors are discussed
+in the DEFAULT section of the software and are
+configurable by the user. WWIV will interpret a "heart"
+symbol as a color command when it is followed by a
+number.  Because WWIV is one of the few BBS programs that
+can use these color commands, games containing them are
+almost always written for the exclusive use of WWIV
+boards.  These games are also most often characterized as
+games where the CHAINEDIT option of USE DOS INTERRUPTS
+should be left at the default setting of Y.
+
+Games that may be considered as being written for
+other software are those which do not use CHAIN.TXT and
+which instead use one of the drop files of another bbs
+software.  These usually include games which use
+DORINFO1.DEF (RBBS, QBBS, REMOTE ACCESS), games which use
+PcBOARD.SYS (PcBoard versions 12 and 14), games which use
+DOOR.SYS (Wildcat 3.0, GAP, and PcBoard 14.5+), and games
+which use CALLINFO.BBS (pre-version 3.0 of Wildcat).
+These games can often be made to work with WWIV provided
+that a 'converter' is also used.  The use of converters
+and so forth will be discussed later.
+
+1.  Setting up WWIV games.  Most WWIV games have relatively good documentation and therefore setting them up and getting them to work is usually very straight forward.  However, if there is no documentation and/or the documentation seems insufficient, then there are a number of things that you can experiment with by trial and error to see if you can get the game to run.
+2 Placement of Game Files.  If the game does not tell you where to place the files, you can try each of the following setups to see if one of them causes the game to work:
+
+* In its own directory.  i.e. C:\WWIV\MWAR
+* In a directory called CHAINS (especially for older games) i.e. C:\WWIV\CHAINS
+* In a directory off of CHAINS (also popular place for older  WWIV games) i.e.  C:\WWIV\CHAINS\MWAR
+* In the main BBS directory. i.e. C:\WWIV
+
+3. Relationship to CHAIN.TXT. If you get a 'parameter file notfound' or other type of error message from the game, then it may be that it is not finding CHAIN.TXT correctly.  You may try incorporating a batch file and copying the CHAIN.TXT to the directory where the game is located. Use  DOS commands as follows:
+```batch
+     copy con MWAR.BAT
+     @echo off
+     copy chain.txt c:\wwiv\chains\mwar
+     cd chains\mwar
+     mwar
+     cd\wwiv
+```
+then press CTRL Z or F6 (function key 6) to save the batch file.
+
+4. DOS Interrupts. Some games written especially for WWIV will let the BBS handle the DOS INTERRUPTS.  This is especially true of many games written in PASCAL for use with WWIV.  A sign that sometimes the DOS interrupt option is set incorrectly is when the game echos double characters.  If the game is viewable from local mode but not from the remote mode, then you may want to experiment with setting the DOS INTERRUPTS option differently.
+5. SHRINK Option. Many games do not necessitate the BBS to shrink out in order to run them; however, if you experience a "lock up" or freezing of the computer when you try to run the game, this may be an indication that there is insufficient memory available and that you should shrink the BBS. It may be helpful to set the BBS to shrink out if the game is large (ie the file size is big).
+6. Setting up Non-WWIV Games. Because these games are not specifically made for WWIV, the first step is to determine what software they support.  WWIV creates all major drop files required for most online games.  Below is a list of BBS packages and the drop file they use.
+```
+           GAP             -> Door.Sys
+           Genesis Deluxe  -> CallInfo.BBS
+           GT PowerComm    -> GTUser.BBS
+           Osiris#         -> ExtInfo#.QBS
+           PCBoard v12xx   -> PCBoard.Sys
+                              PCBoard.Dat
+                                Users
+           PCBoard v14xx   -> PCBoard.Sys
+                              PCBoard.Dat
+                                Users
+           QuickBBS        -> DorInfo1.Def
+           RBBS#           -> DorInfo#.Def
+           WildCat         -> CallInfo.BBS
+           Remote Access   -> Dorinfo1.Def
+           SpitFire
+           WWIV            -> Chain.Txt
+```
+7. Fossil Drivers. WWIV now requires a fossil driver in order to run. Some games expect a fossil to be present even though that is not mentioned in the documentation of the game.  This is particularly true for games written for QBBS, RBBS, and OPUS.  Games which DO NOT require a fossil driver should work fine even though the driver is loaded. The better known fossil drivers are X00 and BNU.  Many WWIV system operators report excellent results from X00.
+8. Batchfiles in the Multi-Instance Environment. The batchfile below shows an example of having a game in a different directory for each "instance".  It uses Trade Wars as an example.  Whether or not the setup shown below is necessary depends upon the chain and how it is written. The example is theoretical.  Current versions of TradeWars have not been checked to determine whether or not it requires such a setup. Lines beginning with REM are "remark" lines and are meant to help you understand what is transpiring in the batch file.
+```batch
+         @Echo Off
+
+         REM --> Check to see if instance 3
+         if %WWIV_INSTANCE%==3 goto Inst3
+
+         REM --> Check to see if instance 2
+         if %WWIV_INSTANCE%==2 goto Inst2
+
+         REM --> Example only has three instances; got here, must be
+         REM --> instance 1
+         goto Inst1
+
+         REM --> Subroutine for Instance 1
+         :Inst1
+         Copy C:\WWIV\CHAIN.TXT C:\WWIV\DOORS\TW\1
+         C:
+         Cd\WWIV\DOORS\TW\1
+         TW2002
+         Goto Done
+
+         REM --> Subroutine for Instance 2
+         :Inst2
+         Copy C:\WWIV\CHAIN.002 C:\WWIV\DOORS\TW\2\CHAIN.TXT
+         C:
+         Cd\WWIV\DOORS\TW\2
+         TW2002
+         Goto Done
+
+         REM --> Subroutine for Instance 3
+         :Inst3
+         Copy C:\WWIV\CHAIN.003 C:\WWIV\DOORS\TW\3\CHAIN.TXT
+         C:
+         Cd\WWIV\DOORS\TW\3
+         TW2002
+         Goto Done
+
+         REM --> Cleanup area, exits batch file in proper dir, or
+         REM --> whatever necessary.
+         :Done
+         C:
+         Cd\WWIV
+```
+7. Other Comments regarding CHAINS. Some of the games written for WWIV in Pascal are presented in uncompiled form by the authors.  This is often done so that the pascal code may be altered or customized for your board.  Usually these authors have made use of something called a COMMON.PAS file which interfaces the game with WWIV.  If a particular game has not been compiled, you must first compile it with the appropriate version of the Turbo Pascal compiler using the appropriate version of COMMON.PAS.  Most of the versions of COMMON.PAS are available
+for downloading on the WWIV Support Boards.
+8. BRUNxx. Some games written in QuickBASIC have been compiled to utilize an intermediate program called BRUN (Basic RUN time module). Such games require the BRUN module specific to the compiler. Current versions of BRUN are BRUN20, BRUN30, BRUN40, and BRUN45.  Again, these programs are available on most WWIV Support Boards.  The BRUNxx file may be placed in your path and used by all programs that require it.  One advantage of the Basic RUN time compilers is that the resulting EXE's require significantly less space (approximately 35k less per program).
+9. Commented Chain.txt.  CHAIN.TXT Definition File by MrBill. **Note:** Some of the original information about Mr. Bill and MrBill's Abode has been shortened to accomodate the format of these docs.
+```
+ -----------CHAIN.TXT-----------------------------------
+ 1                  User number
+ MRBILL             User alias
+ Bill               User real name
+                    User callsign (HAM radio)
+ 21                 User age
+ M                  User sex
+   16097.00         User gold
+ 05/19/89           User last logon date
+ 80                 User colums
+ 25                 User width
+ 255                User security level (0-255)
+ 1                  1 if Co-SysOp, 0 if not
+ 1                  1 if SysOp, 0 if not
+ 1                  1 if ANSI, 0 if not
+ 0                  1 if at remote, 0 if local console
+    2225.78         User number of seconds left till logoff
+ F:\WWIV\GFILES\    System GFILES directory (gen. txt files)
+ F:\WWIV\DATA\      System DATA directory
+ 890519.LOG         System log of the day
+ 2400               User baud rate
+ 2                  System com port
+ MrBill's Abode     System name
+ MrBill             System SysOp
+ 83680              Time user logged on/# of secs. from midn
+ 554                User number of seconds on system so far
+ 5050               User number of uploaded k
+ 22                 User number of uploads
+ 42                 User amount of downloaded k
+ 1                  User number of downloads
+ 8N1                User parity
+ 2400               Com port baud rate
+ 7400               WWIVnet node number
+```
 ## Links to Lists of Doors
 We don't know if all the Doors on these lists work with WWIV 5.0 or not. But let's try 'em!
 

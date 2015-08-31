@@ -78,7 +78,12 @@ These pages will help you find WWIV 5.0 compatible utilities and installation in
 ### [Chains & Doors](doors)  
 ### [General Files AKA G-Files](gfiles)  
 ### [Messaging System AKA Subs](subs)  
-### [Email System](email)  
+### Email System  
+
+The email system in WWIV allows the sending of email to other users on the system as well as other users in WWIV based networks you participate in and even to Internet users if you have the appropriate add on software installed. Sending email is as easy as hitting th E key at the WFC or online.  You can email a local user by name or number.  For sending WWIV based network mail, see the network documentation for addressing. 
+
+TODO: How his internet mail handling with the new tools?
+
 ### [Using ANSI in WWIV](ansi)
 ### [Sub Fix Utility](fix)
 ### [QWK and WWIVMail](qwkwwivmail)

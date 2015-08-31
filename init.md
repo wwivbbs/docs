@@ -6,7 +6,29 @@ when you run init.exe from the command prompt.
 
 TODO: Add an ASCII screen shot of the Init Screen
 
-## General System Configuration  
+## General System Configuration
+###Newuser restrict : LCMA*PEVKNU01234
+
+Restriction | Description
+:---: | ---
+ L | 
+ C | 
+ M | Prevent posting to subs
+ A | 
+ * | 
+ P | 
+ E | 
+ V | 
+ K | 
+ N | 
+ U | 
+ 0 | 
+ 1 | 
+ 2 | 
+ 3 | 
+ 4 | 
+
+
 ## System Paths  
 ## External Transfer Protocol Configuration  
 

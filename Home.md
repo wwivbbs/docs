@@ -21,6 +21,7 @@ The WWIV Dev Team
 #### [WWIV BBS Hall of Fame](wwivHOF)
 #### [WWIV BBS List](wwivbbslist)
 #### [WWIVCon](wwwivcon)
+#### [New SysOp Suggestions](newsysop)
 
 ## Download WWIV 5.0 Binaries
 

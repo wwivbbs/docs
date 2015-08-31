@@ -68,6 +68,7 @@ These pages will help you find WWIV 5.0 compatible utilities and installation in
 ### [WWIV Edit](wwwivedit)  
 ### [Multi Instance](multinode)  
 ### [Chains & Doors](doors)  
+### [General Files](gfiles)  
 ### [Using ANSI in WWIV](ansi)
 ### [Sub Fix Utility](fix)
 ### [QWK and WWIVMail](qwkwwivmail)

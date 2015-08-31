@@ -1,7 +1,8 @@
 # New SysOps
 ***
 
-**NOTE:** This oringally apperaed in the WWIV 4.30 Documentation and it is still a great ready today.
+**NOTE:** This originally appeared in the WWIV 4.30 Documentation and it is still a great ready today. 
+We don't have support boards and software distribution subs any longer, but the concepts are useful examples.
 
 Operating a BBS can be a very satisfying (and addictive)
 experience, particularly if you have given some thought to your
@@ -9,7 +10,7 @@ setup and the needs and desires of your target audience.  A BBS
 with an attentive and participating sysop offers a personal, "homey"
 atmosphere that the Internet cannot provide.  With the "Internet
 Explosion" still in full swing, you must target a specific group
-of users and advertise to capture a sizeable user base.
+of users and advertise to capture a sizable user base.
 
 Because a BBS can be used for such a wide variety of things,
 this chapter assumes that you know virtually nothing about a

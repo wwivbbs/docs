@@ -2,12 +2,16 @@
 ***
 
 These are the SysOp tools and WWIV BBS settings which can be configured 
-when you run init.exe from the command prompt.
+when you run INIT.EXE from the command prompt.
 
 ## General System Configuration
 **System PW**  
 
-This is the Password you enter as well as the user password to gain SysOp level access to the BBS.
+The system password defaults to SYSOP, but you should be sure to change it to 
+something else, hopefully something that other people will have a difficult 
+time guessing.  Selecting your own personalized system password prevents other 
+people from gaining unauthorized access to your BBS. When you type the 
+password it will show on screen as XXXXX.
 
 **System Name**  
 
@@ -20,11 +24,17 @@ so its been the practice of current SysOps to put their proper AREA CODE and the
 
 **Closed System**  
 
-If your system is not open to new users, put Y in this field.
+If your system will not be allowing users to dial up and establish accounts on 
+your system, set this to Yes.  If someone does dial up a closed system, they 
+will be presented with a short message telling them it is a closed system and 
+does not accept new users.
 
 **Newuser PWD**  
 
-You can specify a password that new users must have in order to join the BBS.
+This is the password users will have to enter in order to log on as new 
+users. If there is no Newuser password, anyone may log on as a new user. 
+This should only be used if you wish to operate a "private" system where 
+you only allow people you know to log on.
 
 **Newuser restrict : LCMA*PEVKNU01234**  
 
@@ -34,7 +44,7 @@ Restriction | Description
 :---: | ---
  L | 
  C | 
- M | Prevent posting to subs
+ M | The default restriction of M means that any messages that the user posts, will not be seen by anyone else until you have validated the messages.
  A | 
  * | 
  P | 
@@ -51,46 +61,106 @@ Restriction | Description
 
 **Newuser SL**  
 
-This is the Security Level (SL) that new users will be assigned.
+This sets the security level that all new users are given. The default is 10. 
+This should also be left alone until you understand what the different 
+security levels do, and even then, most sysops will probably want to leave 
+this set to 10.
 
 **Newuser DSL**  
 
-This is the Download Security Level (DSL) that new users will be assigned.
+This sets the download security level that all new users are given. The 
+default is zero. New users are severely limited in what they can do on the 
+BBS until you have 'validated' them which usually involves an increase in 
+their SL and DSL as well as possibly the assignment of some Access 
+Restrictions (AR's) and Download Access Restrictions (DAR's).
 
 **Newuser gold**  
 
-Gold was a feature of WWIV BBS that was not widely used. You can ignore this. -P
+WWIV keeps track of an amount of "gold" for use in online games, if needed. 
+This sets the default amount new users are given. The regular distribution 
+version of WWIV does not use gold for anything. If you have registered your 
+BBS and obtained the source code, modifications are available which can allow 
+you to use gold, for example, to regulate downloads or game use by requiring 
+that the caller "earn" a certain amount of gold by posting.
 
 **Sysop name**  
 
-Your SysOp account name.
+At a few points in the BBS, the system will need to print out the name of the 
+system operator. This is where you can set what that name will be.  You may 
+use your real name, but many sysops use "handles" or aliases instead. This is 
+totally up to you.
 
 **Sysop time: from - to**  
 
-Set the time when the SysOp should be shown as available. This was used like officer hours and it sets the 
-SysOp is available to chat feature so users can summon you for an on screen chat. This was useful when the BBS 
-was running on a PC in your basement or living room. Not so much if you system is hosted on a VM in the cloud.
+The sysop low time and sysop high time set the time limits that the sysop is 
+available to be chatted with.  If, for example, you don't want people to be 
+able to request a chat between 11pm and 7am, then your chat hours would be 
+7am to 11pm.  The low time (when chat hours begin) would then be 7am, and 
+the high time (when chat hours end) would be 11pm. You enter the time in the 
+standard 24-hour format, where 7am is 07:00 and 11pm is 23:00.
+
+Normally, the scroll lock key determines when the sysop is available for chat. 
+If sysop hours are defined, the system ignores the status of scroll lock 
+during the hours the sysop is supposed to be unavailable. In other words, if 
+you followed the above example and chose available hours to be from 7am to 
+11pm, callers will not be able to request chats with you from 11pm to 7am, 
+regardless of the scroll lock setting.
+
+During the sysop hours (7am to 11pm), scroll lock IS monitored, and will 
+determine whether or not the sysop is available for chat.  If the scroll lock 
+is on, callers will be told you are available, and if they request a chat, a 
+chat alarm will be sounded (unless you have turned the beep off.
 
 **Net time: from - to**  
 
 Net time is the time the system is closed to users but open for Nets to make contact and share messages and files.
 
-**Ratios**  
+**Upload/Download Ratios**  
 
-In the days of dial-up, you didn't want to have all your users calling up and just downloading programs, you also
-wanted to require them to upload things. This ratio was a mechanism to enforce that.
+Many sysops want to have up/download ratio requirements. This allows you to 
+set them. A caller's ratio is defined to be the number of kilobytes (k) 
+(1024 bytes) of files uploaded divided by the number of kilobytes of files 
+downloaded. So, if you want a caller to be able to download 5k for every 1k 
+uploaded, the required ratio would then be 1/5=0.2, so you would set the ratio 
+required to be 0.200. This way, when a caller has violated the ratio 
+(downloaded over five times what he/she uploaded), the caller would not be 
+allowed to download again until the caller uploaded enough data to clear the 
+ratio.
+
+**Post/Call ratio**
+
+Similar to the Up/Download ratio, this restricts users from downloading if 
+they do not meet the minimum ratio established.
 
 **Max waiting**  
 
+Each caller may have a number of pieces of mail waiting. This allows you to 
+set the maximum number of pieces of mail a caller can have waiting. NOTE: The 
+sysop (SL=255) can have 5 times this number of mail waiting. So, if, for 
+normal callers, 20 is the maximum, then 100 would be the maximum for the 
+sysop. If the sysop has more than 254 pieces of email waiting, only the first 
+254 will show up at the mail prompt, but the rest will not be deleted. After 
+the sysop reads some email, the software will make more of the waiting email 
+available, but will still only show the first 254 pieces at the mail prompt.
+
 **Max users**  
+
+The BBS requires you set the maximum number of users that can be on the 
+system. This defaults to 500, but you may increase or decrease it. The 
+absolute maximum is 32,767, but 2,000 is probably about the limit for 
+performance reasons (i.e., the system slows down the more users you have).
 
 **Caller number**  
 
-How many Callers has your BBS had?
+If you have converted to WWIV v4 from another BBS (possibly an earlier version 
+of WWIV), you may set the current caller number with this option. This counter 
+is incremented each time the system receives a non-network call unless the 
+remote caller is the sysop.
 
 **Days active**  
 
-How long has your BBS been up and running, from the inital time the config.dat was created.
+Again, if you converted from another BBS, you can set the number of days your 
+BBS has been active here.
 
 ## System Paths  
 ```
@@ -110,10 +180,41 @@ How long has your BBS been up and running, from the inital time the config.dat w
 │                                                                          │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
-## External Transfer Protocol Configuration  
 
-### Internal XMODEM, YMODEM & ZMODEM
-TODO: I don't know anything about these. The initial settings are blank. Not sure they work.
+If you have more than one hard disk, you may wish to split up the BBS files among your hard disks, in order to better use the space. Using this option, you may change the directories that the BBS looks to for certain things.  
+
+**NOTE:** Changing any of the options here will only change where the BBS looks for the data; IT WILL NOT ACTUALLY MOVE ANY FILES OR DIRECTORIES. The following rules should be observed when assigning or changing directories:
+
+1. Never use the root directory of any drive to store BBS files; the root directory can only hold a fixed number of files, while any sub-directories may hold an unlimited number of files in them.
+2. Always have a backslash on the end of the path/directory name. The software will normally add this backslash for you but there may be occasions where it is required.
+3. The directory may be specified relative to the main BBS directory, or as a full pathname. In other words, "MSGS\" is recognized as a sub-directory of the main BBS dir.  In most instances, however, you won't need to change the default directories.   For security reasons, you are strongly advised to use complete paths to these directories. If you choose to have directories located on another drive, you MUST include a drive letter in the pathname.
+
+**Messages Directory**  
+Information regarding all e-mail and posts is stored here.
+
+**GFILES Directory**  
+The Directory where the BBS text files are stored. These files can be read by users while they are on line. If you have any GFILE sections (described later), the BBS will create sub-directories of the GFILES directory, i.e. "gfiles\section1\". See[????] for information on G-Files.
+
+**DATA Directory**  
+Data files used by the BBS are stored here.
+
+**DLOADS Directory**  
+This directory is used to set the default directory for new file sections.
+
+**TEMPx Directories**  
+This area is used to temporarily store files for the BBS.  In a multi-instance setup you will need a separate temporary directory for each instance that you have.  The INIT program will create a temporary directory for each instance the first time it is run for that instance.	The default name is TEMP<inst num>. You may change this, but remember to create the directory as INIT will not automatically do this for you. Please note also that any files found in the temporary directory when the BBS is run will be DELETED. If you point the temporary directory to your root directory, or the BBS directory, ALL THE FILES IN THAT DIRECTORY WILL BE ERASED. Therefore, have the temporary directory be one that doesn't contain any files you care about.
+
+**BATCH Directory**  
+This directory is used to temporarily store files that are batch uploaded (defaults to the defined TEMPx directory).  Make sure this directory has adequate disk space for files being batch uploaded (at least 5 MB recommended). After batch uploads are completed, the BBS will automatically move the files into the appropriate drive and directory and delete the uploaded files.
+
+You may freely change DLOADS, TEMPx and BATCH to whatever you want without hurting anything. HOWEVER, the TEMPx and BATCH directories MUST exist. You may choose to have the temporary directory exist as a RAM disk. If the TEMPx directory is a sub-directory of a RAM disk, MAKE SURE that the directory is created BEFORE the BBS is run. In other words, run the BBS in a batch file that first creates the temp directory. The others (messages, gfiles, data), however, will have files in them that the BBS needs to find in the appropriate directories.  If you change the Messages, GFILES, or DATA directories, you must:
+
+1. Go to DOS and create the new directory.
+2. Move all files from the old to the new directory.
+3. You should then probably erase the old files and old  directory, to ensure you aren't confused by multiple  copies later on.
+4. You will then need to create subdirectories, of the  new directories, with THE SAME NAME, and copy all files  from the old subdirectories to the new ones.
+
+## External Transfer Protocol Configuration  
 ```
 ┌────────────── Select Protocol ┐
 │ 2. XModem (Internal)          │
@@ -159,7 +260,12 @@ Fill in the next screen so it matches this one.
 The X in SX\RX indicated XMODEM. TO add YMODEM and ZMODEM, Insert 
 two more entries to the list and just change the "SX\RX" to "SY\RY" or "SZ\RZ" on each line.
 
-## External Editor Configuration  
+## External Editor Configuration 
+
+A full screen editor (FSED) allows you and your callers (with ANSI) to write email and posts using an editor that is not restricted to the line-by-line approach used by the internal line editor.  Some editors allow the use of function and arrow keys to move the cursor about the screen, in much the same manner as a regular word processor.  Full screen editors tend to be awkward for callers to use, however, as while the sysop might use the arrow keys to move the cursor, the caller must almost always use control-key combinations to achieve the same thing.  Still, there are some great advantages to using a full screen editor, especially from the sysop's point of view, and so provision is made in WWIV for their use.  The full screen editor must do all I/O through DOS calls.
+
+WWIVedit, another WSS product, is probably the most preferred FSED and is written specifically for use on WWIV BBS systems. WWIVedit is self installing and requires very little intervention during installation. WWIVedit is available on all Support Boards and on the Internet FTP site. [More information about WWIVEdit on WWIV 5.0](wwwivedit)
+ 
 ## Security Level Configuration  
 ```
 ┌──── Security Level Editor ┐
@@ -177,6 +283,46 @@ two more entries to the list and just change the "SX\RX" to "SY\RY" or "SZ\RZ" o
 │ Co-sysop         : No     │
 └───────────────────────────┘
 ```
+
+For each security level (SL) there is a set of data that determine what a caller with this SL may do. These levels are numbered 0 through 255. You may change the default settings to suit your particular situation but most find the default setup satisfactory. If you should desire to change the settings, use {,},[,], to scan through until you find an SL you want to change. Then, hit enter to edit the data. You can then alter:
+
+**Security level**  
+Changing this field moves you to the entered security level. The other data on the screen is appropriately changed. Any data changed for the previous SL is saved.
+
+**Time per day**  
+This gives the time, in minutes, that a caller with that SL is able to be logged on the system per day, regardless of the number of calls.
+
+**Time per logon**  
+This gives the time, in minutes, that a caller with that SL is able to be logged on to the system per call. Normally, the time per day is 2.5 times the time per logon. Normally, the time allowed on is limited by the time per logon, but after the second call that day, the time per day may cut down the total amount of time on. Of course, the time allowed on may be affected by uploads, chat time, and extra time allowed by the sysop.
+
+**Messages read**  
+This sets the number of messages that can be read (per call) by a caller with that SL.
+
+**Emails per day**  
+This sets the maximum number of pieces of mail that a caller with that SL can send, per day. 
+**NOTE:** Email excludes feedback. All callers are allowed to send up to five pieces of feedback per day.
+
+**Posts per day**  
+This sets the maximum number of posts a caller with that SL can post per day.
+
+**Post anony**  
+If set, this means that a caller can post anonymously on any message base.
+
+**Email anony**  
+If set, this means that a caller can send anonymous e-mail on the system. No network emails may be sent anonymously.
+
+**Read anony posts**  
+If set, a caller with this SL can read the names on anonymous posts.
+
+**Read anony email**  
+If set, a caller with this SL can read the names on anonymous e-mail.
+
+**Limited co-sysop**  
+If set, a caller with this SL can validate and delete messages from any caller. Normally, callers can only delete messages they have written.
+
+**Co-sysop**  
+If set, a caller with this SL has access to all co-sysop functions.
+
 ## Auto-Validation Level Configuration  
 ```
 ┌───────────────────────────────────────────────────────────── Select AutoVal ┐
@@ -192,6 +338,11 @@ two more entries to the list and just change the "SX\RX" to "SY\RY" or "SZ\RZ" o
 │ ALT-F10   10    0                                                           │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
+
+The sysop can set the Alt-F keys (Alt-F1 through Alt-F10) to set certain data for a caller.  This function allows you to change that data.	You may set the SL, Download Security Level (DSL), Access Restriction (AR), Download Access Restriction (DAR), and System Restrictions.  Then, when a caller is on-line, you may press any ALT-F key combination to immediately change that caller's access levels and restrictions.  This may be useful for validating a user that is online.  You can, for example, just hit Alt-F1, and if you have that configured to give the caller standard access, the caller will immediately receive the configured access. It all happens very quickly, and there is no immediate indication on the caller's side that anything has happened, save perhaps a dramatic increase in the time-left display.  The Alt-F10 key combination is used if you have configured the optional Simple Auto-Sysop Validation ASV. The first four (Alt+F1-F4) settings are used in the optional Advanced ASV system.  See Section 4.1.15 for more information on ASV.
+
+**CAUTION:** If you are logged-on locally, and hit an Alt-F key combination, your user account will be altered as well.  This would do no permanent damage, but it will cause an annoyance as you have to reset your own access levels again.
+
 ## Archiver Configuration  
 ```
 ┌──────── Select Archiver ┐
@@ -207,6 +358,35 @@ two more entries to the list and just change the "SX\RX" to "SY\RY" or "SZ\RZ" o
 │ [EXT] New Archiver Name │
 └─────────────────────────┘
 ```
+
+You may configure up to 15 supporting archiver formats. ZIP, ARJ, PAK, LHA, and RAR are pre-configured on first installation. The first archiver record is the default archive on the system. The first four are also copied into the pre 4.30 archiver structure for backward compatibility with other supporting programs.	For most users, you will not need to adjust these settings. The standard DOS replacement parameters %1 and %2 are used for source and destination filenames. To navigate through the archiver records, use the bracket keys [ and ].  To edit a record, hit enter.
+
+**CAUTION:** It is *HIGHLY* recommended that you edit the command lines of all archivers and specify a complete path and filename to the program to run (i.e. c:\bat\pkzip.exe -a %1 %2). It is possible, though very unlikely, that malicious user could upload a batch file or compiled executable with an archiver name that may do harm to your system if run.
+
+**Archiver Name**  
+This is a recognizable name you canassign to the archive type.
+
+**Archive Extension**  
+This is the three letterextension applied to files of this particular type. Thissetting is how the BBS identifies archives.
+
+**Archive List**  
+This command lists the archive tothe screen without actually extracting the files.
+
+**Archive Extract**  
+This command extracts the archiveto the temporary directory for the current instance.
+
+**Archive Add**  
+This command adds a file to anarchive.
+
+**Archive Delete**  
+This command deletes a specifiedfile or list of files from the current archive.
+
+**Archive Comment**  
+This command applies a BBScomment to the selected archive. %K substitutesGFILES\COMMENT.TXT for commenting.
+
+**Archive Test**  
+This command tests the selectedarchive for validity and integrity.
+
 ## Instance Configuration  
 ```
 ┌─────────────────────────────────────── Temporary Directory Configuration ┐
@@ -232,9 +412,22 @@ two more entries to the list and just change the "SX\RX" to "SY\RY" or "SZ\RZ" o
 │                                                                            │
 └────────────────────────────────────────────────────────────────────────────┘
 ``` 
+
+WWIV has the ability to offer users multiple languages through the use of string files. To configure languages, all that is required is to define the directory where the language string and menu files are located. See Chapter 9 for more information.
+
 ## Network Configuration  
 
-Network configuration is discussed at length as part of setting up Nets to which your BBS 
+If you have installed the NETxx.ZIP archive in the BBS directory, this option will allow configuration of networks. The prompts are self explanatory. For details on network configuration, see NETxx.DOC in the distribution archive.
+
+The only setting that affects the BBS itself is the Network Type.  This setting tells the BBS and the network software how to handle the particular network. There are currently three network types: WWIV, Fido, and Internet.
+
+**WWIV network type**  
+This type is processednormally and entirely by the NETxx package.
+
+**Fido and Internet network types**  
+These typesimplement internal hooks for pre-processors and tosserssuch as WWIVtoss and the PPP Project to convert nativetype messages and email to WWIV format and vice versa.
+
+**NOTE:** Network configuration is discussed at length as part of setting up Nets to which your BBS 
 joins. See [NETS on the Home page of the wiki](home).
 
 ## Registration Information  
@@ -245,3 +438,5 @@ nostalgic purposes.
 ## User Editor  
 
 ## Update Sub/Directory Maximums
+
+This is a system tuning parameter.  These items require runtime memory thus the higher they are set, the less memory is available when shelling to DOS or running external programs.  You should NOT select more than you think that you will actually need, for more memory is required as the number is increased.  This setting may be modified later if you require more subs or directories.

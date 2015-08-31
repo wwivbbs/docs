@@ -2,6 +2,12 @@
 ***
 
 # Overview
+
+The INI or Initialization file is probably the most enigmatic part of WWIV. 
+It provides quick access to the core of configurable options and allows a 
+quite diverse array of system tuning parameters.	The file is well commented 
+and should be fairly easy to adjust to your particular situation. The default 
+file is setup for a generic BBS and should be sufficient for most applications.
 The INI is the home to many core WWIV settings and occasionally 3rd party add-ons append
 settings to the end of the file.
 

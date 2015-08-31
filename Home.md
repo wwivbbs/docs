@@ -1,6 +1,14 @@
 
 # WWIV 5.0 BBS Software wiki
 ***
+```
+                        WWW     WWW WWW     WWW III VVV   VVV
+                        WWW     WWW WWW     WWW III VVV   VVV
+                        WWW     WWW WWW     WWW III VVV   VVV
+                        WWW  W  WWW WWW  W  WWW III  VVV VVV
+                        WWW WWW WWW WWW WWW WWW III   VVVVV
+                         WWW   WWW   WWW   WWW  III    VVV
+```
 
 WWIV BBS SOFTWARE has a long [history](wwivhistory), this project is to give WWIV a strong future.
 

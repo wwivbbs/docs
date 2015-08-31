@@ -1,6 +1,8 @@
 # New SysOps
 ***
 
+**NOTE:** This oringally apperaed in the WWIV 4.30 Documentation and it is still a great ready today.
+
 Operating a BBS can be a very satisfying (and addictive)
 experience, particularly if you have given some thought to your
 setup and the needs and desires of your target audience.  A BBS

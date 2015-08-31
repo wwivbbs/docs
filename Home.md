@@ -78,6 +78,7 @@ These pages will help you find WWIV 5.0 compatible utilities and installation in
 ### [Chains & Doors](doors)  
 ### [General Files AKA G-Files](gfiles)  
 ### [Messaging System AKA Subs](subs)  
+### [Email System](email)  
 ### [Using ANSI in WWIV](ansi)
 ### [Sub Fix Utility](fix)
 ### [QWK and WWIVMail](qwkwwivmail)

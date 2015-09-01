@@ -93,7 +93,7 @@ Select G. General System Configuration
 
 You navigate these INIT forms with the arrow keys and ENTER key.
 Hit ESC to Exit the forms and save your changes.  
-**NOTE: **All the changes you make are saved when you exit.  
+**NOTE:** All the changes you make are saved when you exit.  
 But, you can always change it back later.
 
 For a Quick Setup change the following fields to your preferences.
@@ -116,7 +116,7 @@ From the command prompt at c:\wwiv
 ### Create the SYSOP account
 
 Under the Server menu, select Run Local Node  
-**NOTE: **This starts a local copy of the WWIV BBS without opening up 
+**NOTE:** This starts a local copy of the WWIV BBS without opening up 
 connections for outside users.
 
 This is the Waiting For Caller (WFC) Screen.

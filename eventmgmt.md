@@ -1,7 +1,7 @@
 # Event Management
 ***
 
-Also new in version 4.30 are multiple system  events.  The system events defined in INIT.EXE in previous versions have also been moved to the Event Editor.
+Originally new in version 4.30 are multiple system  events.
 
 Events are setup by using the EVENTEDIT feature. This feature may be accessed in the following ways:
 1. From WFC, enter H and then enter the system password when prompted for it.
@@ -10,8 +10,7 @@ Events are setup by using the EVENTEDIT feature. This feature may be accessed in
 
 ### Event Editor (EE).  
 
-When executed for the first time, the event list will be empty.  From this menu, you have the option to Insert, Delete, or Execute and event.  The Execute command is made available for you to test your event to ensure it performs as you expect it to.  When choosing to test the event, you must make sure the event meet all the criteria for running at the
-time of the test.  For example, if the event is not set to run on Tuesday and you try to test it on Tuesday, it will not run. To create a new event, select Insert and the Event Editor will be displayed as follows:
+When executed for the first time, the event list will be empty.  From this menu, you have the option to Insert, Delete, or Execute and event.  The Execute command is made available for you to test your event to ensure it performs as you expect it to.  When choosing to test the event, you must make sure the event meet all the criteria for running at the time of the test.  For example, if the event is not set to run on Tuesday and you try to test it on Tuesday, it will not run. To create a new event, select Insert and the Event Editor will be displayed as follows:
 
 ```
 ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿

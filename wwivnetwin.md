@@ -1,16 +1,38 @@
 # Configuring WWIVNet on Windows
 ***
 
-## Overview
+## Installation and Configuration
 
-1. Get [WWIVNET.zip](http://wwivbbs.com/wwivnet/)
-2. Get Net38b.zip **NOTE:** As part of the WWIV 5.0 Update this is not yet available.
+* Submit your WWIVNet Node Application to 1@1 [Skulls & Bones BBS](telnet://skulls.wwivbbs.com)
+* Get [WWIVNET.zip](http://wwivbbs.com/wwivnet/) put in \wwiv\nets\wwivnet
+* [Net38b.zip](http://www.wwiv.us/net38b3.zip) put in \wwiv
+* Setup your node in WWIV INIT.EXE
+```
+┌─────────────────────────────────────────────────── Network Configuration ┐
+│ Net Type  : WWIVnet                                                      │
+│ Net Name  : WWIVNet                                                      │
+│ Node #    : YOURNODE                                                     │
+│ Directory : NETS\WWIVNET\                                                │
+└──────────────────────────────────────────────────────────────────────────┘
+```
+* Edit \wwiv\NET.INI: POPNAME & POPPASS will be given to you by 1@1 **NOTE: ** NET.INI is missing from the release zip. For now grab it from down below.
+* Create \wwiv\nets\wwivnet\CALLOUT.NET and add the line supplied by 1@1
+* Create \wwiv\mail.bat and add the line provided to you by 1@1. You will have a second line as well bbs.exe -m -e with runs the local mail handler and maintenance events.
+* From \wwiv\ run ```Network3 y .0``` which will verify your configuration and files and send an email to your local #1 mailbox. 
+* From the \wwiv run ```bbs.exe -M``` to pickup and deliver the mail. **Note: ** The default config of WWIV5TelentServer runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run Network3.
+* Login as #1 and Check your email on the BBS. You should see a pretty email and it should say "Everything is Fine" along with other details.
 
-## Installation & Configuration
+####Verify Network Mail
+* Create a new email and address it to 1@1
+* You will be prompted to pick the net (WWVIVnet) and confirm the system Skull & Bones.
+* Give it a subject. Send Eli a love note and hit /S to save and send.
+* From \WWIV run ```MAIL.BAT``` which will send the outbound mail. Ideally you and ELi are chatting in IRC while you do this. ;-) then you can confirm and troubleshoot all at once. If not, wait a couple of hours and run ```MAIL.BAT``` again.
 
-# **NOTE: This will all be revised shortly. Please hold.**
+####Scheduling MAIL.BAT
 
-## NET.INI
+TODO: Testing Event Schedule
+
+## NET.INI Workaround
 ```INI
 [NETWORK1]
 primenet = WWIVNET

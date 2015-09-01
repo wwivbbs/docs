@@ -10,12 +10,18 @@ To run the WWIV5 Telnet Server, run C:\WWIV\WWIV5TelentServer.exe and the UI sho
 
 ### Preferences Page
 This is where you set your file paths, nodes, and all your Telnet Server Settings. For most part, once you set this up you will be done with this screen.
+
+For initial setups, just correct the file paths.
+
 ![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwiv5telnet/WWIV5_Telnet_Server_Preferences.png)
 
-### Menu
+### Server Menu
 Most important to note here is starting and stopping the Telnet nodes, setting preference and running
 a local node. The local node is one that has not network connections open and is commonly used for SysOp
 activities.
+
+For initial Setups, run the local node and then hit <SPACE> to login as a NEW User. Then after you are logged in, hit F1 to change your Security Level (SL) and Download Security Level (DSL) to 255. This account is now the SYSOP.
+
 ![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwiv5telnet/WWIV5_Telnet_Server_Menu.png)
 
 ### WWIV5 Telnet Server with nodes Running

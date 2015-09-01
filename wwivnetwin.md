@@ -4,8 +4,8 @@
 ## Installation and Configuration
 
 * Submit your WWIVNet Node Application to 1@1 [Skulls & Bones BBS](telnet://skulls.wwivbbs.com)
-* Get [WWIVNET.zip](http://wwivbbs.com/wwivnet/) put in \wwiv\nets\wwivnet
-* [Net38b.zip](http://www.wwiv.us/net38b3.zip) put in \wwiv
+* Get [WWIVNET.zip](http://wwivbbs.com/wwivnet/) put all of the contents of the zip in \wwiv\nets\wwivnet
+* [Net38b.zip](http://www.wwiv.us/net38b3.zip) put all of the contents in \wwiv
 * Setup your node in WWIV INIT.EXE
 ```
 ┌─────────────────────────────────────────────────── Network Configuration ┐

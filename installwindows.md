@@ -20,16 +20,13 @@ WWIV 5 is compiled with MSVC 2015. Install the
 
 ## Fossils Driver
 
-TODO: Add this.
+WWIV 5.0 is tested and used primarily with a fork of the Synchro BBS FOssil Driver.
 
-TODO: This needs to be in the packaged build.
+TODO: This needs to be in the packaged build 
 
-What works on my win7x86 install:
-
+Download [sbbsexec.zip](http://sourceforge.net/projects/wwiv/files/redist/sbbsexec.zip/download) and place the mentioned files like so:
 * sbbsexec.dll in \windows\system32
 * dosxtrn.exe in \wwiv
-
-q: What about sbbsexec.ini?
 
 ## Installation Steps
 

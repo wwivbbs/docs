@@ -20,7 +20,8 @@
 * Create \wwiv\nets\wwivnet\CALLOUT.NET and add the line supplied by 1@1
 * Create \wwiv\mail.bat and add the line provided to you by 1@1. You will have a second line as well bbs.exe -m -e with runs the local mail handler and maintenance events.
 * From \wwiv\ run ```Network3 y .0``` which will verify your configuration and files and send an email to your local #1 mailbox. 
-* From the \wwiv run ```bbs.exe -M``` to pickup and deliver the mail. **Note: ** The default config of WWIV5TelentServer runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run Network3.
+* From the \wwiv run ```bbs.exe -M``` to pickup and deliver the mail.  
+**Note:** The default config of WWIV5TelentServer runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run Network3.
 * Login as #1 and Check your email on the BBS. You should see a pretty email and it should say "Everything is Fine" along with other details.
 
 ####Verify Network Mail

@@ -27,36 +27,41 @@ time of the test.  For example, if the event is not set to run on Tuesday and yo
 ³   Which? [A-H,[,],Q=Quit] :                      ³
 ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
 ```
-A) Event Time.  Set the time for the event based on the 24 hour
-clock.
+**A) Event Time**  
+Set the time for the event based on the 24 hour clock.
 
-B) Event Command.  Set the command to execute.  You will
+**B) Event Command**  
+Set the command to execute.  You will
 normally want to use a batch file to run events but can use any
 executable file as a command.  You may also provide parameters
 to include system based information on the command line.  A list
 of command line parameters for system based information is
 available by pressing the ? key.
 
-C) Phone Off Hook?.  If you want the system to take the phone off
-hook, during the event, set accordingly.
+**C) Phone Off Hook?**  
+If you want the system to take the phone off hook, during the event, set accordingly.
 
-D) Already Run?.  If the event has already run for the current
+**D) Already Run?**  
+If the event has already run for the current
 time period, this will be Yes.  You can change it to No to have
 the event run again if desired.
 
-E) Shrink?.  If your event requires a large amount of memory,
+**E) Shrink?**  
+If your event requires a large amount of memory,
 set this to Yes to have the BBS shrink out of memory prior to
 event execution.
 
-F) Force User Off?.  If you want to force all users off the
+**F) Force User Off?**  
+If you want to force all users off the
 system prior to the event running, set accordingly.  Note that
 ANY event that touches the user records, configuration or status
 data files, should have this set to yes.
 
-G) Days to Execute.  Select the days you want the event to
-execute here.
+**G) Days to Execute**  
+Select the days you want the event to execute here.
 
-H) Node.  Set the node number for the event to run on.  If there
+**H) Nod**.  
+Set the node number for the event to run on.  If there
 is only one node operational, the event will run on that node.
 If more than one node is operational, and no specific node is
 specified, the event will run on the first available node.  Note

@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-### 32bit x86 Windows
+#### 32bit x86 Windows
 WWIV BBS will start and run on Windows 10 x64 (I did it), but none 
 of the supporting programs and utilities you use with WWIV
 will work on anything but 32bit x86 systems. We do not have code for 
@@ -12,13 +12,13 @@ use a 32bit x86 version of Windows.
 We are also unsure if Windows Server will work. We have one failed attempt
 on Windows Server 2003 R2. Let us know if you try it and it works.
 
-### Microsoft Visual Studio C++ Runtime
+#### Microsoft Visual Studio C++ Runtime
 
 WWIV 5 is compiled with MSVC 2015. Install the 
 [Visual C++ Redistributable for Visual Studio 2015]
 (https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
-## Fossils Driver
+#### Fossils Driver
 
 WWIV 5.0 is tested and used primarily with a fork of the Synchro BBS FOssil Driver.
 

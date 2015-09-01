@@ -77,6 +77,7 @@ These pages will help you find WWIV 5.0 compatible utilities and installation in
 ### [WWIV Edit](wwwivedit)  
 ### [Multi Instance](multinode)  
 ### [Chains & Doors](doors)  
+### [Event Management](eventmgmt)  
 ### [General Files AKA G-Files](gfiles)  
 ### [Transfer Files](transfers)  
 ### [Messaging System AKA Subs](subs)  

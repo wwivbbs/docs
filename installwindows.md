@@ -9,8 +9,11 @@ will work on anything but 32bit x86 systems. We do not have code for
 all these other programs (yet?). Maybe down the road. So, for now 
 use a 32bit x86 version of Windows.
 
-We are also unsure if Windows Server will work. We have one failed attempt
+**NOTE: **We are also unsure if Windows Server will work. We have one failed attempt
 on Windows Server 2003 R2. Let us know if you try it and it works.
+
+#### Windows Updates and .Net 4.5
+You should have ALL high priority updates on your windows mahcine. This might mean running windows update several times. As a part of this, you should also have installed Microsoft .Net Framework 4.5.x installed. The [4.5.2 install is here](http://www.microsoft.com/en-us/download/details.aspx?id=42642) if it was automatically installed by Windows Update.
 
 #### Microsoft Visual Studio C++ Runtime
 

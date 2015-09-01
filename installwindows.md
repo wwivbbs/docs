@@ -156,7 +156,7 @@ grant it the SysOp security levels.
 
 * Hit F1 and the WWIV User Editor will appear over the top of the 
 screen you were just at.
-
+```
     ┌────────────────────────────────────────────────────────────────────┐
     │ WWIV User Editor                                    [Newsysop #-1] │
     ├────────────────────────────────────────────────────────────────────┤
@@ -175,7 +175,7 @@ screen you were just at.
     ├────────────────────────────────────────────────────────────────────┤
     │    (ENTER) Next Field   (UP-ARROW) Previous Field    (ESC) Exit    │
     └────────────────────────────────────────────────────────────────────┘
-
+```
 * Change the Security Level (SL) to 255.
 * Change the DL Sec. Level (DSL) to 255.  
 

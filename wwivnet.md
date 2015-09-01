@@ -10,6 +10,10 @@ Technology based net. All of these nets are covered on the [Other Nets](othernet
 For the purpose of this page, WWIVNet refers to the specific instance of a 
 WWIVNet that is the primary network for WWIV BBSes called WWIVNet.
 
+## Technical Overview of WWIVNet
+
+TODO: Fill this in
+
 ## Joining WWIVNet
 
 Thanks for your interest in WWIVnet,

@@ -2,6 +2,9 @@
 ***
 
 ## Screenshots of the WWIV5TelnetServer
+
+To run the WWIV5 Telnet Server, run C:\WWIV\WWIV5TelentServer.exe and the UI shows below will appear.
+
 ### Main Screen
 ![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwiv5telnet/WWIV5_Telnet_Server_Main.png)
 

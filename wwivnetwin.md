@@ -15,7 +15,8 @@
 │ Directory : NETS\WWIVNET\                                                │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
-* Edit \wwiv\NET.INI: POPNAME & POPPASS will be given to you by 1@1 **NOTE: ** NET.INI is missing from the release zip. For now grab it from down below.
+* Edit \wwiv\NET.INI: POPNAME & POPPASS will be given to you by 1@1  
+**NOTE:** NET.INI is missing from the release zip. For now grab it from down below.
 * Create \wwiv\nets\wwivnet\CALLOUT.NET and add the line supplied by 1@1
 * Create \wwiv\mail.bat and add the line provided to you by 1@1. You will have a second line as well bbs.exe -m -e with runs the local mail handler and maintenance events.
 * From \wwiv\ run ```Network3 y .0``` which will verify your configuration and files and send an email to your local #1 mailbox. 

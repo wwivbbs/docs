@@ -91,29 +91,30 @@ Select G. General System Configuration
 
 You navigate these INIT forms with the arrow keys and ENTER key.
 Hit ESC to Exit the forms and save your changes.  
-NOTE: All the changes you make are saved when you exit.  
+**NOTE: **All the changes you make are saved when you exit.  
 But, you can always change it back later.
 
 For a Quick Setup change the following fields to your preferences.
-System Password  
-System Name  
-Sysop Name  
+
+* System Password  
+* System Name  
+* Sysop Name  
 
 Type ESC to exit back to the main menu  
 On the Main Menu hit ESC or Q to exit INIT
 
 From the command prompt at c:\wwiv  
-Run WWIV5TelnetServer.exe  
-The WWIV5 Telnet Server application will start.  
-Under the Server Menu select Preferences.  
-Change WWIV Executable to: c:\wwiv\bbs.exe  
-Change Home Directory to c:\wwiv  
-Click OK to close the Preferences dialog.  
+
+* Run WWIV5TelnetServer.exe & The WWIV5 Telnet Server application will start.  
+* Under the Server Menu select Preferences.  
+* Change WWIV Executable to: c:\wwiv\bbs.exe  
+* Change Home Directory to c:\wwiv  
+* Click OK to close the Preferences dialog.  
 
 ### Create the SYSOP account
 
 Under the Server menu, select Run Local Node  
-NOTE: This starts a local copy of the WWIV BBS without opening up 
+**NOTE: **This starts a local copy of the WWIV BBS without opening up 
 connections for outside users.
 
 This is the Waiting For Caller (WFC) Screen.
@@ -144,16 +145,16 @@ This is the Waiting For Caller (WFC) Screen.
     │                                                                              │
     └──────────────────────────────────────────────────────────────────────────────┘
 
-Hit the SPACE bar and answer Yes to logon to your WWIV BBS.  
-At the logon prompt enter NEW to create a new account.  
-Fill out out all the information. Yes some of it seems odd,
-you can modify these things.  
+* Hit the SPACE bar and answer Yes to logon to your WWIV BBS.  
+* At the logon prompt enter NEW to create a new account.  
+* Fill out out all the information. Yes some of it seems odd,
+* you can modify these things.  
 **When you are prompted to accept or change your password, stop.**
 
 You are going to use the Waiting For Caller (WFC) commands to edit this user and
 grant it the SysOp security levels.
 
-Hit F1 and the WWIV User Editor will appear over the top of the 
+* Hit F1 and the WWIV User Editor will appear over the top of the 
 screen you were just at.
 
     ┌────────────────────────────────────────────────────────────────────┐
@@ -178,7 +179,8 @@ screen you were just at.
 * Change the Security Level (SL) to 255.
 * Change the DL Sec. Level (DSL) to 255.  
 
-ESC to save the changes to this user.  
+* Hit ESC to save the changes to this user.  
+
 You will be back at your normal user session screen and can complete the
 new account setup. You can change your password or use the one provided.
 It does not have to be (should not be for security) the same as your 

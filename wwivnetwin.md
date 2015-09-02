@@ -38,8 +38,8 @@ Or a variety of other applications. Here's some we're using
 
 Scheduler | BBS Who uses 
 --- | ----
-[Z-Cron](http://www.z-cron.com/) | Cloud City BBS
-
+[Z-Cron](http://www.z-cron.com/) | Cloud City BBS @206
+[System Scheduler](http://www.splinterware.com/products/wincron.htm) | Skull and Bone @1
 
 ## NET.INI Workaround
 ```INI

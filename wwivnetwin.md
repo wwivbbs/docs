@@ -32,7 +32,14 @@
 
 ####Scheduling MAIL.BAT
 
-TODO: Testing Event Schedule
+None of the SysOps polled as of Sept 2015 use the Event Service to run WWIVNet Mail. 
+They all use some sort of scheduling service. You could use the one builtin to windows.
+Or a variety of other applications. Here's some we're using
+
+Scheduler | BBS Who uses 
+--- | ----
+[Z-Cron](http://www.z-cron.com/) | Cloud City BBS
+
 
 ## NET.INI Workaround
 ```INI

@@ -7,7 +7,7 @@ TODO: Someone official should fill this part out.
 There is no registration to use WWIV 5.0. But we'd love to add you to the list, so contact the team! Http://wwivbbs.com
 
 
-Copyright 2014+ [name of copyright owner]
+Copyright 2014+ WWIV Software Services, LLC
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -13,10 +13,12 @@
 @72      : Flashback BBS
 @73      : The eSource BBS
 @90      : The Wretched Beagle (coming soon)
+@206     : Cloud City BBS                      telnet://wwiv.cloudcitybbs.com
 @255     : Alpha Centauri BBS            telnet://acentauribbs.no-ip.org:2002
 @514     : Mystic Rhythms
 @666     : Hawkeye's BBS
 @707     : The Blood Stone                             telnet://www.bsbbs.com
+@815     : Inland Utopia (10am-11pm PST)           telnet://iutopia.no-ip.org
 ------------------------------------------------------------------------------
 Not connected to WWIVnet
 ------------------------------------------------------------------------------
@@ -31,7 +33,6 @@ No Dial Tone
 @177     : Dunedain BBS                     telnet://dunedainbbs.undo.it:2323
 @180     : Nitemare Cafe                   telnet://bbs.nitemarecafe.com:2002
            Web Page has a message that server is being moved
-@815     : Inland Utopia (10am-11pm PST)       telnet://iutopia.etowns.org:24
 ==============================================================================
 Know of any other WWIVs?
 Send any updates via email: xenos AT remove-this.aliens.free.net.ph

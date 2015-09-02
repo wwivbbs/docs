@@ -1,8 +1,11 @@
 # TradeWars 2002
 ***
 
-[Download TradeWares 200 form EISOnline](http://www.eisonline.com/downloads/)  
-**NOTE:** I am not sure that version works with WWIV 5.  
+[Download TradeWares 2002 from ClassicTW](http://wiki.classictw.com/index.php?title=Application:TradeWars_2002_v3)  
+
+**NOTE:** You do NOT want the "GS" version of TW2002. The GS version is not a door
+version it is a standalone game server. You also do NOT want the DPMI version of 
+the download.
 
 First thing you need to make sure you do not have the dpmi version  
 extract Tradewars into a directory preferably c:\wwiv\tw  

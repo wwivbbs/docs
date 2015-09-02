@@ -9,6 +9,7 @@ version it is a standalone game server.
 
 Known Issue | Workaround  or Description
 --- | ---
+NTVDM.EXE Crashes when launching TW2002 on Windows7 | No known workaround 
 Unregistered versions will only work locally with WWIV5TelnetServer & Default TW2002 Configuration | Unregistered versions of TW2002 only let you use 1 Node. WWIV5TelnetServer reserves Instance 1 of WWIV for the Local Node. To workaround this: Go into the Preferences and change the value of "Use Nodes" from 2 through 4 to 1 through 4.
 
 ## Installation Steps

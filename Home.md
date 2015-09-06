@@ -2,12 +2,12 @@
 # WWIV 5.0 BBS Software wiki
 ***
 ```
-                        WWW     WWW WWW     WWW III VVV   VVV   555555    000000
-                        WWW     WWW WWW     WWW III VVV   VVV   55        00  00
-                        WWW     WWW WWW     WWW III VVV   VVV   555555    00  00
-                        WWW  W  WWW WWW  W  WWW III  VVV VVV        55    00  00
-                        WWW WWW WWW WWW WWW WWW III   VVVVV         55 .. 00  00
-                         WWW   WWW   WWW   WWW  III    VVV      555555 .. 000000
+                    WWW     WWW WWW     WWW III VVV   VVV   555555    000000
+                    WWW     WWW WWW     WWW III VVV   VVV   55        00  00
+                    WWW     WWW WWW     WWW III VVV   VVV   555555    00  00
+                    WWW  W  WWW WWW  W  WWW III  VVV VVV        55    00  00
+                    WWW WWW WWW WWW WWW WWW III   VVVVV         55 .. 00  00
+                     WWW   WWW   WWW   WWW  III    VVV      555555 .. 000000
 ```
 
 WWIV BBS SOFTWARE has a long [history](wwivhistory), this project is to give WWIV a strong future.

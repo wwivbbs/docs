@@ -1,12 +1,14 @@
 # WWIV ANSI Support
 ***
 
-TODO: Put the stuff about the colors in here.
-TODO: Should mention anything that doesn't work like on Local Server
+
 
 
 ### Notes
 Just some notes to use when working on this page
+
+* Put the stuff about the colors in here.
+* Should mention anything that doesn't work like on Local Server
 
 From What's New
 ```

@@ -72,7 +72,7 @@ COLORTITLE: [Y] Whether or not Color Changes are allowed in the title
 MOUSE: [N] Y=Allow Mouse Locally
 DIRECTVIDEO: [N] Must be set to 0/N for Remote use
 SCROLL: [N] Smooth Scrolling (won't work remotely);
-PREFIX: [9]
+PREFIX: [9] This is the character which will be inserted before each quoted line.
 BBSDISABLE: [1] If Disable Taglines is set in boardedit, and this is 1,
             then User taglines will still work. If set to 2, user
             taglines wont work, but bbs taglines will.

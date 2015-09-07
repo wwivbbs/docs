@@ -67,8 +67,9 @@ builtin Telnet Server and Net2BBS from PCMicro.
 ## Nets
 Nets are federation of BBSes which connect to share messages and\or files. 
 These pages will help you find WWIV 5.0 compatible utilities and installation instructions.
-### [WWIVNet](wwivnet)  
-### [Other Nets](othernets)  
+### [WWIVNet](wwivnet)
+### [Other Nets](othernets)
+### [Usenet](usenet)
 
 ## Advanced Configuration
 

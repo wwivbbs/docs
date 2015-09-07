@@ -1,6 +1,7 @@
 # Client Software for Users of Bulletin Board Systems
 ***
 
+### Telnet
 Here are some clients you can use on your device to access WWIV 5.0 via Telnet.
 
 Client | Windows | Linux | Android | iOS | Windows Phone
@@ -11,7 +12,6 @@ Client | Windows | Linux | Android | iOS | Windows Phone
 [AfterShock](https://play.google.com/store/apps/details?id=com.asvcorp.aftershock) |  |  | X |  |
 [EtherTerm](https://github.com/M-griffin/EtherTerm) | X | X |  |  |
 [Blank]() |  |  |  |  |
-
 
 Key:  
 X = Known to exist  
@@ -42,3 +42,15 @@ and freeware clients I have used and can recommend:
     SyncTerm
         http://syncterm.bbsdev.net
 ```
+
+###QWK Mail Readers
+
+Client | Windows | Linux | OSx | Android | iOS | Windows Phone
+------ | :-----: | :---: | :-: | :-----: | :-: | :-----------:
+[MultiMail](http://multimail.sourceforge.net/) | X | X | X |  |
+[Blank]() |  |  |  |  |
+
+Key:  
+X = Known to exist  
+V = Verified to work  
+

@@ -147,7 +147,7 @@ a ```newsrc``` line above the newsgroup lists in news.rc, example:
 \wwiv\nets\wwivnet\news.rc
 
     newsrc
-    alt.bbs.doors 25849 ALTBBSD
+    alt.bbs.doors 25849 ALTBBSW
 ```
 This will force NEWS.EXE to download the list of every available newsgroups on the 
 server. This will be a LOT of data so some people prefer to do this manually.

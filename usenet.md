@@ -163,6 +163,6 @@ Now, when you execute your mail.bat file, you should see the news.exe portion
 connect to the newsgroups and start downloading messages.
 
 ***
-###Credit
+####Credit
 This quick guide was originally published on Facebook:
 [Quick & Dirty Newsgroups using WINS](https://www.facebook.com/notes/wwiv-bbs-software-help-dev-documentation/quick-dirty-newsgroups-using-wins/852450728099932) by jim 1@707.WWIVnet

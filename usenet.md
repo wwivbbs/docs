@@ -157,7 +157,8 @@ Using an NNTP client download the list of newsgroups available from your Usenet 
 Put this list of newsgroups into \wwiv\nets\wwivnet\newsrc.
 
 **Verify the creation of the appropriate network file \wwiv\nets\wwivnet\n[SUBTYPE].net
-Containing a single line:
+There may be a bug that omits the host 32767, if so you will need to manually add the host.
+You may need to do this for each USENET group you add to your system
 ```
 \wwiv\nets\wwivnet\nALTBBSW.net
 

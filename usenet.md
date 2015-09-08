@@ -154,7 +154,7 @@ Using a text editor, create BBSLIST.99
 BBSLIST.99
 ---
 ~0
-@32767      *707-585-NEWS #57600        !     [    ]  "My BBS's Internet Gateway"
+@32767      *707-585-NEWS #57600      !     [    ]  "My BBS's Internet Gateway"
 ---
 
 You can change the phone number above to whatever area code and prefix you wish.

@@ -158,10 +158,9 @@ Put this list of newsgroups into \wwiv\nets\wwivnet\newsrc.
 
 **Verify the creation of the appropriate network file \wwiv\nets\wwivnet\n[SUBTYPE].net
 Containing a single line:
-
+```
 \wwiv\nets\wwivnet\nALTBBSW.net
 
-```
 32767
 ```
 

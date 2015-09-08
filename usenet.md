@@ -15,7 +15,7 @@ Compiled 08/20/2014 by Jimmy Mac 1@707 WWIVnet
 Most of my information was gathered from old PPPProject FAQ’s
  
 First, the important stuff:
-12345678901234567890123456789012345678901234567890123456789012345678901234567890
+
 It is assumed that you already have Net37 configured and are connected to a 
 network like WWIVnet
  
@@ -131,12 +131,13 @@ make this sub public (in subs.lst) [Y/N]
 Which category is this sub in (0 for unknown/misc) : 17 (internet Newsgroups)
 and you're done with adding the sub.
  
-Next, you need to get fancy with some network data files. In your bbs\data\[primenet] folder,
-find the file that was automatically created during the sub creation named nALTBBSD.net and
-open it with a text editor. The file will be blank so on the very first line, enter 32767 and
-save and close the file.
+Next, you need to get fancy with some network data files. In your 
+bbs\data\[primenet] folder, find the file that was automatically created during 
+the sub creation named nALTBBSD.net and open it with a text editor. The file will 
+be blank so on the very first line, enter 32767 and save and close the file.
  
-Now, assuming that you are already connected to a Net, there will be some files to edit;
+Now, assuming that you are already connected to a Net, there will be some files 
+to edit;
  
 [random number] is typically a date/timestamp but I don't ever see it change.
  
@@ -155,7 +156,7 @@ BBSLIST.99
 ~0
 @32767      *707-585-NEWS #57600        !      [     ]  "My BBS's Internet Gateway"
 ---
- 
+
 You can change the phone number above to whatever area code and prefix you wish.
 the [     ] can be for your WWIV reg # if you have one.
  
@@ -226,9 +227,9 @@ news.rc
 alt.bbs.doors 25849 ALTBBSD
 ---
  
-Best to check on your newsgroup server to determine what the current high message 
-number is or you may find your BBS trying to download 10 years of news. It really 
-won't like that.
+Best to check on your newsgroup server to determine what the current high 
+message number is or you may find your BBS trying to download 10 years of news. 
+It really won't like that.
  
  
 For the next file, newsrc, there are two options. First is to have it auto 
@@ -239,18 +240,18 @@ news.rc
 newsrc
 alt.bbs.doors 25849 ALTBBSD
 ---
- 
+
 This will force a refresh of the newsrc file and populate the file with a list 
-of available newsgroups on the server. This will be a LOT of data so it's actually 
-best to gather this information using a news reader that can create the file for 
-you. I used XNews.
+of available newsgroups on the server. This will be a LOT of data so it's 
+actually best to gather this information using a news reader that can create the 
+file for you. I used XNews.
  
 Now, when you execute your mail.bat file, you should see the news.exe portion 
 connect to the newsgroups and start downloading messages.
  
  
-This is a draft version of this document and may contain errors. Please feel free to 
-contact me should you experience any issues or find any errors.
+This is a draft version of this document and may contain errors. Please feel 
+free to contact me should you experience any issues or find any errors.
  
 jim 1@707.WWIVnet
 ```

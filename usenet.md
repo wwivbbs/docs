@@ -156,6 +156,15 @@ server. This will be a LOT of data so some people prefer to do this manually.
 Using an NNTP client download the list of newsgroups available from your Usenet Provider.
 Put this list of newsgroups into \wwiv\nets\wwivnet\newsrc.
 
+**Verify the creation of the appropriate network file \wwiv\nets\wwivnet\n[SUBTYPE].net
+Containing a single line:
+
+\wwiv\nets\wwivnet\nALTBBSW.net
+
+```
+32767
+```
+
 ###MAIL.BAT
 TODO: Are there any additional lines to add to MAIL.BAT?
 

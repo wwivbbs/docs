@@ -90,7 +90,6 @@ TODO: How his internet mail handling with the new tools?
 
 ### [Using ANSI in WWIV](ansi)
 ### [Sub Fix Utility](fix)
-### [QWK and WWIVMail](qwkwwivmail)
 
 ## [Registration & License](license)
 

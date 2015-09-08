@@ -164,6 +164,15 @@ You may need to do this for each USENET group you add to your system
 
 32767
 ```
+As other SysOps subscribe to the SUBS, you will begin to see them appear in these n[SUBTYPE]net files:
+```
+\wwiv\nets\wwivnet\nALTBBSW.net
+
+1
+708
+255
+32767
+```
 
 ###MAIL.BAT
 TODO: Are there any additional lines to add to MAIL.BAT?

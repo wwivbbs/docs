@@ -15,10 +15,12 @@ Compiled 08/20/2014 by Jimmy Mac 1@707 WWIVnet
 Most of my information was gathered from old PPPProject FAQ’s
  
 First, the important stuff:
-It is assumed that you already have Net37 configured and are connected to a network like WWIVnet
+12345678901234567890123456789012345678901234567890123456789012345678901234567890
+It is assumed that you already have Net37 configured and are connected to a 
+network like WWIVnet
  
-You need to have access to a news server. With your login info in hand, edit your net.ini file
-(Packaged with WINS as sample.ini)
+You need to have access to a news server. With your login info in hand, edit 
+your net.ini file (Packaged with WINS as sample.ini)
  
 Open net.ini and find the section [NEWS]
  
@@ -96,8 +98,8 @@ my_listserv@domain.com *1000
  
 Now, with your net.ini file updated, it's time to configure your newsgroups:
  
-In BOARDEDIT (//BE), insert your new newsgroup: For this example, we are adding the Usenet
-newsgroup alt.bbs.doors
+In BOARDEDIT (//BE), insert your new newsgroup: For this example, we are adding 
+the Usenet newsgroup alt.bbs.doors
  
 A) Name    : alt.bbs.doors
 B) Filename    : ALTBBSD 
@@ -117,8 +119,8 @@ O) Description     : A brief description of the newsgroup
  
 With your newsgroup created, it is time to modify J) Net info:
  
-Select J and for "What sub type" give it an easy to recognize name. For this example I'm
-using ALTBBSD.
+Select J and for "What sub type" give it an easy to recognize name. For this 
+example I'm using ALTBBSD.
  
 What sub type: ALTBBSD
 Will you be hosting the sub? : Y
@@ -179,13 +181,14 @@ CONNECT.99
 @32767   your_node#
 ---
  
-Whenever I have to change a BBSLIST.x, CALLOUT.x or CONNECT.x file, I run the following commands
-from my BBS directory:
+Whenever I have to change a BBSLIST.x, CALLOUT.x or CONNECT.x file, I run the 
+following commands from my BBS directory:
  
 network3 .0 Y
 network2     
  
-This will generate a network status message and process it for you via email to the SysOp
+This will generate a network status message and process it for you via email 
+to the SysOp
  
 Assuming that there are no errors, you should see something like this:
 ---
@@ -206,27 +209,30 @@ Everything is fine.
 (0 seconds for analysis)       
 ---
  
-If there are errors, you will have to address them before proceeding. Check to see that you have
-not mistyped anything in the above files BBSLIST.x, CALLOUT.x and CONNECT.x.
+If there are errors, you will have to address them before proceeding. Check to 
+see that you have not mistyped anything in the above files BBSLIST.x, 
+CALLOUT.x and CONNECT.x.
  
 Once you are clear, you may proceed
  
 Next, create two text files, news.rc and newsrc (no ext)
  
-In news.rc, you will be adding the newsgroups you wish to include as subs in the following
-format: [newsgroup name] [high message number] [subtype] (from the first steps)
+In news.rc, you will be adding the newsgroups you wish to include as subs in 
+the following format: [newsgroup name] [high message number] [subtype] 
+(from the first steps)
  
 news.rc
 ---
 alt.bbs.doors 25849 ALTBBSD
 ---
  
-Best to check on your newsgroup server to determine what the current high message number is or
-you may find your BBS trying to download 10 years of news. It really won't like that.
+Best to check on your newsgroup server to determine what the current high message 
+number is or you may find your BBS trying to download 10 years of news. It really 
+won't like that.
  
  
-For the next file, newsrc, there are two options. First is to have it auto populate buy inserting
-a line above the newsgroup line in news.rc with [newsrc]
+For the next file, newsrc, there are two options. First is to have it auto 
+populate buy inserting a line above the newsgroup line in news.rc with [newsrc]
  
 news.rc
 ---
@@ -234,15 +240,17 @@ newsrc
 alt.bbs.doors 25849 ALTBBSD
 ---
  
-This will force a refresh of the newsrc file and populate the file with a list of available
-newsgroups on the server. This will be a LOT of data so it's actually best to gather this
-information using a news reader that can create the file for you. I used XNews.
+This will force a refresh of the newsrc file and populate the file with a list 
+of available newsgroups on the server. This will be a LOT of data so it's actually 
+best to gather this information using a news reader that can create the file for 
+you. I used XNews.
  
-Now, when you execute your mail.bat file, you should see the news.exe portion connect to the
-newsgroups and start downloading messages.
+Now, when you execute your mail.bat file, you should see the news.exe portion 
+connect to the newsgroups and start downloading messages.
  
  
-This is a draft version of this document and may contain errors. Please feel free to contact me should you experience any issues or find any errors.
+This is a draft version of this document and may contain errors. Please feel free to 
+contact me should you experience any issues or find any errors.
  
 jim 1@707.WWIVnet
 ```

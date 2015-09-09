@@ -24,6 +24,16 @@
 **Note:** The default config of WWIV5TelentServer runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run Network3.
 * Login as #1 and Check your email on the BBS. You should see a pretty email and it should say "Everything is Fine" along with other details.
 
+###Create MAIL.BAT
+In your \wwiv\ directory create MAIL.BAT and insert the following lines.
+```batch
+@ECHO OFF
+c:
+cd \wwiv\
+NETWORK /N1 .0
+bbs -m -e
+```
+
 ####Verify Network Mail
 * Create a new email and address it to 1@1
 * You will be prompted to pick the net (WWVIVnet) and confirm the system Skull & Bones.

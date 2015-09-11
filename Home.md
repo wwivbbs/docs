@@ -38,9 +38,7 @@ steps, see the full details on related INIT settings, WWIV.INI and other Advance
 configuration topics.
 
 [Windows WWIV 5.0 Installation](installwindows)
-
 [Linux WWIV 5.0 Installation](installlinux)
-
 [MSGs to users need Customization](msgs)  
 [Taglines on Messages](taglines)  
 
@@ -91,7 +89,7 @@ TODO: How his internet mail handling with the new tools?
 
 ### [Using ANSI in WWIV](ansi)
 ### [Sub Fix Utility](fix)
-
+### [Managing Log Files](logfiles)
 ## [Registration & License](license)
 
 ## [Client Software for Users of BBSes](clients)

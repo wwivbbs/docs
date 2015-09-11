@@ -73,7 +73,6 @@ These pages will help you find WWIV 5.0 compatible utilities and installation in
 ## Advanced Configuration
 
 ### [WWWIV.ini](wwivini)  
-### [WWIV Mods](mods)  
 ### [WWIV Edit](wwwivedit)  
 ### [Multi Instance](multinode)  
 ### [Chains & Doors](doors)  

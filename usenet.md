@@ -175,9 +175,8 @@ As other SysOps subscribe to the subs, you will begin to see them appear in thes
 ```
 
 ###MAIL.BAT
-TODO: Are there any additional lines to add to MAIL.BAT?
 
-Now, when you execute your mail.bat file, you should see the news.exe portion 
+Now, when your mail.bat runs, you should see the news.exe portion 
 connect to the newsgroups and start downloading messages.
 
 ***

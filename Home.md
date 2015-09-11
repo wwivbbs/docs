@@ -42,6 +42,7 @@ configuration topics.
 [Linux WWIV 5.0 Installation](installlinux)
 
 [MSGs to users need Customization](msgs)  
+[Taglines on Messages](taglines)  
 
 ## [Upgrading Earlier WWIV BBSes](wwivupgrade)
 Do you have your floppy disks with your 4.x WWIV BBS on it? We can get you upgraded to WWIV 5.0 

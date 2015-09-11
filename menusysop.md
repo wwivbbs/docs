@@ -14,11 +14,14 @@ These commands can be run while logged-on to the WWIV BBS. You will be prompted 
 ```
 
 ### [A] Allow Editor  
+Add and Remove Files from ALLOW.DAT
 ### [C] Chain Editor  
+Brings up the [Chain \ Door Editor Menu](doors)
 ### [E] Events Editor  
+Bring up the Events editor. Events are scheduled Jobs run on a schedule or after other system events.
 ### [I] Instance Editor  
+Allows the SysOp to see the status of all instances. Shutdown individual instances or all instances.
 ### [M] Menu Editor  
-
 Menu commands are called by there name and a number of options parameters.  
 The following forms are valid syntax  
 
@@ -184,13 +187,29 @@ GuestApply | Allows a guest to apply for access
 ConfigFileList | Enter the List+ configurator so the user can set it up to look like he wants
 
 ### [U] User Editor  
+The User editor allows you to change the account information, SL, DSL, etc. and other user settings.
+
 ### [K] Print Votes  
+Lists the voting questions.
+
 ### [?] Display Help  
+Displays the //SYSOP command menu
+
 ### [B] Sub Editor  
+The SUB Editor allows you to add\remove\edit SUBs or Boards.
 ### [D] Dir Editor  
+The DIR Editor allows you to add\remove\edit Directories in the Transfer section of the BBS
 ### [G] Bulletin Editor  
+The Bulletin editor allows you add\remove\edit Directories in the G-Files section of the BBS
 ### [J] Conference Editor  
+Conferences are groupings of SUBs. This option lets you add\remove\modify Conferences.
 ### [T] Text Editor  
+
 ### [V] Voting Editor  
+The voting editor allows you to add\remove and modify the polls on your BBS. Polls allow
+you to ask your users for feedback, collect opinions on current events. Any sort of multiple
+choice\yes|no question you want.
+
 ### [Q] Quit  
+That one's pretty obvious.
 

@@ -1,8 +1,14 @@
 # WWIV ANSI Support
 ***
 
+###Editor Color Codes
+These are the color codes you can use when posting messages, sending feedback and email on WWIV BBS. To use
+a particular color type CTRL-P + the letter or number that represents the color you want. You can then use 
+CTRL-P+0 to return to the default color.
 
+![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwivbbs/COLORS.png)
 
+###WWIV Pipe Colors
 
 ### Notes
 Just some notes to use when working on this page

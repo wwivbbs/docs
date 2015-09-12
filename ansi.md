@@ -10,6 +10,69 @@ CTRL-P+0 to return to the default color.
 
 ###WWIV Pipe Colors
 
+####WWIV.INI Colors
+
+```INI
+;=============================================================================
+;                               COLOR OPTIONS
+;=============================================================================
+;
+; NOTE:  Although the BBS is capable of using over 90 color combinations,
+; only the first ten may be set here.  The remaining colors are set from
+; inside the BBS.
+;
+; Colors are selected numerically. To determine the value for a color, use the
+; following chart:
+;
+;    0 = Black             8  = Dark Gray
+;    1 = Blue              9  = Light Blue
+;    2 = Green             10 = Light Green
+;    3 = Cyan              11 = Light Cyan
+;    4 = Red               12 = Light Red
+;    5 = Magenta           13 = Light Magenta
+;    6 = Brown             14 = Yellow
+;    7 = Light Gray        15 = White
+;
+; Now, to calculate a color, you take the value for the background color and
+; multiply by 16, then add it to the foreground color you wish. This will
+; provide the value you should use for that color combination. Note that
+: color values greater than 127 will result in blinking. In other words,
+; you should probably restrict background colors to colors 0-7 above.
+;
+; An example: if you want to find the value for, say, bright yellow on magenta,
+; it would be (5*16) + 14. This equates to (magenta * 16) + white.
+;
+; -----------------------------------------------------------------------------
+NUCOLOR[0]     = 7
+NUCOLOR[1]     = 11
+NUCOLOR[2]     = 14
+NUCOLOR[3]     = 13
+NUCOLOR[4]     = 31
+NUCOLOR[5]     = 10
+NUCOLOR[6]     = 12
+NUCOLOR[7]     = 9
+NUCOLOR[8]     = 5
+NUCOLOR[9]     = 3
+NUCOLORBW[0]   = 7
+NUCOLORBW[1]   = 15
+NUCOLORBW[2]   = 15
+NUCOLORBW[3]   = 15
+NUCOLORBW[4]   = 112
+NUCOLORBW[5]   = 15
+NUCOLORBW[6]   = 15
+NUCOLORBW[7]   = 7
+NUCOLORBW[8]   = 7
+NUCOLORBW[9]   = 7
+;
+; System Colors
+;
+TOPCOLOR               = 27                 ; for topscreen info
+F1COLOR                = 9                  ; for F1 user editor
+EDITLINECOLOR          = 31                 ; current field in F1
+CHATSELCOLOR           = 11                 ; for selecting sysop
+MSG_COLOR              = 2                  ; for color msgs
+;
+```
 ### Notes
 Just some notes to use when working on this page
 

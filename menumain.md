@@ -27,50 +27,50 @@
 
 ## Message Center  
 Command | Usage
-------- | -----
-N |  
-P | 
-R | 
-S |
-Z | 
-# | 
-J | 
-* | 
-> \ + \ ] | 
-< \ - \ [ |
-} |
-{ |
-H | 
+:---: | -----
+N | Scans all SUBs for new messages 
+P | Post a new message in the current SUB.
+R | Remove Message allows you to delete a message you posted to the current SUB.
+S | Scan shows you the list of all the messages in the current SUB, starting at the message number you provide.
+Z | Scans all the subs non-stop as in the text will go flying by so fast you cant' read it.
+# | Enter a # go to that SUB.
+J | Join a conference allows you to switch between conferences.
+* | List all the available SUBs 
+> \ + \ ] | Move Up 1 SUB
+< \ - \ [ | Move Down 1 SUB
+} | Move Up 1 Conference
+{ | Move Down 1 Conference
+H | Hop to a another SUB allows you move to a sub by typing in part of the name.
 
 ## Miscellaneous  
 Command | Usage
-------- | -----
-A | 
-B | 
-C | 
-L | 
-I | 
-O | 
-U | 
-V | 
-X | 
+:---: | -----
+A | The auto-message is displayed to users when they login. You can view and maybe add an auto-message here.
+B | BBS List is just what it sounds like, a list of BBSes.
+C | This calls the SysOp for a Chat if they are available.
+L | Display the last callers to the BBS.
+I | Display the system Information message.
+O | Log Off
+U | Display the list of Users on the BBS.
+V | Vote on the polls in the BBS.
+X | Toggling expert modem turns on\off the menus being displayed after every selection. You can always re-display the menu by typing **?**
 Y | 
 CTRL-Y |
 ## E-Mail  
 Command | Usage
-------- | -----
-E | 
-M | 
-F | 
-K | 
+:---: | -----
+E | Send an email to a user on this BBS or another BBS if the BBS is a memeber of Nets or even the internet if the BBS supports that.
+M | Read your Email
+F | Feedback is an email to the SysOp.
+K | Killing a sent email allows you to delete it.
 
 ## System Features  
 Command | Usage
-------- | -----
-D | Change your Defaults  
-G | Read General Files  
-T | Transfer Section  
-. | Online Programs Launches Doors\Chains Menu
-$ | Use Time Bank  
-CTRL-T | 
+:---: | -----
+D | Your Defaults include information about your account, your editor of choice and other useful settings.
+G | General Files are files available from the SysOp.
+T | The Transfer section is where you can download and upload files.
+. | Online Programs Launches Doors\Chains Menu **Games** and other fun BBS add-ons.
+$ | The Time Bank allows you to save time from today to use in the future. Not really as important in today's BBS world, but used to be critical to power users in the Dial-Up days.
+CTRL-T | Display how much time you have left to use in this login.
 

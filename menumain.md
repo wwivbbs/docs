@@ -54,8 +54,8 @@ O | Log Off
 U | Display the list of Users on the BBS.
 V | Vote on the polls in the BBS.
 X | Toggling expert modem turns on\off the menus being displayed after every selection. You can always re-display the menu by typing **?**
-Y | 
-CTRL-Y |
+Y | Displays your user account information.
+CTRL-Y | This toggles the screen by screen pausing in the BBSes display. If you feel like it is pausing one or two lines short, edit your terminal size in Defaults.
 ## E-Mail  
 Command | Usage
 :---: | -----

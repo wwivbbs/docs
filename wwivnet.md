@@ -12,7 +12,7 @@ WWIVNet that is the primary network for WWIV BBSes called WWIVNet.
 
 ## Technical Overview of WWIVNet
 
-TODO: Fill this in
+Currently WWIVnet uses a centralized SMTP and POP server to route email and sub messages to member nodes. This will be replaced with a BINKP based solution in the future.
 
 ## Joining WWIVNet
 

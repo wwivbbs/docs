@@ -1,8 +1,5 @@
 # Registration & Licensing
 ***
-
-TODO: Someone official should fill this part out.
-
 ## WWIV 5.0 Registration & License
 There is no registration to use WWIV 5.0. But we'd love to add you to the list, so contact the team! Http://wwivbbs.com
 
@@ -22,6 +19,4 @@ limitations under the License.
 
 ## WWIV 4.3 Registration & Licensing
 
-WWIV 4.3 and prior is commercially available and owned by WSS.
-
-TODO:Let's include some history here on pricing
+WWIV 4.3 and prior is commercially available and owned by WWIV Software Services, LLC.

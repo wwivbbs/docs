@@ -8,6 +8,7 @@ Events are setup by using the EVENTEDIT feature. This feature may be accessed in
 1. From WFC, enter H and then enter the system password when prompted for it.
 2. From the main menu, enter //EVENTEDIT and then enter the system password when prompted for it.
 3. From the main menu, enter //EE (short form for EVENTEDIT and the system password when prompted for it.
+4. From the //SYSOP menu you can select Event Editor.
 
 ### Event Editor (EE).  
 
@@ -68,50 +69,32 @@ You can use the [ and ] to navigate between events.
 
 ###System Events
 
-Selecting System Events from the opening
-screen of the Event Editor will open the System Events Editor.
-```
-ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-³   System Events Configuration                    ³
-³                                                  ³
-³   1. Terminal Program     :                      ³
-³   2. Shrink for terminal? : No                   ³
-³   3. Begin Day Event      :                      ³
-³   4. Logon Event          :                      ³
-³   5. Logoff Event         :                      ³
-³   6. Newuser Event        :                      ³
-³   7. Upload  Event        :                      ³
-³   8. Virus Scanner CmdLine:                      ³
-³   Q. Quit                                        ³
-³                                                  ³
-³   Which? <Q, 1-8, ? = Help>                      ³
-ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
-```
+There are four System Events you can use and are configured in WWIV.INI
 
-1. Terminal Program.  If you wish to be able to access your
-terminal program by hitting T from the WFC Screen, configure to
-commandline for the program here.
-
-2. Shrink for Terminal.  If your terminal requires a large
-amount of memory, toggle this to Yes to have the BBS shrink
-prior to executing the command.
-
-3. Begin Day Event.  The begin day event will run at midnight
+1. Begin Day Event.  The begin day event will run at midnight
 every day.  This is a great place for game maintenance routines
 and other programs that need to run once every day such as
 AutoSend or NFT's cleanup routines.
-
-4. Logon Event. This event runs each time a user logs on.
-
-5. Logoff Event. This event runs each time a user logs off.
-
-6. Newuser Event. This event runs each time a new user logs on.
-
-7. Upload Event.  This event runs each time a user uploads a
+2. Logon Event. This event runs each time a user logs on.
+3. Newuser Event. This event runs each time a new user logs on.
+4. Upload Event.  This event runs each time a user uploads a
 file or a batch of files to the BBS.
 
-8. Virus Scanner CmdLine.  this is the commandline for your
-virus scanner.
+```INI
+;=============================================================================
+;                          EXTERNAL PROGRAM OPTIONS
+;=============================================================================
+;
+;UPLOAD_CMD     =                           ; upload event
+;BEGINDAY_CMD   =                           ; beginday even
+;NEWUSER_CMD    =                           ; newuser event
+;LOGON_CMD      =                           ; logon event
+;
+;
+```
 
-Again, replaceable commandline parameters are available and the
-list is accessed by hitting ? in the System Events Editor.
+For example, to configure c:\wwiv\logon.bat to run after the logon event occurs you would edit the line as follows:
+```INI
+LOGON_CMD      = c:\wwiv\logon.bat           ; logon event
+```
+**NOTE:** As well as inserting the file to run, you also need to remove the leading ";" which un-comments the line.

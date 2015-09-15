@@ -6,15 +6,16 @@ Here are some clients you can use on your device to access WWIV 5.0 via Telnet.
 
 Client | Windows | Linux | Android | iOS | Windows Phone
 ------ | :-----: | :---: | :-----: | :-: | :-----------:
-[SyncTerm](http://www.syncterm.net/) | V | X |  |  |
-[NetRunner](http://mysticbbs.com/downloads.html) | X | X |  |  |
-[Terminal IDE](https://play.google.com/store/apps/details?id=com.spartacusrex.spartacuside) |  |  | X |  |
-[AfterShock](https://play.google.com/store/apps/details?id=com.asvcorp.aftershock) |  |  | X |  |
-[EtherTerm](https://github.com/M-griffin/EtherTerm) | X | X |  |  |
+[SyncTerm](http://www.syncterm.net/) | V | x |  |  |
+[NetRunner](http://mysticbbs.com/downloads.html) | x | x |  |  |
+[Terminal IDE](https://play.google.com/store/apps/details?id=com.spartacusrex.spartacuside) |  |  | x |  |
+[AfterShock](https://play.google.com/store/apps/details?id=com.asvcorp.aftershock) |  |  | x |  |
+[EtherTerm](https://github.com/M-griffin/EtherTerm) | x | x |  |  |
+[JuiceSSH](https://juicessh.com/) |  |  | V |  |
 [Blank]() |  |  |  |  |
 
 Key:  
-X = Known to exist  
+x = Known to exist  
 V = Verified to work  
 
 ## NOTES

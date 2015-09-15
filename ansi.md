@@ -85,11 +85,17 @@ them. For example, by default |#5 is GREEN on BLACK. A User can change to MAGENT
 
 ![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwivbbs/ColorEditor.png)
 
+###Art Tools
+[ASCII Art Studio](http://www.torchsoft.com/en/aas_information.html) is a great tool for making the B&W versions of your .TAG lines, Welcomes, Logons, etc. Then you can add the color codes in notepad.  
+[Pablo Draw](http://picoe.ca/products/pablodraw/) is a great tool for doing full color ANSI artwork, used by many of the top artists.  
+
+###Known Issues
+* Microsoft stopped including [ANSI.SYS](https://en.wikipedia.org/wiki/ANSI.SYS) in Windows around the VISTA time frame. Because there's no ANSI support on some OSes you won't see well rendered ANSI on the local system. You'll see all those square brackets and extended ASCII characters.
+
 ### Notes
 Just some notes to use when working on this page
 
-* Put the stuff about the colors in here.
-* Should mention anything that doesn't work like on Local Server
+* Tracking this work in [Issue #160](https://github.com/wwivbbs/wwiv/issues/160)
 
 From What's New
 ```

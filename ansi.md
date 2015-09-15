@@ -9,6 +9,11 @@ CTRL-P+0 to return to the default color.
 ![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwivbbs/COLORS.png)
 
 ###WWIV Pipe Colors
+These are the default 0-9 Pipe colors used in the menu system and other UI pages. You uses them by specifying
+```|#5``` when you want to start GREEN and then ```|#0``` to switch back to GRAY. Look in some of the .MSG files
+in \wwiv\gfiles for more samples.
+
+![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwivbbs/defaultPipeColors.png)
 
 ####WWIV.INI Colors
 
@@ -73,6 +78,13 @@ CHATSELCOLOR           = 11                 ; for selecting sysop
 MSG_COLOR              = 2                  ; for color msgs
 ;
 ```
+
+###User Custom Colors
+By using the //COLORS menu option, users can customize how color codes are displayed to them and only
+them. For example, by default |#5 is GREEN on BLACK. A User can change to MAGENTA on WHITE and anywhere |#5 or CTROL-P5 have been used .MSG files or SUB messages it will display the users chosen color instead. Here is a screen shot of //COLORS. The character in the cell is the one you press to customize that color.
+
+![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwivbbs/ColorEditor.png)
+
 ### Notes
 Just some notes to use when working on this page
 

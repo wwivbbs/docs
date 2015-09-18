@@ -37,9 +37,9 @@ you're ready to go live and open up to users. After you complete these installat
 steps, see the full details on related INIT settings, WWIV.INI and other Advanced 
 configuration topics.
 
-[Windows WWIV 5.0 Installation](installwindows)
-[Linux WWIV 5.0 Installation](installlinux)
-[MSGs to users need Customization](msgs)  
+[Windows WWIV 5.0 Installation](installwindows)  
+[Linux WWIV 5.0 Installation](installlinux)  
+[MSGs to users need Customization](msgs)   
 [Taglines on Messages](taglines)  
 
 ## [Upgrading Earlier WWIV BBSes](wwivupgrade)

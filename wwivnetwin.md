@@ -50,7 +50,7 @@ Scheduler | BBS Who uses
 --- | ----
 [Z-Cron](http://www.z-cron.com/) | Cloud City BBS @206
 [System Scheduler](http://www.splinterware.com/products/wincron.htm) | Skull and Bone @1
-
+[Windows Task Scheduler](http://windows.microsoft.com/en-US/windows/schedule-task#1TC=windows-7) | Blood Stone BBS @707
 ## NET.INI Workaround
 ```INI
 [NETWORK1]

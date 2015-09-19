@@ -18,6 +18,7 @@
 @514     : Mystic Rhythms
 @666     : Hawkeye's BBS
 @707     : The Blood Stone                             telnet://www.bsbbs.com
+@708     : Manic Arcade BBS (Dev)                telnet://www.manicarcade.com
 @815     : Inland Utopia (10am-11pm PST)           telnet://iutopia.no-ip.org
 ------------------------------------------------------------------------------
 Not connected to WWIVnet

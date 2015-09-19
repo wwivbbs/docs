@@ -95,7 +95,7 @@ TODO: How his internet mail handling with the new tools?
 This page will include information on Telnet clients, dial-up clients
 and other User helpers. We want to make this easy for the new BBS User.
 
-## [WWIV Project Ideas]
+## [WWIV Project Ideas](WWIV-Project-Ideas)
 This page will include ideas for projects that developers might want to take on in their copious spare time.
 
 ## [Links](links)

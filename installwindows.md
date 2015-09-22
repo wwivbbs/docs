@@ -20,23 +20,15 @@ WWIV 5 is compiled with MSVC 2015. Install the
 [Visual C++ Redistributable for Visual Studio 2015]
 (https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
-#### Fossils Driver
-
-WWIV 5.0 is tested and used primarily with a fork of the Synchro BBS FOssil Driver.
-
-TODO: This needs to be in the packaged build [#147](https://github.com/wwivbbs/wwiv/issues/147)
-
-Download [sbbsexec.zip](http://sourceforge.net/projects/wwiv/files/redist/sbbsexec.zip/download) and place the mentioned files like so:
-* sbbsexec.dll in \windows\system32
-* dosxtrn.exe in \wwiv
-
 ## Installation Steps
 
 Take the build of WWIV you downloaded and extract all the  files 
 into c:\wwiv (or c:\bbs). To make it easy on the author(s) we'll 
 just say c:\wwiv from now on.
 
+You must also must place a copy of ```sbbsexec.dll``` which is in the ZIP file in ```\windows\system32```.  
 
+### Initial Configuration
 From a command prompt run INIT.EXE  
 You will see this:  
 

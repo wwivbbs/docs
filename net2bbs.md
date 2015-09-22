@@ -1,6 +1,8 @@
 # Net2BBS Telnet Server by PCMicro
 ***
 
+This is an alternative to the Fossil Driver and Telnet Server included in WWIV 5.0.
+
 ## Known Issues
 
 Issue | Comments

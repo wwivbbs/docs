@@ -15,8 +15,8 @@
 │ Directory : NETS\WWIVNET\                                                │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
-* Edit \wwiv\NET.INI: POPNAME & POPPASS will be given to you by 1@1  
-**NOTE:** NET.INI is missing from the release zip. For now grab it from down below.
+* Rename ```\wwiv\sample_net.ini``` to ```\wwiv\net.ini```
+* Edit \wwiv\net.ini and input the POPNAME & POPPASS will be given to you by 1@1  
 * Create \wwiv\nets\wwivnet\CALLOUT.NET and add the line supplied by 1@1
 * Create \wwiv\mail.bat and add the line provided to you by 1@1. You will have a second line as well bbs.exe -m -e with runs the local mail handler and maintenance events.
 * From \wwiv\ run ```Network3 y .0``` which will verify your configuration and files and send an email to your local #1 mailbox. 
@@ -51,68 +51,8 @@ Scheduler | BBS Who uses
 [Z-Cron](http://www.z-cron.com/) | Cloud City BBS @206
 [System Scheduler](http://www.splinterware.com/products/wincron.htm) | Skull and Bone @1
 [Windows Task Scheduler](http://windows.microsoft.com/en-US/windows/schedule-task#1TC=windows-7) | Blood Stone BBS @707
-## NET.INI Workaround
-```INI
-[NETWORK1]
-primenet = WWIVNET
-smtphost= wwivbbs.com
-POPHOST = wwivbbs.com
-SMTPPORT= 2525
-POPPORT= 110
-POPNAME = Your POP Name
-POPPASS = Your POP Pass
-;
-[GENERAL]
-DRIVER = KLOS          
-PPPCMD = KALI
-RETRIES = 3
-KEEPSENT = 7
-ALLMAIL = Y      
-MOREINFO = N
-ONECALL = Y
-CLEANUP = N
-REALNAME = Y
-IPADDR = [Your BBS IP ADDR]
-;IPSTRING = IP address set to
-NETMASK = 255.255.255.0
-DNS = [Your preferred DNS server address]
-SDNS = [Your secondary DNS server address]
-DOMAIN = wwivbbs.com
-GATEWAY =  [Your GW ADDR]
-TIMEOUT = 90
-SOCK_DELAY=90
-INACTIVE = 120
-; User account name for forwarding service, if used.
-;FWDNAME = unclebrute
-; Mail domain for forwarding services, if used.
-;FWDDOM =ispop.net
-[NEWS]
-;NEWSHOST=[NEWS Server IP ADDR]
-;NEWSNAME=[NEWS Server Login]
-;NEWSPASS=[NEWS Server Pass]
-;NEWSNAME0 = newsname
-;NEWSHOST0 = news.erols.com
-;NEWSHOST = msnews.microsoft.com
-;NEWSPASS0 = newspassword
-POSTMASTER = 1
-REGNO = 0
-NEWSRC_UPD= Y
-TMPDIR = C:\WWIV\NEWSTEMP
-; Use WWIV real name (USER.LST) instead of the alias on outbound mail.
-REALNAME = N
-SPAMCONTROL = Y
-SPAMADDRESS = YourFake Email@some.com.remove.com
-REPLYTO = Your email@your.com.remove.com
-SIGNATURE = C:\WWIV\GFILES\inet.tag
-;RIMETAG = C:\WWIV\GFILES\rime.tag
-;DOVETAG = C:\WWIV\GFILES\dove.tag
-XPOSTS = 5
-BINXPOST = Y
-QUIET = N
-;
 
-```
-
+***
 Within the Net37.zip there are two documents and I've also posted them on the wiki:  
 
 * [NET37.DOC](net37doc) <- Has all the installation information (Must Read!)

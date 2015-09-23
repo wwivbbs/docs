@@ -55,5 +55,19 @@ Coordinator, Eli Sanford 1@1 WWIVnet or email elisanford@gmail.com
     Signature/Name:                              Date:
     
 ## [Configuring WWIVNet on Windows](wwivnetwin)
-
 ## [Configuring WWIVNet on Linux](wwivnetlinux)
+## Hosting your own WWIVNet SUB
+
+If\when you are are ready to host your own WWIVNet sub here are the steps to take:
+
+* Set up your sub locally in your BBS first. This is harmless.
+* Get to the Sub Editor in //SYSOP or from the WFC screen.
+* Choose to Insert a new SUB and fill-out the Name, and Filename fields at a minimum.
+* Then choose "J" Net Info and select WWIVNet
+* The SUBTYPE is the internal name of the sub in WWIVNet this must be unique (see SUBS.LST)
+* Select YES you will be hosting the SUB.
+* It is easiest and best to also allow auto add/drop requests. Unless your Sub is more exclusive.
+* Select YES to add it to SUBS.LST to make it public.  
+**Note:** Currently we have to manually share the subs.lst, that will be fixed in the future.
+* Add your Sub to the subs.lst or request help on the WWIV Sysops Sub
+* Post an announcement on the WWIVNet Sub Yellow Pages to advertise your new sub

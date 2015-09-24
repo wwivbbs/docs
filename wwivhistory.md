@@ -3,6 +3,10 @@
 
 Wayne Bell originally wrote WWIV BBS software and developed it until 1997.  In 1998, WWIV was purchased by WWIV Software Services, LLC (WSS) and was supported, developed and distributed by WSS and authorized Source Distribution Sites (SDS) until XXXX. In YYYY WSS agreed to open source the WWIV Software under the Apache License. It is the BBS system of choice for thousands of sysops world-wide who appreciate having a rock-solid BBS system to rely upon and who like the fact that it is dynamic and evolving software.
 
+##[WWIV Hall of Fame](wwivHOF)
+##[WWIVCon](wwivcon)
+
+
 ##Historical Data 
 
 TODO: This needs to be updated to WWIV 5.0 history

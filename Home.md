@@ -18,10 +18,7 @@ Thank you,
 The WWIV Dev Team 
 
 ## [History of WWIV](wwivhistory)
-#### [WWIV BBS Hall of Fame](wwivHOF)
 #### [WWIV BBS List](wwivbbslist)
-#### [WWIVCon](wwwivcon)
-#### [New SysOp Suggestions](newsysop)
 
 ## Download WWIV 5.0 Binaries
 
@@ -88,6 +85,7 @@ TODO: How his internet mail handling with the new tools?
 
 ### [Using ANSI in WWIV](ansi)
 ### [Sub Fix Utility](fix)
+### [New SysOp Suggestions](newsysop)
 ### [Managing Log Files](logfiles)
 ## [Registration & License](license)
 

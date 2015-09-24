@@ -1,4 +1,4 @@
-# WWIV BBS Listing as of 15 August 2015
+# WWIV BBS Listing as of 24 September 2015
 ```
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
  WWIVNet :
@@ -28,7 +28,7 @@ Not connected to WWIVnet
          : The Arcade BBS                   telnet://thearcade.darktech.org
 ============================================================================
 No Dial Tone
-  Previously listed sites which appear to be offline as of 15 August 2015
+  Previously listed sites which appear to be offline as of 24 September 2015
 ============================================================================
 
 @71      : The Radio Shack               telnet://radioshack.wwivbbs.com:24

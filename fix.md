@@ -52,6 +52,9 @@ Experimental Features [?]
 Logfile saved in \BBS directory
 
 ```FIX.LOG
+
+C:\BBS\FIX.EXE -D
+
 ----------  Thu 24 Sep 2015, fix v5.00 (Build 1586)
 + 16:38:11  Reading config.dat...
 + 16:38:11  Reading C:\WWIV\DATA\status.dat...

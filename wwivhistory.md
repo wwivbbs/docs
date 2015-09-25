@@ -106,9 +106,17 @@ designed with multi-tasking in mind.
 In January of 1998, Dean Nash purchased WWIV and WWIV Software Services from Wayne Bell. WSS was reformed as a Tennessee Limited Liability Company with a full corporate posture. Craig Dooley was appointed Support Coordinator and supervises the Support Board System and Source Distribution Sites.
 
 ## WWIV 5.0 
-In YYYY WSS agreed to open source the WWIV Software under the Apache License.
+In YYYY WSS agreed to open source the WWIV Software under the Apache License. Originally the code was managed on Sourceforge, but in 2015 development was moved to GitHub.
 
-##[WWIV Hall of Fame](wwivHOF)
+##WWIV Hall of Fame
+
+HOF Member | Handle | Node | Contributions
+--- | --- | ---- | ---
+Wayne Bell | Random | WWIVnet @1 | The creator of WWIV
+Dean Nash | Trader Jack | | WWIV Software Services
+Adam Caldwell | The Emporer |  | WWIVEdit
+Craig Dooley | | | WWIVToss
+
 ##WWIVCon
 WWIVCon was the official WWIV Convention. Here's the information we have found year by year.
 

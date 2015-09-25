@@ -170,3 +170,4 @@ Form 1991 through 1994 the official WWIVNews was published and distributed over 
 [THOUGHTS ON CO-SYSOPS FOR WWIV BOARDS AND SECURITY LEVELS IN GENERAL.. by Kent Stromsmoe](http://www.textfiles.com/bbs/cosysop.txt)  
 [WWIVNet & WWIVLink split](http://www.bbsdocumentary.com/library/CONTROVERSY/EVENTS/WWIVWAR/)  
 [The BBS.org Enty on WWIV](http://sysopscorner.thebbs.org/wwiv.html)  
+[Blodstone BBS WWIV Files](http://www.bsbbs.com/wwiv/)  

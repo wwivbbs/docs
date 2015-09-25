@@ -5,9 +5,8 @@
 The FIX utility is a tool that can inspect your BBS's data files and is used sparingly when facing possible corruption in your .dat files
 
 ```FIX
-Fix /? for info
 
-Command Line Usage: FIX.EXE [-Y, -D, -U, -X]
+Command Line Usage: 
 
         -Y      = Force Yes to All Prompts
         -D      = Check Directories
@@ -30,6 +29,7 @@ Checks for critical DATA files [Paths? ]
 Adding the -D command line switch instructs FIX to run the FixDirectoriesCommand
 
 ```FIX-D
+
 Checks # of files
 Checks and repairs Extended Descriptions
 ```
@@ -37,6 +37,7 @@ Checks and repairs Extended Descriptions
 Adding the -U command line switch instructs FIX to run the FixUsersCommand
 
 ```FIX-U
+
 Checks USER.LST
        Checks for trashed user records
        Checks size
@@ -52,8 +53,8 @@ Experimental Features [?]
 Logfile saved in \BBS directory
 
 ```FIX.LOG
-
-C:\BBS\FIX.EXE -D
+(Ran FIX -D)
+C:\BBS\FIX.LOG
 
 ----------  Thu 24 Sep 2015, fix v5.00 (Build 1586)
 + 16:38:11  Reading config.dat...

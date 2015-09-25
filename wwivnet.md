@@ -56,6 +56,13 @@ Coordinator, Eli Sanford 1@1 WWIVnet or email elisanford@gmail.com
     
 ## [Configuring WWIVNet on Windows](wwivnetwin)
 ## [Configuring WWIVNet on Linux](wwivnetlinux)
+## Maintaining your WWIVNet Connections
+When you setup WWIVNet you download WWIVNET-##.zip from the build server and put the files in ```\wwiv\nets\wwivnet```. Occasionally you need to update these files so your BBS knowns who the new nodes & SUBs are on the net as well as which ones have gone away. If you are NOT also setup to get a Usenet feed you can copy the new files from the zip to ```\wwiv\net\wwivnet``` each time they are updated.
+
+If you are also getting a feed from Usenet you have customized these files and you need to maintain your edits. These are the files you need to edit each time you get a new set of WWIVNet files.
+
+**TODO** This in progress. See [Issue 229](https://github.com/wwivbbs/wwiv/issues/229).  
+
 ## Hosting your own WWIVNet SUB
 
 If\when you are are ready to host your own WWIVNet sub here are the steps to take:

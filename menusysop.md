@@ -14,7 +14,24 @@ These commands can be run while logged-on to the WWIV BBS. You will be prompted 
 ```
 
 ### [A] Allow Editor  
-Add and Remove Files from ALLOW.DAT
+This option applies to registered sysops only and is
+associate with the OPT_FAST_Search setup.  A program is
+provided called WWSORT.EXE which should be run first.
+
+This program creates your original ALLOW.DAT file which
+will permit a fast search for duplicate file names.  The
+ALLOWEDIT option gives the sysop the ability to add or
+remove file names from the binary file.  A sysop might
+want to add the name of a non-existant file if he did
+not care to have that file uploaded to him.  For example,
+sysops frequently get a "scam" uploaded to them called
+FASTCASH.  This "scam" is like a chain letter for BBSes.
+Putting FASTCASH as a file name would prevent someone's
+uploading a file by that name.  By the same token, if
+the sysop needs to remove a filename from the binary
+list, he has the option to do so by using the ALLOWEDIT
+option.                                                       
+
 ### [C] Chain Editor  
 Brings up the [Chain \ Door Editor Menu](doors)
 ### [E] Events Editor  

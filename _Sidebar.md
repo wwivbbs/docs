@@ -1,4 +1,5 @@
 ###[History of WWIV](wwivhistory)
+###[WWIV BBS List](wwivbbslist)
 ###[Installation on Windows](installwindows)
 ###[Installation on Linux](installlinux)
 ###[Back to Wiki Home](Home)

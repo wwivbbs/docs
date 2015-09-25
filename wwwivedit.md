@@ -20,22 +20,26 @@ and overwrite the existing file.
 Your install is done. To set WWIVEdit as your editor, at the Main Menu go to "D" defaults and using
 option "9" change your fullscreen editor.
 
-If you need to add the lines by hand to wwiv.ini, here they are
-
-    Description : wwivedit 
-    BBS Type : WWIV 
-    Use DOS Interrupts: No 
-    Emulate FOSSIL : Yes 
-    Filename to run remotely: 
-    C:\wwiv\wwivedit\wwivedit %1 %2 %3 %4 
-    Filename to run locally: 
-    C:\wwiv\wwivedit\wwivedit %1 %2 %3 %3 -set:local 
-    %1 = filename to edit 
-    %2 = chars per line 
-    %3 = lines per page 
-    %4 = max lines 
-
-<ESC> when done.
+When you run install, this will be added to your external editors section in INIT.EXE
+```
+┌───────────────────────────────────────────── External Editor Configuration ┐
+│ Description       : WWIVEdit -- Highly Recommended                         │
+│ BBS Type          : WWIV                                                   │
+│ Use DOS Interrupts: No                                                     │
+│ Emulate FOSSIL    : Yes                                                    │
+│ Filename to run remotely:                                                  │
+│ C:\WWIV\WWIVEDIT\WWIVEDIT %1 %2 %3 %4                                      │
+│                                                                            │
+│ Filename to run locally:                                                   │
+│ C:\WWIV\WWIVEDIT\WWIVEDIT %1 %2 %3 %4 -set:local                           │
+│                                                                            │
+│ %1 = filename to edit                                                      │
+│ %2 = chars per line                                                        │
+│ %3 = lines per page                                                        │
+│ %4 = max lines                                                             │
+│                                                                            │
+└────────────────────────────────────────────────────────────────────────────┘
+```
 
 Using your favorite text editor open c:\wwiv\wwivedit\config\default.dep and 
 edit the file so has the following changes:
@@ -82,7 +86,7 @@ FOSSIL: [1] 1=Use fossil driver if Comport > 0
 BBS: [3] 0=None, 1=WWIV
 ```
 
-After you edit file from the command prompt run `C:\WWIV\WWIVEDIT\WWIVEDT -F` which compiles the changes.
+After you edit file from the command prompt run `C:\WWIV\WWIVEDIT\WWIVEDIT -F` which compiles the changes.
 
 ### Installing WWIVEdit on Linux
 

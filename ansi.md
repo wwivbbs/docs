@@ -13,6 +13,8 @@ These are the default 0-9 Pipe colors used in the menu system and other UI pages
 ```|#5``` when you want to start GREEN and then ```|#0``` to switch back to GRAY. Look in some of the .MSG files
 in \wwiv\gfiles for more samples.
 
+**Note:** that the ```+``` sign should not be used when you add the code to a file, I merely used that so the text would show up. So you would use ```|#0``` NOT ```|+#0```.
+
 ![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwivbbs/defaultPipeColors.png)
 
 ####WWIV.INI Colors

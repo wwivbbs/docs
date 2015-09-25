@@ -5,3 +5,5 @@ Ideas for new utilities or new features for WWIV that might take more time than 
 3. Embedding a scripting language (Python, JavaScript) in the BBS.
 4. Built-in FTN support.
 5. Built-in QWKnet support.
+6. Add secure protocol to WWIVTelnet Server. SSH?
+7. Add GEOIP filter/block tools to WWIVTelnet Server

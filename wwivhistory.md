@@ -113,7 +113,7 @@ WWIVCon was the official WWIV Convention. Here's the information we have found y
 [WWIVCon 1994- New Orleans 1-3 July](wwivcon1994)  
 [WWIVCon 1995 - Buffalo](wwivcon1995)  
 [WWIVCon 1996 - Minneapolis](wwivcon1996)  
-[WWIVCon 1997 - Washington DC](wwivcon1997)  
+[WWIVCon 1997 - Washington DC 25-27 July](wwivcon1997)  
 [WWIVCon 1998 - Pigeon Forge 21-23 August](wwivcon1998)  
 [WWIVCon 1999 - Los Angeles](wwivcon1999)  
 

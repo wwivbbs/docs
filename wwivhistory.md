@@ -107,7 +107,16 @@ designed with multi-tasking in mind.
 In YYYY WSS agreed to open source the WWIV Software under the Apache License. It is the BBS system of choice for thousands of sysops world-wide who appreciate having a rock-solid BBS system to rely upon and who like the fact that it is dynamic and evolving software.
 
 ##[WWIV Hall of Fame](wwivHOF)
-##[WWIVCon](wwivcon)
+##WWIVCon
+WWIVCon was the official WWIV Convention. Here's the information we have found year by year.
+[WWIVCon 1994- New Orleans 1-3 July](wwivcon1994)  
+[WWIVCon 1995 - Buffalo](wwivcon1995)  
+[WWIVCon 1996 - Minneapolis](wwivcon1996)  
+[WWIVCon 1997 - Washington DC](wwivcon1997)  
+[WWIVCon 1998 - Pigeon Forge 21-23 August](wwivcon1998)  
+[WWIVCon 1999 - Los Angeles](wwivcon1999)  
+
+
 ##WWIVNews - The WWIV Newsletter
 Form 1991 through 1994 the official WWIVNews was published and distributed over WWIV Nets. 
 **TO DO** Fact Check those dates.

@@ -1,4 +1,4 @@
-#WWIVCon 1997 Washington DC
+#WWIVCon 1997 Washington DC 25-27 July
 ***
 
 ```

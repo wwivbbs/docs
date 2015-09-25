@@ -102,9 +102,11 @@ practically, have the BBS run external programs without running under a
 multi-tasking  operating  system.  To  put  it  simply,  PC-DOS was not
 designed with multi-tasking in mind.
 
+## WWIV Software Services
+In January of 1998, Dean Nash purchased WWIV and WWIV Software Services from Wayne Bell. WSS was reformed as a Tennessee Limited Liability Company with a full corporate posture. Craig Dooley was appointed Support Coordinator and supervises the Support Board System and Source Distribution Sites.
 
 ## WWIV 5.0 
-In YYYY WSS agreed to open source the WWIV Software under the Apache License. It is the BBS system of choice for thousands of sysops world-wide who appreciate having a rock-solid BBS system to rely upon and who like the fact that it is dynamic and evolving software.
+In YYYY WSS agreed to open source the WWIV Software under the Apache License.
 
 ##[WWIV Hall of Fame](wwivHOF)
 ##WWIVCon
@@ -147,54 +149,6 @@ Form 1991 through 1994 the official WWIVNews was published and distributed over 
 [WWIVNews Volume 6 Issue 3 (September/October 1995)](wwiv9509)  
 [WWIVNews Volume 6 Issue 4 (December 1995)](wwiv9512)  
 [WWIVNews Volume 7 Issue 1 (Spring 1996)](wwiv96spr)  
-
-##Historical Data 
-
-TODO: This needs to be updated to WWIV 5.0 history
-
-WWIV was originally written by Wayne
-Bell.  Wayne began work on WWIV when he was a teenager.  It
-was first written in BASIC on a TRS-80.  Wayne soon
-recognized the limitations of the BASIC language for BBS
-operations and he re-wrote the program in PASCAL.  At that
-time, the BBS could be registered by donations of $25.  The
-last PASCAL version was v3.21d. Many modern day PASCAL BBS
-systems are based wholly or in part upon this early version
-of WWIV. All v4.xx releases of WWIV have been written in C.
-With this language, WWIV has developed into a multifeatured
-BBS system supporting one of the most trouble-free hobbyist
-networks in the world.  WWIVnet, the network founded by
-Wayne, began as a local based network in Los Angeles,
-California with 25 charter members.  In the early 1990's,
-the network grew to over 1,500 members located around the
-world. Because many sysops wanted to run their own networks
-for various reasons, Wayne added a feature which allowed the
-BBS system to participate in multiple WWIV-based networks
-and developed the networking software to support such
-multiple network usage. At the peak, there were some 100
-WWIV based networks offering a range of topics and
-supporting a multitude of various interests.
-
-In January of 1998, Dean Nash purchased WWIV and WWIV
-Software Services from Wayne Bell.  WSS was reformed as
-a Tennessee Limited Liability Company with a full
-corporate posture. Craig Dooley was appointed Support
-Coordinator and supervises the Support Board System and
-Source Distribution Sites.
-
-The documentation for WWIV has also developed overtime.
-It began as a short 3-page document written by Wayne.
-Later, with v4.10, William Daystrom wrote a complete
-set of documentation for use with WWIV. Beginning with
-v4.20, Filo added additional comments to some of the
-documentation files written by Will and completely
-rewrote others.  The documentation was again completely
-rewritten by Filo for v4.23 and updated for the v4.24a
-release. With the release of v4.30, the documentation
-was updated to reflect all code changes and was
-converted to several different formats for your
-convenience.
-
 
 ## Other History Pages and Stories Mentioning WWIV
 [Wikipedia](https://en.wikipedia.org/wiki/WWIV)  

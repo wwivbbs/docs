@@ -221,7 +221,11 @@ The Bulletin editor allows you add\remove\edit Directories in the G-Files sectio
 ### [J] Conference Editor  
 Conferences are groupings of SUBs. This option lets you add\remove\modify Conferences.
 ### [T] Text Editor  
+TEDIT - Edit a text file located in the GFILES directory only
 
+**NOTE:** This command functions basically the same as E from WFC.  
+EDIT - Runs the SysOp editor (or full screen editor if selected); allows the text files to be located any- where on the hard disk, instead of just in the GFILES directory as with TEDIT.
+                                                                    
 ### [V] Voting Editor  
 The voting editor allows you to add\remove and modify the polls on your BBS. Polls allow
 you to ask your users for feedback, collect opinions on current events. Any sort of multiple

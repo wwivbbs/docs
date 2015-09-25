@@ -42,17 +42,17 @@ These settings are used to restrict new users from certain features of the syste
 
 Restriction | Description
 :---: | ---
- L | Logon : Limits the caller to 1 logon per day.
- C | Chat  : Restricts the caller from requesting chat mode.
+ L | Logons      : Limits the caller to 1 logon per day.
+ C | Chat        : Caller won't be able to request chats with you.
  M | The default restriction of M means that any messages that the user posts, will not be seen by anyone else until you have validated the messages.
  A | Automessage : The caller cannot change the automessage. 
- * | Anonymous : The caller cannot post anonymously.
- P | Post : The caller cannot post messages.
- E | E-mail : The caller cannot send e-mail.
- V | Voting : The caller is not permitted to vote.
- K | 
- N | WWIVnet : The caller cannot use the WWIV network.
- U | Upload : All uploads by this user will go to the sysop dir.
+ * | Anonymous   : The caller cannot post anonymously.
+ P | Post        : The caller cannot post messages.
+ E | E-mail      : The caller cannot send e-mail.
+ V | Voting      : The caller is not permitted to vote.
+ K | Chat        : Restricts the user from chat room
+ N | WWIVnet     : The caller cannot use the WWIV network.
+ U | Upload      : All uploads by this user will go to the sysop dir.
  0 | 
  1 | 
  2 | 

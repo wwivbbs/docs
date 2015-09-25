@@ -1,8 +1,8 @@
 # History of WWIV
 ***
-##The Official History of WWIV By Wayne Bell Random 1@1
-
-_**Originally posted in WWIVNEWS Volume 1, Issue 1, January 1991**_
+##The Official History of WWIV 
+**By Wayne Bell Random 1@1**  
+_Originally posted in WWIVNEWS Volume 1, Issue 1, January 1991_
 
 WWIV started around December 1984, when  I first put up a BBS. It
 was run on  an IBM-PC with a 10  meg hard disk and a  Hayes 1200. I was

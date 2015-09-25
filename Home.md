@@ -18,17 +18,14 @@ Thank you,
 The WWIV Dev Team 
 
 ## [History of WWIV](wwivhistory)
-#### [WWIV BBS List](wwivbbslist)
+## [WWIV BBS List](wwivbbslist)
 
-## Download WWIV 5.0 Binaries
-
+## Get WWIV 5.0
 WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from
-the [WWIV build server](http://build.wwiv.us/job/wwiv/)
-
+the [WWIV build server](http://build.wwiv.us/job/wwiv/)  
 [Building WWIV 5.0](buildwwiv5)
 
 ## New Installations
-
 The following steps will get you up and running quickly, but I would not say
 you're ready to go live and open up to users. After you complete these installation 
 steps, see the full details on related INIT settings, WWIV.INI and other Advanced 
@@ -54,7 +51,6 @@ builtin Telnet Server and Net2BBS from PCMicro.
 ### [Dial-Up Modem Access](dialup)
 
 ## WWIV 5 Menus  
-
 ### [Waiting for Caller (WFC) & Top Screen](wfctop)  
 ### [WWIV BBS User Menus](menumain)  
 ### [WWIV Slash Menu](menuslash)  
@@ -68,7 +64,6 @@ These pages will help you find WWIV 5.0 compatible utilities and installation in
 ### [Usenet](usenet)
 
 ## Advanced Configuration
-
 ### [WWWIV.ini](wwivini)  
 ### [WWIV Edit](wwwivedit)  
 ### [Multi Instance](multinode)  

@@ -140,3 +140,91 @@ ANY UNREQUESTED COMMERCIAL E-MAIL SENT TO THIS ADDRESS WILL BE ASSESSED
 
 
 ```
+
+(another email about it)
+ ALL ATTENDEES ARE INVITED TO INTERJECT WHERE APPROPRIATE!
+
+WWIVcon 98 took place the weekend of 21-23 August in Pigeon Forge Tennessee.
+
+Attendees were:
+
+Richard Claypool    aka Texan Hawk
+Mike McShane        aka Snorkel
+Randy Miller        aka Hobbit
+Bob Milot
+Dean Nash           aka Trader Jack
+Jennifer Ogle       aka White Queen
+Kent Ogle           aka The Prisoner
+Frank Reid
+Dennis Thompson     aka Maintech
+Dave Toy            aka Dave
+
+TJ and Hobbit arrived on Friday afternoon to find Snorkel, Dave, Bob, and
+Texan Hawk already present and wondering where TJ was since he was supposed
+to be there 2 hours earlier.  After check in and brief introductions, the
+weary travelers adjourned to the pool gazebo to consume various and sundry
+beverages and get to know each other a bit.  Later that evening, White Queen
+and The Prisoner arrived and joined in the frey.
+
+8pm Friday:  The recently refreshed mob journeyed to the Golden Coral by foot
+to have dinner.  TJ noticed the funny looking tower on the way, but said
+nothing to the assembled group.  After dinner, as the group walked back to
+the hotel, TJ suggested that everyone take a jump off the bungee tower.
+Hobbit was concerned that if he were to jump it may break the bungee so he
+declined.  The brave trio of TJ, Bob and Texan Hawk paid their fee and
+proceeded to suit up for the jump.  TJ felt he should be the first to jump,
+setting the example for the others so he quickly climbed to the top of the
+70 foot tower and prepared to meet his fate.  When the attendant asked
+"Head first or feet first?" there was no doubt in his mind as to the method
+he would employ.   TJ took the plunge head first quickly followed by Texan
+Hawk, the first blind person to ever jump from the tower.  His comments
+during the free fall were... shall we say, colorful.  Bob was the final
+jumper and arrived on the ground without incident (or his glasses....).
+After the hoopla concluded the mob and the adrenaline charged trio proceeded
+back to the hotel for a few more 12 ounce curls and then off to bed in the
+wee hours of the morning.
+
+About 1:30am Saturday Morning: A bearded gentleman pulls up in the
+parking lot of the Best Western Plaza Inn.  "Wonder where all those
+sysop people are and where's my roomate?" The tardy wanderer walks of
+in the direction of Room 282....
+
+9am Saturday:  TJ plus family, Hobbit, and the recently arrived Maintech
+departed for a fun filled day at Dollywood.  They were to meet the Reid
+Clan at the gate but the mass of assembled Dollyfans precluded the link-up.
+The Wild Bunch (Dave, Bob, and Texan Hawk) remained in a slovenly sleep as
+a result of the previous evening.  What they really did Saturday and the
+whereabouts of Snorkel remain a mystery to this day.  There was talk
+of a county road some miles away that had an establishment where
+scantily clad women....  I digress....  White Queen and The Prisoner passed
+on the events of the day since they are from the area.
+
+6pm Saturday:  The group assembled at the hotel and proceeded to the
+Hiedelberg German Restaurant since the Alabama Grill was overbooked.
+A fine German dinner accompanied by generous amounts of Wiezen beer and
+music from an Oompah Band was enjoyed by all.  Hobbit took this opportunity
+to demonstrate his skill in the "Chicken Dance" with TJ's daughter. Oh
+stop you perverts.... she's only 8 years old.....
+
+8pm Saturday:  Everyone assembled in the meeting room for an icebreaker and
+a beer or two and enjoyed a variety of music provided by Miller Music.
+Hobbit doubles as a DJ in addition to his duties as a WWIV Sysop.  TJ
+conducted a brief demonstration of LNET-II for all those interested. About
+9pm, TJ called the esteemed group to the round table for final introductions
+and discussion.  TJ and Frank delivered their views on the future directions
+for WWIV and answered many questions on a variety of issues.  With great
+input from all present, the decision was made to set a milestone for the
+release of 4.30 as a version that contained FOSSIL support and a few more
+of the remaining functional changes.  Discussion moved on to future releases
+for multiple platforms to include Windows, OS/2 and *nix, and BBS/Network
+security.  Several ideas were presented that bear further research before
+any announcement is made.  Varied discussion went on for three hours and
+about 12am, TJ passed out WWIVcon T-shirts to all attendees.  Frank and
+wife departed shortly after but the hardcores remained until almost 5am
+talking and witnessing the antics of Texan Hawk.
+
+9am Sunday:   Those not suffering from hangovers had a leisurely breakfast
+at the hotel cafe, said their good-byes proceeded to depart for home.
+
+
+Origin: Mountain Empire Server * 423-477-4015

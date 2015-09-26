@@ -92,3 +92,6 @@ and other User helpers. We want to make this easy for the new BBS User.
 This page will include ideas for projects that developers might want to take on in their copious spare time.
 
 ## [Links](links)
+
+***
+[Atom Feed of Wiki Changes](https://github.com/wwivbbs/wwiv/wiki.atom)

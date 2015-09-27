@@ -1,3 +1,6 @@
+#WWIV 5.0 OpenSourcing Announcement (September 18, 2004)
+***
+
 Original URL: http://wss.wwiv.com/news/pr-50License.htm
 
 WWIV Software Services announces changes in licensing program for

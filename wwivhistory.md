@@ -106,7 +106,11 @@ designed with multi-tasking in mind.
 In January of 1998, Dean Nash purchased WWIV and WWIV Software Services from Wayne Bell. WSS was reformed as a Tennessee Limited Liability Company with a full corporate posture. Craig Dooley was appointed Support Coordinator and supervises the Support Board System and Source Distribution Sites.
 
 ## WWIV 5.0 
-In YYYY WSS agreed to open source the WWIV Software under the Apache License. Originally the code was managed on Sourceforge, but in 2015 development was moved to GitHub.
+WWIV 5.0 was started in 1999 with moderate progress which picked up in earnest in 2003. On going development and daily build releases continue to this day.
+
+On September 18 2004 WSS announced that WWIV 5.0 would be open source under the Apache License. Originally the code was managed on Sourceforge, but in 2015 development was moved to GitHub.
+
+[Original Open Source Announcement](wwivopensource)
 
 ##WWIV Hall of Fame
 

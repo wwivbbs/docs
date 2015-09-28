@@ -7,3 +7,4 @@ Ideas for new utilities or new features for WWIV that might take more time than 
 5. Built-in QWKnet support.
 6. Add secure protocol to WWIVTelnet Server. SSH?
 7. Add GEOIP filter/block tools to WWIVTelnet Server
+8. Autosend (external or built-in to network tools)

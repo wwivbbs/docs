@@ -1,7 +1,6 @@
 # Links
 ***
 
-**NOTE:** This is just lazy notes and will go away probably
 
 Link | Comments
 ---- | --------

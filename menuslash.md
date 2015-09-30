@@ -22,8 +22,10 @@ These are commands which can be issued from the main menu and start with either 
 ## Additional Commands
 These are not listed in the default menus
 
-| Command | Meaning |
-| ------- | -------- |
-| //SYSOP | Goes to the [SysOp Menu](menusysop) if you have a SysOp Security Level. |
-| //VER | Displays WWIV version information |
-| //CE | Chain Edit brings up the menu to edit doors\chains |
+Command | Meaning 
+--- | ---
+//SYSOP | Goes to the [SysOp Menu](menusysop) if you have a SysOp Security Level. 
+//VER | Displays WWIV version information 
+//CE | Chain Edit brings up the menu to edit doors\chains
+
+

@@ -1,4 +1,4 @@
-Build Ideas
+#### Build Ideas
   * Standardize on GNU Make on Linux
   * Standardize on NMAKE from MSVC 6.0 on WIN32
   * Put defines in a seperate makefile (user.mk) from main code
@@ -18,7 +18,7 @@ Build Ideas
   * C++ Classes (in places.. Not rewrite in C++, but gradual transition)
 
 
-Door Ideas
+#### Door Ideas
   * Make door dropfile format file (i.e. CHAIN.FMT) that defines the format
     for a door file (so it's not hard coded into the source code, and new
     door formats can be added adhoc to product.
@@ -29,7 +29,7 @@ Door Ideas
     language (like WWIVBASIC) to replace it (which would be completely 
     cross-platform portable!)
 
-Message Areas
+#### Message Areas
   * Possible use of JAM message base format. (Type3)
   * Built-in FTN support
   * Drop Type-1 message base support
@@ -44,8 +44,7 @@ Message Areas
   * Built in support to forward SMTP messages.
   * Built in support to check a POP mailbox.
 
-
-File Areas
+#### File Areas
   * Add new fields to file area (FTP directory) so that utilities can make
     HTML versions of the file areas for wev sites.
   * Internal ZModem
@@ -53,21 +52,19 @@ File Areas
   * Write a standard FileBase API and make WWIV use it. (Seperate out filebase
     specific code, i.e. file listing, searching, etc. from the main bbs flow)
 
-
-Platforms
+#### Platforms
   * Tiered platform Development
     * WIN32 - Primary
     * Linux - Primary
     * OS/2  - Secondary
-  * Seperate Generic from OS Dependent Code
-  * MSVC 6.0 Standard Editon - Standard compiler on WIN32
+  * Separate Generic from OS Dependent Code
+  * MSVC 6.0 Standard Edition - Standard compiler on WIN32
   * GCC 2.91/2.95 (aka EGCS 1.1x) - Standard compiler on Linux
   * Dos version still? - Dos will be around until around at least until
     the end of 2001 from MS.  And FreeDos/OpenDOS/IBM DOS will be around 
     even longer.
 
-
-Communications
+#### Communications
   * WIN32 communications (maybe even TAPI?)
   * Sockets under WIN32.
   * Sockets under OS/2
@@ -76,14 +73,12 @@ Communications
   * Include simple HTTP server?
   * Finger Daemon support?
 
-
-File Formats
+#### File Formats
   * XML?
   * Text files?
   * Try to limit the number of binary files (less portable)
 
-
-Tools/Utilities
+#### Tools/Utilities
   * 1 big WWIVUTIL.EXE that contains
     * Msgbase purger/maintenance utility
     * Userlist purger/maintenance utility
@@ -91,17 +86,15 @@ Tools/Utilities
     * reporting tool.
   * Public SDK/Libraries for writing utilities (i.e. Web Tools)
   
-
-User Experience (caller)
-  * Similiar user experience as 4.30 from telnetting in.
+#### User Experience (caller)
+  * Similar user experience as 4.30 from telnetting in.
   * Further extend Menus
     * Move all commands (i.e. Defaults, Automessage, BBSList, Chains) into Menus
 
-
-Sysop Experience
+#### Sysop Experience
   * Installation program.
   * Online help while a caller is online
   * INIT
     * GUI INIT on Windows, Curses based INIT on Linux. 
-    * Java based INIT for both??
+    * Java based INIT for both?
 

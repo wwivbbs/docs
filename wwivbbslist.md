@@ -13,7 +13,7 @@
 @70      : The Gate BBS                       telnet://thegate.sytes.net:24
 @72      : Flashback BBS
 @73      : The eSource BBS
-@90      : The Wretched Beagle (coming soon)
+@90      : The Wretched Beagle              telnet://bbs.wretchedbeagle.com
 @206     : Cloud City BBS                    telnet://wwiv.cloudcitybbs.com
 @255     : Alpha Centauri BBS          telnet://acentauribbs.no-ip.org:2002
 @514     : Mystic Rhythms

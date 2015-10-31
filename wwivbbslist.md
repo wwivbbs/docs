@@ -10,16 +10,12 @@
 @11      : Weather Station                 telnet://bbs.weather-station.org
 @50      : The Mountain Empire                        telnet://bbs.wwiv.net
 @61      : Aliens' Abode (aka Aliens' Alcove 2) telnet://aliens.free.net.ph
-@70      : The Gate BBS                       telnet://thegate.sytes.net:24
-@72      : Flashback BBS
-@73      : The eSource BBS
 @90      : The Wretched Beagle              telnet://bbs.wretchedbeagle.com
 @206     : Cloud City BBS                    telnet://wwiv.cloudcitybbs.com
 @255     : Alpha Centauri BBS          telnet://acentauribbs.no-ip.org:2002
-@514     : Mystic Rhythms
-@666     : Hawkeye's BBS
+@514     : Mystic Rhythms                                        <unlisted>
 @707     : The Blood Stone                           telnet://www.bsbbs.com
-@708     : Manic Arcade BBS (Dev)              telnet://wwiv.manicarcade.com
+@708     : Manic Arcade BBS (Dev)             telnet://wwiv.manicarcade.com
 @815     : Inland Utopia (10am-11pm PST)         telnet://iutopia.no-ip.org
 ----------------------------------------------------------------------------
 Not connected to WWIVnet
@@ -28,9 +24,12 @@ Not connected to WWIVnet
          : The Arcade BBS                   telnet://thearcade.darktech.org
 ============================================================================
 No Dial Tone
-  Previously listed sites which appear to be offline as of 24 September 2015
 ============================================================================
-
+@72      : Flashback BBS
+@73      : The eSource BBS
+@666     : Hawkeye's BBS
+@70      : The Gate BBS                       telnet://thegate.sytes.net:24
+           Now a SynchroNet BBS
 @71      : The Radio Shack               telnet://radioshack.wwivbbs.com:24
 @177     : Dunedain BBS                   telnet://dunedainbbs.undo.it:2323
 @180     : Nitemare Cafe                 telnet://bbs.nitemarecafe.com:2002

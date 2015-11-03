@@ -4,10 +4,12 @@
 
 Link | Comments
 ---- | --------
-[Eli's Official Home Page](http://wwivbbs.com/) | THE WWIV Site
+[Official WWIV Site](http://www.wwivbbs.org/)  | 
+[Bloodstone BBS WWIV Files](http://www.bsbbs.com/wwiv/)  | 
+http://dloads.filenet.wwiv.net/ | Eagle's Bay
+[Cloud City BBS](http://cloudcitybbs.com) | 
 [SF Wiki](http://sourceforge.net/p/wwiv/wiki/Home/) | Old Site
 [SF Hosted Home Page](http://wwiv.sourceforge.net/) | old Site
-http://dloads.filenet.wwiv.net/ | Eagle's Bay
 [Wikipedia](https://en.wikipedia.org/wiki/WWIV) | 
 [WWWIVNews Archives at TextFiles.com](http://www.textfiles.com/bbs/WWIVNEWS/)  | 
 [BBS Documenary WWIV Pages](http://software.bbsdocumentary.com/IBM/DOS/WWIV/)  | 
@@ -19,4 +21,3 @@ http://dloads.filenet.wwiv.net/ | Eagle's Bay
 [Thoughts on Co-SysOps for WWIV Boards & Security Levels in General](http://www.textfiles.com/bbs/cosysop.txt)  | by Kent Stromsmoe
 [WWIVNet & WWIVLink split](http://www.bbsdocumentary.com/library/CONTROVERSY/EVENTS/WWIVWAR/)  | 
 [The BBS.org Enty on WWIV](http://sysopscorner.thebbs.org/wwiv.html)  | 
-[Blodstone BBS WWIV Files](http://www.bsbbs.com/wwiv/)  | 

@@ -4,10 +4,9 @@
  WWIVNet :
  Node    : BBS Name
 =========:==================================================================
-@1       : Skulls & Crossbones                  telnet://skulls.wwivbbs.com
+@1       : Weather Station                 telnet://bbs.weather-station.org
 @2       : Eagle's Dare                       telnet://bbs.filenet.wwiv.net
                                                       telnet://bbsdoors.com
-@11      : Weather Station                 telnet://bbs.weather-station.org
 @50      : The Mountain Empire                        telnet://bbs.wwiv.net
 @61      : Aliens' Abode (aka Aliens' Alcove 2) telnet://aliens.free.net.ph
 @90      : The Wretched Beagle              telnet://bbs.wretchedbeagle.com

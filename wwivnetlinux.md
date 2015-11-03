@@ -39,15 +39,6 @@ We will build up the associated structure as we go along. The surrounded by
 
 **Basic Mail Processing Workflow**  
 
-Inbound    
-`fetchmail -> procmail -> ${WWIVNET_DIR}/inbound/new (procmail uses Maildir format)`  
-`inbound.sh -> loops over ${WWIVNET_DIR}/inbound/new -> uudecode -> dosemu inbound.bat`
-
-outbound  
-`dosemu outbound.bat -> creates outgoing Snn.net -> calls network.bat`  
-`network.bat -> puts uuencoded -> ${WWIVNET_DIR}/mqueue`  
-`callout.py -> emails UUE packets and moves to -> ${WWIVNET_DIR}/sent`  
-
 ### Installing Binaries
 
 We will have a conflict with the Windows binaries, so install.sh moves them all to win-bins

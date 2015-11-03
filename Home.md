@@ -22,7 +22,7 @@ The WWIV Dev Team
 
 ## Get WWIV 5.0
 WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from
-the [WWIV build server](http://build.wwiv.us/job/wwiv/)  
+the [WWIV build server](http://build.wwivbbs.org/job/wwiv/)  
 [Building WWIV 5.0](buildwwiv5)
 
 ## New Installations

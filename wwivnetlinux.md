@@ -26,17 +26,9 @@ We will build up the associated structure as we go along. The surrounded by
         **network2** (link to network)
         **network3** (link to network)
         data
-        **wwivnet**
-            **inbound**
-                **new**
-            **inbound-processed**
-            **mqueue**
-            **sent**
+        **wwivnet**    
     bin
         **processmail.sh**
-        **inbound.sh**
-        **outbound.sh**
-        **callout.py**
     .dosemu
         drive_c
             autoexec.bat
@@ -44,8 +36,6 @@ We will build up the associated structure as we go along. The surrounded by
             **network1.bat**
             **network2.bat**
             **network3.bat**
-            **inbound.bat**
-            **outbound.bat**
 
 **Basic Mail Processing Workflow**  
 
@@ -132,17 +122,21 @@ and should be placed in your base WWIV directory saved as network
 # Grab all our wwiv location info
 source ~/.wwivrc
 
+# This will be the network number according to your init setup
+# for example, your first network will be .0, your second .1, etc
+NET=$1
+
 # Keep things like control-C from dropping out of the shell script
 trap "echo" SIGHUP SIGINT SIGTERM
 
 sed -i 's/\//\\/g' ${WWIVDATA_DIR}/networks.dat
 
 #This one throws away error messages sent to STDERR, but still shows most activity
-dosemu -dumb -quiet -E $(basename ${0}).bat 2>/dev/null
+dosemu -dumb -quiet "$(basename ${0}).bat ${NET}" 2>/dev/null
 
 # You may want to uncomment the below line and comment the above one if you
 # want to make the output as quiet as possible.
-#dosemu -dumb -quiet -E $(basename ${0}).bat >/dev/null 2>&1
+#dosemu -dumb -quiet "$(basename ${0}).bat ${NET}" >/dev/null 2>&1
 
 sed -i 's/\\/\//g' ${WWIVDATA_DIR}/networks.dat
 ```   

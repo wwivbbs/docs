@@ -125,26 +125,27 @@ _**Configuring WWIVnet details and directories**_
 1. create ${WWIV_DIR}/nets/wwivnet
 2. get network info files wwivnet.zip and extract into ${WWIV_DIR}/nets/wwivnet
 3. create ${WWIV_DIR}/nets/wwivnet/callout.net: 
-* Make a file with a single line containing the @1 node (it's the only active node relaying messages, atm).  The format is:
-* @1 & "yourpassword"
-* "yourpassword" is the one you provided to 1@1 and the file must include the double-quotes.
+ * Make a file with a single line containing the @1 node (it's the only active node relaying messages, atm).  The format is:
+ * @1 & "yourpassword"
+ * "yourpassword" is the one you provided to 1@1 and the file must include the double-quotes.
 4. use init to set up network info (select "N")
-* Network type : WWIVnet
-* Network name : WWIVnet
-* Node number : <your node number>
-* Data Directory : nets/wwivnet/
+ * Network type : WWIVnet
+ * Network name : WWIVnet
+ * Node number : -your node number-
+ * Data Directory : nets/wwivnet/
 5. run network3 (the shell script) - Now that all the WWIVNet config bits are in place, we can run the network3 program to validate our setup.  If everything goes as expected, you should get a network report mailed to you on your board locally.  The command to run is:
-* network3 y .<your network position in INIT>
-* for example, your list of nets in INIT starts with 0, so your first network is .0, the second is .1, etc.  Since this is probably your first network, the command is probably network3 y .0
-* If no network number is given, .0 is assumed, so network3 y is the same as network3 y .0
+ * network3 y .-your network position in INIT-
+ * for example, your list of nets in INIT starts with 0, so your first network is .0, the second is .1, etc.  Since this is probably your first network, the command is probably network3 y .0
+ * If no network number is given, .0 is assumed, so network3 y is the same as network3 y .0
 
 
 We should now have all our directories in place. The main ones for mail processing are
+```
  Directory | Description 
 -----------|-------------
 ${WWIV_DIR} | your bbs userid's home dir for the .*rc files. The network* shell scripts go here as well
 ${WWIV_DIR}/bin | location for most of the non-wwiv utility scripts 
-
+```
 
 _**Getting mail config**_
 

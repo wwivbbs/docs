@@ -7,6 +7,8 @@ for some of the tools (NET38, et al)
 
 **STEP #1**  - Get a WWIVnet Node Number assigned.  
 You will need the Node Number for several steps in this setup.  
+**STEP #2**  - send a password to 1@1 for the bank auth.
+You can do this at the same time as getting the Node Number.  You will need this for your callout.net file later.
 **NOTE:** Please don't bother to try configuring things ahead of time; 
 it will just cause issues during setup.  
 
@@ -26,16 +28,16 @@ We will build up the associated structure as we go along. The surrounded by
         **network2** (link to network)
         **network3** (link to network)
         data
-        **wwivnet**    
-    bin
-        **processmail.sh**
-    .dosemu
-        drive_c
-            autoexec.bat
-            **network.bat**
-            **network1.bat**
-            **network2.bat**
-            **network3.bat**
+        nets
+            **wwivnet**    
+        bin
+            **processmail.sh**
+        .dosemu
+            drive_c
+                autoexec.bat
+                **network1.bat**
+                **network2.bat**
+                **network3.bat**
 
 **Basic Mail Processing Workflow**  
 
@@ -120,15 +122,21 @@ the BBS, it has someplace to go (i.e., run DOS binaries).
 
 _**Configuring WWIVnet details and directories**_
 
-# create ${WWIV_DIR}/nets/wwivnet
-# get network info files wwivnet.zip and extract into ${WWIV_DIR}/nets/wwivnet
-# create ${WWIV_DIR}/nets/wwivnet/callout.net: Make a file with a single line containing the @1 node (it's the only active node relaying messages, atm).
-# use init to set up network info (select "N")
+1. create ${WWIV_DIR}/nets/wwivnet
+2. get network info files wwivnet.zip and extract into ${WWIV_DIR}/nets/wwivnet
+3. create ${WWIV_DIR}/nets/wwivnet/callout.net: 
+* Make a file with a single line containing the @1 node (it's the only active node relaying messages, atm).  The format is:
+* @1 & "yourpassword"
+* "yourpassword" is the one you provided to 1@1 and the file must include the double-quotes.
+4. use init to set up network info (select "N")
 * Network type : WWIVnet
 * Network name : WWIVnet
 * Node number : <your node number>
 * Data Directory : nets/wwivnet/
-# run network (the shell script) - Now that all the WWIVNet config bits are in place, we can run the network.exe via dosemu and it will set up the majority of the directory structure under ${WWIV_DIR}/wwivnet for us.
+5. run network3 (the shell script) - Now that all the WWIVNet config bits are in place, we can run the network3 program to validate our setup.  If everything goes as expected, you should get a network report mailed to you on your board locally.  The command to run is:
+* network3 y .<your network position in INIT>
+* for example, your list of nets in INIT starts with 0, so your first network is .0, the second is .1, etc.  Since this is probably your first network, the command is probably network3 y .0
+* If no network number is given, .0 is assumed, so network3 y is the same as network3 y .0
 
 
 We should now have all our directories in place. The main ones for mail processing are
@@ -140,43 +148,19 @@ ${WWIV_DIR}/bin | location for most of the non-wwiv utility scripts
 
 _**Getting mail config**_
 
-We use fetchmail+procmail to pull WWIVnet messages from 1@1. You will need the following:
-
-1. .fetchmailrc configured with your username and password for the POP3 server at 1@1 (skulls.wwivbbs.com)
-2. .procmailrc in the wwiv base configured to dump a copy of the messages
-
-Of these two, .procmailrc is already set up for you by the install.sh to dump to the PPP inbound, and the only change you need to make for .fetchmailrc is to add your credentials. for example, the poll line:
-
-poll skulls.wwivbbs.com with proto POP3  
-user 'youruserid' there with password 'yourpassword' is 'wwiv' here  
-
-replace youruserid with your login and yourpassword with your password.  
-**NOTE:** This is NOT your login to the Skulls and Crossbones BBS, it's the separate id/password you got from Eli for the SMTP server.
-
 _**Sending mail config**_  
 
 There isn't much of anything special to do for sending mail; all the pieces you need are already in place if you have done everything above. Sending a message in the BBS will cause the system to prepare outbound mail when you log out.
 
-The only thing you can edit if you want is ${WWIV_DIR}/bin/callout.py. Change the line:
-tn.write("MAIL FROM: bbsname@skulls.wwivbbs.com\n")
-to reflect your SMTP login name. This isn't necessary, but it may help with troubleshooting.
-
-callout.py - is used to send WWIVnet messages to 1@1 right now. It basically 
-takes the place of a full-fledged MTA like postfix for sending mail.
-It currently assumes python 2.x, so if your system is python 3.x, you will have to make sure you are calling callout.py with the right version of python.
-
 _**Putting it all together**_
 
-And finally, we have three scripts to handle inbound/outbound mail that do some checking and preprocessing to manage the details. These are all in the ${WWIV_DIR}/bin directory.
-inbound.sh - calls fetchmail, processes all the inbound files and inserts them into the BBS
-outbound.sh - looks for all the output files from the BBS, converts them into the appropriate format, and sends them out via callout.py
-processmail.sh - a wrapper for inbound.sh and outbound.sh to make it easy to schedule WWIVnet checks via cron. How often you schedule mail checks is entirely up to you, but every 15 minutes or so is probably more than sufficient.
+How often you schedule mail checks is entirely up to you, but every 15 minutes or so is probably more than sufficient.
 At this point, WWIVnet should be working well enough to handle sending mail between systems. If you are still having issues, you will need to resolve them before moving on to Message Subs. Look for help in the irc channel if you are stuck.
 
 _**Subscribing to Message Subs**_
 
 This is abbreviated information (and some gotchas for Linux). Please see the Full WWIV Docs for detailed information on setting up subs if this isn't enough info.
-Now that we've gotten through all of the setup and tested with some netmail, it's time to actually add some subs. The first thing you need to do is look at your ${WWIV_DIR}/wwivnet/SUBS.LST to see all the available WWIVnet subs. For example, a few of the core subs are:
+Now that we've gotten through all of the setup and tested with some netmail, it's time to actually add some subs. The first thing you need to do is look at your ${WWIV_DIR}/nets/wwivnet/subs.lst to see all the available WWIVnet subs. For example, a few of the core subs are:
 1 1 R WWIVNET Sysop Area
 GENCHAT 1 R WWIVNET General Chat
 WWIVDEV 1 R WWIV Development

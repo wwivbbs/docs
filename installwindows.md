@@ -2,14 +2,15 @@
 
 ## Prerequisites
 
+#### Minimum Version of Windows
+The project officially supports Windows 7 or Windows Server 2008 R2 or later.
+
 #### 32bit x86 Windows
 WWIV BBS will start and run on Windows 10 x64 (I did it), but none 
 of the supporting programs and utilities you use with WWIV
 will work on anything but 32bit x86 systems. We do not have code for 
 all these other programs (yet?). Maybe down the road. So, for now 
 use a 32bit x86 version of Windows.
-
-**NOTE:** There is a bug which prevents current bulilds from running on XP or WinSrvr2003R2. This will be removed when a resolution or decision about OS support is made.
 
 #### Windows Updates and .Net 4.5
 You should have ALL high priority updates on your windows mahcine. This might mean running windows update several times. As a part of this, you should also have installed Microsoft .Net Framework 4.5.x installed. The [4.5.2 install is here](http://www.microsoft.com/en-us/download/details.aspx?id=42642) if it was automatically installed by Windows Update. **XP** For Windows XP [4.5 was the last supported release](http://www.microsoft.com/en-us/download/details.aspx?id=30653), there may be updates on top of that, so install and then run Windows Update.
@@ -32,7 +33,7 @@ You must also must place a copy of ```sbbsexec.dll``` which is in the ZIP file i
 From a command prompt run INIT.EXE  
 You will see this:  
 
-    WWIV v5.00 (Build 479) Initialization/Configuration Program.
+    WWIV v5.00 (Build ####) Initialization/Configuration Program.
     Copyright (c) 1998-2014, WWIV Software Services
     CONFIG.DAT NOT FOUND.
     Perform initial installation?

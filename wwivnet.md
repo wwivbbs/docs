@@ -12,7 +12,7 @@ WWIVNet that is the primary network for WWIV BBSes called WWIVNet.
 
 ## Technical Overview of WWIVNet
 
-On November 2, 2015, WWIVNet switched to [BINKP](https://en.wikipedia.org/wiki/Binkp) as the underlying protocol for transferring net email and sub messages.
+On November 2, 2015, WWIVNet switched to [BINKP](https://en.wikipedia.org/wiki/Binkp) as the underlying protocol for transferring net email and sub messages. The design of the network currently is a hub and spoke model with one node "@1" at the center point for all traffic flow.
 
 ## Joining WWIVNet
 
@@ -68,7 +68,7 @@ If you are also getting a feed from Usenet you have customized these files and y
 If\when you are are ready to host your own WWIVNet sub here are the steps to take:
 
 * Set up your sub locally in your BBS first. This is harmless.
-* Get to the Sub Editor in //SYSOP or from the WFC screen.
+* Get to the Sub Editor in //SYSOP, from the menu with //BE or "B" from the WFC screen.
 * Choose to Insert a new SUB and fill-out the Name, and Filename fields at a minimum.
 * Then choose "J" Net Info and select WWIVNet
 * The SUBTYPE is the internal name of the sub in WWIVNet this must be unique (see SUBS.LST)

@@ -142,8 +142,11 @@ The basic command to invoke the message transport is:
 networkb --send --network=(name of your network) --node=(number of target)
 
 You want to make sure networkb is run from your ${WWIV_DIR}
+
 (name of your network) = whatever you named your network in init (typically wwivnet)
+
 (number of target) = the number of the system you get/send messages from/to (typically 1)
+
 
 So, a command for a typical setup will look like this:
 

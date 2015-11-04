@@ -213,7 +213,7 @@ The important bit is the first and second field. This is the "Subtype" and host 
 
 **Note:** that in the example, the sub type is "GENCHAT" and the Host is "1"
 
-**NOTE:** When putting in a filename (option B), use all lowercase. There is an issue where dosemu and WWIV get disagreeable about filename case. If you don't follow this, you will be dealing with the "Gotchas" section below and doing hard links (you really want to avoid this if possible).
+**NOTE:** When putting in a filename (option B), **use all lowercase**. There is an issue where dosemu and WWIV get disagreeable about filename case. If you don't follow this, you will be dealing with the "Gotchas" section below and doing hard links (you really want to avoid this if possible).
 After you finish adding a new sub and the automated request is generated, it will take some time for the request to make it to the host node and for it to auto-subscribe your node. Assuming your net tossing is working, the BBS will attempt to run network1 when you log out. Once it has generated the necessary files, it will be sent as part of the callout process listed above. If you have already gotten it working for normal user netmail, this should "just work."
 
 _**Gotchas**_  

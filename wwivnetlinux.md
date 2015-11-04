@@ -3,7 +3,7 @@
 
 Setting up WWIVnet and subscribing to Subs isn't hard, but there are a few 
 gotchas; mostly due to filename inconsistencies and having to use DOSEMU 
-for some of the tools (NET37 and PPP)
+for some of the tools (NET38, et al)
 
 **STEP #1**  - Get a WWIVnet Node Number assigned.  
 You will need the Node Number for several steps in this setup.  
@@ -43,38 +43,14 @@ We will build up the associated structure as we go along. The surrounded by
 
 We will have a conflict with the Windows binaries, so install.sh moves them all to win-bins
 
-1. Install NET37.ZIP binaries
-* unzip NET37.ZIP in ${WWIV_DIR}
-* mv NETWORK.EXE to NETWORK0.EXE (it's going to be replaced by the one from PPP)
-2. Install PPP15B99.ZIP) binaries
-* We actually use only two binaries from the PPP project: NETWORK.EXE and UU.EXE.
-* Extract the files from PPP15B99.ZIP to ${WWIV_DIR}
-* unzip PPP15B99.ZIP NETWORK.EXE UU.EXE
-* Configure net.ini for PPP
-
-Most of the net.ini file actually isn't used for anything. 
-All we are doing is giving just enough info to bundle the messages. 
-All you really need are the [FILENET] and [GENERAL] sections. here is 
-a sample minimal net.ini file:
-
-    [FILENET]
-    [GENERAL]
-    FWDNAME = userid
-    FWDDOM = bbs.domain.name
-
-What you will notice is just the forwarding name and domain; The 
-FILENET section isn't used at all, but still must exist or PPP fails. 
-**NOTE:** FWDNAME and FWDDOM are arbitrary These don't actually mean 
-anything in the context of WWIVnet, since they aren't actually used 
-to deliver the messages. It's just nice to have something 
-meaningful-looking in the header for when things break and you are 
-trying to troubleshoot.
+1. Install NET38b3.ZIP binaries
+* unzip NET38b3.ZIP in ${WWIV_DIR}
 
 ### Configuring WWIVnet
 
 **WWIVnet under dosemu**
 
-Since we need to run the NET37/PPP binaries under dosemu, we will 
+Since we need to run the NET38 binaries under dosemu, we will 
 get the dosemu parts going first. For a detailed explanation of how 
 to set up DOSEMU (in particular, the relationship between shell 
 scripts and batch files), check out [DOSEMU common settings] first. 
@@ -88,7 +64,6 @@ _dosemu config_
 1. extract dosemu_batchfiles.tgz in your dosemu C: drive (e.g, ~/.dosemu/drive_c)
 2. edit files to suit your system
 * make sure paths match your setup (e.g, in batch files)
-* edit network.bat and change NODENUMBER to your node number
 
 _network scripts_
 
@@ -145,27 +120,23 @@ the BBS, it has someplace to go (i.e., run DOS binaries).
 
 _**Configuring WWIVnet details and directories**_
 
-1. edit ${WWIV_DIR}/.wwivrc and change WWIVNET_NODE=yournodenumber to your node number (e.g., If your node is 90, then the variable should be WWIVNET_NODE=90).
-2. create ${WWIV_DIR}/wwivnet
-3. get network info files wwivnet.zip and extract into ${WWIV_DIR}/wwivnet
-4. create ${WWIV_DIR}/wwivnet/CALLOUT.NET: Make a DOS-formatted file with a single line containing the @1 node (it's the only active node relaying messages, atm).
-5. use init to set up network info (select "N")
+# create ${WWIV_DIR}/nets/wwivnet
+# get network info files wwivnet.zip and extract into ${WWIV_DIR}/nets/wwivnet
+# create ${WWIV_DIR}/nets/wwivnet/callout.net: Make a file with a single line containing the @1 node (it's the only active node relaying messages, atm).
+# use init to set up network info (select "N")
 * Network type : WWIVnet
 * Network name : WWIVnet
 * Node number : <your node number>
-* Data Directory : wwivnet/
-6. run network (the shell script) - Now that all the WWIVNet config bits are in place, we can run the network.exe via dosemu and it will set up the majority of the directory structure under ${WWIV_DIR}/wwivnet for us.
-7. make the inbound-processed directory
-* mkdir ${WWIV_DIR}/wwivnet/inbound-processed
+* Data Directory : nets/wwivnet/
+# run network (the shell script) - Now that all the WWIVNet config bits are in place, we can run the network.exe via dosemu and it will set up the majority of the directory structure under ${WWIV_DIR}/wwivnet for us.
+
 
 We should now have all our directories in place. The main ones for mail processing are
  Directory | Description 
 -----------|-------------
 ${WWIV_DIR} | your bbs userid's home dir for the .*rc files. The network* shell scripts go here as well
 ${WWIV_DIR}/bin | location for most of the non-wwiv utility scripts 
-${WWIVNET_DIR}/mqueue | where PPP puts outgoing
-${WWIVNET_DIR}/inbound/new | where we will have fetch+proc put new incoming
-${WWIVNET_DIR}/inbound-processed | where stuff gets moved to when processed
+
 
 _**Getting mail config**_
 

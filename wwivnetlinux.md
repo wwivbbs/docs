@@ -22,15 +22,13 @@ We will build up the associated structure as we go along. The surrounded by
         .dosemurc
         .wwivrc
         in.nodemgr
-        **network**
-        **network1** (symbolic link to network)
-        **network2** (symbolic link to network)
-        **network3** (symbolic link to network)
+        **network0**
+        **network1** (symbolic link to network0)
+        **network2** (symbolic link to network0)
+        **network3** (symbolic link to network0)
         data
         nets
             **wwivnet**    
-        bin
-            **processmail.sh**
         .dosemu
             drive_c
                 autoexec.bat
@@ -68,13 +66,13 @@ _network scripts_
 
 We have a common network shell script that can be used to reference 
 multiple DOS batch files in dosemu. The core script looks like this 
-and should be placed in your base WWIV directory saved as network 
-(not network.sh):
+and should be placed in your base WWIV directory saved as network0 
+(not network0.sh):
 
 ```shell
 #!/bin/bash
 #
-# network[123]
+# network[0123]
 #
 # This sets the pathname separator in networks.bat before calling the appropriate
 # DOS batch file with dosemu.  If we don't, the DOS version of the NETXX scripts
@@ -106,13 +104,13 @@ dosemu -dumb -quiet "$(basename ${0}).bat ${NET}" 2>/dev/null
 sed -i 's/\\/\//g' ${WWIVDATA_DIR}/networks.dat
 ```   
 
-make it executable (chmod 755 network)  
+make it executable (chmod 755 network0)  
 symbolic links to network should also be created for network1 network2 
 and network3
 
-    ln -s network network1
-    ln -s network network2
-    ln -s network network3
+    ln -s network0 network1
+    ln -s network0 network2
+    ln -s network0 network3
 
 What this allows is for when calls to the WWIVnet binaries happens from 
 the BBS, it has someplace to go (i.e., run DOS binaries).
@@ -136,16 +134,8 @@ _**Configuring WWIVnet details and directories**_
  * If no network number is given, .0 is assumed, so network3 y is the same as network3 y .0
 
 
-We should now have all our directories in place. The main ones for mail processing are
-```
- Directory | Description 
------------|-------------
-${WWIV_DIR} | your bbs userid's home dir for the .*rc files. The network* shell scripts go here as well
-${WWIV_DIR}/bin | location for most of the non-wwiv utility scripts 
-```
-
 **Basic Mail Processing Workflow**  
-WWIVnet uses BinkP to transfer messages between systems.  In most cases, all you need to do is schedule the networkb binary to run periodically.  If it finds any message files on your system to send out, it will pick them up and send to the target node.  After it is done sending, it will then grab anything on the target system that is destined for your board and insert them into the local mesg files. 
+WWIVnet uses BinkP to transfer messages between systems.  In most cases, all you need to do is schedule the networkb binary to run periodically to push/pull messages.  If it finds any message files on your system to send out, it will pick them up and send to the target node.  After it is done sending, it will then grab anything on the target system that is destined for your board and insert them into the local mesg files. 
 
 The basic command to invoke the message transport is:
 
@@ -173,9 +163,12 @@ Flags:
 --skip_net Skip invoking network1/network2/network3
 ```
 
+If you want to allow your system to listen for incoming connections to BinkP, that's possible to do with the --receive flag; but it's a one-shot service, so it needs to be put in a loop (more details to come on this).  Most people will be perfectly fine with just polling with the --send flag.
+
 _**Putting it all together**_
 
-How often you schedule mail checks is entirely up to you, but every 15 minutes or so is probably more than sufficient.
+How often you schedule mail checks is entirely up to you, but every 15 minutes or so is probably more than sufficient.  Just adding the networkb --send command to cron should work nicely.
+
 At this point, WWIVnet should be working well enough to handle sending mail between systems. If you are still having issues, you will need to resolve them before moving on to Message Subs. Look for help in the irc channel if you are stuck.
 
 _**Subscribing to Message Subs**_
@@ -222,8 +215,8 @@ After you finish adding a new sub and the automated request is generated, it wil
 
 _**Gotchas**_  
 
-**NOTE:** You should not need this section unless you ignored the warning about using lowercase filenames.
-
+**NOTE:** You should not need this section unless you ignored the warning about using lowercase filenames; in which case, shame on you.  Go back and do it right.
+ 
 The Main issue is with filename mismatches. Sub files are in two places; the dat files are in ${WWIV_DIR}/data and the message contents are in ${WWIV_DIR}/msgs. Because of how PPP and DOSemu work, there is a conflict with the msgs/*dat files. You will need to create links between the files. You can get ahead of the issue by doing in the following:
 
 1. cd ${WWIV_DIR}/msgs
@@ -243,25 +236,13 @@ _**The Nitty-Gritty**_
 
 This is information about exactly what the Network*.exe files are doing. You don't need to understand this to install WWIVnet, but it can be useful info.
 The processing of the net files comes from page 38 of
-NET37TEC.DOC. Essentially what the steps are after the procmail
-rule picks up the files are:
+NET37TEC.DOC. 
 
 1. Convert network.dat's path separator with sed 
-2. uudecode the incoming file to SNN.NET, where NN is your node #
-where the file ultimately needs to end up is your wwivnet 
-directory. Another gotcha is filename case (again).
-NETWORK1.EXE can't see the file if it's lowercase.
-3. dosemu NETWORK3.EXE to analyze the packets. This should create
-the P.EXE file from the SNN.NET file.
-3. After the P.EXE file is created (and converted to uppercase),
-process it with NETWORK2.EXE
-4. Convert network.dat's path separator back with sed. This
-conversion is really dependent on how the network.dat file is being
-processed. If it's in dosemu, the separator needs to be \, if it's
-linux, it needs to be /. Example of how this affects you: if the separator is
-a /, then the NETXX EXE files can't find the path and fail on processing; if the 
-separator is a \, then parts of your message info (like where the message came from)
-will be missing.
+* uudecode the incoming file to SNN.NET, where NN is your node # where the file ultimately needs to end up is your wwivnet directory. 
+* dosemu NETWORK3.EXE to analyze the packets. This should create the P.EXE file from the SNN.NET file.
+* After the P.EXE file is created process it with NETWORK2.EXE
+* Convert network.dat's path separator back with sed. This conversion is really dependent on how the network.dat file is being processed. If it's in dosemu, the separator needs to be \, if it's linux, it needs to be /. Example of how this affects you: if the separator is a /, then the NETXX EXE files can't find the path and fail on processing; if the separator is a \, then parts of your message info (like where the message came from) will be missing.
 
 # Other WWIVNet Documenation
 ***

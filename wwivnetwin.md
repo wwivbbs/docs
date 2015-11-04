@@ -16,45 +16,38 @@
 │ Directory : NETS\WWIVNET\                                                │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
-* Rename ```\wwiv\sample_net.ini``` to ```\wwiv\net.ini```
-* Edit \wwiv\net.ini and input the POPNAME & POPPASS will be given to you by 1@1  
-* Create \wwiv\nets\wwivnet\CALLOUT.NET and add the line supplied by 1@1
-* Create \wwiv\mail.bat and add the line provided to you by 1@1. You will have a second line as well bbs.exe -m -e with runs the local mail handler and maintenance events.
-* From \wwiv\ run ```Network3 y .0``` which will verify your configuration and files and send an email to your local #1 mailbox. 
+* Create \wwiv\nets\wwivnet\CALLOUT.NET with ```@1 & "password"``` replacing password with the one provided by 1@1.
+* From \wwiv\ run ```Network3 y``` which will verify your configuration and files and send an email to your local #1 mailbox. 
 * From the \wwiv run ```bbs.exe -M``` to pickup and deliver the mail.  
 **Note:** The default config of WWIV5TelentServer runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run Network3.
 * Login as #1 and Check your email on the BBS. You should see a pretty email and it should say "Everything is Fine" along with other details.
 
-###Create MAIL.BAT
-In your \wwiv\ directory create MAIL.BAT and insert the following lines.
-```batch
-@ECHO OFF
-c:
-cd \wwiv\
-NETWORK /N1 .0
-bbs -m -e
+###Create BINKP.CMD
+Create \wwiv\bink.cmd with the following commands:
+```
+@ Echo OFF
+rem NetworkB controller
+cls
+
+:start
+C:
+cd \wwiv
+echo Starting NetworkB to Receive Inbound Connections
+echo.
+networkb --receive
+
+goto start
 ```
 
 ####Verify Network Mail
-* Create a new email and address it to 1@1
-* You will be prompted to pick the net (WWVIVnet) and confirm the system Skull & Bones.
-* Give it a subject. Send Eli a love note and hit /S to save and send.
-* From \WWIV run ```MAIL.BAT``` which will send the outbound mail. Ideally you and ELi are chatting in IRC while you do this. ;-) then you can confirm and troubleshoot all at once. If not, wait a couple of hours and run ```MAIL.BAT``` again.
-
-####Scheduling MAIL.BAT
-
-None of the SysOps polled as of Sept 2015 use the Event Service to run WWIVNet Mail. 
-They all use some sort of scheduling service. You could use the one builtin to windows.
-Or a variety of other applications. Here's some we're using
-
-Scheduler | BBS Who uses 
---- | ----
-[Z-Cron](http://www.z-cron.com/) | Cloud City BBS @206
-[System Scheduler](http://www.splinterware.com/products/wincron.htm) | Skull and Bone @1
-[Windows Task Scheduler](http://windows.microsoft.com/en-US/windows/schedule-task#1TC=windows-7) | Blood Stone BBS @707
+* With \wwiv\bbs.exe -m & BINKP.CMD running:
+* Login to your BBS and send an email to 1@1
+* You will be prompted to pick the net (WWVIVnet) and confirm the system (Weather Station).
+* Give it a subject. Send the Net Coordinator a love note and hit /S to save and send.
+* Ideally you and 1@1 are chatting in IRC while you do this. ;-) then you can confirm and troubleshoot all at once. If not, wait a couple of hours for 1@1 to read or reply.
 
 ***
-Within the Net37.zip there are two documents and I've also posted them on the wiki:  
+Within the Net37.zip there are two documents and I've also posted them on the wiki. They have a lot of technical information if you'd like to read it.
 
 * [NET37.DOC](net37doc) <- Has all the installation information (Must Read!)
 * [NET37TEC.DOC](net37tecdoc) <- Good technical read on the inner workings of WWIVNet (optional)

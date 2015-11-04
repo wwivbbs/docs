@@ -12,7 +12,7 @@ WWIVNet that is the primary network for WWIV BBSes called WWIVNet.
 
 ## Technical Overview of WWIVNet
 
-On October 2, 2015, WWIVNet switched to [BINKP](https://en.wikipedia.org/wiki/Binkp) as the underlying protocol for transferring net email and sub messages.
+On November 2, 2015, WWIVNet switched to [BINKP](https://en.wikipedia.org/wiki/Binkp) as the underlying protocol for transferring net email and sub messages.
 
 ## Joining WWIVNet
 

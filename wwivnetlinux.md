@@ -9,6 +9,7 @@ for some of the tools (NET38, et al)
 You will need the Node Number for several steps in this setup.  
 **STEP #2**  - send a password to 1@1 for the bank auth.
 You can do this at the same time as getting the Node Number.  You will need this for your callout.net file later.
+
 **NOTE:** Please don't bother to try configuring things ahead of time; 
 it will just cause issues during setup.  
 
@@ -19,14 +20,12 @@ We will build up the associated structure as we go along. The surrounded by
 
     ${WWIV_DIR}
         .dosemurc
-        **.fetchmailrc**
-        **.procmailrc**
         .wwivrc
         in.nodemgr
         **network**
-        **network1** (link to network)
-        **network2** (link to network)
-        **network3** (link to network)
+        **network1** (symbolic link to network)
+        **network2** (symbolic link to network)
+        **network3** (symbolic link to network)
         data
         nets
             **wwivnet**    
@@ -38,8 +37,6 @@ We will build up the associated structure as we go along. The surrounded by
                 **network1.bat**
                 **network2.bat**
                 **network3.bat**
-
-**Basic Mail Processing Workflow**  
 
 ### Installing Binaries
 
@@ -147,11 +144,34 @@ ${WWIV_DIR} | your bbs userid's home dir for the .*rc files. The network* shell 
 ${WWIV_DIR}/bin | location for most of the non-wwiv utility scripts 
 ```
 
-_**Getting mail config**_
+**Basic Mail Processing Workflow**  
+WWIVnet uses BinkP to transfer messages between systems.  In most cases, all you need to do is schedule the networkb binary to run periodically.  If it finds any message files on your system to send out, it will pick them up and send to the target node.  After it is done sending, it will then grab anything on the target system that is destined for your board and insert them into the local mesg files. 
 
-_**Sending mail config**_  
+The basic command to invoke the message transport is:
 
-There isn't much of anything special to do for sending mail; all the pieces you need are already in place if you have done everything above. Sending a message in the BBS will cause the system to prepare outbound mail when you log out.
+networkb --send --network=(name of your network) --node=(number of target)
+
+You want to make sure networkb is run from your ${WWIV_DIR}
+(name of your network) = whatever you named your network in init (typically wwivnet)
+(number of target) = the number of the system you get/send messages from/to (typically 1)
+
+So, a command for a typical setup will look like this:
+
+networkb --send --network=wwivnet --node=1
+
+Full networkb usage looks like:
+
+```
+Usage: networkb [flags]
+Flags:
+--network  Network name to use (i.e. wwivnet)
+--bbsdir   (optional) BBS directory if other than current directory 
+--send     Send network traffic to --node
+--receive  Receive from any node
+--node     Node number (only used when sending)
+--port     Port number to use (receiving only)
+--skip_net Skip invoking network1/network2/network3
+```
 
 _**Putting it all together**_
 

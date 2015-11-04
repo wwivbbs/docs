@@ -28,7 +28,7 @@ to prevent it from being looked over or overwritten by another application.
 
 The best way to have your application processed is to get on a WWIVnet
 BBS and mail this completed application to either the WWIVnet Network 
-Coordinator, Eli Sanford 1@1 WWIVnet or email elisanford@gmail.com
+Coordinator, Weatherman 1@1 WWIVnet or email mark@weather-station.org
 
 
     =============================================================================

@@ -16,7 +16,7 @@
 │ Directory : NETS\WWIVNET\                                                │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
-* Create \wwiv\nets\wwivnet\CALLOUT.NET with ```@1 & "password"``` replacing password with the one provided by 1@1.
+* Create \wwiv\nets\wwivnet\CALLOUT.NET with ```@1 && /1 "password"``` replacing password with the one provided by 1@1.
 * From \wwiv\ run ```Network3 y``` which will verify your configuration and files and send an email to your local #1 mailbox. 
 * From the \wwiv run ```bbs.exe -M``` to pickup and deliver the mail.  
 **Note:** The default config of WWIV5TelentServer runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run Network3.

@@ -78,3 +78,9 @@ If\when you are are ready to host your own WWIVNet sub here are the steps to tak
 **Note:** Currently we have to manually share the subs.lst, that will be fixed in the future.
 * Add your Sub to the subs.lst or request help on the WWIV Sysops Sub
 * Post an announcement on the WWIVNet Sub Yellow Pages to advertise your new sub
+
+***
+Within the Net37.zip there are two documents and I've also posted them on the wiki. They have a lot of technical information if you'd like to read it.
+
+* [NET37.DOC](net37doc) <- Has all the installation information (Must Read!)
+* [NET37TEC.DOC](net37tecdoc) <- Good technical read on the inner workings of WWIVNet (optional)

@@ -45,9 +45,3 @@ goto start
 * You will be prompted to pick the net (WWVIVnet) and confirm the system (Weather Station).
 * Give it a subject. Send the Net Coordinator a love note and hit /S to save and send.
 * Ideally you and 1@1 are chatting in IRC while you do this. ;-) then you can confirm and troubleshoot all at once. If not, wait a couple of hours for 1@1 to read or reply.
-
-***
-Within the Net37.zip there are two documents and I've also posted them on the wiki. They have a lot of technical information if you'd like to read it.
-
-* [NET37.DOC](net37doc) <- Has all the installation information (Must Read!)
-* [NET37TEC.DOC](net37tecdoc) <- Good technical read on the inner workings of WWIVNet (optional)

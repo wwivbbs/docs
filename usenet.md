@@ -73,7 +73,7 @@ O) Description: None.
 ```
 **Note** these entries might be here already:
 * Edit \wwiv\networks\wwivnet\CONNECT.NET and make sure that 32767 is not listed.
-* Then add ``` @32767 = 0:00 ``` to the right of your node number such that it looks something like this: ``` @707   1=0.0 32767=0.00 ``` Next to your node number is the only location you will want to see 32767
+* Then add ``` @32767 = 0:00 ``` to the right of your node number such that it looks something like this: ``` @707   1=0.0 32767=0.00 ``` Next to your node number is the only location you will want to see 32767 in CONNECT.NET
 * Edit \wwiv\networks\wwivnet\CALLOUT.NET file to add the following line at the bottom ``` @32767  & ```
 * Now verify you didn't enter anything incorrectly by running ``` NETWORK3 .0 Y ``` and then ``` NETWORK2 ```
 

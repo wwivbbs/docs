@@ -44,7 +44,7 @@ O) Description: None.
 If you want to host the group locally and share it with the net, then answer Yes 
 to hosting the group, to "Allow auto add/drop requests" and to "Make this sub 
 public (in subs.lst)" and select a sub category for the group. Others on 
-WWIVNet will be able to join this sub like and other and you will be the gateway to 
+WWIVNet will be able to join this sub and you will be the gateway to 
 Usenet for this group. Your configuration will look like this:
 ```
 A) Name       : alt.bbs.wwiv
@@ -67,23 +67,13 @@ O) Description: None.
 ```
 
 ## Configure the Network Files
-* Edit \wwiv\nets\wwivnet\BBSLIST.0 add a line at the end "99"
+* Edit \wwiv\networks\wwivnet\BBSLIST.NET add a line at the end for @32767if it does not already exist 
 ```
-~714114005
-:A
-1
-99
-```
-* Create \wwiv\nets\wwivnet\BBSLIST.99 and insert the following text:  
-The Phone number can be anything you wish  
-The [] is for your WWIV Registration number if you have one (optional)
-```
-~0
-@32767      *707-585-NEWS #57600      !     [    ]  "My BBS's Internet Gateway"
+@32767      *707-585-NEWS #57600        !      [     ]  "WWIVNET Internet Gateway"
 ```
 **Note** these entries might be here already:
-* Edit \wwiv\nets\wwivnet\CONNECT.0 and add 32767 to the end of the first time.
-* Also add ```@32767 1``` as the last time.
+* Edit \wwiv\networks\wwivnet\CONNECT.NET and make sure that 32767 is not listed on the first time.
+* Then add ```@32767 = 0:00``` to the right of your node number such that it looks something like this: 
 * Now verify you didn't enter anything incorrectly by running ```NETWORK3 .0 Y``` and then ```NETWORK2```
 
 This will generate a network status message and process it for you via email 

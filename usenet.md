@@ -73,8 +73,9 @@ O) Description: None.
 ```
 **Note** these entries might be here already:
 * Edit \wwiv\networks\wwivnet\CONNECT.NET and make sure that 32767 is not listed on the first time.
-* Then add ```@32767 = 0:00``` to the right of your node number such that it looks something like this: ```@707   1=0.0 32767=0.00``` 
-* Now verify you didn't enter anything incorrectly by running ```NETWORK3 .0 Y``` and then ```NETWORK2```
+* Then add ``` @32767 = 0:00 ``` to the right of your node number such that it looks something like this: ``` @707   1=0.0 32767=0.00 ``` 
+* Edit \wwiv\networks\wwivnet\CALLOUT.NET file to add the following line at the bottom ``` @32767  & ```
+* Now verify you didn't enter anything incorrectly by running ``` NETWORK3 .0 Y ``` and then ``` NETWORK2 ```
 
 This will generate a network status message and process it for you via email 
 to the SysOp. Login your BBS and read your email. Assuming that there are no errors, you should 

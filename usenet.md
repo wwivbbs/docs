@@ -111,6 +111,12 @@ If there are errors, you will have to address them before proceeding. Check to
 see that you have not mistyped anything in the above files BBSLIST.NET, 
 CALLOUT.NET and CONNECT.NET. Once you are clear, you may proceed.
 
+## Configure c:\wwiv\net.ini by editing the sample_net.ini and saving it as net.ini
+Required sections are as follows (uncomment and edit as appropriate): 
+``` [NETWORK] ```
+``` primenet = WWIVNET ```
+``` POPNAME = [your alias]```
+
 ## Configure the Usenet Newsgroup Subcriptions
 
 * create a text file ```\wwiv\nets\wwivnet\NEWS.RC``` In this file you will be listing every file in the following format:  

@@ -69,7 +69,7 @@ O) Description: None.
 ## Configure the Network Files
 * Edit \wwiv\networks\wwivnet\BBSLIST.NET add a line at the end for @32767if it does not already exist 
 ```
-@32767      *707-585-NEWS #57600        !      [     ]  "WWIVNET Internet Gateway"
+@32767     *707-585-NEWS #57600      !    [     ]  "WWIVNET Internet Gateway"
 ```
 **Note** these entries might be here already:
 * Edit \wwiv\networks\wwivnet\CONNECT.NET and make sure that 32767 is not listed on the first time.
@@ -77,7 +77,7 @@ O) Description: None.
 * Now verify you didn't enter anything incorrectly by running ```NETWORK3 .0 Y``` and then ```NETWORK2```
 
 This will generate a network status message and process it for you via email 
-to the SysOp. Login your BBS and read you email. Assuming that there are no errors, you should 
+to the SysOp. Login your BBS and read your email. Assuming that there are no errors, you should 
 see something like this:
 
 ```
@@ -107,8 +107,8 @@ Everything is fine.
 (0 seconds for analysis)       
 ```
 If there are errors, you will have to address them before proceeding. Check to 
-see that you have not mistyped anything in the above files BBSLIST.x, 
-CALLOUT.x and CONNECT.x. Once you are clear, you may proceed.
+see that you have not mistyped anything in the above files BBSLIST.NET, 
+CALLOUT.NET and CONNECT.NET. Once you are clear, you may proceed.
 
 ## Configure the Usenet Newsgroup Subcriptions
 

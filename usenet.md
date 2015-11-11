@@ -114,7 +114,9 @@ CALLOUT.NET and CONNECT.NET. Once you are clear, you may proceed.
 ## Configure c:\wwiv\net.ini 
 
 Edit the sample_net.ini and saving it as net.ini if you do not already have net.ini
+
 Required sections are as follows (uncomment and edit as appropriate): 
+
 ``` 
 [NETWORK] 
 primenet = WWIVNET 
@@ -128,9 +130,9 @@ NEWSHOST=[IP address of NNTP server] ; FQDN may work here but I've found best re
 NEWSNAME=[Your NNTP username]
 NEWSPASS=[Your NNTP password]
 ```
-*The following items are optional but recommended
+*The following items are optional but recommended*
 ```
-REALNAME = Y ; Y/N
+REALNAME = Y 
 SPAMADDRESS = YourFake Email@some.com.remove.com
 REPLYTO = Your email@your.com.remove.com
 SIGNATURE = C:\WWIV\GFILES\INTERNET.TAG

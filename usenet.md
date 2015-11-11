@@ -168,7 +168,7 @@ a ```newsrc``` line above the newsgroup lists in news.rc, example:
     newsrc
     alt.bbs.doors 25849 ALTBBSW
 ```
-This will instruct NEWS.EXE to create NEWSRC if it does not already exist and download the list of every available newsgroups on the server. This will be a LOT of data so some people prefer to do this manually.
+This will instruct NEWS.EXE to create NEWSRC if it does not already exist and download a list of every available newsgroup on the server. This will be a LOT of data so some people prefer to do this manually.
 
 **Manually Populate NEWSRC**  
 Using an NNTP client download the list of newsgroups available from your Usenet Provider.

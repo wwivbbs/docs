@@ -142,7 +142,7 @@ NEWSRC_UPD = Y
 
 ## Configure the Usenet Newsgroup Subcriptions
 
-* create a text file ```\wwiv\nets\wwivnet\NEWS.RC``` In this file you will be listing every file in the following format:  
+* create a text file ```\wwiv\networks\wwivnet\NEWS.RC``` In this file you will be listing every file in the following format:  
 ```[newsgroup name] [high message number] [subtype]```  
   
 **[newsgroup name]** - Use the dotted name of the group. ex: alt.bbs.wwiv  
@@ -156,12 +156,11 @@ For example:
 alt.bbs.wwiv    12456    altbbsw
 ```
 
-* create a text file \wwiv\nets\wwivnet\NEWSRC (yes, no extension) This file will contain
-the list of every group available from your Usenet Provider. To populate this list there 
-are two options:  
+* Generate NEWSRC: This file will contain a list of every group available from your Usenet Provider. 
+To populate this list there are two options:  
 
-**Auto-Download NEWSRC**  
-To have the group list download and populated the next time network mail is processed, add 
+**Auto-Generate NEWSRC**  
+To have the group list created and populated the next time network mail is processed, add 
 a ```newsrc``` line above the newsgroup lists in news.rc, example: 
 ```
 \wwiv\nets\wwivnet\news.rc
@@ -169,24 +168,23 @@ a ```newsrc``` line above the newsgroup lists in news.rc, example:
     newsrc
     alt.bbs.doors 25849 ALTBBSW
 ```
-This will force NEWS.EXE to download the list of every available newsgroups on the 
-server. This will be a LOT of data so some people prefer to do this manually.
+This will instruct NEWS.EXE to create NEWSRC if it does not already exist and download the list of every available newsgroups on the server. This will be a LOT of data so some people prefer to do this manually.
 
 **Manually Populate NEWSRC**  
 Using an NNTP client download the list of newsgroups available from your Usenet Provider.
-Put this list of newsgroups into \wwiv\nets\wwivnet\newsrc.
+Save this list of newsgroups as \wwiv\networks\wwivnet\newsrc.
 
-**Verify the creation of the appropriate network file \wwiv\nets\wwivnet\n[subtype].net**
+**Verify the creation of the appropriate network file \wwiv\networks\wwivnet\n[subtype].net**
 There may be a bug that omits the host 32767, if so you will need to manually add the host.
 You may need to do this for each USENET group you add to your system
 ```
-\wwiv\nets\wwivnet\nALTBBSW.net
+\wwiv\networks\wwivnet\nALTBBSW.net
 
 32767
 ```
-As other SysOps subscribe to the subs, you will begin to see them appear in these n[subtype]net files:
+As other SysOps subscribe to the subs, you will begin to see them appear in these n[subtype].net files:
 ```
-\wwiv\nets\wwivnet\nALTBBSW.net
+\wwiv\networks\wwivnet\nALTBBSW.net
 
 1
 708
@@ -200,6 +198,3 @@ Now, when your mail.bat runs, you should see the news.exe portion
 connect to the newsgroups and start downloading messages.
 
 ***
-####Credit
-This quick guide was originally published on Facebook:
-[Quick & Dirty Newsgroups using WINS](https://www.facebook.com/notes/wwiv-bbs-software-help-dev-documentation/quick-dirty-newsgroups-using-wins/852450728099932) by jim 1@707.WWIVnet

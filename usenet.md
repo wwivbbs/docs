@@ -113,9 +113,28 @@ CALLOUT.NET and CONNECT.NET. Once you are clear, you may proceed.
 
 ## Configure c:\wwiv\net.ini by editing the sample_net.ini and saving it as net.ini
 Required sections are as follows (uncomment and edit as appropriate): 
-``` [NETWORK] ```
-``` primenet = WWIVNET ```
-``` POPNAME = [your alias]```
+``` 
+[NETWORK] 
+primenet = WWIVNET 
+POPNAME = [your alias] ; used as your display name on NNTP posts
+
+[GENERAL]
+DOMAIN=[your domain.com] ; used with POPNAME to create you@your.com email address for NNTP
+
+[NEWS]
+NEWSHOST=[IP address of NNTP server] ; FQDN may work here but I've found best results with IP
+NEWSNAME=[Your NNTP username]
+NEWSPASS=[Your NNTP password]
+```
+*The following items are optional but recommended
+```
+REALNAME = Y ; Y/N
+SPAMADDRESS = YourFake Email@some.com.remove.com
+REPLYTO = Your email@your.com.remove.com
+SIGNATURE = C:\WWIV\GFILES\INTERNET.TAG
+XPOSTS = 5
+NEWSRC_UPD = Y
+```
 
 ## Configure the Usenet Newsgroup Subcriptions
 

@@ -113,7 +113,7 @@ CALLOUT.NET and CONNECT.NET. Once you are clear, you may proceed.
 
 ## Configure c:\wwiv\net.ini 
 
-Edit the sample_net.ini and saving it as net.ini if you do not already have net.ini
+Edit the sample_net.ini and save it as net.ini if you do not already have net.ini
 
 Required sections are as follows (uncomment and edit as appropriate): 
 
@@ -193,6 +193,15 @@ As other SysOps subscribe to the subs, you will begin to see them appear in thes
 ```
 
 ###MAIL.BAT
+If you intend on using a batch file to initiate transfers, simply add the following lines
+```
+CALL NETWORK /N32767 .0 /A /P707-585-NEWS /S57600 /T993228415 .0 
+CALL NETWORK1
+CALL NETWORK2
+CALL BBS.EXE /N10 /E
+```
+Of course yours may look a little different. I use node 10 for maintenance, hence the /N10 on the bottom line.
+NETWORK1 and NETWORK2 are optional but I like using them to unpack and handle the incoming messages. 
 
 Now, when your mail.bat runs, you should see the news.exe portion 
 connect to the newsgroups and start downloading messages.

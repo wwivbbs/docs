@@ -67,7 +67,7 @@ O) Description: None.
 ```
 
 ## Configure the Network Files
-* Edit \wwiv\networks\wwivnet\BBSLIST.NET add a line at the end for @32767if it does not already exist 
+* Edit \wwiv\networks\wwivnet\BBSLIST.NET add a line at the end for @32767 if it does not already exist 
 ```
 @32767     *707-585-NEWS #57600      !    [     ]  "WWIVNET Internet Gateway"
 ```
@@ -206,4 +206,9 @@ NETWORK1 and NETWORK2 are optional but I like using them to unpack and handle th
 Now, when your mail.bat runs, you should see the news.exe portion 
 connect to the newsgroups and start downloading messages.
 
+###Troubleshooting (todo)
+
+Common issues:
+
 ***
+

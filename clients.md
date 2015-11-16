@@ -6,7 +6,7 @@ Here are some clients you can use on your device to access WWIV 5.0 via Telnet.
 
 Client | Windows | Linux | Android | iOS | Windows Phone
 ------ | :-----: | :---: | :-----: | :-: | :-----------:
-[SyncTerm](http://www.syncterm.net/) | V | x |  |  |
+[SyncTerm](http://www.syncterm.net/) | V - Use RAW not Telnet | x |  |  |
 [NetRunner](http://mysticbbs.com/downloads.html) | x | x |  |  |
 [Terminal IDE](https://play.google.com/store/apps/details?id=com.spartacusrex.spartacuside) |  |  | x |  |
 [AfterShock](https://play.google.com/store/apps/details?id=com.asvcorp.aftershock) |  |  | x |  |

@@ -1,11 +1,11 @@
 ## QuickBBS Based Full Screen Editors
-WWIV includes support for QuickBBS MSGTMP/MSGINF editors such as **OpenEdit** and **Tide**.  
+WWIV includes support for QuickBBS MSGTMP/MSGINF editors such as **Open!EDIT** and **Tide**.  
 QuickBBS editors bring more choices for you and your users in writing messages on your system.
 
 ### Configuring the editor in INIT:
 Type or scroll to E for **External Editor Configuration**. 
 
-####[OpenEDIT](http://www.tinysbbs.com/OpenEDIT.html) by Shawn Highfield 
+####[Open!EDIT](http://www.tinysbbs.com/OpenEDIT.html) by Shawn Highfield 
 * Description: OpenEdit 
 * BBS Type: QuickBBS 
 * Dos Interupts: OFF 

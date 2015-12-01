@@ -25,6 +25,8 @@ WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from
 the [WWIV build server](http://build.wwivbbs.org/job/wwiv/)  
 [Building WWIV 5.0](buildwwiv5)
 
+[WWIV Release and Versioning](wwiv_releases_and_versioning)
+
 ## New Installations
 The following steps will get you up and running quickly, but I would not say
 you're ready to go live and open up to users. After you complete these installation 

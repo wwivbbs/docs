@@ -5,7 +5,7 @@ QuickBBS editors bring more choices for you and your users in writing messages o
 ### Configuring the editor in INIT:
 Type or scroll to E for **External Editor Configuration**. 
 
-#### OpenEdit by Shawn Highfield 
+####[OpenEDIT](http://www.tinysbbs.com/OpenEDIT.html) by Shawn Highfield 
 * Description: OpenEdit 
 * BBS Type: QuickBBS 
 * Dos Interupts: OFF 

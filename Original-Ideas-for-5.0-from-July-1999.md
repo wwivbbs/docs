@@ -19,9 +19,9 @@
 
 
 #### Door Ideas
-  * Make door dropfile format file (i.e. CHAIN.FMT) that defines the format
-    for a door file (so it's not hard coded into the source code, and new
-    door formats can be added adhoc to product.
+  * [Issue 391](https://github.com/wwivbbs/wwiv/issues/391) Make door dropfile format file (i.e. CHAIN.FMT) 
+that defines the format for a door file (so it's not hard coded into the source code, and new door formats 
+can be added adhoc to product. 
   * [X] Use same handle passing mechanisms as EleBBS (On WIN32/OS2)
   * [X] Remove chain support?  (It could come back later on, but as it is, is not
     portable to WIN32 or Linux)  We could recreate a newer chain format that
@@ -30,27 +30,23 @@
     cross-platform portable!)
 
 #### Message Areas
-  * Possible use of JAM message base format. (Type3)
-  * Built-in FTN support
+  * [Issue 392](https://github.com/wwivbbs/wwiv/issues/392) Possible use of JAM message base format. (Type3)
+  * [Issue 393](https://github.com/wwivbbs/wwiv/issues/393) Built-in FTN support
   * [X] Drop Type-1 message base support
-  * Move msgbase clean up code (i.e. renumbering, deleting, etc.) to a utility
-    so it doesn't overly-complicate the message base code (as it is now)
-  * Update msg header format so that there are not as many kludges (like 
-    Title[80] really means the network number, etc..)
-  * Write a standard MessageBase API and make WWIV use it. (seperate out
-    core MSGAPI from the BBS flow)
-  * Internal Newsgroup support
-  * ~~PPP Project integrated with Network.~~
-  * Built in support to forward SMTP messages.
-  * Built in support to check a POP mailbox.
+  * [Issue 394](https://github.com/wwivbbs/wwiv/issues/394) Move msgbase clean up code (i.e. renumbering, 
+deleting, etc.) to a utility so it doesn't overly-complicate the message base code (as it is now)
+  * [Issue 395](https://github.com/wwivbbs/wwiv/issues/395) Update msg header format so that there are not as many kludges (like Title[80] really means the network number, etc..)
+  * [Issue 396](https://github.com/wwivbbs/wwiv/issues/396) Write a standard MessageBase API and make WWIV use it. (seperate out core MSGAPI from the BBS flow)
+  * [Issue 397](https://github.com/wwivbbs/wwiv/issues/397) Internal Newsgroup support
+  * [Issue 400](https://github.com/wwivbbs/wwiv/issues/400) PPP Project integrated with Network.
+  * [Issue 398](https://github.com/wwivbbs/wwiv/issues/398) Built in support to forward SMTP messages.
+  * [Issue 399](https://github.com/wwivbbs/wwiv/issues/399) Built in support to check a POP mailbox.
 
 #### File Areas
-  * Add new fields to file area (FTP directory) so that utilities can make
-    HTML versions of the file areas for wev sites.
+  * [Issue 401](https://github.com/wwivbbs/wwiv/issues/401) Add new fields to file area (FTP directory) so that utilities can make HTML versions of the file areas for wev sites.
   * [X] Internal ZModem
-  * Long File Name support.
-  * Write a standard FileBase API and make WWIV use it. (Seperate out filebase
-    specific code, i.e. file listing, searching, etc. from the main bbs flow)
+  * [Issue 402](https://github.com/wwivbbs/wwiv/issues/402) Long File Name support.
+  * [Issue 403](https://github.com/wwivbbs/wwiv/issues/403) Write a standard FileBase API and make WWIV use it. (Seperate out filebase specific code, i.e. file listing, searching, etc. from the main bbs flow)
 
 #### Platforms
   * [X] Tiered platform Development
@@ -69,9 +65,9 @@
   * [X] Sockets under WIN32.
   * ~~Sockets under OS/2~~
   * [X] Linux - Ideas?
-  * POP support to check your e-mail?
-  * Include simple HTTP server?
-  * Finger Daemon support?
+  * [Issue 399](https://github.com/wwivbbs/wwiv/issues/399) POP support to check your e-mail?
+  * ~~Include simple HTTP server?
+  * [Issue 404](https://github.com/wwivbbs/wwiv/issues/404) Finger Daemon support?
 
 #### File Formats
   * XML?
@@ -94,7 +90,6 @@
 #### Sysop Experience
   * Installation program.
   * Online help while a caller is online
-  * INIT
+  * ~~INIT
     * ~~GUI INIT on Windows,~~ Curses based INIT on Linux. 
     * ~~Java based INIT for both?~~
-

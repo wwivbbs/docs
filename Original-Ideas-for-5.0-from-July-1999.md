@@ -75,12 +75,12 @@ deleting, etc.) to a utility so it doesn't overly-complicate the message base co
   * Try to limit the number of binary files (less portable)
 
 #### Tools/Utilities
-  * 1 big WWIVUTIL.EXE that contains
+  * [Issue 407](https://github.com/wwivbbs/wwiv/issues/407) 1 big WWIVUTIL.EXE that contains
     * Msgbase purger/maintenance utility
     * Userlist purger/maintenance utility
     * File area listing utility
     * reporting tool.
-  * Public SDK/Libraries for writing utilities (i.e. Web Tools)
+  * [Issue 408](https://github.com/wwivbbs/wwiv/issues/408) Public SDK/Libraries for writing utilities (i.e. Web Tools)
   
 #### User Experience (caller)
   * [X] Similar user experience as 4.30 from telnetting in.
@@ -88,8 +88,8 @@ deleting, etc.) to a utility so it doesn't overly-complicate the message base co
     * Move all commands (i.e. Defaults, Automessage, BBSList, Chains) into Menus
 
 #### Sysop Experience
-  * Installation program.
-  * Online help while a caller is online
+  * [Issue 409](https://github.com/wwivbbs/wwiv/issues/409) Installation program
+  * [Issue 410](https://github.com/wwivbbs/wwiv/issues/410) Online help while a caller is online
   * ~~INIT
     * ~~GUI INIT on Windows,~~ Curses based INIT on Linux. 
     * ~~Java based INIT for both?~~

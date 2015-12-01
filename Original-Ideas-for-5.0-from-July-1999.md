@@ -23,7 +23,7 @@
     for a door file (so it's not hard coded into the source code, and new
     door formats can be added adhoc to product.
   * [X] Use same handle passing mechanisms as EleBBS (On WIN32/OS2)
-  * Remove chain support?  (It could come back later on, but as it is, is not
+  * [X] Remove chain support?  (It could come back later on, but as it is, is not
     portable to WIN32 or Linux)  We could recreate a newer chain format that
     is source code portable from Linux to WIN32, or even create a script
     language (like WWIVBASIC) to replace it (which would be completely 

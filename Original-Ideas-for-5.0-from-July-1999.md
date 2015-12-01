@@ -66,7 +66,7 @@ deleting, etc.) to a utility so it doesn't overly-complicate the message base co
   * ~~Sockets under OS/2~~
   * [X] Linux - Ideas?
   * [Issue 399](https://github.com/wwivbbs/wwiv/issues/399) POP support to check your e-mail?
-  * ~~Include simple HTTP server?
+  * ~~Include simple HTTP server?~~
   * [Issue 404](https://github.com/wwivbbs/wwiv/issues/404) Finger Daemon support?
 
 #### File Formats

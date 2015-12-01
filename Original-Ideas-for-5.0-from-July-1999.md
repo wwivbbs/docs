@@ -69,7 +69,7 @@ deleting, etc.) to a utility so it doesn't overly-complicate the message base co
   * ~~Include simple HTTP server?~~
   * [Issue 404](https://github.com/wwivbbs/wwiv/issues/404) Finger Daemon support?
 
-#### File Formats
+#### [Issue 406](https://github.com/wwivbbs/wwiv/issues/406) File Formats
   * XML?
   * Text files?
   * Try to limit the number of binary files (less portable)
@@ -84,7 +84,7 @@ deleting, etc.) to a utility so it doesn't overly-complicate the message base co
   
 #### User Experience (caller)
   * [X] Similar user experience as 4.30 from telnetting in.
-  * Further extend Menus
+  * [Issue 405](https://github.com/wwivbbs/wwiv/issues/405) Further extend Menus
     * Move all commands (i.e. Defaults, Automessage, BBSList, Chains) into Menus
 
 #### Sysop Experience

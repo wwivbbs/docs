@@ -31,7 +31,7 @@ Platform | Tier
 ---------|------
 Windows 32-bit (Windows7 or later) | Tier1
 Linux {Debian8 like} (x86/X64)| Tier2
-Others | Tier3
+Others (ARM) | Tier3
 
 ### Release Cadence
 Every quarter (or so) a new Minor release will be released.  Bugs targeted to this release will use the GitHub milestone functionality.

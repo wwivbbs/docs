@@ -13,7 +13,7 @@ Type or scroll to E for **External Editor Configuration**.
 * File name to run remotely: c:\wwiv\oe\oedit.exe -n%5 -pC:\WWIV\TEMP%N -1 
 * File name to run locally: c:\wwiv\oe\oedit.exe -n%5 -pC:\WWIV\TEMP%N -1 
 
-#### TIDE by Errol Smith
+#### [TIDE](http://www.ros.com.au/~errol/tide.html) by Errol Smith
 * Description: Tide
 * BBS Type: QuickBBS
 * Dos Interupts: OFF

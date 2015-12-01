@@ -25,7 +25,7 @@ __Tier1__ | Fully supported, bugs may block a release.
 __Tier2__ | Supported but lacking a maintainer, bugs may __NOT__ block a release.
 __Tier3__ | Best effort support, bugs will __NOT__ block a release.
 
-Platforms:
+### Platforms:
 
 Platform | Tier
 ---------|------
@@ -35,3 +35,6 @@ Others (ARM) | Tier3
 
 ### Release Cadence
 Every quarter (or so) a new Minor release will be released.  Bugs targeted to this release will use the GitHub milestone functionality.
+
+
+

@@ -30,7 +30,7 @@ Platforms:
 Platform | Tier
 ---------|------
 Windows 32-bit (Windows7 or later) | Tier1
-Linux [Debian8 like] (x86/X64)| Tier2
+Linux {Debian8 like} (x86/X64)| Tier2
 Others | Tier3
 
 ### Release Cadence

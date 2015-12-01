@@ -1,3 +1,5 @@
+Please open any additional ideas as Github Issue. Do not add to this list.
+
 #### Build Ideas
   * ~~Standardize on GNU Make on Linux~~
   * ~~Standardize on NMAKE from MSVC 6.0 on WIN32~~

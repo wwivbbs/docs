@@ -16,7 +16,8 @@ BUILD | Build number from Jenkins
 
 ### Platform Support
 
-WWIV supports the following platforms on a tiered system. The tiers are:
+WWIV supports the following platforms on a tiered system.  
+The tiers are:
 
 Tier | Description
 -----|-------------
@@ -24,6 +25,13 @@ __Tier1__ | Fully supported, bugs may block a release.
 __Tier2__ | Supported but lacking a maintainer, bugs may __NOT__ block a release.
 __Tier3__ | Best effort support, bugs will __NOT__ block a release.
 
+Platforms:
+
+Platform | Tier
+---------|------
+Windows 32-bit (Windows7 or later) | Tier1
+Linux [Debian8 like] (x86/X64)| Tier2
+Others | Tier3
 
 ### Release Cadence
 Every quarter (or so) a new Minor release will be released.  Bugs targeted to this release will use the GitHub milestone functionality.

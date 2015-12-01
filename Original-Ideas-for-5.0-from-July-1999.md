@@ -40,7 +40,7 @@
   * Write a standard MessageBase API and make WWIV use it. (seperate out
     core MSGAPI from the BBS flow)
   * Internal Newsgroup support
-  * PPP Project integrated with Network.
+  * ~~PPP Project integrated with Network.~~
   * Built in support to forward SMTP messages.
   * Built in support to check a POP mailbox.
 

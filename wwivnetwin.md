@@ -6,7 +6,7 @@
 * Submit your WWIVNet Node Application to 1@1 Weather Station BBS - telnet://bbs.weather-station.org/
 * Get the latest version of [WWIVNET-##.zip](http://build.wwivbbs.org/job/wwivnet/) on the build server. 
 * Put all of the contents of the zip in ```\wwiv\nets\wwivnet```
-* [Net38b.zip](http://www.wwiv.us/net38b3.zip) put all of the *.EXE files in \WWIV. The rest of the files are not needed.
+* [Net38b.zip](http://www.wwiv.us/net38b6.zip) put all of the *.EXE files in \WWIV. The rest of the files are not needed.
 * Setup your node in WWIV INIT.EXE
 ```
 ┌─────────────────────────────────────────────────── Network Configuration ┐

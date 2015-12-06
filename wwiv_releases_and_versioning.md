@@ -1,5 +1,5 @@
 # WWIV Releases and Versioning 
-_Draft Proposal_  
+_Current Proposal (and plan of record)_  
 _2015-11-30_  
 Rushfan (wwiv@)  
 ***

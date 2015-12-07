@@ -161,5 +161,6 @@ Form 1991 through 1994 the official WWIVNews was published and distributed over 
 [WWIVNews Volume 6 Issue 3 (September/October 1995)](wwiv9509)  
 [WWIVNews Volume 6 Issue 4 (December 1995)](wwiv9512)  
 [WWIVNews Volume 7 Issue 1 (Spring 1996)](wwiv96spr)  
+[WWIVNews Template - Keep this at the bottom](wwivnewstemplate)  
 
 ## [Other WWIV Pages](links)

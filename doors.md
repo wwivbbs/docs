@@ -93,7 +93,7 @@ Doors Running on WWIV BBSes | Doors with Installation Steps
 [BuZZ]() | [TradeWars 2002](doortw2002) 
 [Chat]() | 
 [Clans](doorclan) | 
-[Cryptogram]()
+[Cryptogram]() |
 [Falcon's Eye]() | 
 [Food Fight]() | 
 [Food Fite! (The Sequel!)]() | 

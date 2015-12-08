@@ -93,6 +93,7 @@ Doors Running on WWIV BBSes | Doors with Installation Steps
 [BuZZ]() | [TradeWars 2002](doortw2002) 
 [Chat]() | 
 [Clans](doorclan) | 
+[Cryptogram]()
 [Falcon's Eye]() | 
 [Food Fight]() | 
 [Food Fite! (The Sequel!)]() | 
@@ -108,6 +109,7 @@ Doors Running on WWIV BBSes | Doors with Installation Steps
 [Operation Overkill]() | 
 [Outpost Trader]() | 
 [Over-Under (Card Solitaire)]() | 
+[Pentasim]() |
 [PimpWars]() | 
 [Russian Roulette]() | 
 [Scrabble (The Word Game)]() | 

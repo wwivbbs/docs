@@ -105,7 +105,13 @@ assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have a
 These should all be placed in your base WWIV directory. For example, if your WWIV base is /home/wwiv and your git base is /home/wwiv/wwiv-master, the following will copy all the compiled binaries to your base wwiv directory
 ```
 cd /home/wwiv  
-cp /home/wwiv/wwiv-master/bbs/bbs /home/wwiv/wwiv-master/init/init /home/wwiv/wwiv-master/fix/fix home/wwiv/wwiv-master/nodemgr/nodemgr /home/wwiv/wwiv-master/netutil/netutil /home/wwiv/wwiv-master/network/network /home/wwiv/wwiv-master/networkb/networkb  . 
+cp /home/wwiv/wwiv-master/bbs/bbs \
+/home/wwiv/wwiv-master/init/init \
+/home/wwiv/wwiv-master/fix/fix \
+home/wwiv/wwiv-master/nodemgr/nodemgr \
+/home/wwiv/wwiv-master/netutil/netutil \
+/home/wwiv/wwiv-master/network/network \
+/home/wwiv/wwiv-master/networkb/networkb  . 
 ```
 **(don't forget the ".")**
 run sh install.sh It will run init at the end; say Yes to initializing and log out of init. init takes care of the remaining WWIV-specific config files (e.g., config.dat)  

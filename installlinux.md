@@ -23,7 +23,8 @@ Compile things you will need
 
 Package | Comments
 ------- | ----------
-svn (subversion) |  to grab the source code for compiling  
+git |  to grab the source code for compiling  
+ncurses-devel | development headers, etc
 cmake | 
 make | 
 gcc 4.9 or later | 
@@ -87,19 +88,26 @@ Copy the compiled binaries to your WWIV base directory
 
 **NOTE:** Do these steps as a non-root user; your BBS user would be the easiest from a file permissions perspective later on.
 
-pull down the code from svn (svn checkout svn://svn.code.sf.net/p/wwiv/svn/trunk wwiv-svn) There are currently no pre-built binaries for linux.  
-In the svn directory (e.g., ```/home/wwiv/wwiv-svn```), run ```cmake . && make``` (don't forget the ".")
-assuming you built in ```/home/wwiv/wwiv-svn```, the binaries you will have as a result are:
+There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution.  You are welcome to try them, but compiling is likely to work better.
+  
+pull down the code from git (https://github.com/wwivbbs/wwiv.git) 
+In the svn directory (e.g., ```/home/wwiv/wwiv-master```), run ```cmake . && make``` (don't forget the ".")
+assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have as a result are:
 ```
-/home/wwiv/wwiv-svn/bbs/bbs  
-/home/wwiv/wwiv-svn/init/init  
-/home/wwiv/wwiv-svn/nodemgr/nodemgr  
-/home/wwiv/wwiv-svn/fix/fix  
-/home/wwiv/wwiv-svn/networkb/networkb  
+/home/wwiv/wwiv-master/bbs/bbs  
+/home/wwiv/wwiv-master/init/init  
+/home/wwiv/wwiv-master/fix/fix  
+/home/wwiv/wwiv-master/nodemgr/nodemgr  
+/home/wwiv/wwiv-master/netutil/netutil  
+/home/wwiv/wwiv-master/network/network
+/home/wwiv/wwiv-master/networkb/networkb  
 ```
-These should all be placed in your base WWIV directory. For example, if your WWIV base is /home/wwiv and your svn base is /home/wwiv/wwiv-svn, the following will copy all the compiled binaries to your base wwiv directory
+These should all be placed in your base WWIV directory. For example, if your WWIV base is /home/wwiv and your git base is /home/wwiv/wwiv-master, the following will copy all the compiled binaries to your base wwiv directory
+```
 cd /home/wwiv  
-cp /home/wwiv/wwiv-svn/fix/fix /home/wwiv/wwiv-svn/bbs/bbs /home/wwiv/wwiv-svn/init/init /home/wwiv/wwiv-svn/nodemgr/nodemgr /home/wwiv/wwiv-svn/networkb/networkb . (don't forget the ".")  
+cp /home/wwiv/wwiv-master/bbs/bbs /home/wwiv/wwiv-master/init/init /home/wwiv/wwiv-master/fix/fix home/wwiv/wwiv-master/nodemgr/nodemgr /home/wwiv/wwiv-master/netutil/netutil /home/wwiv/wwiv-master/network/network /home/wwiv/wwiv-master/networkb/networkb  . 
+```
+**(don't forget the ".")**
 run sh install.sh It will run init at the end; say Yes to initializing and log out of init. init takes care of the remaining WWIV-specific config files (e.g., config.dat)  
 
 Your BBS basic local setup is complete. Run ./bbs and set up a new user to be the sysop (#1) account (ie, type NEW for the user and fill in the user info). Once you are done, log out.  

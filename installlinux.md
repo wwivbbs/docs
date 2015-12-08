@@ -108,7 +108,7 @@ cd /home/wwiv
 cp /home/wwiv/wwiv-master/bbs/bbs \
 /home/wwiv/wwiv-master/init/init \
 /home/wwiv/wwiv-master/fix/fix \
-home/wwiv/wwiv-master/nodemgr/nodemgr \
+/home/wwiv/wwiv-master/nodemgr/nodemgr \
 /home/wwiv/wwiv-master/netutil/netutil \
 /home/wwiv/wwiv-master/network/network \
 /home/wwiv/wwiv-master/networkb/networkb  . 

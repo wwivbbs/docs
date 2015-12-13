@@ -20,16 +20,20 @@ The WWIV Dev Team
 ## [History of WWIV](wwivhistory)
 ## [WWIV BBS List](wwivbbslist)
 
-## Get WWIV 5.0 (stable)
-WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from
-the [WWIV build server](http://build.wwivbbs.org/jenkins/job/wwiv_5.0.0/)  
-[Building WWIV 5.0](buildwwiv5)
+## Get WWIV 5.0 (current production release)
+WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from here.
+You will need the platform specific release for WWIV and also the network software
+(DOS based) which works on both Windows and Linux.
 
+* [wwiv500-win32.zip](https://storage.googleapis.com/build-iv/releases/5.0/wwiv500-win32.zip) - WWIV 5.0.0 for Win32
+* [wwiv500-linux.tar.gz](https://storage.googleapis.com/build-iv/releases/5.0/wwiv500-linux.tar.gz) - WWIV 5.0.0 for Linux
+* [net38b6](https://storage.googleapis.com/build-iv/releases/5.0/net38b6.zip) - Net38 beta-6 (DOS, Win32, Linux)
 
-## Get WWIV 5.1 (unstable)
-WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from
-the [WWIV build server](http://build.wwivbbs.org/jenkins/job/wwiv/)  
-[Building WWIV 5.1](buildwwiv5)
+## Get WWIV 5.1 (development/continuous builds)
+Pre-built WWIV 5.1.0 binaries for x86 Windows and Linux can be downloaded from
+the [WWIV Continuous Build Server](http://build.wwivbbs.org/jenkins/job/wwiv/)  
+
+If you wish to compile it yourself, please see: [Building WWIV 5.1](buildwwiv5)
 
 [WWIV Release and Versioning](wwiv_releases_and_versioning)
 

@@ -20,10 +20,16 @@ The WWIV Dev Team
 ## [History of WWIV](wwivhistory)
 ## [WWIV BBS List](wwivbbslist)
 
-## Get WWIV 5.0
+## Get WWIV 5.0 (stable)
 WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from
-the [WWIV build server](http://build.wwivbbs.org/job/wwiv/)  
+the [WWIV build server](http://build.wwivbbs.org/jenkins/job/wwiv_5.0.0/)  
 [Building WWIV 5.0](buildwwiv5)
+
+
+## Get WWIV 5.0 (unstable)
+WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from
+the [WWIV build server](http://build.wwivbbs.org/jenkins/job/wwiv/)  
+[Building WWIV 5.1](buildwwiv5)
 
 [WWIV Release and Versioning](wwiv_releases_and_versioning)
 

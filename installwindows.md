@@ -12,8 +12,8 @@ will work on anything but 32bit x86 systems. We do not have code for
 all these other programs (yet?). Maybe down the road. So, for now 
 use a 32bit x86 version of Windows.
 
-#### Windows Updates and .Net 4.5
-You should have ALL high priority updates on your windows mahcine. This might mean running windows update several times. As a part of this, you should also have installed Microsoft .Net Framework 4.5.x installed. The [4.5.2 install is here](http://www.microsoft.com/en-us/download/details.aspx?id=42642) if it was automatically installed by Windows Update. **XP** For Windows XP [4.5 was the last supported release](http://www.microsoft.com/en-us/download/details.aspx?id=30653), there may be updates on top of that, so install and then run Windows Update.
+#### Windows Updates and .Net 4.6
+You should have ALL high priority updates on your Windows machine. This might mean running windows update several times. As a part of this, you should also have installed Microsoft .Net Framework 4.6 or newer.
 
 #### Microsoft Visual Studio C++ Runtime
 

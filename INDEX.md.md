@@ -33,9 +33,9 @@ You will need the platform specific release for WWIV and also the network softwa
 Pre-built WWIV 5.1.0 binaries for x86 Windows and Linux can be downloaded from
 the [WWIV Continuous Build Server](http://build.wwivbbs.org/jenkins/job/wwiv/)  
 
-If you wish to compile it yourself, please see: [Building WWIV 5.1](development/build_wwiv_5)
+If you wish to compile it yourself, please see: [Building WWIV 5.1](Development/Build_WWIV_5)
 
-[WWIV Release and Versioning](development/wwiv_releases_and_versioning)
+[WWIV Release and Versioning](Development/WWIV_releases_and_versioning)
 
 ## New Installations
 The following steps will get you up and running quickly, but I would not say
@@ -101,6 +101,3 @@ This page will include information on Telnet clients, dial-up clients
 and other User helpers. We want to make this easy for the new BBS User.
 
 ## [Links](links)
-
-***
-[Atom Feed of Wiki Changes](https://github.com/wwivbbs/wwiv/wiki.atom)

@@ -10,15 +10,15 @@
                WWW   WWW   WWW   WWW  III    VVV      555555 .. 000000
 ```
 
-WWIV BBS SOFTWARE has a long [history](wwivhistory), this project is to give WWIV a strong future.
+WWIV BBS SOFTWARE has a long [history](wwiv_history), this project is to give WWIV a strong future.
 
 Were working hard to bring you the best bbs software we can. This wiki is to support the users of WWIV from install to customization.
 
 Thank you,  
 The WWIV Dev Team 
 
-## [History of WWIV](wwivhistory)
-## [WWIV BBS List](wwivbbslist)
+## [History of WWIV](wwiv_history)
+## [WWIV BBS List](wwiv_bbs_list)
 
 ## Get WWIV 5.0 (current production release)
 WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from here.
@@ -33,9 +33,9 @@ You will need the platform specific release for WWIV and also the network softwa
 Pre-built WWIV 5.1.0 binaries for x86 Windows and Linux can be downloaded from
 the [WWIV Continuous Build Server](http://build.wwivbbs.org/jenkins/job/wwiv/)  
 
-If you wish to compile it yourself, please see: [Building WWIV 5.1](buildwwiv5)
+If you wish to compile it yourself, please see: [Building WWIV 5.1](development/build_wwiv_5)
 
-[WWIV Release and Versioning](wwiv_releases_and_versioning)
+[WWIV Release and Versioning](development/wwiv_releases_and_versioning)
 
 ## New Installations
 The following steps will get you up and running quickly, but I would not say

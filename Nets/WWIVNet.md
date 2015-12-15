@@ -5,7 +5,7 @@
 WWIVNet refers to a WWIV BBS based Net that uses WWIV's message and network 
 packet system to share email and sub messages. There are and have been other 
 WWIVNet based networks, similiar to how there are more than one FidoNet 
-Technology based net. All of these nets are covered on the [Other Nets](othernets) page.
+Technology based net. All of these nets are covered on the [Other Nets](Other_Nets) page.
 
 For the purpose of this page, WWIVNet refers to the specific instance of a 
 WWIVNet that is the primary network for WWIV BBSes called WWIVNet.
@@ -54,8 +54,8 @@ Coordinator, Weatherman 1@1 WWIVnet or email mark@weather-station.org
 
     Signature/Name:                              Date:
     
-## [Configuring WWIVNet on Windows](wwivnetwin)
-## [Configuring WWIVNet on Linux](wwivnetlinux)
+## [Configuring WWIVNet on Windows](WWIVNet_Windows)
+## [Configuring WWIVNet on Linux](WWIVNet_Linux)
 ## Maintaining your WWIVNet Connections
 When you setup WWIVNet you download WWIVNET-##.zip from the build server and put the files in ```\wwiv\nets\wwivnet```. Occasionally you need to update these files so your BBS knowns who the new nodes & SUBs are on the net as well as which ones have gone away. If you are NOT also setup to get a Usenet feed you can copy the new files from the zip to ```\wwiv\net\wwivnet``` each time they are updated.
 
@@ -82,5 +82,5 @@ If\when you are are ready to host your own WWIVNet sub here are the steps to tak
 ***
 Within the Net37.zip there are two documents and I've also posted them on the wiki. They have a lot of technical information if you'd like to read it.
 
-* [NET37.DOC](net37doc) <- Has all the installation information (Must Read!)
-* [NET37TEC.DOC](net37tecdoc) <- Good technical read on the inner workings of WWIVNet (optional)
+* [NET37.DOC](NET37_Docs) <- Has all the installation information (Must Read!)
+* [NET37TEC.DOC](NET37_Tec_Docs) <- Good technical read on the inner workings of WWIVNet (optional)

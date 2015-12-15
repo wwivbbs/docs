@@ -8,8 +8,6 @@ Link | Comments
 [Bloodstone BBS WWIV Files](http://www.bsbbs.com/wwiv/)  | 
 http://dloads.filenet.wwiv.net/ | Eagle's Bay
 [Cloud City BBS](http://cloudcitybbs.com) | 
-[SF Wiki](http://sourceforge.net/p/wwiv/wiki/Home/) | Old Site
-[SF Hosted Home Page](http://wwiv.sourceforge.net/) | old Site
 [Wikipedia](https://en.wikipedia.org/wiki/WWIV) | 
 [WWWIVNews Archives at TextFiles.com](http://www.textfiles.com/bbs/WWIVNEWS/)  | 
 [BBS Documenary WWIV Pages](http://software.bbsdocumentary.com/IBM/DOS/WWIV/)  | 

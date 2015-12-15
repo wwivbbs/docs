@@ -428,7 +428,7 @@ This type is processednormally and entirely by the NETxx package.
 These typesimplement internal hooks for pre-processors and tosserssuch as WWIVtoss and the PPP Project to convert nativetype messages and email to WWIV format and vice versa.
 
 **NOTE:** Network configuration is discussed at length as part of setting up Nets to which your BBS 
-joins. See [NETS on the Home page of the wiki](home).
+joins. See [NETS on the Home page of the wiki](/Nets).
 
 ## Registration Information  
 

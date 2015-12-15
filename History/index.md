@@ -103,14 +103,22 @@ multi-tasking  operating  system.  To  put  it  simply,  PC-DOS was not
 designed with multi-tasking in mind.
 
 ## WWIV Software Services
-In January of 1998, Dean Nash purchased WWIV and WWIV Software Services from Wayne Bell. WSS was reformed as a Tennessee Limited Liability Company with a full corporate posture. Craig Dooley was appointed Support Coordinator and supervises the Support Board System and Source Distribution Sites.
+In January of 1998, Dean Nash purchased WWIV and WWIV Software Services 
+from Wayne Bell. WSS was reformed as a Tennessee Limited Liability 
+Company with a full corporate posture. Craig Dooley was appointed Support 
+Coordinator and supervises the Support Board System and Source Distribution 
+Sites.
 
 ## WWIV 5.0 
-WWIV 5.0 was started in 1999 with moderate progress which picked up in earnest in 2003. On going development and daily build releases continue to this day.
+WWIV 5.0 was started in 1999 with moderate progress which picked up in 
+earnest in 2003. On going development and daily build releases continue 
+to this day.
 
-On September 18 2004 WSS announced that WWIV 5.0 would be open source under the Apache License. Originally the code was managed on Sourceforge, but in 2015 development was moved to GitHub.
+On September 18 2004 WSS announced that WWIV 5.0 would be open source 
+under the Apache License. Originally the code was managed on 
+Sourceforge, but in 2015 development was moved to GitHub.
 
-[Original Open Source Announcement](wwivopensource)
+[Original Open Source Announcement](WWIV_Open_Source_Announcement)
 
 ##WWIV Hall of Fame
 
@@ -122,13 +130,14 @@ Adam Caldwell | The Emporer |  | WWIVEdit
 Craig Dooley | | | WWIVToss
 
 ##WWIVCon
-WWIVCon was the official WWIV Convention. Here's the information we have found year by year.
+WWIVCon was the official WWIV Convention. Here's the information we 
+have found year by year.
 
-[WWIVCon 1994- New Orleans 1-3 July](wwivcon1994)  
-[WWIVCon 1995 - Buffalo](wwivcon1995)  
-[WWIVCon 1996 - Minneapolis](wwivcon1996)  
-[WWIVCon 1997 - Washington DC 25-27 July](wwivcon1997)  
-[WWIVCon 1998 - Pigeon Forge 21-23 August](wwivcon1998)  
-[WWIVCon 1999 - Los Angeles](wwivcon1999)  
+[WWIVCon 1994- New Orleans 1-3 July](WWIVCon/WWIVCon_1994)  
+[WWIVCon 1995 - Buffalo](WWIVCon/WWIVCon_1995)  
+[WWIVCon 1996 - Minneapolis](WWIVCon/WWIVCon_1996)  
+[WWIVCon 1997 - Washington DC 25-27 July](WWIVCon/WWIVCon_1997)  
+[WWIVCon 1998 - Pigeon Forge 21-23 August](WWIVCon/WWIVCon_1998)  
+[WWIVCon 1999 - Los Angeles](WWIVCon/WWIVCon_1999)  
 
 ## [Other WWIV Pages](links)

@@ -183,7 +183,7 @@ System Password you setup in INIT.
 
 _**Congratulations! You are now the SysOp of a WWIV 5.0 BBS!**_
 
-Continue on to more advanced [WWIV5 Telnet Server](wwwiv5telnetserver) settings 
+Continue on to more advanced [WWIV5 Telnet Server](/Configuration/Telnet/WWIV_5_telnet_server) settings 
 to get on the internet. But we suggest you read through the rest of the 
 documentation before you get too excited about that just yet. But don't worry, 
 it's not hard at all!

@@ -3,7 +3,7 @@
 
 ## Prerequisites
 This entire process will assume you are already on WWIVNet. So, 
-[setup WWIVNet](wwivnet) first. We will walk you through subscribing
+[setup WWIVNet](WWIVNet) first. We will walk you through subscribing
 to alt.bbs.wwiv as an example. This assumes your Usenet Provider 
 carries this group. You can replace alt.bbs.wwiv with your favorite 
 news group. Some of the steps will have to repeat for every newsgroup 

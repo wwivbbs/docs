@@ -5,7 +5,7 @@ This relates to settings for using DOSEMU to run certain parts of the WWIV
 BBS. The main things are system related (e.g., WWIVnet) and DOORs related. 
 There are a number of things, however, that apply to all cases when using 
 DOSEMU. If you haven't installed WWIV for linux yet, please check out 
-[WWIV 5.0 Install on Linux](installlinux).
+[WWIV 5.0 Install on Linux](Linux_Installation).
 
 ## Common Settings
 
@@ -23,8 +23,10 @@ Component | Comments
 dosemu | is actually a wrapper for the binary file dosemu.bin  
 dosemu.bin | the main binary  
 .dosemurc | a config file that's called when dosemu is invoked  
-dosdebug | a binary that allows for inspecting running dosemu processes. It can be handy to use for killing a dosemu that has hung for some reason.  
-.dosemu directory | typically, the .dosemu directory will be created under  the home directory of the user running it.  
+dosdebug | a binary that allows for inspecting running dosemu processes. It 
+can be handy to use for killing a dosemu that has hung for some reason.  
+.dosemu directory | typically, the .dosemu directory will be created under  
+the home directory of the user running it.  
 dosemu.users | typically in /etc/dosemu. Defines user permissions  
 
 DOSEMU typically comes with FreeDOS; a DOS implementation that works pretty 
@@ -36,7 +38,9 @@ the man pages for dosemu and dosemu.bin.
 
 ### User Permissions
 
-Your wwiv user should be restricted in its access while running DOSEMU. This is found in the dosemu.users file (usually in /etc/dosemu). Just add a single line to the end of the file:
+Your wwiv user should be restricted in its access while running DOSEMU. This 
+is found in the dosemu.users file (usually in /etc/dosemu). Just add a single 
+line to the end of the file:
 
 wwiv restricted  
 
@@ -68,11 +72,16 @@ most things.
 
 ### running the first time 
 
-If you have never run dosemu manually, please do it now as your bbs userid (e.g., wwiv). That sets up the shell drive info (typically under ~/.dosemu) that will be referenced in the rest of this page.
+If you have never run dosemu manually, please do it now as your bbs userid 
+(e.g., wwiv). That sets up the shell drive info (typically under ~/.dosemu) 
+that will be referenced in the rest of this page.
 
 ### The model of a script
 
-When dealing with DOSEMU, you have to be able to pass information from WWIV to DOSEMU. This is usually handled by calling a shell script in the linux directory that runs a DOS batch file under DOSEMU. A typical script will look something like this:
+When dealing with DOSEMU, you have to be able to pass information from WWIV 
+to DOSEMU. This is usually handled by calling a shell script in the linux 
+directory that runs a DOS batch file under DOSEMU. A typical script will 
+look something like this:
 
 ```shell
 #!/bin/bash
@@ -93,10 +102,21 @@ dosemu -f ~/.dosemurc -I "dosbanner 0" -E "tw2002.bat ${NODE}" 2>/dev/null
 
 You will notice a few things in this script
 
-1. The trap line is very important. It closes a security issue of allowing someone to ctrl-C out of a running shell script. You REALLY don't want that to happen. If it does, the user running the script has the potential to get dropped to a shell and they will have full access to every file your BBS user does. I'm not talking about every file in your BBS directory, I'm talking every file on your linux system that user can see. This is another reason the bbs user you create should be as limited as possible at the linux level. If you run DOSEMU as root, that will be full access to EVERY SINGLE FILE on the entire system. I can't stress enough that you have to be very careful with this; it's not 1992 anymore.
-2. We are sourcing the .wwivrc file in the home directory. This is where we keep all the variables so that they can be used easily by all of our scrips.
+1. The trap line is very important. It closes a security issue of allowing 
+someone to ctrl-C out of a running shell script. You REALLY don't want that 
+to happen. If it does, the user running the script has the potential to get 
+dropped to a shell and they will have full access to every file your BBS user 
+does. I'm not talking about every file in your BBS directory, I'm talking 
+every file on your linux system that user can see. This is another reason the 
+bbs user you create should be as limited as possible at the linux level. If 
+you run DOSEMU as root, that will be full access to EVERY SINGLE FILE on the 
+entire system. I can't stress enough that you have to be very careful with 
+this; it's not 1992 anymore.
+2. We are sourcing the .wwivrc file in the home directory. This is where we 
+keep all the variables so that they can be used easily by all of our scrips.
 3. We are setting NODE equal to the node value from the chainedit information
-4. Then we call the various commands in which we are interested. In this case, unix2dos and dosemu
+4. Then we call the various commands in which we are interested. In this case, 
+unix2dos and dosemu
 
 ### Parts of a dosemu call
 
@@ -105,12 +125,22 @@ That last line:
 has a lot of stuff going on. Here is a breakdown of all the bits:
 
 1. dosemu - the binary itself
-2. -f ~/.dosemurc - We are calling a specific rc file. This allows us to have more than one so we can have separate configurations for system scripts and doors. By default, calling dosemu by itself will read .dosemurc in the user's home directory. If you are using .dosemurc, this flag is NOT necessary
-3. -I "dosbanner 0" - This disables the startup text from DOSEMU (this is NOT settable in the rc file, so we do it at the time of calling dosemu
-4. -E "tw2002.bat ${NODE}" - defines the batch file we are calling once DOSEMU starts up. In this case, we are passing the batch file for starting Trade Wars and the instance node.
-5. 2>/dev/null - We are redirecting STDERR messages to /dev/null (ie, throwing them away). This is just to clean up output.
+2. -f ~/.dosemurc - We are calling a specific rc file. This allows us to have 
+more than one so we can have separate configurations for system scripts and 
+doors. By default, calling dosemu by itself will read .dosemurc in the user's 
+home directory. If you are using .dosemurc, this flag is NOT necessary
+3. -I "dosbanner 0" - This disables the startup text from DOSEMU (this is NOT 
+settable in the rc file, so we do it at the time of calling dosemu
+4. -E "tw2002.bat ${NODE}" - defines the batch file we are calling once DOSEMU 
+starts up. In this case, we are passing the batch file for starting Trade Wars 
+and the instance node.
+5. 2>/dev/null - We are redirecting STDERR messages to /dev/null (ie, throwing 
+them away). This is just to clean up output.
 
-The main thing that you will be messing with the most is the -E parameter. Most everything else will "just work" and pretty much stay static once you get it dialed in.
+The main thing that you will be messing with the most is the -E parameter. 
+Most everything else will "just work" and pretty much stay static once you get 
+it dialed in.  
+
 and now the corresponding batch file
 
 ```batch
@@ -122,10 +152,15 @@ TW2002 TWNODE=%1 > ERR%1.LOG
 exitemu
 ```
 
-This is all pretty typical. The important item is the last line: exitemu. That closes the DOSEMU session and returns to the linux environment. Without it, your users will either become hung, or the process will drop into a DOS shell. Dropping into a shell is VERY bad; that gives full access to all your files and will likely let someone run rampant on your system.
+This is all pretty typical. The important item is the last line: exitemu. That 
+closes the DOSEMU session and returns to the linux environment. Without it, 
+your users will either become hung, or the process will drop into a DOS shell. 
+Dropping into a shell is VERY bad; that gives full access to all your files and 
+will likely let someone run rampant on your system.
 
 ### The DOS environment files
-The core files in the DOS environment are still the config.sys and autoexec.bat files. Minimal files that will work for most things look like this:
+The core files in the DOS environment are still the config.sys and autoexec.bat 
+files. Minimal files that will work for most things look like this:
 
 _**config.sys**_  
 

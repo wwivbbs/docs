@@ -10,15 +10,12 @@
                WWW   WWW   WWW   WWW  III    VVV      555555 .. 000000
 ```
 
-WWIV BBS SOFTWARE has a long [history](History/index), this project is to give WWIV a strong future.
+WWIV BBS SOFTWARE has a long [history](History), this project is to give WWIV a strong future.
 
 Were working hard to bring you the best bbs software we can. This wiki is to support the users of WWIV from install to customization.
 
 Thank you,  
 The WWIV Dev Team 
-
-## [History of WWIV](History/index)
-## [WWIV BBS List](WWIV_BBS_list)
 
 ## Get WWIV 5.0 
 (current production release)
@@ -35,9 +32,9 @@ You will need the platform specific release for WWIV and also the network softwa
 Pre-built WWIV 5.1.0 binaries for x86 Windows and Linux can be downloaded from
 the [WWIV Continuous Build Server](http://build.wwivbbs.org/jenkins/job/wwiv/)  
 
-If you wish to compile it yourself, please see: [Building WWIV 5.1](Development/Build_WWIV_5)
+If you wish to compile it yourself, please see: [Building WWIV 5.1](Development/build_WWIV_5)
 
-[WWIV Release and Versioning](Development/WWIV_releases_and_versioning)
+[WWIV Release and Versioning](Development/wwiv_releases_and_versioning)
 
 ## New Installations
 The following steps will get you up and running quickly, but I would not say
@@ -50,7 +47,7 @@ configuration topics.
 [MSGs to users need Customization](Configuration/Custom_user_messages)   
 [Taglines on Messages](Configuration/taglines)  
 
-## [Upgrading Earlier WWIV BBSes](wwivupgrade)
+## [Upgrading Earlier WWIV BBSes](Installation/WWIV_4x_Upgrade)
 Do you have your floppy disks with your 4.x WWIV BBS on it? We can get you upgraded to WWIV 5.0 
 and you can join the fold again!
 
@@ -65,7 +62,7 @@ builtin Telnet Server and Net2BBS from PCMicro.
 ### [Dial-Up Modem Access](Configuration/dialup)
 
 ## WWIV 5 Menus  
-### [Waiting for Caller (WFC) & Top Screen](Menus_and_Features/Waiting_for_Callers)  
+### [Waiting for Caller (WFC) & Top Screen](Menus_and_Features/Waiting_for_callers)  
 ### [WWIV BBS User Menus](Menus_and_Features/Main_menu)  
 ### [WWIV Slash Menu](Menus_and_Features/Slash_menu)  
 ### [//SYSOP Menu](Menus_and_Features/SysOp_menu)
@@ -79,7 +76,7 @@ These pages will help you find WWIV 5.0 compatible utilities and installation in
 
 ## Advanced Configuration
 ### [WWIV.ini](Configuration/wwivini)  
-### [WWIV Edit](wwivedit)  
+### [WWIV Edit](Editors/wwivedit)  
 ### [Multi Instance](Configuration/multinode)  
 ### [Chains & Doors](Doors)  
 ### [Event Management](Menus_and_Features/eventmgmt)  

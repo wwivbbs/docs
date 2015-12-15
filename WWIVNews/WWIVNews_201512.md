@@ -41,11 +41,10 @@
     is a significant milestone. 
 
     You can download WWIV 5.0 here:
-        Windows - https://goo.gl/JcyFct
-        Linux - https://goo.gl/Lru5P7
+        https://github.com/wwivbbs/wwiv/releases/tag/wwiv_5.0.0
 
-    You can find installation instructions on the wiki: 
-        https://github.com/wwivbbs/wwiv/wiki
+    You can find installation instructions in the Docs: 
+        http://wwivbbs.readthedocs.org/
     
     Here are some of the great new things in WWIV 5.0
     
@@ -129,14 +128,14 @@
     new @1 node for WWIVnet.  Rushfan suggested myself and the rest of 
     the group was on-board with that change.  I was very humbled by the 
     votes of support and encouragement.  It has been my passion to keep 
-    WWIV and WWIVnet alive in the most resiliant way possible.  My hardware
+    WWIV and WWIVnet alive in the most resilient way possible.  My hardware
     setup is robust for a home environment and offers a good deal 
     redundancy. I will always do my best to make sure WWIVnet is running 
     the best way possible.
 
     That same night, we decided to make a historic change for WWIVnet.  
     We switched the entire network from using WINS (PPP Project) to 
-    NetworkB (BinkP) written by Rushfan.  Given the magnatude of changes 
+    NetworkB (BinkP) written by Rushfan.  Given the magnitude of changes 
     that we made that night, I think it went fantastic!  We have been 
     running completely using BinkP for WWIVnet ever since.  It has proved 
     to be a major step forward!  I can't thank Rushfan enough for writing 
@@ -189,9 +188,9 @@
     =======================================================================
                           WWIV Links and Information
     WWIC 5.0 Team Site                               http://www.wwivbbs.org
-    WWIV BBS List          https://github.com/wwivbbs/wwiv/wiki/wwivbbslist
-    WWIV 5.0 Documentation             https://github.com/wwivbbs/wwiv/wiki
-    WWIVNews Archive          https://github.com/wwivbbs/wwiv/wiki/wwivnews
+    WWIV BBS List            http://wwivbbs.rtd.org/en/latest/WWIV_BBS_list
+    WWIV 5.0 Documentation                   http://wwivbbs.readthedocs.org
+    WWIVNews Archive              http://wwivbbs.rtd.org/en/latest/WWIVNews
     WWIV IRC                             irc://irc.ospreynet.info:6667/wwiv
     =======================================================================
                                     THE END

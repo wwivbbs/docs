@@ -11,10 +11,10 @@ Here's what needs to happen when we have a new WWIVNews:
 * Post here: http://www.bbsnews.org/
 * Post on Facebook: https://www.facebook.com/groups/314823385196005/
 
-Special Steps for Vol8Iss1:  
+Special Steps for Vol8 Issue 1:  
 
 * http://www.bbsing.com/ <- You have a bad link to WWIV on your home page
 * http://sysopscorner.thebbs.org/wwiv.html (sysopscorner@pcmicro.com) <- all your  WSS info is wrong
 * http://thebbs.org/bbsfaq/ch03.3.5.htm#3.5.37 (Frank Robbins bbsfaq@thebbs.org) WWIV needs a new entry
 * Have WWIVNet added http://winramturbo.com/pbi/sysopres/bbsntwks.htm  (Frank Robbins webmaster@winramturbo.com)
-* 
+* Can we add to this : http://software.bbsdocumentary.com/IBM/WINDOWS/WWIV/

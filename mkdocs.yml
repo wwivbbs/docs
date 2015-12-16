@@ -5,3 +5,17 @@ pages:
  - 'index.md'
  - 'WWIV_BBS_list.md'
  - 'license.md'
+ - Configuration:
+    - 'Configuration/Custom_user_messages.md'
+    - 'Configuration/dialup.md'
+    - 'Configuration/init.md'
+    - 'Configuration/logfiles.md'
+    - 'Configuration/multinode.md'
+    - 'Configuration/taglines.md'
+    - 'Configuration/wwivini.md'
+        - Telnet:
+            - 'Configuration/Telnet/NET2BBS.md'
+            - 'Configuration/Telnet/WWIV_5_telnet_server.md'
+        - Tools and Utilities:
+            - 'Configuration/Tools_and_Utilities/clients.md'
+            - 'Configuration/Tools_and_Utilities/fix.md'

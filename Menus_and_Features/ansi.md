@@ -6,7 +6,7 @@ These are the color codes you can use when posting messages, sending feedback an
 a particular color type CTRL-P + the letter or number that represents the color you want. You can then use 
 CTRL-P+0 to return to the default color.
 
-![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwivbbs/COLORS.png)
+![WWIVBBSColors](/screenshots/wwivbbs/COLORS.png)
 
 ###WWIV Pipe Colors
 These are the default 0-9 Pipe colors used in the menu system and other UI pages. You uses them by specifying
@@ -15,7 +15,7 @@ in \wwiv\gfiles for more samples.
 
 **Note:** that the ```+``` sign should not be used when you add the code to a file, I merely used that so the text would show up. So you would use ```|#0``` NOT ```|+#0```.
 
-![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwivbbs/defaultPipeColors.png)
+![defPipeColors](/screenshots/wwivbbs/defaultPipeColors.png)
 
 ####WWIV.INI Colors
 
@@ -85,7 +85,7 @@ MSG_COLOR              = 2                  ; for color msgs
 By using the //COLORS menu option, users can customize how color codes are displayed to them and only
 them. For example, by default |#5 is GREEN on BLACK. A User can change to MAGENTA on WHITE and anywhere |#5 or CTROL-P5 have been used .MSG files or SUB messages it will display the users chosen color instead. Here is a screen shot of //COLORS. The character in the cell is the one you press to customize that color.
 
-![](https://github.com/wwivbbs/wwiv/blob/master/screenshots/wwivbbs/ColorEditor.png)
+![ColorEditor](/screenshots/wwivbbs/ColorEditor.png)
 
 ###Art Tools
 [ASCII Art Studio](http://www.torchsoft.com/en/aas_information.html) is a great tool for making the B&W versions of your .TAG lines, Welcomes, Logons, etc. Then you can add the color codes in notepad.  

@@ -43,7 +43,7 @@ Send any updates via email: xenos AT remove-this.aliens.free.net.ph
 
             WWIV was originally written by Wayne Bell.
      WWIV v5.00 is currently being developed as an open source project.
-          The project website is at http://wwivbbs.github.io
+          The project website is at http://www.wwivbbs.org
   WWIV Developers and Sysops hang out for IRC chat on the #wwiv channel on
    irc.ospreynet.info and are usually active in the evenings 6PM onward.
 ```

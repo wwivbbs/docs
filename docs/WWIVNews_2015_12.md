@@ -189,9 +189,9 @@
     =======================================================================
                           WWIV Links and Information
     WWIC 5.0 Team Site                               http://www.wwivbbs.org
-    WWIV BBS List          https://github.com/wwivbbs/wwiv/wiki/wwivbbslist
-    WWIV 5.0 Documentation             https://github.com/wwivbbs/wwiv/wiki
-    WWIVNews Archive          https://github.com/wwivbbs/wwiv/wiki/wwivnews
+    WWIV BBS List           http://wwivbbs.rtfd.org/en/latest/WWIV_BBS_list
+    WWIV 5.0 Documentation                   http://wwivbbs.readthedocs.org
+    WWIVNews Archive             http://wwivbbs.rtfd.org/en/latest/WWIVNews
     WWIV IRC                             irc://irc.ospreynet.info:6667/wwiv
     =======================================================================
                                     THE END

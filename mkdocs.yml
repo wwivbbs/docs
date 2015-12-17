@@ -1,6 +1,7 @@
 site_name: WWIV BBS 5.0 Documentation
 repo_url: https://github.com/wwivbbs/docs/
 copyright: 2014+ WWIV Software Services, LLC
+docs_dir: docs
 pages:
     - 'index.md'
     - 'WWIV_BBS_list.md'

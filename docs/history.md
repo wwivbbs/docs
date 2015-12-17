@@ -133,11 +133,11 @@ Craig Dooley | | | WWIVToss
 WWIVCon was the official WWIV Convention. Here's the information we 
 have found year by year.
 
-[WWIVCon 1994- New Orleans 1-3 July](WWIVCon/WWIVCon_1994)  
-[WWIVCon 1995 - Buffalo](WWIVCon/WWIVCon_1995)  
-[WWIVCon 1996 - Minneapolis](WWIVCon/WWIVCon_1996)  
-[WWIVCon 1997 - Washington DC 25-27 July](WWIVCon/WWIVCon_1997)  
-[WWIVCon 1998 - Pigeon Forge 21-23 August](WWIVCon/WWIVCon_1998)  
-[WWIVCon 1999 - Los Angeles](WWIVCon/WWIVCon_1999)  
+[WWIVCon 1994- New Orleans 1-3 July](WWIVCon_1994)  
+[WWIVCon 1995 - Buffalo](WWIVCon_1995)  
+[WWIVCon 1996 - Minneapolis](WWIVCon_1996)  
+[WWIVCon 1997 - Washington DC 25-27 July](WWIVCon_1997)  
+[WWIVCon 1998 - Pigeon Forge 21-23 August](WWIVCon_1998)  
+[WWIVCon 1999 - Los Angeles](WWIVCon_1999)  
 
 ## [Other WWIV Pages](links)

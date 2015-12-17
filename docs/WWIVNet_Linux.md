@@ -246,7 +246,3 @@ NET37TEC.DOC.
 * dosemu NETWORK3.EXE to analyze the packets. This should create the P.EXE file from the SNN.NET file.
 * After the P.EXE file is created process it with NETWORK2.EXE
 * Convert network.dat's path separator back with sed. This conversion is really dependent on how the network.dat file is being processed. If it's in dosemu, the separator needs to be \, if it's linux, it needs to be /. Example of how this affects you: if the separator is a /, then the NETXX EXE files can't find the path and fail on processing; if the separator is a \, then parts of your message info (like where the message came from) will be missing.
-
-# Other WWIVNet Documenation
-***
-[WWIV Networking Technical Documentation October 1994](wwivnettech2.0)  

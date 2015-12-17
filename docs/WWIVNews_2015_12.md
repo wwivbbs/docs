@@ -40,12 +40,8 @@
     WWIV BBS. WWIV 5.0 was under development for many years and finishing 
     is a significant milestone. 
 
-    You can download WWIV 5.0 here:
-        Windows - https://goo.gl/JcyFct
-        Linux - https://goo.gl/Lru5P7
-
-    You can find installation instructions on the wiki: 
-        https://github.com/wwivbbs/wwiv/wiki
+    Download WWIV 5.0: https://github.com/wwivbbs/wwiv/releases
+    WWIV 5.0 Installation and Docs: http://wwivbbs.readthedocs.org/
     
     Here are some of the great new things in WWIV 5.0
     

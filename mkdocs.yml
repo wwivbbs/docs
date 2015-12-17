@@ -7,11 +7,11 @@ pages:
     - 'WWIV_BBS_list.md'
     - 'license.md'
     - Installation:
-        - 'Installing_on_Windows.md'
-        - 'WWIV_4x_Upgrade.md'
+        - 'Windows Installation': 'Installing_on_Windows.md'
         - 'Linux_Installation.md'
         - 'Linux_dosemu_scripts.md'
         - 'Linux_dosemu_settings.md'
+        - 'Upgrading WWIV 4.x': 'WWIV_4x_Upgrade.md'
     - Configuration:
         - 'Init.exe': 'init.md'
         - 'WWIV.ini': 'wwivini.md'
@@ -32,7 +32,7 @@ pages:
         - 'transfers.md'
         - 'Waiting_for_callers.md'
         - '\\ (slash) Menu': 'Slash_menu.md'
-        - '\\ SysOp Menu': 'SysOp_menu.md'
+        - '\\SysOp Menu': 'SysOp_menu.md'
         - 'Event Management': 'eventmgmt.md'
     - Nets:
         - 'WWIVNet Overview': 'WWIVNet.md'
@@ -45,16 +45,16 @@ pages:
     - Doors & Chains:
         - 'Doors & Chains Overview': 'doors.md'
         - 'Ambroshia.md'
-        - 'BarronRealmsElite.md'
+        - 'Barron_Realms_Elite.md'
         - 'Darkness.md'
         - 'DoorMUD.md'
-        - 'doorteos.md'
+        - 'Planets: The Exploration of Space': 'doorteos.md'
         - 'LORD.md'
         - 'LORD2.md'
         - 'MechWars.md'
         - 'TradeWars2002.md'
     - Editors:
-        - 'wwivedit.md'
+        - 'WWIVEdit.md'
         - 'QuickBBS-Editors.md'
     - Tools and Utilities:
         - 'clients.md'

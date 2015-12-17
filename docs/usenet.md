@@ -71,9 +71,9 @@ O) Description: None.
 ```
 @32767     *707-585-NEWS #57600      !    [     ]  "WWIVNET Internet Gateway"
 ```
-**Note** these entries might be here already:
-* Edit \wwiv\networks\wwivnet\CONNECT.NET and make sure that 32767 is not listed.
-* Then add ``` @32767 = 0:00 ``` to the right of your node number such that it looks something like this: ``` @707   1=0.0 32767=0.00 ``` Next to your node number is the only location you will want to see 32767 in CONNECT.NET
+**Note** @32767 should already exist in CONNECT.NET but you will need to modify the line refrencing your node so that you can connect to @32767:
+* Edit \wwiv\networks\wwivnet\CONNECT.NET 
+* Then add ``` @32767 = 0:00 ``` to the right of your node number such that it looks something like this: ``` @707   1=0.0 32767=0.00 ``` 
 * Edit \wwiv\networks\wwivnet\CALLOUT.NET file to add the following line at the bottom ``` @32767  & ```
 * Now verify you didn't enter anything incorrectly by running ``` NETWORK3 .0 Y ``` and then ``` NETWORK2 ```
 
@@ -123,6 +123,7 @@ primenet = WWIVNET
 POPNAME = [your alias] ; used as your display name on NNTP posts
 
 [GENERAL]
+ONECALL = N ; prevents WINS from launching POP when tossing news
 DOMAIN=[your domain.com] ; used with POPNAME to create you@your.com email address for NNTP
 
 [NEWS]
@@ -198,9 +199,9 @@ If you intend on using a batch file to initiate transfers, simply add the follow
 CALL NETWORK /N32767 .0 /A /P707-585-NEWS /S57600 /T993228415 .0 
 CALL NETWORK1
 CALL NETWORK2
-CALL BBS.EXE /N10 /E
+CALL BBS.EXE /N# /E
 ```
-Of course yours may look a little different. I use node 10 for maintenance, hence the /N10 on the bottom line.
+Of course yours may look a little different. Change /N# to the node number you use for callouts i.e. /N4.
 NETWORK1 and NETWORK2 are optional but I like using them to unpack and handle the incoming messages. 
 
 Now, when your mail.bat runs, you should see the news.exe portion 

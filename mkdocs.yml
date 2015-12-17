@@ -67,7 +67,7 @@ pages:
         - 'links.md'
     - Development:
         - 'build_WWIV_5.md'
-        - 'WWIV_releases_and_versioning.md'
+        - 'wwiv_releases_and_versioning'
     - WWIVCon:
         - 'WWIVCon_1994.md'
         - 'WWIVCon_1995.md'

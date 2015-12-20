@@ -1,8 +1,4 @@
- DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT  
- DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT  
- DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT DRAFT  
 
-```
     oooooo   oooooo     oooo oooooo   oooooo     oooo ooooo oooooo     oooo
      `888.    `888.     .8'   `888.    `888.     .8'  `888'  `888.     .8'
       `888.   .8888.   .8'     `888.   .8888.   .8'    888    `888.   .8'
@@ -190,5 +186,4 @@
     WWIVNews Archive             http://wwivbbs.rtfd.org/en/latest/WWIVNews
     WWIV IRC                             irc://irc.ospreynet.info:6667/wwiv
     =======================================================================
-                                    THE END
-```
+	

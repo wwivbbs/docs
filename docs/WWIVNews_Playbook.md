@@ -8,6 +8,7 @@ Here's what needs to happen when we have a new WWIVNews:
 * Send to jason@textfiles.com to archive here http://textfiles.com/bbs/WWIVNEWS/  &  Get WWIV 5.0 added to the timeline http://timeline.textfiles.com/
 * Post on [BBSNews.org](http://www.bbsnews.org/)
 * Post on [WWIV BBS Facebook Pag](https://www.facebook.com/groups/314823385196005/)
+* Post on [BBS subreddit](https://www.reddit.com/r/bbs/)
 
 Broken links
 

@@ -42,6 +42,7 @@ WWIV SysOps have other options, but they choose D'Bridge.
 
 **BEFORE YOU START - What's Your Node Number**  
 When you combine what you learned reading the Fido Policy doc with the D'Bridge instructions its not crystal clear what you should put in for your Fido/FTN Address, your Uplinks Fido/FTN Address and their BINKD address. You need to know those things to complete D'Bridge Installation. This is one approach to dealing with that:
+
 * You need to figure out what Fidonet Region you are in and if there is an existing NET which covers your area and contact the Net Coordinator OR the Regional Coordinator. 
 * For Zone 1 (US & Canada), you can use [FidoNet.us](http://www.fidonet.us/zone1.html) to determine your Region.
 * If your lucky, your region will have an active web site with helpful instructions(many do not). If not, you need to unzip the Nodelist file you downloaded earlier and open the enclosed file with any text editor. 

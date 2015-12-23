@@ -6,7 +6,7 @@
 
 Before attempting an upgrade, please follow the 
 [WWIV 5 Installation on Windows]
-(http://wwivbbs.readthedocs.org/en/latest/Installing_on_Windows/)
+(Installing_on_Windows)
 to install prerequisites.
 
 # Did I say BACKUP your existing WWIV BBS? 
@@ -40,7 +40,7 @@ WWIV 5 is compiled with MSVC 2015. Install the
 ####Download the current WWIV version
 Visit the download page at wwivbbs.org 
 [Get WWIV]
-(http://wwivbbs.readthedocs.org/en/latest/#get-wwiv-50)
+(/#get-wwiv-50)
 
 ####Install new EXEs
 Take the build of WWIV you downloaded and extract all the  files 
@@ -54,7 +54,7 @@ There have been many changes to WWIV since 4.x so we are providing a detailed sa
 You may either rename sample wwivini.5xx to wwin.ini or you may simply edit your existing wwiv.ini based on the sample.
 ####WWIV.INI sample 
 [wwivini.5xx]
-(http://wwivbbs.readthedocs.org/en/latest/wwivini/)
+(wwivini)
 
 ####Update your configuration files using the new INIT
 From an elevated Command Prompt session, run INIT and verify all settings.
@@ -66,7 +66,7 @@ If you are using a 3rd party Telnet Server like Net2BBS, you may need to edit so
 
 Launch the WWIV5Telnet Server and set your preferences as outlined here: 
 [WWIV5TelnetServer]
-(http://wwivbbs.readthedocs.org/en/latest/WWIV_5_telnet_server/)
+(WWIV_5_telnet_server)
 
 Start the WWIV5TelnetServer and test by telnetting to your bbs!
 

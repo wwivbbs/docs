@@ -25,10 +25,10 @@ Compile things you will need
 Package | Comments
 ------- | ----------
 git |  to grab the source code for compiling  
-ncurses-devel | development headers, etc
+ncurses-devel (libncurses5-dev) | development headers, etc.  libncurses5-dev is the debian version
 cmake | 
 make | 
-gcc 4.9 or later | 
+g++ 4.9 or later | 
 
 (really) Optional Linux Things
 

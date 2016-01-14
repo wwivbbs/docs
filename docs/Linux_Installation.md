@@ -83,10 +83,14 @@ You are now effectively the wwiv user. You can check this with the id command. F
 NOTE All references to init refer to the WWIV init program in the WWIVBASE, NOT the linux init command.
 Make WWIV directory (this should be the same as the home directory of the wwiv user above)
 
-download the latest WWIV 5.0 to your wwiv directory  
-Extract wwiv-build-number-number.zip into your wwiv directory  
-Copy the compiled binaries to your WWIV base directory  
+1. Download the latest wwiv-build-linux-release.tar.gz to your wwiv directory  
+  [WWIV 5.0 Stable](https://build.wwivbbs.org/jenkins/job/wwiv_5.0.0/label=linux/lastStableBuild/)</br>
+  [WWIV 5.1 Development](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/)
+2. Extract wwiv-build-linux-release.tar.gz into your wwiv directory 
 
+If running the pre-built binaries, skip down to "Run Setup", otherwise continue with "Compile Manually"
+
+##### Compile Manually
 **NOTE:** Do these steps as a non-root user; your BBS user would be the easiest from a file permissions perspective later on.
 
 There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution.  You are welcome to try them, but compiling is likely to work better.
@@ -113,7 +117,9 @@ cp /home/wwiv/wwiv-master/bbs/bbs \
 /home/wwiv/wwiv-master/networkb/networkb  . 
 ```
 **(don't forget the ".")**
-run sh install.sh It will run init at the end; say Yes to initializing and log out of init. init takes care of the remaining WWIV-specific config files (e.g., config.dat)  
+
+##### Run Setup
+Run sh install.sh It will run init at the end; say Yes to initializing and log out of init. init takes care of the remaining WWIV-specific config files (e.g., config.dat)  
 
 Your BBS basic local setup is complete. Run ./bbs and set up a new user to be the sysop (#1) account (ie, type NEW for the user and fill in the user info). Once you are done, log out.  
 Run ./init and set up all the details  

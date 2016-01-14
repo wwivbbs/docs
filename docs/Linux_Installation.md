@@ -12,6 +12,7 @@ permissions are correct.
 
 Package | Comments
 ------- | ----------
+sudo | to allow more controlled access to root-owned tools
 xinetd | service manager to start telnet. This doc assumes xinetd, but you can also use inetd or systemd. That will be at your own risk, though.  
 telnetd | telnet service to handle starting the BBS  
 ncurses | any curses library, really. Needed for CLI tools display  

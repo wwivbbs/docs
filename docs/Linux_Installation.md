@@ -92,14 +92,13 @@ Copy the compiled binaries to your WWIV base directory
 There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution.  You are welcome to try them, but compiling is likely to work better.
   
 pull down the code from git (https://github.com/wwivbbs/wwiv.git) 
-In the svn directory (e.g., ```/home/wwiv/wwiv-master```), run ```cmake . && make``` (don't forget the ".")
+In the source directory (e.g., ```/home/wwiv/wwiv-master```), run ```cmake . && make``` (don't forget the ".")
 assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have as a result are:
 ```
 /home/wwiv/wwiv-master/bbs/bbs  
 /home/wwiv/wwiv-master/init/init  
-/home/wwiv/wwiv-master/fix/fix  
 /home/wwiv/wwiv-master/nodemgr/nodemgr  
-/home/wwiv/wwiv-master/netutil/netutil  
+/home/wwiv/wwiv-master/wwivutil/wwivutil  
 /home/wwiv/wwiv-master/network/network
 /home/wwiv/wwiv-master/networkb/networkb  
 ```
@@ -108,9 +107,8 @@ These should all be placed in your base WWIV directory. For example, if your WWI
 cd /home/wwiv  
 cp /home/wwiv/wwiv-master/bbs/bbs \
 /home/wwiv/wwiv-master/init/init \
-/home/wwiv/wwiv-master/fix/fix \
 /home/wwiv/wwiv-master/nodemgr/nodemgr \
-/home/wwiv/wwiv-master/netutil/netutil \
+/home/wwiv/wwiv-master/wwivutil/wwivutil \
 /home/wwiv/wwiv-master/network/network \
 /home/wwiv/wwiv-master/networkb/networkb  . 
 ```

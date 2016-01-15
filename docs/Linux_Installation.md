@@ -109,17 +109,14 @@ assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have a
 These should all be placed in your base WWIV directory. For example, if your WWIV base is /home/wwiv and your git base is /home/wwiv/wwiv-master, the following will copy all the compiled binaries to your base wwiv directory
 ```
 cd /home/wwiv  
-cp /home/wwiv/wwiv-master/bbs/bbs \
-/home/wwiv/wwiv-master/init/init \
-/home/wwiv/wwiv-master/nodemgr/nodemgr \
-/home/wwiv/wwiv-master/wwivutil/wwivutil \
-/home/wwiv/wwiv-master/network/network \
-/home/wwiv/wwiv-master/networkb/networkb  . 
+cp wwiv-master/bbs/bbs wwiv-master/init/init wwiv-master/nodemgr/nodemgr wwiv-master/wwivutil/wwivutil wwiv-master/network/network wwiv-master/networkb/networkb  . 
 ```
 **(don't forget the ".")**
 
 ##### Run Setup
-Run sh install.sh It will run init at the end; say Yes to initializing and log out of init. init takes care of the remaining WWIV-specific config files (e.g., config.dat)  
+Run ```sh install.sh``` </br>
+It will get system-specific settings configured and run init at the end; say Yes to initializing and log out of init. </br>
+init takes care of the remaining WWIV-specific config files (e.g., config.dat)  
 
 Your BBS basic local setup is complete. Run ./bbs and set up a new user to be the sysop (#1) account (ie, type NEW for the user and fill in the user info). Once you are done, log out.  
 Run ./init and set up all the details  

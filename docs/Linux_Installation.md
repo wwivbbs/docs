@@ -18,7 +18,6 @@ telnetd | telnet service to handle starting the BBS
 ncurses | any curses library, really. Needed for CLI tools display  
 dosemu | to run dos|based doors and utilities  
 dos2unix/unix2dos | for converting file types  
-uudecode | for processing WWIVnet files  
 
 Compile things you will need  
 
@@ -121,8 +120,8 @@ init takes care of the remaining WWIV-specific config files (e.g., config.dat)
 Your BBS basic local setup is complete. Run ./bbs and set up a new user to be the sysop (#1) account (ie, type NEW for the user and fill in the user info). Once you are done, log out.  
 Run ./init and set up all the details  
 select (G) "General System Configuration" to set up the BBS name, etc  
-select (U) for the User editor. Set user #1 SL and DSL permissions to 255 to set it up as your sysop user.  
-select (P) "System Paths". You will want to set up relative pathing, not absolute paths, as tools that run   under DOSEMU will conflict and get confused.  
+select (P) "System Paths". You will want to set up relative pathing, not absolute paths, as tools that run under DOSEMU will conflict and get confused. 
+
 example of relative pathing:
 
 * Messages : msgs/ 

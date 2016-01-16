@@ -10,7 +10,7 @@
                WWW   WWW   WWW   WWW  III    VVV      555555 .. 000000
 ```
 
-WWIV BBS SOFTWARE has a long [history](history), this project is to give WWIV a strong future.
+WWIV BBS SOFTWARE has a long [history](history.md), this project is to give WWIV a strong future.
 
 Were working hard to bring you the best bbs software we can. This wiki is to support the users of WWIV from install to customization.
 
@@ -32,9 +32,9 @@ You will need the platform specific release for WWIV and also the network softwa
 Pre-built WWIV 5.1.0 binaries for x86 Windows and Linux can be downloaded from
 the [WWIV Continuous Build Server](http://build.wwivbbs.org/jenkins/job/wwiv/)  
 
-If you wish to compile it yourself, please see: [Building WWIV 5.1](build_WWIV_5)
+If you wish to compile it yourself, please see: [Building WWIV 5.1](build_WWIV_5.md)
 
-[WWIV Release and Versioning](wwiv_releases_and_versioning)
+[WWIV Release and Versioning](wwiv_releases_and_versioning.md)
 
 ## New Installations
 The following steps will get you up and running quickly, but I would not say
@@ -42,61 +42,61 @@ you're ready to go live and open up to users. After you complete these installat
 steps, see the full details on related INIT settings, WWIV.INI and other Advanced 
 configuration topics.
 
-[Windows WWIV 5.0 Installation](Installing_on_Windows)  
-[Linux WWIV 5.0 Installation](Linux_Installation)  
-[MSGs to users need Customization](Custom_user_messages)   
-[Taglines on Messages](taglines)  
+[Windows WWIV 5.0 Installation](Installing_on_Windows.md)  
+[Linux WWIV 5.0 Installation](Linux_Installation.md)  
+[MSGs to users need Customization](Custom_user_messages.md)   
+[Taglines on Messages](taglines.md)  
 
-## [Upgrading Earlier WWIV BBSes](WWIV_4x_Upgrade)
+## [Upgrading Earlier WWIV BBSes](WWIV_4x_Upgrade.md)
 Do you have your floppy disks with your 4.x WWIV BBS on it? We can get you upgraded to WWIV 5.0 
 and you can join the fold again!
 
-## [Init Settings](init)
+## [Init Settings](init.md)
 ## User Access Protocols for WWIV 5.0  
 BBSes used to only be accessible by dialing them up on your phone line with a MODEM. When 
 the Internet took off many BBSes added Telnet support to allow users to connect to the BBS
 over the Internet. That is still in use today. These pages explain how to use the WWIV 5.0 
 builtin Telnet Server and Net2BBS from PCMicro.
-### [WWIV5 Telnet Server](WWIV_5_telnet_server)
-### [Net2BBS Telnet Server by PCMicro](NET2BBS)
-### [Dial-Up Modem Access](dialup)
+### [WWIV5 Telnet Server](WWIV_5_telnet_server.md)
+### [Net2BBS Telnet Server by PCMicro](NET2BBS.md)
+### [Dial-Up Modem Access](dialup.md)
 
 ## WWIV 5 Menus  
-### [Waiting for Caller (WFC) & Top Screen](Waiting_for_callers)  
-### [WWIV BBS User Menus](Main_menu)  
-### [WWIV Slash Menu](Slash_menu)  
-### [//SYSOP Menu](SysOp_menu)
+### [Waiting for Caller (WFC) & Top Screen](Waiting_for_callers.md)  
+### [WWIV BBS User Menus](Main_menu.md)  
+### [WWIV Slash Menu](Slash_menu.md)  
+### [//SYSOP Menu](SysOp_menu.md)
 
 ## Nets
 Nets are federation of BBSes which connect to share messages and\or files. 
 These pages will help you find WWIV 5.0 compatible utilities and installation instructions.
-### [WWIVNet](Nets/WWIVNet)
-### [Other Nets](Nets/Other_Nets)
-### [Usenet](Nets/usenet)
+### [WWIVNet](WWIVNet.md)
+### [Other Nets](Other_Nets.md)
+### [Usenet](usenet.md)
 
 ## Advanced Configuration
-### [WWIV.ini](wwivini)  
-### [WWIV Edit](wwivedit)  
-### [Multi Instance](multinode)  
-### [Chains & Doors](Doors)  
-### [Event Management](eventmgmt)  
-### [General Files AKA G-Files](gfiles)  
-### [Transfer Files](transfers)  
-### [Messaging System AKA Subs](Messaging_system)  
+### [WWIV.ini](wwivini.md)  
+### [WWIV Edit](wwivedit.md)  
+### [Multi Instance](multinode.md)  
+### [Chains & Doors](Doors.md)  
+### [Event Management](eventmgmt.md)  
+### [General Files AKA G-Files](gfiles.md)  
+### [Transfer Files](transfers.md)  
+### [Messaging System AKA Subs](Messaging_system.md)  
 ### Email System  
 
 The email system in WWIV allows the sending of email to other users on the system as well as other users in WWIV based networks you participate in and even to Internet users if you have the appropriate add on software installed. Sending email is as easy as hitting the E key at the WFC or online.  You can email a local user by name or number.  For sending WWIV based network mail, see the network documentation for addressing. 
 
 TODO: How his Internet mail handling with the new tools?
 
-### [Using ANSI in WWIV](ansi)
-### [Sub Fix Utility](fix)
-### [New SysOp Suggestions](newsysop)
-### [Managing Log Files](logfiles)
-## [Registration & License](license)
+### [Using ANSI in WWIV](ansi.md)
+### [Sub Fix Utility](fix.md)
+### [New SysOp Suggestions](newsysop.md)
+### [Managing Log Files](logfiles.md)
+## [Registration & License](license.md)
 
-## [Client Software for Users of BBSes](clients)
+## [Client Software for Users of BBSes](clients.md)
 This page will include information on Telnet clients, dial-up clients
 and other User helpers. We want to make this easy for the new BBS User.
 
-## [Links](links)
+## [Links](links.md)

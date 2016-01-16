@@ -9,7 +9,7 @@ underlying technology they use and the many instances of Nets that use those for
 it's a little confusing). :-)
 
 ## WWIVNet Based Networks
-### [WWIVNet](wwivnet)
+### [WWIVNet](wwivnet.md)
 
 
 ## Fido Technology Nets (FTN)

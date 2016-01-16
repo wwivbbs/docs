@@ -7,7 +7,7 @@ for some of the tools (NET38, et al)
 
 **STEP #1**  - Get a WWIVnet Node Number assigned.  
 You will need the Node Number for several steps in this setup.  
-**STEP #2**  - send a password to 1@1 for the bank auth.
+**STEP #2**  - send a password to 1@1 for the binkp auth.
 You can do this at the same time as getting the Node Number.  You will need this for your callout.net file later.
 
 **NOTE:** Please don't bother to try configuring things ahead of time; 
@@ -40,8 +40,8 @@ We will build up the associated structure as we go along. The surrounded by
 
 We will have a conflict with the Windows binaries, so install.sh moves them all to win-bins
 
-1. Install NET38b3.ZIP binaries
-* unzip NET38b3.ZIP in ${WWIV_DIR}
+1. Install NET38b6.ZIP binaries
+* unzip NET38b6.ZIP in ${WWIV_DIR}
 
 ### Configuring WWIVnet
 
@@ -57,6 +57,8 @@ successfully (have your .dosemurc configured and have manually run
 dosemu).
 
 _dosemu config_
+
+Note: This tgz is currently missing.  will be fixed soon
 
 1. extract dosemu_batchfiles.tgz in your dosemu C: drive (e.g, ~/.dosemu/drive_c)
 2. edit files to suit your system

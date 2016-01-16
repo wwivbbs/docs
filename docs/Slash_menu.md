@@ -24,7 +24,7 @@ These are not listed in the default menus
 
 Command | Meaning 
 --- | ---
-//SYSOP | Goes to the [SysOp Menu](SysOp_Menu.md) if you have a SysOp Security Level. 
+//SYSOP | Goes to the [SysOp Menu](SysOp_menu.md) if you have a SysOp Security Level. 
 //VER | Displays WWIV version information 
 //CE | Chain Edit brings up the menu to edit doors\chains
 

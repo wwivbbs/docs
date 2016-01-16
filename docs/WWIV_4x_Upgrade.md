@@ -36,7 +36,7 @@ WWIV 5 is compiled with MSVC 2015. Install the
 ##Upgrade Steps:
 
 ####Download the current WWIV version
-Visit [the download page](https://build.wwivbbs.org/jenkins/) at wwivbbs.org 
+Read [the GET WWIV instructions](index.md#get-wwiv-50) 
 
 ####Install new EXEs
 Take the build of WWIV you downloaded and extract all the  files 

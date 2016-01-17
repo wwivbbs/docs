@@ -3,104 +3,104 @@ repo_url: https://github.com/wwivbbs/docs/
 copyright: 2014+ WWIV Software Services, LLC
 docs_dir: docs
 pages:
-    - 'index.md'
-    - 'WWIV_BBS_list.md'
-    - 'license.md'
+    - 'Home': index.md
+    - 'WWIV BBS list': wwiv_bbs_list.md
+    - 'license': license.md
     - Installation:
-        - 'Windows Installation': 'Installing_on_Windows.md'
-        - 'Linux_Installation.md'
-        - 'Linux_dosemu_scripts.md'
-        - 'Linux_dosemu_settings.md'
-        - 'Upgrading WWIV 4.x': 'WWIV_4x_Upgrade.md'
+        - 'Windows Installation': installing_on_windows.md
+        - 'Linux Installation': linux_installation.md
+        - 'Linux dosemu scripts': linux_dosemu_scripts.md
+        - 'Linux dosemu settings': linux_dosemu_settings.md
+        - 'Upgrading WWIV 4.x': wwiv_4x_upgrade.md
     - Configuration:
-        - 'Init.exe': 'init.md'
-        - 'WWIV.ini': 'wwivini.md'
-        - 'Custom_user_messages.md'
-        - 'Dial-Up Modems': 'dialup.md'
-        - '.log Files': 'logfiles.md'
-        - 'multinode.md'
-        - 'taglines.md'
+        - 'Init.exe': init.md
+        - 'WWIV.ini': wwivini.md
+        - 'Custom user messages': custom_user_messages.md
+        - 'Dial-Up Modems': dialup.md
+        - '.log Files': logfiles.md
+        - 'multinode': multinode.md
+        - 'taglines': taglines.md
     - Telnet:
-        - 'WWIV 5 Telnet Server': 'WWIV_5_telnet_server.md'    
-        - 'NET2BBS.md'
+        - 'WWIV 5 Telnet Server': wwiv_5_telnet_server.md    
+        - 'NET2BBS': net2bbs.md
     - Menus & Features:
-        - 'Main_menu.md'
-        - 'Messaging_system.md'
-        - 'User_preferences.md'
-        - 'ANSI Colors': 'ansi.md'
-        - 'G-Files': 'gfiles.md'
-        - 'transfers.md'
-        - 'Waiting_for_callers.md'
-        - '\\ (slash) Menu': 'Slash_menu.md'
-        - '\\SysOp Menu': 'SysOp_menu.md'
-        - 'Event Management': 'eventmgmt.md'
+        - 'Main menu': main_menu.md
+        - 'Messaging system': messaging_system.md
+        - 'User preferences': user_preferences.md
+        - 'ANSI Colors': ansi.md
+        - 'G-Files': gfiles.md
+        - 'transfers': transfers.md
+        - 'Waiting for callers': waiting_for_callers.md
+        - '\\ (slash) Menu': slash_menu.md
+        - '\\SysOp Menu': sysop_menu.md
+        - 'Event Management': eventmgmt.md
     - Nets:
-        - 'WWIVNet Overview': 'WWIVNet.md'
-        - 'WWIVNet on Windows': 'WWIVNet_Windows.md'
-        - 'WWIVNet on Linux': 'WWIVNet_Linux.md'
-        - 'Other_Nets.md'
-        - 'USENET': 'usenet.md'
-        - 'NET37_Docs.md'
-        - 'NET37_Tec_Docs.md'
+        - 'WWIVNet Overview': wwivnet.md
+        - 'WWIVNet on Windows': wwivnet_windows.md
+        - 'WWIVNet on Linux': wwivnet_linux.md
+        - 'Other Nets': other_nets.md
+        - 'USENET':  usenet.md
+        - 'NET37 Docs': net37_docs.md
+        - 'NET37 Tec Docs': net37_tec_docs.md
     - Doors & Chains:
-        - 'Doors & Chains Overview': 'doors.md'
-        - 'Ambroshia.md'
-        - 'Barron_Realms_Elite.md'
-        - 'Darkness.md'
-        - 'DoorMUD.md'
-        - 'Planets: The Exploration of Space': 'doorteos.md'
-        - 'LORD.md'
-        - 'LORD2.md'
-        - 'MechWars.md'
-        - 'TradeWars2002.md'
+        - 'Doors & Chains Overview': doors.md
+        - 'Ambroshia': ambroshia.md
+        - 'Barron Realms Elite': barron_realms_elite.md
+        - 'Darkness': darkness.md
+        - 'DoorMUD': doormud.md
+        - 'Planets: The Exploration of Space': doorteos.md
+        - 'LORD': lord.md
+        - 'LORD2': lord2.md
+        - 'MechWars': mechwars.md
+        - 'TradeWars2002': tradewars2002.md
     - Editors:
-        - 'WWIVEdit.md'
-        - 'QuickBBS-Editors.md'
+        - 'WWIVEdit': wwivedit.md
+        - 'QuickBBS-Editors': quickbbs-editors.md
     - Tools and Utilities:
-        - 'clients.md'
-        - 'FIX.exe Utility': 'fix.md'
+        - 'clients': clients.md
+        - 'FIX.exe Utility': fix.md
     - History of WWIV:
-        - 'In the Beginning....': 'history.md'
-        - 'WWIV_Open_Source_Announcement.md'
-        - 'newsysop.md'
-        - 'Original-Ideas-for-5.0-from-July-1999.md'
-        - 'links.md'
+        - 'In the Beginning....': history.md
+        - 'WWIV Open Source Announcement': wwiv_open_source_announcement.md
+        - 'newsysop': newsysop.md
+        - 'Original-Ideas-for-5.0-from-July-1999': original-ideas-for-5.0-from-july-1999.md
+        - 'links': links.md
     - Development:
-        - 'How to Build WWIV 5': 'build_WWIV_5.md'
-        - 'WWIV Releases & Versioning': 'wwiv_releases_and_versioning.md'
+        - 'How to Build WWIV 5': build_wwiv_5.md
+        - 'WWIV Releases & Versioning': wwiv_releases_and_versioning.md
     - WWIVCon:
-        - 'WWIVCon_1994.md'
-        - 'WWIVCon_1995.md'
-        - 'WWIVCon_1996.md'
-        - 'WWIVCon_1997.md'
-        - 'WWIVCon_1998.md'
-        - 'WWIVCon_1999.md'
+        - 'WWIVCon 1994': wwivcon_1994.md
+        - 'WWIVCon 1995': wwivcon_1995.md
+        - 'WWIVCon 1996': wwivcon_1996.md
+        - 'WWIVCon 1997': wwivcon_1997.md
+        - 'WWIVCon 1998': wwivcon_1998.md
+        - 'WWIVCon 1999': wwivcon_1999.md
     - WWIVNews Archive:
-        - 'WWIVNews History': 'WWIVNews.md'
-        - 'WWIVNews_2015_12.md'
-        - 'WWIVNews_1996_Spring.md'
-        - 'WWIVNews_1995_12.md'
-        - 'WWIVNews_1995_09.md'
-        - 'WWIVNews_1995_05.md'
-        - 'WWIVNews_1994_03.md'
-        - 'WWIVNews_1994_01.md'
-        - 'WWIVNews_1993_06.md'
-        - 'WWIVNews_1993_04.md'
-        - 'WWIVNews_1993_02.md'
-        - 'WWIVNews_1992_11.md'
-        - 'WWIVNews_1992_10.md'
-        - 'WWIVNews_1992_09.md'
-        - 'WWIVNews_1992_08.md'
-        - 'WWIVNews_1992_07.md'
-        - 'WWIVNews_1992_06.md'
-        - 'WWIVNews_1992_05.md'
-        - 'WWIVNews_1992_01.md'
-        - 'WWIVNews_1991_08.md'
-        - 'WWIVNews_1991_06.md'
-        - 'WWIVNews_1991_05.md'
-        - 'WWIVNews_1991_04.md'
-        - 'WWIVNews_1991_03.md'
-        - 'WWIVNews_1991_02.md'
-        - 'WWIVNews_1991_01.md'
-        - 'WWIVNews_Template.md'
-        - 'WWIVNews_Playbook.md'
+        - 'WWIVNews History': wwivnews.md
+        - 'WWIVNews 2015 12': wwivnews_2015_12.md
+        - 'WWIVNews 1996 Spring': wwivnews_1996_spring.md
+        - 'WWIVNews 1995 12': wwivnews_1995_12.md
+        - 'WWIVNews 1995 09': wwivnews_1995_09.md
+        - 'WWIVNews 1995 05': wwivnews_1995_05.md
+        - 'WWIVNews 1994 03': wwivnews_1994_03.md
+        - 'WWIVNews 1994 01': wwivnews_1994_01.md
+        - 'WWIVNews 1993 06': wwivnews_1993_06.md
+        - 'WWIVNews 1993 04': wwivnews_1993_04.md
+        - 'WWIVNews 1993 02': wwivnews_1993_02.md
+        - 'WWIVNews 1992 11': wwivnews_1992_11.md
+        - 'WWIVNews 1992 10': wwivnews_1992_10.md
+        - 'WWIVNews 1992 09': wwivnews_1992_09.md
+        - 'WWIVNews 1992 08': wwivnews_1992_08.md
+        - 'WWIVNews 1992 07': wwivnews_1992_07.md
+        - 'WWIVNews 1992 06': wwivnews_1992_06.md
+        - 'WWIVNews 1992 05': wwivnews_1992_05.md
+        - 'WWIVNews 1992 01': wwivnews_1992_01.md
+        - 'WWIVNews 1991 08': wwivnews_1991_08.md
+        - 'WWIVNews 1991 06': wwivnews_1991_06.md
+        - 'WWIVNews 1991 05': wwivnews_1991_05.md
+        - 'WWIVNews 1991 04': wwivnews_1991_04.md
+        - 'WWIVNews 1991 03': wwivnews_1991_03.md
+        - 'WWIVNews 1991 02': wwivnews_1991_02.md
+        - 'WWIVNews 1991 01': wwivnews_1991_01.md
+        - 'WWIVNews Template': wwivnews_template.md
+        - 'WWIVNews Playbook': wwivnews_playbook.md

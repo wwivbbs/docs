@@ -5,7 +5,7 @@ This relates to settings for using DOSEMU to run certain parts of the WWIV
 BBS. The main things are system related (e.g., WWIVnet) and DOORs related. 
 There are a number of things, however, that apply to all cases when using 
 DOSEMU. If you haven't installed WWIV for linux yet, please check out 
-[WWIV Install on Linux](Linux_Installation.md).
+[WWIV Install on Linux](linux_installation.md).
 
 ## Common Settings
 

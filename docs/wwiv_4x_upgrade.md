@@ -5,7 +5,7 @@
 
 
 Before attempting an upgrade, please follow the 
-[WWIV 5 Installation on Windows](Installing_on_Windows.md)
+[WWIV 5 Installation on Windows](installing_on_windows.md)
 to install prerequisites.
 
 # Did I say BACKUP your existing WWIV BBS? 
@@ -59,7 +59,7 @@ in wwiv.ini and no longer requires configuring each instance from INIT.
 If you are using a 3rd party Telnet Server like Net2BBS, you may need to edit some parameters to launch the BBS.
 
 Launch the WWIV5Telnet Server and set your preferences as outlined here: 
-[WWIV5TelnetServer](WWIV_5_telnet_server.md)
+[WWIV5TelnetServer](wwiv_5_telnet_server.md)
 
 Start the WWIV5TelnetServer and test by telnetting to your bbs!
 

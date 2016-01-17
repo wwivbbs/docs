@@ -76,9 +76,9 @@ These pages will help you find WWIV 5.0 compatible utilities and installation in
 
 ## Advanced Configuration
 ### [WWIV.ini](wwivini.md)  
-### [WWIV Edit](wwivedit.md)  
+### [WWIV Edit](WWIVEdit.md)  
 ### [Multi Instance](multinode.md)  
-### [Chains & Doors](Doors.md)  
+### [Chains & Doors](doors.md)  
 ### [Event Management](eventmgmt.md)  
 ### [General Files AKA G-Files](gfiles.md)  
 ### [Transfer Files](transfers.md)  

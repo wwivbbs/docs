@@ -3,7 +3,7 @@ repo_url: https://github.com/wwivbbs/docs/
 copyright: 2014+ WWIV Software Services, LLC
 docs_dir: docs
 pages:
-    - 'index': index.md
+    - 'Home': index.md
     - 'WWIV BBS list': wwiv_bbs_list.md
     - 'license': license.md
     - Installation:

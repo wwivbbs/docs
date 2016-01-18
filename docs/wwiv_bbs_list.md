@@ -1,7 +1,7 @@
 # WWIV BBS Listing as of 24 September 2015
 ```
 =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
- WWIVNet :
+ WWIVnet :
  Node    : BBS Name
 =========:==================================================================
 @1       : Weather Station                 telnet://bbs.weather-station.org

@@ -907,7 +907,7 @@ the following under v4.22 :
   I. AR         : C                                         
   J. Net Info   :                                           
          Network     Type   Host    Flags                   
-      a) WWIVNet     22050  4000                            
+      a) WWIVnet     22050  4000                            
   K. Storage typ: 2                                         
   L. NetValidate:  No                                       
   M. Require Ansi:  No                                      

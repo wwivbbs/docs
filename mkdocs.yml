@@ -35,9 +35,9 @@ pages:
         - '\\SysOp Menu': sysop_menu.md
         - 'Event Management': eventmgmt.md
     - Nets:
-        - 'WWIVNet Overview': wwivnet.md
-        - 'WWIVNet on Windows': wwivnet_windows.md
-        - 'WWIVNet on Linux': wwivnet_linux.md
+        - 'WWIVnet Overview': wwivnet.md
+        - 'WWIVnet on Windows': wwivnet_windows.md
+        - 'WWIVnet on Linux': wwivnet_linux.md
         - 'Other Nets': other_nets.md
         - 'USENET':  usenet.md
         - 'NET37 Docs': net37_docs.md

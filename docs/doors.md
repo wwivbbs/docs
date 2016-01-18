@@ -77,7 +77,7 @@ This allows chiain access to be limited by age.
 ## Guidelines
 If you are going to add a door and installation instructions, please include a link to 
 the official source of the game of the game. If the company no longer exists, please 
-direct everyone to a WWIVNet Node and Transfer Sub where it can be located.
+direct everyone to a WWIVnet Node and Transfer Sub where it can be located.
 
 ## Compatible Doors
 These doors are known to work on WWIV 5.0 because one of the SysOps is running them. We'll provide linkes and installation instructions to get you going.

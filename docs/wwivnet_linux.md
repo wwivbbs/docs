@@ -1,4 +1,4 @@
-# Configuring WWIVNet on Linux
+# Configuring WWIVnet on Linux
 ***
 
 Setting up WWIVnet and subscribing to Subs isn't hard, but there are a few 
@@ -130,7 +130,7 @@ _**Configuring WWIVnet details and directories**_
  * Network name : WWIVnet
  * Node number : -your node number-
  * Data Directory : nets/wwivnet/
-5. run network3 (the shell script) - Now that all the WWIVNet config bits are in place, we can run the network3 program to validate our setup.  If everything goes as expected, you should get a network report mailed to you on your board locally.  The command to run is:
+5. run network3 (the shell script) - Now that all the WWIVnet config bits are in place, we can run the network3 program to validate our setup.  If everything goes as expected, you should get a network report mailed to you on your board locally.  The command to run is:
  * network3 y .-your network position in INIT-
  * for example, your list of nets in INIT starts with 0, so your first network is .0, the second is .1, etc.  Since this is probably your first network, the command is probably network3 y .0
  * If no network number is given, .0 is assumed, so network3 y is the same as network3 y .0

@@ -3,13 +3,13 @@
 A Net is a federation of BBSes which share content in Subs so messages or files posted on 
 one BBS are replicated to the others. 
 
-There are WWIVNet based Nets and FidoNet based nets. For the purpose of this this page that 
+There are WWIVnet based Nets and FidoNet based nets. For the purpose of this this page that 
 refers not the instances of the Nets themselves (which can the same names), but to the 
 underlying technology they use and the many instances of Nets that use those formats. (Yeah, 
 it's a little confusing). :-)
 
-## WWIVNet Based Networks
-### [WWIVNet](wwivnet.md)
+## WWIVnet Based Networks
+### [WWIVnet](wwivnet.md)
 
 
 ## Fido Technology Nets (FTN)
@@ -52,7 +52,7 @@ When you combine what you learned reading the Fido Policy doc with the D'Bridge 
 * Now run the DB3 installation and follow the steps.
 
 #### WWIVTOSS
-The latest version of WWIVToss can be downloaded from [The Weather Station WWIVNet @11](http://www.weather-station.org/wwiv/).  
+The latest version of WWIVToss can be downloaded from [The Weather Station WWIVnet @11](http://www.weather-station.org/wwiv/).  
 
 **TODO:** Add the setup info if needed, or update the WWIVToss Docs.
 

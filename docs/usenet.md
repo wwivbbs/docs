@@ -2,8 +2,8 @@
 ***
 
 ## Prerequisites
-This entire process will assume you are already on WWIVNet. So, 
-[setup WWIVNet](WWIVNet) first. We will walk you through subscribing
+This entire process will assume you are already on WWIVnet. So, 
+[setup WWIVnet](wwivnet.md) first. We will walk you through subscribing
 to alt.bbs.wwiv as an example. This assumes your Usenet Provider 
 carries this group. You can replace alt.bbs.wwiv with your favorite 
 news group. Some of the steps will have to repeat for every newsgroup 
@@ -13,7 +13,7 @@ you will to subscribe.
 * Using Board Edit (B from WFC or //BE form the BBS Main Menu), Insert 
 a new group wherever you wish in your list.
 * Edit the name to match the group name, and any of the other values as to your preferences.
-* Edit the (J) Net Info and add it to WWIVNet
+* Edit the (J) Net Info and add it to WWIVnet
 * Set the sub type to ALTBBSW
 * Now you have choices. 
 
@@ -31,7 +31,7 @@ H) Max Msgs   : 50
 I) AR         : None.
 J) Net info   :
       Network      Type    Host    Scrb   Flags
-   a) WWIVNet      ALTBBSW <HERE>  0
+   a) WWIVnet      ALTBBSW <HERE>  0
 K) Storage typ: 2
 L) Val network: No
 M) Req ANSI   : No
@@ -40,11 +40,11 @@ O) Description: None.
                                                                       
 ```
 
-**Share the Group on WWIVNet**  
+**Share the Group on WWIVnet**  
 If you want to host the group locally and share it with the net, then answer Yes 
 to hosting the group, to "Allow auto add/drop requests" and to "Make this sub 
 public (in subs.lst)" and select a sub category for the group. Others on 
-WWIVNet will be able to join this sub and you will be the gateway to 
+WWIVnet will be able to join this sub and you will be the gateway to 
 Usenet for this group. Your configuration will look like this:
 ```
 A) Name       : alt.bbs.wwiv
@@ -58,7 +58,7 @@ H) Max Msgs   : 50
 I) AR         : None.
 J) Net info   :
       Network      Type    Host    Scrb   Flags
-   a) WWIVNet      ALTBBSW <HERE>  0      Auto-Req Auto-Info(1)
+   a) WWIVnet      ALTBBSW <HERE>  0      Auto-Req Auto-Info(1)
 K) Storage typ: 2
 L) Val network: No
 M) Req ANSI   : No
@@ -82,8 +82,8 @@ to the SysOp. Login your BBS and read your email. Assuming that there are no err
 see something like this:
 
 ```
-Subj: WWIVNet Analysis as of 09/07/15
-Name: WWIVNet @206
+Subj: WWIVnet Analysis as of 09/07/15
+Name: WWIVnet @206
 Date: Mon Sep 07 18:55:06 2015
 RE: net38b3 analysis from system @206:
 

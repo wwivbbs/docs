@@ -1,9 +1,9 @@
-# Configuring WWIVNet on Windows
+# Configuring WWIVnet on Windows
 ***
 
 ## Installation and Configuration
 
-* Submit your WWIVNet Node Application to 1@1 Weather Station BBS - telnet://bbs.weather-station.org/
+* Submit your WWIVnet Node Application to 1@1 Weather Station BBS - telnet://bbs.weather-station.org/
 * Get the latest version of [WWIVNET-##.zip](http://build.wwivbbs.org/job/wwivnet/) on the build server. 
 * Put all of the contents of the zip in ```\wwiv\nets\wwivnet```
 * [Net38b.zip](http://www.wwiv.us/net38b6.zip) put all of the *.EXE files in \WWIV. The rest of the files are not needed.
@@ -11,7 +11,7 @@
 ```
 ┌─────────────────────────────────────────────────── Network Configuration ┐
 │ Net Type  : WWIVnet                                                      │
-│ Net Name  : WWIVNet                                                      │
+│ Net Name  : WWIVnet                                                      │
 │ Node #    : YOURNODE                                                     │
 │ Directory : NETS\WWIVNET\                                                │
 └──────────────────────────────────────────────────────────────────────────┘

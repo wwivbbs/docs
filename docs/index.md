@@ -42,7 +42,7 @@ you're ready to go live and open up to users. After you complete these installat
 steps, see the full details on related INIT settings, WWIV.INI and other Advanced 
 configuration topics.
 
-[Windows WWIV 5.0 Installation](installing_on_windows.md)  
+[Windows WWIV 5.0 Installation](windows_installation.md)  
 [Linux WWIV 5.0 Installation](linux_installation.md)  
 [MSGs to users need Customization](custom_user_messages.md)   
 [Taglines on Messages](taglines.md)  

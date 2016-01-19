@@ -5,7 +5,7 @@
 
 
 Before attempting an upgrade, please follow the 
-[WWIV 5 Installation on Windows](installing_on_windows.md)
+[WWIV 5 Installation on Windows](windows_installation.md)
 to install prerequisites.
 
 # Did I say BACKUP your existing WWIV BBS? 

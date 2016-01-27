@@ -1,7 +1,7 @@
 #Usenet
 ***
 
-This setup guide assumes that you already have a WWIVNet style network
+This setup guide assumes that you already have a WWIVnet style network
 configured as your network 0. The steps below will reference the Usenet node as 1, or the second network.
 Change this number as required to work with your BBS.
 

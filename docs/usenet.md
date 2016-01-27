@@ -1,27 +1,85 @@
 #Usenet
 ***
 
+This setup guide assumes that you already have a WWIVNet style network
+configured as your network 0. The steps below will reference the Usenet node as 1, or the second network.
+Change this number as required to work with your BBS.
+
 ## Prerequisites
-This entire process will assume you are already on WWIVNet. So, 
-[setup WWIVNet](WWIVNet) first. We will walk you through subscribing
-to alt.bbs.wwiv as an example. This assumes your Usenet Provider 
-carries this group. You can replace alt.bbs.wwiv with your favorite 
-news group. Some of the steps will have to repeat for every newsgroup 
-you will to subscribe.
+* Create a new folder for your Usenet files: \wwiv\networks\usenet
+* WINS (bundeled with the the release version of WWIV 5.00)
+* If you do not have a WWIVnet style network already configured, you will also need net37 or newer.
+* 
 
-## Add the group to your BBS
-* Using Board Edit (B from WFC or //BE form the BBS Main Menu), Insert 
-a new group wherever you wish in your list.
-* Edit the name to match the group name, and any of the other values as to your preferences.
-* Edit the (J) Net Info and add it to WWIVNet
-* Set the sub type to ALTBBSW
-* Now you have choices. 
+## Create your new network
+* Run INIT and select N. Network Configuration
+* Insert a new WWIVnet network and provide the name, node number and path:
+```
+ Net Type  : WWIVnet                                                      
+ Net Name  : Usenet                                                    
+ Node #    : 1                                                            
+ Directory : C:\WWIV\NETWORKS\USENET\   
+```
+* Esc - Exit and quit INIT
 
-**Local Group Only on your BBS**  
-If you only want the group to be local on your BBS answer YES to hosting the sub and NO to allowing add\drops and making the sub public on subs.lst. Your config will look like this:
+## Create and configure the Network Files
+* Create \wwiv\networks\usenet\address.net
+```
+@1 sysopname@your.com
+```
+* Create \wwiv\networks\usenet\BBSLIST.NET add your node @1 and the virtual Internet node @32767. 
+```
+@1     &    *123-555-INET #57600      |!    [     ]  "Your BBS Name"
+@32767      *123-555-NEWS #57600       !    [     ]  "Usenet Internet Gateway"
+```
+*Create \wwiv\networks\usenet\bbslist.1 and add your node @1 and the virtual node 99
+```
+:
+1
+99
+```
+* Create \wwiv\networks\usenet\bbslist.99 and add the following:
+```
+@32767      *707-585-NEWS   #57600        $!|      [     ]  "Internet Gateway"
+```
+* Create \wwiv\networks\usenet\callout.1
+```
+@1  &&
+```
+* Create \wwiv\networks\usenet\callout.99
+```
+@32767  &&
+```
+* Create \wwiv\networks\usenet\callout.net
+```
+@32767  &&
+```
+* Create \wwiv\networks\usenet\connect.99
+```
+@1 32767
+@32767 1 
+```
+* Create \wwiv\networks\usenet\connect.net
+```
+@1     32767=0.0
+@32767     1=0.0
+```
+## Configure the Usenet Newsgroup Subcriptions
+* Create \wwiv\networks\usenet\NEWS.RC (this will hold your newsgroup subscriptions)
+* Create \wwiv\networks\usenet\NEWSRC (this will contain a list of all newsgroups available on your providers server)
+* Edit \wwiv\networks\usenet\NEWS.RC In this file you will be listing every record in the following format:
+[newsgroup name] [high message number] [subtype] 
+```
+newsrc
+alt.bbs.wwiv    12456    altbbsw
+```
+The ```newsrc``` line will force the population of the NEWSRC file. This line will be removed after the initial population of the NEWSRC file.
+
+## Create your Usenet SUBS in BoardEdit
+
 ```
 A) Name       : alt.bbs.wwiv
-B) Filename   : UABWWIV
+B) Filename   : ALTBBSW
 C) Key        : None.
 D) Read SL    : 10
 E) Post SL    : 20
@@ -31,81 +89,54 @@ H) Max Msgs   : 50
 I) AR         : None.
 J) Net info   :
       Network      Type    Host    Scrb   Flags
-   a) WWIVNet      ALTBBSW <HERE>  0
+   a) Usenet      ALTBBSW <HERE>  0      Auto-Req Auto-Info(1)
 K) Storage typ: 2
 L) Val network: No
 M) Req ANSI   : No
 N) Disable tag: No
-O) Description: None.
-                                                                      
+O) Description: None.     
 ```
 
-**Share the Group on WWIVNet**  
-If you want to host the group locally and share it with the net, then answer Yes 
-to hosting the group, to "Allow auto add/drop requests" and to "Make this sub 
-public (in subs.lst)" and select a sub category for the group. Others on 
-WWIVNet will be able to join this sub and you will be the gateway to 
-Usenet for this group. Your configuration will look like this:
+## Subscribe the vireual node 32767 to the sub by editing the nALTBBSW.net file generated when you created the SUB.
+* Edit c:\wwiv\networks\usenet\nALTBBSW.net
 ```
-A) Name       : alt.bbs.wwiv
-B) Filename   : UABWWIV
-C) Key        : None.
-D) Read SL    : 10
-E) Post SL    : 20
-F) Anony      : No
-G) Min. Age   : 0
-H) Max Msgs   : 50
-I) AR         : None.
-J) Net info   :
-      Network      Type    Host    Scrb   Flags
-   a) WWIVNet      ALTBBSW <HERE>  0      Auto-Req Auto-Info(1)
-K) Storage typ: 2
-L) Val network: No
-M) Req ANSI   : No
-N) Disable tag: No
-O) Description: None.                                                   
+32767
 ```
-
-## Configure the Network Files
-* Edit \wwiv\networks\wwivnet\BBSLIST.NET add a line at the end for @32767 if it does not already exist 
-```
-@32767     *707-585-NEWS #57600      !    [     ]  "WWIVNET Internet Gateway"
-```
-**Note** these entries might be here already:
-* Edit \wwiv\networks\wwivnet\CONNECT.NET and make sure that 32767 is not listed.
-* Then add ``` @32767 = 0:00 ``` to the right of your node number such that it looks something like this: ``` @707   1=0.0 32767=0.00 ``` Next to your node number is the only location you will want to see 32767 in CONNECT.NET
-* Edit \wwiv\networks\wwivnet\CALLOUT.NET file to add the following line at the bottom ``` @32767  & ```
-* Now verify you didn't enter anything incorrectly by running ``` NETWORK3 .0 Y ``` and then ``` NETWORK2 ```
+##  Verify with network3
+* From a command prompt run the following command:
+``` c:\wwiv\NETWORK3 .0 Y ``` 
+and then 
+``` NETWORK2 ```
 
 This will generate a network status message and process it for you via email 
 to the SysOp. Login your BBS and read your email. Assuming that there are no errors, you should 
 see something like this:
 
 ```
-Subj: WWIVNet Analysis as of 09/07/15
-Name: WWIVNet @206
-Date: Mon Sep 07 18:55:06 2015
-RE: net38b3 analysis from system @206:
+Msg:  [1/1] E-Mail
+Subj: Usenet Analysis as of 01/26/16
+Name: Usenet @1
+Date: Tue Jan 26 20:00:04 2016
 
-                  << WWIV ANSI ART HERE >>>
-
-          The Offical Network of WWIV BBS Software
+RE: net38b6 analysis from system @1:
 
 Network Coordinator is @1
 Group Coordinator is @1
 Area Coordinator is @1
- 
-2 systems are 1 hop away.
-18 systems are 2 hops away.
- 
-20 systems total, average  1.90 hops.
- 
-19 systems route through @1.
+
+Using bias of 0.00100 $/k/hop.
+
+1 system is 1 hop away.
+1 systems total, average  1.00 hops.
 1 system routes through @32767.
- 
+
 Everything is fine.
-(490k free for analysis)
-(0 seconds for analysis)       
+(418k free for analysis)
+(0 seconds for analysis)
+
+Usenet
+
+Mail {QSRIDAF?-+GEMZPVUOLCNY@} :
 ```
 If there are errors, you will have to address them before proceeding. Check to 
 see that you have not mistyped anything in the above files BBSLIST.NET, 
@@ -140,75 +171,28 @@ XPOSTS = 5
 NEWSRC_UPD = Y
 ```
 
-## Configure the Usenet Newsgroup Subcriptions
-
-* create a text file ```\wwiv\networks\wwivnet\NEWS.RC``` In this file you will be listing every file in the following format:  
-```[newsgroup name] [high message number] [subtype]```  
-  
-**[newsgroup name]** - Use the dotted name of the group. ex: alt.bbs.wwiv  
-**[high message number]** - The message # from which you will download. You want to check what this is
-on your Usenet provider, you don't want to end up downloading 10 years worth of postings.  
-**[subtype]** - The SUBTYPE of the group will be what you enter for SUBTYPE when you add this group
-to WWIV in BoardEdit. This has a limit of 7 Characters.  
-
-For example:
+###Create a news toss batch file
+* Create c:\wwiv\usenet-toss.bat (You can name this anything you like)
 ```
-alt.bbs.wwiv    12456    altbbsw
-```
-
-* Generate NEWSRC: This file will contain a list of every group available from your Usenet Provider. 
-To populate this list there are two options:  
-
-**Auto-Generate NEWSRC**  
-To have the group list created and populated the next time network mail is processed, add 
-a ```newsrc``` line above the newsgroup lists in news.rc, example: 
-```
-\wwiv\nets\wwivnet\news.rc
-
-    newsrc
-    alt.bbs.doors 25849 ALTBBSW
-```
-This will instruct NEWS.EXE to create NEWSRC if it does not already exist and download a list of every available newsgroup on the server. This will be a LOT of data so some people prefer to do this manually.
-
-**Manually Populate NEWSRC**  
-Using an NNTP client download the list of newsgroups available from your Usenet Provider.
-Save this list of newsgroups as \wwiv\networks\wwivnet\newsrc.
-
-**Verify the creation of the appropriate network file \wwiv\networks\wwivnet\n[subtype].net**
-There may be a bug that omits the host 32767, if so you will need to manually add the host.
-You may need to do this for each USENET group you add to your system
-```
-\wwiv\networks\wwivnet\nALTBBSW.net
-
-32767
-```
-As other SysOps subscribe to the subs, you will begin to see them appear in these n[subtype].net files:
-```
-\wwiv\networks\wwivnet\nALTBBSW.net
-
-1
-708
-255
-32767
-```
-
-###MAIL.BAT
-If you intend on using a batch file to initiate transfers, simply add the following lines
-```
-CALL NETWORK /N32767 .0 /A /P707-585-NEWS /S57600 /T993228415 .0 
+CALL NETWORK /N32767 .1
 CALL NETWORK1
 CALL NETWORK2
-CALL BBS.EXE /N10 /E
+CALL BBS.EXE /N1 /E
 ```
-Of course yours may look a little different. I use node 10 for maintenance, hence the /N10 on the bottom line.
+Of course yours may look a little different. I use node 1 for maintenance, hence the /N1 on the bottom line.
 NETWORK1 and NETWORK2 are optional but I like using them to unpack and handle the incoming messages. 
 
-Now, when your mail.bat runs, you should see the news.exe portion 
+Now, when your usenet-toss.bat runs, you should see the news.exe portion 
 connect to the newsgroups and start downloading messages.
 
-###Troubleshooting (todo)
+## Gate to WWIVnet (TODO)
 
-Common issues:
+### Troubleshooting (TODO)
 
-***
+## Common issues:
+* NEWSRC may not populate fully the first few tosses.
+* Typo's (Typically my land-mines)
+* 
+
+
 

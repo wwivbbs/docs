@@ -138,8 +138,8 @@ Usenet
 Mail {QSRIDAF?-+GEMZPVUOLCNY@} :
 ```
 If there are errors, you will have to address them before proceeding. Check to 
-see that you have not mistyped anything in the above files BBSLIST.NET, 
-CALLOUT.NET and CONNECT.NET. Once you are clear, you may proceed.
+see that you have not mistyped anything in the above files BBSLIST.x, 
+CALLOUT.x and CONNECT.x. Once you are clear, you may proceed.
 
 ## Configure c:\wwiv\net.ini 
 
@@ -176,7 +176,7 @@ NEWSRC_UPD = Y
 ###Create a news toss batch file
 * Create c:\wwiv\usenet-toss.bat (You can name this anything you like)
 ```
-CALL NETWORK /N32767 .1
+CALL NETWORKP /N32767 .1
 CALL NETWORK1
 CALL NETWORK2
 CALL BBS.EXE /N1 /E

@@ -28,8 +28,8 @@ Change this number as required to work with your BBS.
 ```
 * Create \wwiv\networks\usenet\BBSLIST.NET add your node @1 and the virtual Internet node @32767. 
 ```
-@1     &    *123-555-INET #57600      |!    [     ]  "Your BBS Name"
-@32767      *123-555-NEWS #57600       !    [     ]  "Usenet Internet Gateway"
+@1     &    *123-555-INET #57600      $!|    [     ]  "Your BBS Name"
+@32767      *123-555-NEWS #57600       !     [     ]  "Usenet Internet Gateway"
 ```
 * Create \wwiv\networks\usenet\bbslist.1 and add your node @1 and the virtual node 99
 ```
@@ -39,7 +39,7 @@ Change this number as required to work with your BBS.
 ```
 * Create \wwiv\networks\usenet\bbslist.99 and add the following:
 ```
-@32767      *707-585-NEWS   #57600        $!|      [     ]  "Internet Gateway"
+@32767      *123-555-NEWS   #57600     $!|      [     ]  "Usenet Internet Gateway"
 ```
 * Create \wwiv\networks\usenet\callout.1
 ```
@@ -194,7 +194,7 @@ connect to the newsgroups and start downloading messages.
 ## Common issues:
 * NEWSRC may not populate fully the first few tosses.
 * Typo's (Typically my land-mines)
-* 
+
 
 
 

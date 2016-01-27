@@ -9,7 +9,6 @@ Change this number as required to work with your BBS.
 * Create a new folder for your Usenet files: \wwiv\networks\usenet
 * WINS (bundeled with the the release version of WWIV 5.00)
 * If you do not have a WWIVnet style network already configured, you will also need net37 or newer.
-* 
 
 ## Create your new network
 * Run INIT and select N. Network Configuration
@@ -32,7 +31,7 @@ Change this number as required to work with your BBS.
 @1     &    *123-555-INET #57600      |!    [     ]  "Your BBS Name"
 @32767      *123-555-NEWS #57600       !    [     ]  "Usenet Internet Gateway"
 ```
-*Create \wwiv\networks\usenet\bbslist.1 and add your node @1 and the virtual node 99
+* Create \wwiv\networks\usenet\bbslist.1 and add your node @1 and the virtual node 99
 ```
 :
 1
@@ -97,7 +96,7 @@ N) Disable tag: No
 O) Description: None.     
 ```
 
-## Subscribe the vireual node 32767 to the sub by editing the nALTBBSW.net file generated when you created the SUB.
+## Subscribe the virtual node 32767 to the sub by editing the nALTBBSW.net file generated when you created the SUB.
 * Edit c:\wwiv\networks\usenet\nALTBBSW.net
 ```
 32767
@@ -152,6 +151,9 @@ Required sections are as follows (uncomment and edit as appropriate):
 [NETWORK] 
 primenet = WWIVNET 
 POPNAME = [your alias] ; used as your display name on NNTP posts
+
+[NETWORK1]
+primenet-USENET
 
 [GENERAL]
 DOMAIN=[your domain.com] ; used with POPNAME to create you@your.com email address for NNTP

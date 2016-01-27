@@ -17,7 +17,7 @@ Change this number as required to work with your BBS.
  Net Type  : WWIVnet                                                      
  Net Name  : Usenet                                                    
  Node #    : 1                                                            
- Directory : C:\WWIV\nets\USENET\   
+ Directory : C:\WWIV\NETS\USENET\   
 ```
 * Esc - Exit and quit INIT
 

@@ -64,15 +64,13 @@ Change this number as required to work with your BBS.
 @32767     1=0.0
 ```
 ## Configure the Usenet Newsgroup Subcriptions
-* Create \wwiv\nets\usenet\NEWS.RC (this will hold your newsgroup subscriptions)
-* Create \wwiv\nets\usenet\NEWSRC (this will contain a list of all newsgroups available on your providers server)
-* Edit \wwiv\nets\usenet\NEWS.RC In this file you will be listing every record in the following format:
-[newsgroup name] [high message number] [subtype] 
+* Create \wwiv\nets\usenet\NEWS.RC (this will hold your newsgroup subscriptions) In this file you will be listing every record in the following format: [newsgroup name] [high message number] [subtype]  
+NOTE: The ```newsrc``` line will force the population of the NEWSRC file. This line will be removed after the initial population of the NEWSRC file.
 ```
 newsrc
 alt.bbs.wwiv    12456    altbbsw
 ```
-The ```newsrc``` line will force the population of the NEWSRC file. This line will be removed after the initial population of the NEWSRC file.
+* Create a blank file \wwiv\nets\usenet\NEWSRC (this will contain a list of all newsgroups available on your providers server)
 
 ## Create your Usenet SUBS in BoardEdit
 

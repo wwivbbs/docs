@@ -22,9 +22,9 @@ Change this number as required to work with your BBS.
 * Esc - Exit and quit INIT
 
 ## Create and configure the Network Files
-* Create \wwiv\nets\usenet\address.net
+* Create \wwiv\nets\usenet\address.net 
 ```
-@1 sysopname@your.com
+~0
 ```
 * Create \wwiv\nets\usenet\BBSLIST.NET add your node @1 and the virtual Internet node @32767. 
 ```
@@ -86,7 +86,7 @@ H) Max Msgs   : 50
 I) AR         : None.
 J) Net info   :
       Network      Type    Host    Scrb   Flags
-   a) Usenet      ALTBBSW <HERE>  0      Auto-Req Auto-Info(1)
+   a) Usenet      ALTBBSW <HERE>  1      
 K) Storage typ: 2
 L) Val network: No
 M) Req ANSI   : No
@@ -147,26 +147,26 @@ Required sections are as follows (uncomment and edit as appropriate):
 
 ``` 
 [NETWORK] 
-primenet = WWIVNET 
+primenet = WWIVNET ; The name of your existing network
 POPNAME = [your alias] ; used as your display name on NNTP posts
 
-[NETWORK1]
-primenet = USENET
+[NETWORK1] ; add the second network as network1
+primenet = USENET ; name your second network 
 
 [GENERAL]
-DOMAIN=[your domain.com] ; used with POPNAME to create you@your.com email address for NNTP
+DOMAIN=[your domain.com] ; Remove brackets- used with POPNAME to create you@your.com email address for NNTP
 
 [NEWS]
-NEWSHOST=[IP address of NNTP server] ; FQDN may work here but I've found best results with IP
-NEWSNAME=[Your NNTP username]
-NEWSPASS=[Your NNTP password]
+NEWSHOST=[IP address of NNTP server] ; Remove brackets- FQDN may work here but I've found best results with IP
+NEWSNAME=[Your NNTP username] ; Remove brackets- Youy username required by your usenet provider
+NEWSPASS=[Your NNTP password] ; Remove brackets- Youy password required by your usenet provider
 ```
 *The following items are optional but recommended*
 ```
 REALNAME = Y 
 SPAMADDRESS = YourFake Email@some.com.remove.com
 REPLYTO = Your email@your.com.remove.com
-SIGNATURE = C:\WWIV\GFILES\INTERNET.TAG
+; SIGNATURE = C:\WWIV\GFILES\INTERNET.TAG ; Uncomment if you have this tag file
 XPOSTS = 5
 NEWSRC_UPD = Y
 ```
@@ -174,7 +174,7 @@ NEWSRC_UPD = Y
 ###Create a news toss batch file
 * Create c:\wwiv\usenet-toss.bat (You can name this anything you like)
 ```
-CALL NETWORKP /N32767 .1
+CALL NETWORK /N32767 .1
 CALL NETWORK1
 CALL NETWORK2
 CALL BBS.EXE /N1 /E

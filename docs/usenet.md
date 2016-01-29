@@ -26,38 +26,14 @@ Change this number as required to work with your BBS.
 ```
 ~0
 ```
-* Create \wwiv\nets\usenet\BBSLIST.NET add your node @1 and the virtual Internet node @32767. 
+* Create \wwiv\nets\usenet\bbslist.net add your node @1 and the virtual Internet node @32767. 
 ```
 @1     &    *123-555-INET #57600      $!|    [     ]  "Your BBS Name"
 @32767      *123-555-NEWS #57600       !     [     ]  "Usenet Internet Gateway"
 ```
-* Create \wwiv\nets\usenet\bbslist.1 and add your node @1 and the virtual node 99
-```
-:
-1
-99
-```
-* Create \wwiv\nets\usenet\bbslist.99 and add the following:
-```
-@32767      *123-555-NEWS   #57600     $!|      [     ]  "Usenet Internet Gateway"
-```
-* Create \wwiv\nets\usenet\callout.1
-```
-@1  &&
-```
-* Create \wwiv\nets\usenet\callout.99
-```
-@32767  &&
-```
 * Create \wwiv\nets\usenet\callout.net
 ```
 @32767  &&
-```
-* Create \wwiv\nets\usenet\connect.99
-```
-@1 32767
-@32767 1 
-```
 * Create \wwiv\nets\usenet\connect.net
 ```
 @1     32767=0.0

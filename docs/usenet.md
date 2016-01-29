@@ -26,7 +26,7 @@ Change this number as required to work with your BBS.
 ```
 ~0
 ```
-* Create \wwiv\nets\usenet\bbslist.netc add your node @1 and the virtual Internet node @32767. 
+* Create \wwiv\nets\usenet\bbslist.net add your node @1 and the virtual Internet node @32767. 
 ```
 @1     &    *123-555-INET #57600      $!|    [     ]  "Your BBS Name"
 @32767      *123-555-NEWS #57600       !     [     ]  "Usenet Internet Gateway"

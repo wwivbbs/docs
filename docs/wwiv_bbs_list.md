@@ -16,6 +16,7 @@
 @707     : The Blood Stone                           telnet://www.bsbbs.com
 @708     : Manic Arcade BBS (Dev)             telnet://wwiv.manicarcade.com
 @815     : Inland Utopia (10am-11pm PST)         telnet://iutopia.no-ip.org
+@900     : Storm Mountain                    telnet://storm-mt-bbs.ddns.net
 ----------------------------------------------------------------------------
 Not connected to WWIVnet
 ----------------------------------------------------------------------------

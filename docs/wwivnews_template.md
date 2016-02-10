@@ -39,8 +39,14 @@
     =======================================================================
                                 Another Article
                             By Another Author 1@Node
-    
-    
+
+    =======================================================================
+                          WWIV Links and Information
+    WWIC 5.0 Team Site                               http://www.wwivbbs.org
+    WWIV BBS List           http://docs.wwivbbs.org/en/latest/wwiv_bbs_list
+    WWIV 5.0 Documentation                          http://docs.wwivbbs.org
+    WWIVNews Archive             http://docs.wwivbbs.org/en/latest/wwivnews
+    WWIV IRC                             irc://irc.ospreynet.info:6667/wwiv
     =======================================================================
                                      THE END
 

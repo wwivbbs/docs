@@ -79,6 +79,27 @@ If\when you are are ready to host your own WWIVnet sub here are the steps to tak
 * Add your Sub to the subs.lst or request help on the WWIV Sysops Sub
 * Post an announcement on the WWIVnet Sub Yellow Pages to advertise your new sub
 
+## Custom Ports for BINKP
+If you are running other BINKP protocol networks (like Fidonet), you might need to specify a custom port for WWIVnet. 
+To do this, the custom port needs to be specified in `binkp.net` by adding  `:port#` to your entry like so:  
+`@206 wwiv.cloudcitybbs.com:24555`
+This is managed by @1, the Network Coordinator. So you first contact them about this as you joing WWIVnet or if you need to make a change later. You will then also need to specify this custom port in your `binkp.cmd` or other such batch file, for example:
+```
+@ Echo OFF
+rem NetworkB controller
+cls
+
+:start
+C:
+cd \wwiv
+echo Starting NetworkB to Receive Inbound Connections
+echo.
+networkb --receive --port=24555
+```
+On Linux you would need to add the `--port=xxxx` option to your sheduled job. 
+
+Again, be sure to coordinate changes with 1@1 or you will be dropped off the net.
+
 ***
 Within the Net37.zip there are two documents and I've also posted them on the wiki. They have a lot of technical information if you'd like to read it.
 

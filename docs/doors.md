@@ -80,7 +80,7 @@ the official source of the game of the game. If the company no longer exists, pl
 direct everyone to a WWIVnet Node and Transfer Sub where it can be located.
 
 ## Compatible Doors
-These doors are known to work on WWIV 5.0 because one of the SysOps is running them. We'll provide linkes and installation instructions to get you going.
+These doors are known to work on WWIV because one of the SysOps is running them. We'll provide linkes and installation instructions to get you going.
 
 Doors Running on WWIV BBSes | Doors with Installation Steps
 --------------------------- | -----------------------------
@@ -304,6 +304,6 @@ for downloading on the WWIV Support Boards.
  7400               WWIVnet node number
 ```
 ## Links to Lists of Doors
-We don't know if all the Doors on these lists work with WWIV 5.0 or not. But let's try 'em!
+We don't know if all the Doors on these lists work with WWIV or not. But let's try 'em!
 
 [The BBS Corner](http://www.bbscorner.com/doorgames/doorgamesites.htm)  

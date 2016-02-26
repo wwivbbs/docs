@@ -2,7 +2,7 @@
 ***
 
 ### Telnet
-Here are some clients you can use on your device to access WWIV 5.0 via Telnet.
+Here are some clients you can use on your device to access WWIV via Telnet.
 
 Client | Windows | Linux | Android | iOS | Windows Phone
 ------ | :-----: | :---: | :-----: | :-: | :-----------:
@@ -49,9 +49,9 @@ and freeware clients I have used and can recommend:
 In the days of dialup BBSes, on popular boards you frequently had less than you needed to read
 all the messages and reply, look for files, etc. To help optimize your time, tools to allow you 
 download messages, read offline, reply offline and then upload your replies were created. QWK was
-one such framework and is still supported in WWIV 5.0 BBS.
+one such framework and is still supported in WWIV BBS.
 
-To download the unread messages on a WWIV 5.0 BBS use the //QWK command from the Main Menu. You will then be presented with the option to use the Internal WWIV Qek, downlaod an ASCII file of posts or Configure the Sub Scan. 
+To download the unread messages on a WWIV BBS use the //QWK command from the Main Menu. You will then be presented with the option to use the Internal WWIV Qek, downlaod an ASCII file of posts or Configure the Sub Scan. 
 
 Configuring the Sub Scan let's you enable\disable downloading messages for particular subs and this is a first good place to start. Once that is done, you can use the Internal WWIV QWK to Download a QWK packet. Or if you are ready to Upload you can do that here as well.
 

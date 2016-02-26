@@ -1,4 +1,4 @@
-#Building WWIV5 5.0 BBS
+#Building WWIV5 BBS
 ***
 
 ## Windows Builds
@@ -7,7 +7,7 @@ We prefer contributors to FORK WWIVBBS repositories to their account and work fr
 If you're on Windows this is likely in this folder: "Documents\GitHub\WWIV"
 
 ###Download Visual Studio
-WWIV 5.0 is compiled with the VS2015 compiler for windows. You can download [Microsoft Visual Studio 2015 Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)
+WWIV is compiled with the VS2015 compiler for windows. You can download [Microsoft Visual Studio 2015 Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)
 
 ###Install VS2015
 Choose a custom install and select the following components:
@@ -21,7 +21,7 @@ Common Tools
    GitHub for VS
 ```
 
-##Build WWIV 5.0
+##Build WWIV
 * From the VS2015 menu, select File and then Open from Source Control
 On the bottom, you should see your local GIT repositories already.
 Above that you will see Login to GitHub, do that.

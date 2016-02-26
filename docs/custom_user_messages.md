@@ -3,13 +3,13 @@
 When you logged in, you saw several places where some placeholder messages were displayed. 
 These messages are all specified in files located at \wwiv\gfiles. In this directory, there 
 are a number of .MSG and .ANS files which are the messages and menus displayed you users as 
-they use your WWIV 5.0 BBS.
+they use your WWIV BBS.
 
 You can customize all of these as you wish. They can be edited with NOTEPAD or another text 
 editor. .MSG files are used by default and .ANS files are displayed to users if their client 
 supports ANSI. You should definitely have an ANSI version wherever you want to show off some 
 art or where you can enhance the look and feel of your board. This is one of the ways you can 
-make your WWIV 5.0 BBS your own. 
+make your WWIV BBS your own. 
 
 While there are many others, as a new SysOp, the following MSGs are where you should start.
 

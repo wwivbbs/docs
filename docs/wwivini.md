@@ -21,7 +21,7 @@ also refer to specific settings in wwiv.ini.
 ```INI
 ;=============================================================================
 ;
-;                 WWIV Version 5.00 Initialization File
+;                 WWIV Version 5 Initialization File
 ;
 ;              Lines begining with a semi-colon are ignored
 ;=============================================================================
@@ -230,7 +230,7 @@ THREAD_SUBS            = N                  ; activate threading message code
 DISABLE_PD             = Y                  ; disable Pulldown menu support
 TITLEBAR               = Y                  ; show user in console titlebar
 ;
-;!!!NOTE: ENABLE_PIPES, EXTRA_COLOR AND ENABLE_MCI are always on in wwiv 5.0
+;!!!NOTE: ENABLE_PIPES, EXTRA_COLOR AND ENABLE_MCI are always on in wwiv
 ;
 ;=============================================================================
 ;                           SYSTEM TUNING PARAMETERS

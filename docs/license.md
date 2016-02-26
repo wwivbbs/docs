@@ -1,7 +1,9 @@
 # Registration & Licensing
 ***
-## WWIV 5.0 Registration & License
-There is no registration to use WWIV 5.0. But we'd love to add you to the list, so contact the team! Http://wwivbbs.org
+## WWIV 5 Registration & License
+There is no registration to use WWIV 5. 
+But we'd love to add you to the list, 
+so contact the team! http://www.wwivbbs.org
 
 
 Copyright 2014+ WWIV Software Services, LLC

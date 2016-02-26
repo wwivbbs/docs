@@ -1,13 +1,13 @@
 
-# WWIV 5.0 BBS Software wiki
+# WWIV BBS Software Documentation
 ***
 ```
-              WWW     WWW WWW     WWW III VVV   VVV   555555    000000
-              WWW     WWW WWW     WWW III VVV   VVV   55        00  00
-              WWW     WWW WWW     WWW III VVV   VVV   555555    00  00
-              WWW  W  WWW WWW  W  WWW III  VVV VVV        55    00  00
-              WWW WWW WWW WWW WWW WWW III   VVVVV         55 .. 00  00
-               WWW   WWW   WWW   WWW  III    VVV      555555 .. 000000
+              WWW     WWW WWW     WWW III VVV   VVV   555555    11
+              WWW     WWW WWW     WWW III VVV   VVV   55        11
+              WWW     WWW WWW     WWW III VVV   VVV   555555    11
+              WWW  W  WWW WWW  W  WWW III  VVV VVV        55    11
+              WWW WWW WWW WWW WWW WWW III   VVVVV         55 .. 11
+               WWW   WWW   WWW   WWW  III    VVV      555555 .. 11
 ```
 
 WWIV BBS SOFTWARE has a long [history](history.md), this project is to give WWIV a strong future.
@@ -16,16 +16,6 @@ Were working hard to bring you the best bbs software we can. This wiki is to sup
 
 Thank you,  
 The WWIV Dev Team 
-
-## Get WWIV 5.0 
-(current production release)
-WWIV 5.0 binaries for x86 Windows and Linux can be downloaded from here.
-You will need the platform specific release for WWIV and also the network software
-(DOS based) which works on both Windows and Linux.
-
-* [wwiv500-win32.zip](https://github.com/wwivbbs/wwiv/files/61304/wwiv500-win32.zip) - WWIV 5.0.0 for Win32
-* [wwiv500-linux.tar.gz](https://github.com/wwivbbs/wwiv/files/61302/wwiv500-linux.tar.gz) - WWIV 5.0.0 for Linux
-* [net38b6](https://github.com/wwivbbs/wwiv/files/61303/net38b6.zip) - Net38 beta-6 (DOS, Win32, Linux)
 
 ## Get WWIV 5.1 
 (development/continuous builds)
@@ -42,20 +32,20 @@ you're ready to go live and open up to users. After you complete these installat
 steps, see the full details on related INIT settings, WWIV.INI and other Advanced 
 configuration topics.
 
-[Windows WWIV 5.0 Installation](windows_installation.md)  
-[Linux WWIV 5.0 Installation](linux_installation.md)  
+[Windows WWIV Installation](windows_installation.md)  
+[Linux WWIV Installation](linux_installation.md)  
 [MSGs to users need Customization](custom_user_messages.md)   
 [Taglines on Messages](taglines.md)  
 
 ## [Upgrading Earlier WWIV BBSes](wwiv_4x_upgrade.md)
-Do you have your floppy disks with your 4.x WWIV BBS on it? We can get you upgraded to WWIV 5.0 
+Do you have your floppy disks with your 4.x WWIV BBS on it? We can get you upgraded to WWIV
 and you can join the fold again!
 
 ## [Init Settings](init.md)
-## User Access Protocols for WWIV 5.0  
+## User Access Protocols for WWIV
 BBSes used to only be accessible by dialing them up on your phone line with a MODEM. When 
 the Internet took off many BBSes added Telnet support to allow users to connect to the BBS
-over the Internet. That is still in use today. These pages explain how to use the WWIV 5.0 
+over the Internet. That is still in use today. These pages explain how to use the WWIV 
 builtin Telnet Server and Net2BBS from PCMicro.
 ### [WWIV5 Telnet Server](wwiv_5_telnet_server.md)
 ### [Net2BBS Telnet Server by PCMicro](net2bbs.md)
@@ -69,7 +59,7 @@ builtin Telnet Server and Net2BBS from PCMicro.
 
 ## Nets
 Nets are federation of BBSes which connect to share messages and\or files. 
-These pages will help you find WWIV 5.0 compatible utilities and installation instructions.
+These pages will help you find WWIV compatible utilities and installation instructions.
 ### [WWIVnet](wwivnet.md)
 ### [Other Nets](other_nets.md)
 ### [Usenet](usenet.md)

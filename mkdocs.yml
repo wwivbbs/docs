@@ -1,8 +1,9 @@
-site_name: WWIV BBS 5.1 Documentation
+site_name: WWIV BBS 5.1
 repo_url: https://github.com/wwivbbs/docs/
 copyright: 2014+ WWIV Software Services, LLC
 docs_dir: docs
 pages:
+    - 'Home': index.md
     - Installation:
         - 'Windows Installation': windows_installation.md
         - 'Linux Installation': linux_installation.md
@@ -57,7 +58,6 @@ pages:
             - 'clients': clients.md
             - 'FIX.exe Utility': fix.md
     - About:
-      - 'Home': index.md
       - 'WWIV BBS list': wwiv_bbs_list.md
       - 'license': license.md
       - History of WWIV:

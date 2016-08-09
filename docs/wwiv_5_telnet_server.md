@@ -1,9 +1,9 @@
-# WWIV 5 Telnet Server
+# WWIV Server
 ***
 
 ## Screenshots of the WWIV5TelnetServer
 
-To run the WWIV5 Telnet Server, run C:\WWIV\WWIV5TelentServer.exe and the UI shows below will appear.
+To run the WWIV Server, run c:\wwiv\WWIVServer.exe and the UI shows below will appear.
 
 ### Main Screen
 ![MainScreen](/screenshots/wwiv5telnet/WWIV5_Telnet_Server_Main.png)
@@ -24,6 +24,6 @@ For initial Setups, run the local node and then hit <SPACE> to login as a NEW Us
 
 ![Menu](/screenshots/wwiv5telnet/WWIV5_Telnet_Server_Menu.png)
 
-### WWIV5 Telnet Server with nodes Running
+### WWIV5 Server with nodes Running
 When the telnet nodes are running you will see their status on the right hand pane.
 ![runtime](/screenshots/wwiv5telnet/WWIV5_Telnet_Server_Running.png)

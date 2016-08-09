@@ -19,7 +19,7 @@ The WWIV Dev Team
 
 ## Get WWIV 5.1 
 (development/continuous builds)
-Pre-built WWIV 5.1.0 binaries for x86 Windows and Linux can be downloaded from
+Pre-built WWIV 5.1 binaries for x86 Windows and Linux can be downloaded from
 the [WWIV Continuous Build Server](http://build.wwivbbs.org/jenkins/job/wwiv/)  
 
 If you wish to compile it yourself, please see: [Building WWIV 5.1](build_wwiv_5.md)
@@ -47,7 +47,7 @@ BBSes used to only be accessible by dialing them up on your phone line with a MO
 the Internet took off many BBSes added Telnet support to allow users to connect to the BBS
 over the Internet. That is still in use today. These pages explain how to use the WWIV 
 builtin Telnet Server and Net2BBS from PCMicro.
-### [WWIV5 Telnet Server](wwiv_5_telnet_server.md)
+### [WWIV Server](wwiv_5_telnet_server.md)
 ### [Net2BBS Telnet Server by PCMicro](net2bbs.md)
 ### [Dial-Up Modem Access](dialup.md)
 
@@ -83,6 +83,7 @@ TODO: How his Internet mail handling with the new tools?
 ### [Sub Fix Utility](fix.md)
 ### [New SysOp Suggestions](newsysop.md)
 ### [Managing Log Files](logfiles.md)
+
 ## [Registration & License](license.md)
 
 ## [Client Software for Users of BBSes](clients.md)

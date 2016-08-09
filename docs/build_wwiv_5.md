@@ -48,19 +48,20 @@ g++ 4.9 or later |
 ### Build Steps
 There are two primary ways to get the files for building; download a zip of the project or clone the repo.  In both cases, you will end up with the following files in the build directory:  
 
-   bbs/bbs  
-   init/init  
-   nodemgr/nodemgr  
-   wwivutil/wwivutil  
-   network/network  
-   networkb/networkb  
+* bbs/bbs  
+* init/init  
+* nodemgr/nodemgr  
+* wwivutil/wwivutil  
+* network/network  
+* networkb/networkb
+* network1/network1
+* network2/network2
+* network3/network3
 
 #### Using a downloaded .zip (no git required)
 * If you don't want to worry about managing a git repo and just want the files, you can download the zipped project file from GitHub.  Go to https://github.com/wwivbbs/wwiv and click on the "[Download Zip](https://github.com/wwivbbs/wwiv/archive/master.zip)" Button
 * unzip the zip file. It will create a wwiv-master directory in your current location
 * navigate to wwiv-master
-* If you want to create a debug version, run ```./debug.sh```
-* run ```cmake . && make``` (don't forget the ".")
 
 #### Using a repo
 If you plan to have an active repo, we prefer contributors to FORK WWIVBBS repositories to their account and work from there.  
@@ -75,5 +76,10 @@ If you plan to have an active repo, we prefer contributors to FORK WWIVBBS repos
     git clone https://github.com/<em>YOUR-USERNAME</em>/wwiv.git
     ```
 * Navigate to wwiv
+
+#### Compiling WWIV
+
+No matter which way you used (source zip or git repository), compiling WWIV is the same.
+
 * If you want to create a debug version, run ```./debug.sh```
 * run ```cmake . && make``` (don't forget the ".")

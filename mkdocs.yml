@@ -29,8 +29,8 @@ pages:
             - 'G-Files': gfiles.md
             - 'transfers': transfers.md
             - 'Waiting for callers': waiting_for_callers.md
-            - '\\ (slash) Menu': slash_menu.md
-            - '\\SysOp Menu': sysop_menu.md
+            - '// (slash) Menu': slash_menu.md
+            - '//SysOp Menu': sysop_menu.md
             - 'Event Management': eventmgmt.md
         - Nets:
             - 'WWIVnet Overview': wwivnet.md

@@ -13,7 +13,7 @@ Orginally added in v4.30 is an optional full screen WFC that provides informatio
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │               Activity and Statistics of My WWIV BBS Node 1                  │
 ├──────────────────────────────────────┬───────────────────────────────────────┤
-│ Calls Today....... 0                 │ WWIV Version.... v5.00 (Development)  │
+│ Calls Today....... 0                 │ WWIV Version.... v5.10 (Development)  │
 │ Feedback Waiting.. 1       New: 1    │ Net Version..... 0                    │
 │ Uploads Today..... 0                 │ Total Users..... 1                    │
 │ Messages Today.... 0                 │ Total Calls..... 0                    │
@@ -78,9 +78,9 @@ Ctrl  + F4 |
 F5 | Hang up on User.  Hangs up on the user online with no warning.
 Shift + F5 | Line Noise Hang up. Outputs random characters to the comport and hangs up on the user.
 Ctrl  + F5 | Timeout Hang up. Sends the user a "Call back when you are there." message and hangs up on the user.
-F6 | Sysop Alert.  Toggles an alert sound for the sysop when the user logs off.
-Shift + F6 | 
-Ctrl  + F6 | 
+F6 | Unused
+Shift + F6 |  Unused
+Ctrl  + F6 |  Unused
 F7 | Increase Time Online. Adds 5 minutes to users time.
 Shift + F7 | 
 Ctrl  + F7 | 
@@ -118,9 +118,6 @@ This flag appears when the sysophas toggled temporary sysop status with F9.
 
 **Capture flag**  
 This flag appears when the sysophas toggled the global capture with Shift|F1.
-
-**Alert Flag**  
-This flag appears when the sysop haspressed F6 to be informed when the caller hangs up. WhenAlert has been toggled on, the computer will beep after thecurrent user logs off, and will not return to WFC so thatthe sysop can log on locally.
 
 **Comm Disabled flag**  
 This flag appears when thesysop has pressed F3 to prevent the caller from typing.

@@ -33,7 +33,7 @@ You must also must place a copy of ```sbbsexec.dll``` which is in the ZIP file i
 From a command prompt run INIT.EXE  
 You will see this:  
 
-    WWIV v5.00 (Build ####) Initialization/Configuration Program.
+    WWIV v5.10 (Build ####) Initialization/Configuration Program.
     Copyright (c) 1998-2014, WWIV Software Services
     CONFIG.DAT NOT FOUND.
     Perform initial installation?
@@ -120,7 +120,7 @@ This is the Waiting For Caller (WFC) Screen.
     ┌──────────────────────────────────────────────────────────────────────────────┐
     │               Activity and Statistics of My WWIV BBS Node 1                  │
     ├──────────────────────────────────────┬───────────────────────────────────────┤
-    │ Calls Today....... 0                 │ WWIV Version.... v5.00 (Development)  │
+    │ Calls Today....... 0                 │ WWIV Version.... v5.10 (Development)  │
     │ Feedback Waiting.. 1       New: 1    │ Net Version..... 0                    │
     │ Uploads Today..... 0                 │ Total Users..... 1                    │
     │ Messages Today.... 0                 │ Total Calls..... 0                    │
@@ -181,9 +181,9 @@ new account setup. You can change your password or use the one provided.
 It does not have to be (should not be for security) the same as your 
 System Password you setup in INIT.
 
-_**Congratulations! You are now the SysOp of a WWIV 5.0 BBS!**_
+_**Congratulations! You are now the SysOp of a WWIV BBS!**_
 
-Continue on to more advanced [WWIV5Telnet Server](wwiv_5_telnet_server.md) settings 
+Continue on to more advanced [WWIV Server](wwiv_5_telnet_server.md) settings 
 to get on the Internet. But we suggest you read through the rest of the 
 documentation before you get too excited about that just yet. But don't worry, 
 it's not hard at all!

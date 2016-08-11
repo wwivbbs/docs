@@ -92,46 +92,56 @@ To set this, open the console properties and ensure that the
 ## Compatible Doors
 These doors are known to work on WWIV because one of the SysOps is running them. We'll provide linkes and installation instructions to get you going.
 
-Doors Running on WWIV BBSes | Doors with Installation Steps
---------------------------- | -----------------------------
-[Ambroshia - Test of Time](Ambroshia) | [Darkness](Darkness)
-[Barron Realms Elite](BarronRealmsElite) | [DoorMUD](DoorMUD) 
-[8Way Slots]() | [Legend of the Red Dragon](LORD)
-[Alpha Centauri VADV]() | [LORD II - The New World](LORD2)
-[BarneySplat]() | [MechWars](MechWars)
-[BBS Simulator]() | [Planets: The Exploration of Space (TEOS)](doorteos)
-[BuZZ]() | [TradeWars 2002](TradeWars2002) 
-[Chat]() | 
-[Clans](doorclan) | 
-[Cryptogram]() |
-[Falcon's Eye]() | 
-[Food Fight]() | 
-[Food Fite! (The Sequel!)]() | 
-[Freshwater Fishing Simulator]() | 
-[Global War]() | 
-[Guest Registry]() | 
-[Hackin' Crackin']() | 
-[Hangman]() | 
-[LUNATIX]() | 
-[Moguls (Stock Market Sim)]() | 
-[New York 2008]() | 
-[Oddliners]() | 
-[Operation Overkill]() | 
-[Outpost Trader]() | 
-[Over-Under (Card Solitaire)]() | 
-[Pentasim]() |
-[PimpWars]() | 
-[Russian Roulette]() | 
-[Scrabble (The Word Game)]() | 
-[Stack 'em (Tetris Online!)]() | 
-[SuperSlots!]() | 
-[TeleHang (Round Robin Word Guess)]() | 
-[The Realm]() | 
-[The Toilet]() | 
-[Wheel of Fortune (No Vanna!)]() | 
-[WWIVMail/QWK Mail Packets]() | 
-[Yankees & Rednecks]() | 
+| Doors with Installation Steps |
+|-------------------------------|
+[Darkness](Darkness)|
+[DoorMUD](DoorMUD)  |
+[Legend of the Red Dragon](LORD) |
+[LORD II - The New World](LORD2) |
+[MechWars](MechWars) |
+[Planets: The Exploration of Space (TEOS)](doorteos) |
+[TradeWars 2002](TradeWars2002) |
 
+
+| Doors Running on WWIV BBSes (no specific guides) |
+| --------------------------- |
+Ambroshia - Test of Time | 
+Barron Realms Elite |
+8Way Slots | 
+Alpha Centauri VADV | 
+zarneySplat | 
+BBS Simulator | 
+BuZZ | 
+Chat | 
+Clans](doorclan) | 
+Cryptogram |
+Falcon's Eye | 
+Food Fight | 
+Food Fite! (The Sequel!) | 
+Freshwater Fishing Simulator | 
+Global War | 
+Guest Registry | 
+Hackin' Crackin' | 
+Hangman | 
+LUNATIX | 
+Moguls (Stock Market Sim) | 
+New York 2008 | 
+Oddliners | 
+Operation Overkill | 
+Outpost Trader | 
+Over-Under (Card Solitaire) | 
+Pentasim |
+PimpWars | 
+Russian Roulette | 
+Scrabble (The Word Game) | 
+Stack 'em (Tetris Online!) | 
+SuperSlots! | 
+TeleHang (Round Robin Word Guess) | 
+The Realm | 
+The Toilet | 
+Wheel of Fortune (No Vanna!) | 
+WWIVMail/QWK Mail Packets | 
+Yankees & Rednecks | 
 
 
 ##Frequently Asked Questions concerning Chains:

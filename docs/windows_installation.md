@@ -3,23 +3,15 @@
 ## Prerequisites
 
 #### Minimum Version of Windows
-The project officially supports Windows 7 or Windows Server 2008 R2 or later.
+The project officially supports Windows 7 or Windows Server 2012 or later.
 
 #### 32bit x86 Windows
-WWIV BBS will start and run on Windows 10 x64 (I did it), but none 
-of the supporting programs and utilities you use with WWIV
-will work on anything but 32bit x86 systems. We do not have code for 
-all these other programs (yet?). Maybe down the road. So, for now 
-use a 32bit x86 version of Windows.
+WWIV BBS will start and run on Windows 10 x64 but none of the 16-bit DOS
+programs and utilities you use with WWIV will work on 64-bit windows.
+For the best experience, we recomment you use a 32bit x86 version of Windows.
 
 #### Windows Updates and .Net 4.6
 You should have ALL high priority updates on your Windows machine. This might mean running windows update several times. As a part of this, you should also have installed Microsoft .Net Framework 4.6 or newer.
-
-#### Microsoft Visual Studio C++ Runtime
-
-WWIV 5 is compiled with MSVC 2015. Install the 
-[Visual C++ Redistributable for Visual Studio 2015]
-(https://www.microsoft.com/en-us/download/details.aspx?id=48145)
 
 ## Installation Steps
 
@@ -27,14 +19,14 @@ Take the build of WWIV you downloaded and extract all the  files
 into c:\wwiv (or c:\bbs). To make it easy on the author(s) we'll 
 just say c:\wwiv from now on.
 
-You must also must place a copy of ```sbbsexec.dll``` which is in the ZIP file in ```\windows\system32```.  
+You must copy  ```sbbsexec.dll``` to ```\windows\system32```.
 
 ### Initial Configuration
 From a command prompt run INIT.EXE  
 You will see this:  
 
-    WWIV v5.10 (Build ####) Initialization/Configuration Program.
-    Copyright (c) 1998-2014, WWIV Software Services
+    WWIV v5.1.0 (Build ####) Initialization/Configuration Program.
+    Copyright (c) 1998-2016, WWIV Software Services
     CONFIG.DAT NOT FOUND.
     Perform initial installation?
 
@@ -100,7 +92,7 @@ On the Main Menu hit ESC or Q to exit INIT
 
 From the command prompt at c:\wwiv  
 
-* Run WWIV5TelnetServer.exe & The WWIV5 Telnet Server application will start.  
+* Run WWIVServer.exe & The WWIV Server application will start.  
 * Under the Server Menu select Preferences.  
 * Change WWIV Executable to: c:\wwiv\bbs.exe  
 * Change Home Directory to c:\wwiv  

@@ -1,7 +1,7 @@
 # WWIV Server
 ***
 
-## Screenshots of the WWIV5TelnetServer
+## Screenshots of the WWIVServer
 
 To run the WWIV Server, run c:\wwiv\WWIVServer.exe and the UI shows below will appear.
 

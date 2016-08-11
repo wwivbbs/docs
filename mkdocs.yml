@@ -1,7 +1,8 @@
-site_name: WWIV BBS 5.1
+site_name: WWIV BBS
 repo_url: https://github.com/wwivbbs/docs/
 copyright: 2014+ WWIV Software Services, LLC
 docs_dir: docs
+theme: readthedocs
 pages:
     - 'Home': index.md
     - Installation:

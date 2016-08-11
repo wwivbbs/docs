@@ -14,7 +14,7 @@ pages:
     - Configuration:
         - 'Init.exe': init.md
         - 'WWIV.ini': wwivini.md
-        - 'Custom user messages': custom_user_messages.md
+        - 'Displaying Text': displaying_text.md
         - 'Dial-Up Modems': dialup.md
         - '.log Files': logfiles.md
         - 'multinode': multinode.md
@@ -26,7 +26,6 @@ pages:
             - 'Main menu': main_menu.md
             - 'Messaging system': messaging_system.md
             - 'User preferences': user_preferences.md
-            - 'ANSI Colors': ansi.md
             - 'G-Files': gfiles.md
             - 'transfers': transfers.md
             - 'Waiting for callers': waiting_for_callers.md

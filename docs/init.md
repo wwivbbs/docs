@@ -440,3 +440,9 @@ nostalgic purposes.
 ## Update Sub/Directory Maximums
 
 This is a system tuning parameter.  These items require runtime memory thus the higher they are set, the less memory is available when shelling to DOS or running external programs.  You should NOT select more than you think that you will actually need, for more memory is required as the number is increased.  This setting may be modified later if you require more subs or directories.
+
+## Dial-Up Modem Access
+
+The ability to support Modems and Dial-up Access was removed in early WWIV 5.0 builds. 
+You may use an utility like [SexPOTS](http://wiki.synchro.net/util:sexpots) to support
+dial-up access.

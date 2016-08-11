@@ -74,10 +74,20 @@ The is the number of time the chain has been run.
 
 **N) Age Limit**  
 This allows chiain access to be limited by age.
+
+
 ## Guidelines
 If you are going to add a door and installation instructions, please include a link to 
 the official source of the game of the game. If the company no longer exists, please 
 direct everyone to a WWIVnet Node and Transfer Sub where it can be located.
+
+## Windows 10: NTVDM support and Legacy Console
+
+If you are using Windows 10, you must be sure to set the *NTVDM Command Prompt*
+to use *legacy console*. 
+
+To set this, open the console properties and ensure that the
+``` options -> "Use legacy console"``` checkbox is selected.
 
 ## Compatible Doors
 These doors are known to work on WWIV because one of the SysOps is running them. We'll provide linkes and installation instructions to get you going.

@@ -52,15 +52,21 @@ These are the default 0-9 Pipe colors used in the menu system and other UI pages
 ```|#5``` when you want to start GREEN and then ```|#0``` to switch back to GRAY. Look in some of the .MSG files
 in \wwiv\gfiles for more samples.
 
-**Note:** that the ```+``` sign should not be used when you add the code to a file, I merely used that so the text would show up. So you would use ```|#0``` NOT ```|+#0```.
-
 ![defPipeColors](/screenshots/wwivbbs/defaultPipeColors.png)
 
+
 #### Pipe Colors
+
+Two-digit pipe colors are a more widely-accepted "normal" way to define colors.  If you use
+them in your messages, they are the most likely to be displayed properly on other systems
+that might see them (gated subs, etc).
 
 Let NN be a 2 digit color code, and 
 
 ```|NN ``` is the way to display a pipe code to set the color.
+
+You can stack the foreground and background colors, too.  If you want to have
+White on Red, for example, you can use ```|15|20```
 
 | NN | Foreground Color | BackGround Color
 |----|------------------|-----------------|
@@ -88,6 +94,7 @@ Let NN be a 2 digit color code, and
 | 21 | | Magenta
 | 22 | | Brown
 | 23 | | Gray
+
 
 **Note:** WWIV 5.0 supports background color setting as ```|B##```, but since no other
   BBS does too, use of this code is deprecated in 5.1 and will be removed in WWIV 5.2.

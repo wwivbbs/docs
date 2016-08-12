@@ -41,8 +41,6 @@ pages:
             - 'NET37 Tec Docs': net37_tec_docs.md
         - Doors & Chains:
             - 'Doors & Chains Overview': doors.md
-            - 'Ambroshia': ambroshia.md
-            - 'Barron Realms Elite': barron_realms_elite.md
             - 'Darkness': darkness.md
             - 'DoorMUD': doormud.md
             - 'Planets: The Exploration of Space': doorteos.md
@@ -63,7 +61,6 @@ pages:
           - 'In the Beginning....': history.md
           - 'WWIV Open Source Announcement': wwiv_open_source_announcement.md
           - 'newsysop': newsysop.md
-          - 'Original-Ideas-for-5.0-from-July-1999': original-ideas-for-5.0-from-july-1999.md
           - 'links': links.md
       - WWIVCon:
           - 'WWIVCon 1994': wwivcon_1994.md

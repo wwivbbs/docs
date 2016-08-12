@@ -5,7 +5,7 @@
 * Expand the .zip file into c:\wwiv\lord2\
 * From the command prompt, run LCFG.exe
 
-```ASCIDOC
+```
  ** CREATING THE GAME.DAT FILE **
 
  Done.  You can now play locally by typing LORD2 from dos, for
@@ -16,7 +16,7 @@
 
  [MORE]
 ```
-```ASCIIDOC
+```
                    LORD II: CONFIGURE 102
 
  (G)ame Options
@@ -36,7 +36,7 @@
 * If you are setting this up for the first time, edit the Node to match below. You will need 
 to do this for each node that accepts users.
 
-```ASCIIDOC
+```
                              EDITING NODE SETUP
 
 √ (1) Node Number      : 1
@@ -61,7 +61,7 @@ those two lines. (Remove the "REM " from the start of the lines).
 * Move c:\wwiv\lord2\lord2.bat to c:\wwiv\lord2.bat
 * Login into your bbs and use chainedit //ce at the main menu OR at the Waiting for Call (WFC) type C
 * Either way then select Insert door and configure it like this:
-```ASCIIDOC
+```
 Editing Chain # 1
 
 A) Description  : LORD II - The New World

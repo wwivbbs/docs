@@ -100,9 +100,72 @@ White on Red, for example, you can use ```|15|20```
   BBS does too, use of this code is deprecated in 5.1 and will be removed in WWIV 5.2.
 
 
-#### Pipe User Macros
+#### Pipe Code Macros
 
-**TODO **  This needs to be done.
+
+WWIV pipe macros are the canonical way to embed session information into display text.
+
+Let X be a single digit character, and @ be a literal '@' character
+
+```|@X ``` is the way to display a pipe code macro to display session information..
+
+| Code | Information to display |
+|------|------------------------|
+~ | Total e-mails and feedbacks sent.
+/ | Today's Date
+% | Time remaining
+# | User number
+$ | File points
+* | WWIV registration num
+- | A$$ points
+! | Display a pause.
+& | status of ANSI or ASCII
+@ | Current directory name
+: | Current Message area #
+; | Current File area #
+A | User's age
+a | User' language
+B | User's Birthday
+b | Minutes available in the TimeBank
+C | User's city           
+c | User's country
+D | Number of files downloaded    
+d | User's DSL         
+E | # of E-mails sent
+e | # of network E-mails sent    
+F | # of Feedbacks sent      
+f | Date of first call
+G | # of Messages read       
+g | # of gold                
+I | User's callsIgn
+i | # of Illegal log-ons     
+J | Current message conference name   
+j | Current File conference name
+K | Kb uploaded
+k | Kb downloaded
+L | Date of last call
+l | Total number of logons    
+M | # of e-mail waiting        
+m | # of messages posted
+N | User's name         
+n | Sysop's note        
+O | Times on today
+o | Minutes on          
+P | BBS phone number          
+p | User's phone number
+R | User's real name    
+r | Last baud rate connected      
+S | User's SL
+s | User's street addr. 
+T | User's state        
+t | Current time
+U | # of files uploaded      
+V | # messages in sub   
+X | User's gender
+Y | This BBS Name       
+y | User Computer type  
+Z | User's zip code
+
 
 ## Files
 

@@ -22,7 +22,7 @@ The WWIV Dev Team
 Pre-built WWIV 5.1 binaries for x86 Windows and Linux can be downloaded from build.wwivbbs.org.
 
 
-### WWIV 5.1 (stable, production release)
+### WWIV 5.1 (stable, production release) 
 
 * [windows 5.1 (production release)](https://build.wwivbbs.org/jenkins/job/wwiv_5.1/label=windows/lastSuccessfulBuild/artifact/) 
 * [linux 5.1 (production release)](https://build.wwivbbs.org/jenkins/job/wwiv_5.1/label=linux/lastSuccessfulBuild/artifact/) 

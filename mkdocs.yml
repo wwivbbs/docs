@@ -15,6 +15,7 @@ pages:
         - 'Init.exe': init.md
         - 'WWIV.ini': wwivini.md
         - 'Displaying Text': displaying_text.md
+        - 'Other Config Files': config_files.md
         - '.log Files': logfiles.md
         - 'multinode': multinode.md
         - 'taglines': taglines.md

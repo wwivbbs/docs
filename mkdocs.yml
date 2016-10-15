@@ -19,6 +19,7 @@ pages:
         - '.log Files': logfiles.md
         - 'multinode': multinode.md
         - 'taglines': taglines.md
+        - 'fail2ban IP blocking': fail2ban.md
         - Telnet:
             - 'WWIV 5 Telnet Server': wwiv_5_telnet_server.md    
             - 'NET2BBS': net2bbs.md

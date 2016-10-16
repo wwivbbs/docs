@@ -34,8 +34,6 @@ pages:
             - 'Event Management': eventmgmt.md
         - Nets:
             - 'WWIVnet Overview': wwivnet.md
-            - 'WWIVnet on Windows': wwivnet_windows.md
-            - 'WWIVnet on Linux': wwivnet_linux.md
             - 'Other Nets': other_nets.md
             - 'USENET':  usenet.md
             - 'NET37 Docs': net37_docs.md

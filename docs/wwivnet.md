@@ -54,14 +54,89 @@ Coordinator, Weatherman 1@1 WWIVnet or email mark@weather-station.org
 
     Signature/Name:                              Date:
     
-## [Configuring WWIVnet on Windows](wwivnet_windows.md)
-## [Configuring WWIVnet on Linux](wwivnet_linux.md)
+## Configuring WWIVnet
+
+Setting up WWIVnet on Windows and Linux is essentially the same.  All the examples here will use the Windows version of pathing, just remember in linux the path separator is the forward slash, not the back slash.
+
+Anywhere you see a command to run (init, network3, etc), remember this assumes you are in your WWIV installation directory.
+
+* Create a ```nets\wwivnet``` directory in your WWIV directory.
+* Get the latest version of [WWIVNET-##.zip](http://build.wwivbbs.org/job/wwivnet/) on the build server. 
+* Put all of the contents of the zip in ```\wwiv\nets\wwivnet```
+* run ```init``` and select N. Network Configuration
+```
+┌───────────────────────────────────────── Network Configuration ┐
+│ Net Type  : WWIVnet                                            │
+│ Net Name  : WWIVnet                                            │
+│ Node #    : YOURNODE                                           │
+│ Directory : nets\wwivnet\                                      │
+└────────────────────────────────────────────────────────────────┘
+```
+* Create \wwiv\nets\wwivnet\callout.net with ```@1 && /60 "password"``` replacing password with the one provided by 1@1. *NOTE* The double quotes are necessary in the file.
+* Run ```network3 y``` which will verify your configuration and files and send an email to your local #1 mailbox. If no network number is given, .0 is assumed, so ```network3 y``` is the same as ```network3 y .0``` 
+* run ```bbs -M``` to pickup and deliver the mail.  
+**Windows Note:** The default config of WWIVServer runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run network3.
+* Login as #1 and Check your email on the BBS. You should see a pretty email and it should say "Everything is Fine" along with other details.
+
+
+## Verify Network Mail
+* Login to your BBS and send an email to 1@1
+* You will be prompted to pick the net (WWVIVnet) and confirm the system (Weather Station).
+* Give it a subject. Send the Net Coordinator a love note and hit /S to save and send.
+* Ideally you and 1@1 are chatting in IRC while you do this. ;-) then you can confirm and troubleshoot all at once. If not, wait a couple of hours for 1@1 to read or reply.
+
+
 ## Maintaining your WWIVnet Connections
 When you setup WWIVnet you download WWIVNET-##.zip from the build server and put the files in ```\wwiv\nets\wwivnet```. Occasionally you need to update these files so your BBS knowns who the new nodes & SUBs are on the net as well as which ones have gone away. If you are NOT also setup to get a Usenet feed you can copy the new files from the zip to ```\wwiv\net\wwivnet``` each time they are updated.
 
 If you are also getting a feed from Usenet you have customized these files and you need to maintain your edits. These are the files you need to edit each time you get a new set of WWIVnet files.
 
 **TODO** This in progress. See [Issue 229](https://github.com/wwivbbs/wwiv/issues/229).  
+
+
+## Subscribing to Message Subs
+
+Now that we've gotten through all of the setup and tested with some netmail, it's time to actually add some subs. The first thing you need to do is look at your ${WWIV_DIR}/nets/wwivnet/subs.lst to see all the available WWIVnet subs. For example, a few of the core subs are:  
+```
+1 1 R WWIVnet Sysop Area  
+GENCHAT 1 R WWIVnet General Chat  
+WWIVDEV 1 R WWIV Development  
+WWIVNET 1 R WWIV Networking  
+```
+The important bit is the first and second field. This is the "Subtype" and host that you will enter in //BE. Typically, you will just use the Subtype as the Filename, too (it just makes it easier to keep track). In order to add a WWIVnet sub, you will use option "J" in the edit section to set up the Net parameters for the sub. Here's an example:
+
+    A) Name       : WWIVnet General Chat
+    B) Filename   : genchat
+    C) Key        : None.
+    D) Read SL    : 10
+    E) Post SL    : 20
+    F) Anony      : No
+    G) Min. Age   : 0
+    H) Max Msgs   : 1000
+    I) AR         : None.
+    J) Net info   : Not networked.
+    K) Storage typ: 2
+    L) Val network: No
+    M) Req ANSI   : No
+    N) Disable tag: No
+    O) Description: None.
+
+    (Q=Quit) Which (A-O,[=Prev,]=Next) : J
+
+    What sub type? GENCHAT
+    Will you be hosting the sub? No
+
+    Which system (number) is the host? 1
+
+    Attempt automated add request? Yes
+
+    Automated add request sent to @1
+
+**Note:** that in the example, the sub type is "GENCHAT" and the Host is "1"
+
+**NOTE:** When putting in a filename (option B), **use all lowercase**. There is a potential issue with filename case that can be avoided by using lowercase for the names.  
+
+After you finish adding a new sub and the automated request is generated, it will take some time for the request to make it to the host node and for it to auto-subscribe your node. Assuming your net tossing is working, the BBS will attempt to run network1 when you log out. Once it has generated the necessary files, it will be sent as part of the callout process listed above. If you have already gotten it working for normal user netmail, this should "just work."
 
 ## Hosting your own WWIVnet SUB
 
@@ -83,25 +158,12 @@ If\when you are are ready to host your own WWIVnet sub here are the steps to tak
 If you are running other BINKP protocol networks (like Fidonet), you might need to specify a custom port for WWIVnet. 
 To do this, the custom port needs to be specified in `binkp.net` by adding  `:port#` to your entry like so:  
 `@206 wwiv.cloudcitybbs.com:24555`
-This is managed by @1, the Network Coordinator. So you first contact them about this as you joing WWIVnet or if you need to make a change later. You will then also need to specify this custom port in your `binkp.cmd` or other such batch file, for example:
-```
-@ Echo OFF
-rem NetworkB controller
-cls
-
-:start
-C:
-cd \wwiv
-echo Starting NetworkB to Receive Inbound Connections
-echo.
-networkb --receive --port=24555
-```
-On Linux you would need to add the `--port=xxxx` option to your sheduled job. 
+This is managed by @1, the Network Coordinator. So you first contact them about this as you joing WWIVnet or if you need to make a change later. You will then also need to specify this custom port in the WWIVServer.exe config on Windows, or the wwivd.ini file for linux.
 
 Again, be sure to coordinate changes with 1@1 or you will be dropped off the net.
 
 ***
-Within the Net37.zip there are two documents and I've also posted them on the wiki. They have a lot of technical information if you'd like to read it.
+Even though we are no longer using the old DOS version of NETXX, the documentation for net37 has a lot of technical information if you'd like to read it that is still relevant to how the data packets are processed.
 
 * [NET37.DOC](net37_docs.md) <- Has all the installation information (Must Read!)
 * [NET37TEC.DOC](net37_tec_docs.md) <- Good technical read on the inner workings of WWIVnet (optional)

@@ -121,7 +121,7 @@ init takes care of the remaining WWIV-specific config files (e.g., config.dat)
 Your BBS basic local setup is complete. Run ./bbs and set up a new user to be the sysop (#1) account (ie, type NEW for the user and fill in the user info). Once you are done, log out.  
 Run ./init and set up all the details  
 select (G) "General System Configuration" to set up the BBS name, etc  
-select (P) "System Paths". You will want to set up relative pathing, not absolute paths, as tools that run under DOSEMU will conflict and get confused. 
+select (P) "System Paths". You will want to set up relative pathing, not absolute paths, as tools that run under dosemu will conflict and get confused. 
 
 example of relative pathing:
 
@@ -181,13 +181,11 @@ To check status: ```systemctl status wwivd.service```
 
 If you've gotten this far, Your BBS should be up and running. Everything below this point is details about more in-depth configuration (DOORs, WWIVnet, etc) and some of the current warts that linux has that you need to be aware of. If you come across anything that is not detailed here, please let us know.
 
-### DOSEMU config 
+### dosemu config 
 
-DOSEMU is used for a number of things that can't be handled directly. Here are some config details: 
+dosemu is used for a number of things that can't be handled natively in linux (ie, DOS binaries). Here are some config details: 
 
-* [DOSEMU common settings](linux_dosemu_settings.md) - general settings for DOSEMU  
-* [DOSEMU for system scripts](linux_dosemu_scripts.md) - specific settings for system scripts (wwivnet, etc)
-* [DOSEMU for doors] - specific settings for different doors  
+* [dosemu common settings](linux_dosemu_settings.md) - general settings for dosemu  
 
 ### Configuring WWIVnet 
 See [WWIVnet Config on Linux](wwivnet_linux.md) for details on configuring WWIVnet and subscribing to subs

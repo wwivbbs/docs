@@ -188,7 +188,7 @@ dosemu is used for a number of things that can't be handled natively in linux (i
 * [dosemu common settings](linux_dosemu_settings.md) - general settings for dosemu  
 
 ### Configuring WWIVnet 
-See [WWIVnet Config on Linux](wwivnet_linux.md) for details on configuring WWIVnet and subscribing to subs
+See [WWIVnet](wwivnet.md) for details on configuring WWIVnet and subscribing to subs
 
 ### Things that are "hinky" 
 
@@ -216,31 +216,3 @@ _TERM settings_
 
 The Curses library being used for init gets confused on some terminal settings, and results in a borked display on exit. You may have to type a "reset" command to get it to behave normally again. In general, it appears that using a TERM setting in the xterm family works best (xterm, xterm-color, etc).
 
-### Troubleshooting
-
-_Hung bbs process_
-
-There have been some cases where the connection to the bbs will die for unknown reasons and it doesn't clean up properly. This leaves nodes hung up as in use and if a normal user was connected, they won't be able to reconnect. 
-
-To clean up disconnected processes, use the ps command to find them and kill them. Let's look at an example:
-```
-wwiv@wdfs ~ $ ps axu | head -n 1
-USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-    
-wwiv@wdfs ~ $ ps axu | grep "\./bbs\s" | grep -v grep
-wwiv     21546  6.1  0.4   5820  2508 ?        R    11:52   1:08 ./bbs /N1 /I1
-wwiv     21611  0.2  0.4   5820  2252 pts/10   S+   12:09   0:00 ./bbs /N2 /I2
-```
-If you look at the TTY column, you will see that one of the active nodes has "pts/10" while the other has "?". The one with the "?" is the disconnected one. Active terminal sessions have a TTY for user interaction. When the TTY goes away, it becomes an unusable node. So, the one we are interested in killing off is the one with "?" in the TTY column.
-
-so, we can use a shell script to clean these up:
-```shell
-for pid in `ps axu | grep "\./bbs\s" | grep -v grep | awk '{if($7 == "?") print $2}'`
-do
-    kill $pid
-done
-```
-
-This will find all the ps lines that match ./bbs and have "?" in column #7, loop through them and run a kill command on the process id in column #2. 
-
-**NOTE:** You may need to change the field value references for your awk command to match your specific ps output.

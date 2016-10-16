@@ -72,7 +72,7 @@ Anywhere you see a command to run (init, network3, etc), remember this assumes y
 │ Directory : nets\wwivnet\                                      │
 └────────────────────────────────────────────────────────────────┘
 ```
-* Create \wwiv\nets\wwivnet\callout.net with ```@1 && /1 "password"``` replacing password with the one provided by 1@1. *NOTE* The double quotes are necessary in the file.
+* Create \wwiv\nets\wwivnet\callout.net with ```@1 && /60 "password"``` replacing password with the one provided by 1@1. *NOTE* The double quotes are necessary in the file.
 * Run ```network3 y``` which will verify your configuration and files and send an email to your local #1 mailbox. If no network number is given, .0 is assumed, so ```network3 y``` is the same as ```network3 y .0``` 
 * run ```bbs -M``` to pickup and deliver the mail.  
 **Windows Note:** The default config of WWIVServer runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run network3.
@@ -96,12 +96,13 @@ If you are also getting a feed from Usenet you have customized these files and y
 
 ## Subscribing to Message Subs
 
-This is abbreviated information. Please see the Full WWIV Docs for detailed information on 
-setting up subs if this isn't enough info.  Now that we've gotten through all of the setup and tested with some netmail, it's time to actually add some subs. The first thing you need to do is look at your ${WWIV_DIR}/nets/wwivnet/subs.lst to see all the available WWIVnet subs. For example, a few of the core subs are:
+Now that we've gotten through all of the setup and tested with some netmail, it's time to actually add some subs. The first thing you need to do is look at your ${WWIV_DIR}/nets/wwivnet/subs.lst to see all the available WWIVnet subs. For example, a few of the core subs are:  
+```
 1 1 R WWIVnet Sysop Area  
 GENCHAT 1 R WWIVnet General Chat  
 WWIVDEV 1 R WWIV Development  
 WWIVNET 1 R WWIV Networking  
+```
 The important bit is the first and second field. This is the "Subtype" and host that you will enter in //BE. Typically, you will just use the Subtype as the Filename, too (it just makes it easier to keep track). In order to add a WWIVnet sub, you will use option "J" in the edit section to set up the Net parameters for the sub. Here's an example:
 
     A) Name       : WWIVnet General Chat

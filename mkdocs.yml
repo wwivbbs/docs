@@ -8,16 +8,17 @@ pages:
     - Installation:
         - 'Windows Installation': windows_installation.md
         - 'Linux Installation': linux_installation.md
-        - 'Linux dosemu scripts': linux_dosemu_scripts.md
         - 'Linux dosemu settings': linux_dosemu_settings.md
         - 'Upgrading WWIV 4.x': wwiv_4x_upgrade.md
     - Configuration:
         - 'Init.exe': init.md
         - 'WWIV.ini': wwivini.md
         - 'Displaying Text': displaying_text.md
+        - 'Other Config Files': config_files.md
         - '.log Files': logfiles.md
         - 'multinode': multinode.md
         - 'taglines': taglines.md
+        - 'fail2ban IP blocking': fail2ban.md
         - Telnet:
             - 'WWIV 5 Telnet Server': wwiv_5_telnet_server.md    
             - 'NET2BBS': net2bbs.md
@@ -33,8 +34,6 @@ pages:
             - 'Event Management': eventmgmt.md
         - Nets:
             - 'WWIVnet Overview': wwivnet.md
-            - 'WWIVnet on Windows': wwivnet_windows.md
-            - 'WWIVnet on Linux': wwivnet_linux.md
             - 'Other Nets': other_nets.md
             - 'USENET':  usenet.md
             - 'NET37 Docs': net37_docs.md

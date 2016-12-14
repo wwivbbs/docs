@@ -17,8 +17,10 @@ Were working hard to bring you the best bbs software we can. This wiki is to sup
 Thank you,  
 The WWIV Dev Team 
 
-## Get WWIV 5.1 (stable, production release)
-https://github.com/wwivbbs/wwiv/releases/tag/wwiv_5.1.0
+### GET WWIV 5.2 (unstable, development release)
+
+* [windows 5.2](https://build.wwivbbs.org/jenkins/job/wwiv/label=windows/lastSuccessfulBuild/artifact/) 
+* [linux 5.2](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/artifact/) 
 
 Older releases and development information available on [GitHub](http://www.github.com/wwivbbs/wwiv)
 

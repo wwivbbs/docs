@@ -17,31 +17,12 @@ Were working hard to bring you the best bbs software we can. This wiki is to sup
 Thank you,  
 The WWIV Dev Team 
 
-## Get WWIV
-(Current production release)
-Pre-built WWIV 5.1 binaries for x86 Windows and Linux can be downloaded from build.wwivbbs.org.
-
-
-### WWIV 5.1 (stable, production release) 
-
-* [windows 5.1 (production release)](https://build.wwivbbs.org/jenkins/job/wwiv_5.1/label=windows/lastSuccessfulBuild/artifact/) 
-* [linux 5.1 (production release)](https://build.wwivbbs.org/jenkins/job/wwiv_5.1/label=linux/lastSuccessfulBuild/artifact/) 
-
-
-### WWIV 5.2 (unstable, development release)
+### GET WWIV 5.2 (unstable, development release)
 
 * [windows 5.2](https://build.wwivbbs.org/jenkins/job/wwiv/label=windows/lastSuccessfulBuild/artifact/) 
 * [linux 5.2](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/artifact/) 
 
-
-### Older releases
-
-* [windows 5.0 release](https://github.com/wwivbbs/wwiv/files/61304/wwiv500-win32.zip)
-* [linux 5.0 release](https://github.com/wwivbbs/wwiv/files/61302/wwiv500-linux.tar.gz)
-* [Net38 beta-6: Latest DOS based](https://github.com/wwivbbs/wwiv/files/61303/net38b6.zip)
-
-If you wish to compile it yourself, please see: [Building WWIV 5.1](build_wwiv_5.md)
-The WWIV version number strategy is defined in: [WWIV Release and Versioning](wwiv_releases_and_versioning.md)
+Older releases and development information available on [GitHub](http://www.github.com/wwivbbs/wwiv)
 
 ## New Installations
 The following steps will get you up and running quickly, but I would not say

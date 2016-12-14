@@ -19,27 +19,27 @@ pages:
         - '.log Files': logfiles.md
         - 'multinode': multinode.md
         - 'taglines': taglines.md
-        - Telnet:
-            - 'WWIV 5 Telnet Server': wwiv_5_telnet_server.md    
+        - Connectivity:
+            - 'WWIV Server': wwiv_5_telnet_server.md    
             - 'NET2BBS': net2bbs.md
-        - Menus & Features:
+        - Menus and Features:
             - 'Main menu': main_menu.md
             - 'Messaging system': messaging_system.md
             - 'User preferences': user_preferences.md
             - 'G-Files': gfiles.md
             - 'transfers': transfers.md
             - 'Waiting for callers': waiting_for_callers.md
-            - '// (slash) Menu': slash_menu.md
-            - '//SysOp Menu': sysop_menu.md
+            - 'Slash Menu': slash_menu.md
+            - 'SysOp Menu': sysop_menu.md
             - 'Event Management': eventmgmt.md
-        - Nets:
+        - Networking:
             - 'WWIVnet Overview': wwivnet.md
-            - 'WWIVnet on Windows': wwivnet_windows.md
-            - 'WWIVnet on Linux': wwivnet_linux.md
-            - 'Other Nets': other_nets.md
+            - 'WWIVnet/Windows': wwivnet_windows.md
+            - 'WWIVnet/Linux': wwivnet_linux.md
+            - 'Other Networks': other_nets.md
             - 'USENET':  usenet.md
-            - 'NET37 Docs': net37_docs.md
-            - 'NET37 Tec Docs': net37_tec_docs.md
+            - 'NET37 User Documentation': net37_docs.md
+            - 'NET37 Technical Specification': net37_tec_docs.md
         - Doors & Chains:
             - 'Doors & Chains Overview': doors.md
             - 'Ambroshia': ambroshia.md
@@ -59,12 +59,11 @@ pages:
             - 'FIX.exe Utility': fix.md
     - About:
       - 'WWIV BBS list': wwiv_bbs_list.md
-      - 'license': license.md
+      - 'License': license.md
       - History of WWIV:
           - 'In the Beginning....': history.md
           - 'WWIV Open Source Announcement': wwiv_open_source_announcement.md
-          - 'newsysop': newsysop.md
-          - 'Original-Ideas-for-5.0-from-July-1999': original-ideas-for-5.0-from-july-1999.md
+          - 'New SysOps Guide': newsysop.md
           - 'links': links.md
       - WWIVCon:
           - 'WWIVCon 1994': wwivcon_1994.md

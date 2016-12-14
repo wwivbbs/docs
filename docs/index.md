@@ -51,7 +51,6 @@ configuration topics.
 
 [Windows WWIV Installation](windows_installation.md)  
 [Linux WWIV Installation](linux_installation.md)  
-[MSGs to users need Customization](custom_user_messages.md)   
 [Taglines on Messages](taglines.md)  
 
 ## [Upgrading Earlier WWIV BBSes](wwiv_4x_upgrade.md)
@@ -66,7 +65,6 @@ over the Internet. That is still in use today. These pages explain how to use th
 builtin Telnet Server and Net2BBS from PCMicro.
 ### [WWIV Server](wwiv_5_telnet_server.md)
 ### [Net2BBS Telnet Server by PCMicro](net2bbs.md)
-### [Dial-Up Modem Access](dialup.md)
 
 ## WWIV 5 Menus  
 ### [Waiting for Caller (WFC) & Top Screen](waiting_for_callers.md)  
@@ -96,7 +94,6 @@ The email system in WWIV allows the sending of email to other users on the syste
 
 TODO: How his Internet mail handling with the new tools?
 
-### [Using ANSI in WWIV](ansi.md)
 ### [Sub Fix Utility](fix.md)
 ### [New SysOp Suggestions](newsysop.md)
 ### [Managing Log Files](logfiles.md)

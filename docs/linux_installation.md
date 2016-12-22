@@ -93,7 +93,13 @@ If running the pre-built binaries, skip down to "Run Setup", otherwise continue 
 There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution.  You are welcome to try them, but compiling is likely to work better.
   
 pull down the code from git (https://github.com/wwivbbs/wwiv.git) 
-In the source directory (e.g., ```/home/wwiv/wwiv-master```), run ```cmake . && make``` (don't forget the ".")
+Navigate to your source directory (e.g., ```/home/wwiv/wwiv-master```)   
+The first time you compile, you need to precompile cryptlib: 
+`` pushd deps/cl342; make; popd > /dev/null `` 
+
+Now that you have the pre-reqs compiled, it's time to compile WWIV itself.  
+run ```cmake . && make``` (don't forget the ".")  
+
 assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have as a result are:
 ```
 /home/wwiv/wwiv-master/bbs/bbs  
@@ -104,14 +110,15 @@ assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have a
 /home/wwiv/wwiv-master/network2/network2
 /home/wwiv/wwiv-master/network3/network3
 /home/wwiv/wwiv-master/networkb/networkb  
+/home/wwiv/wwiv-master/networkb/networkc  
+/home/wwiv/wwiv-master/networkb/networkf  
 /home/wwiv/wwiv-master/wwivutil/wwivutil  
 ```
 These should all be placed in your base WWIV directory. For example, if your WWIV base is /home/wwiv and your git base is /home/wwiv/wwiv-master, the following will copy all the compiled binaries to your base wwiv directory
 ```
-cd /home/wwiv  
-cp wwiv-master/bbs/bbs  wwiv-master/init/init  wwiv-master/wwivd/wwivd wwiv-master/network/network wwiv-master/network1/network1 wwiv-master/network2/network2 wwiv-master/network3/network3 wwiv-master/networkb/networkb  wwiv-master/wwivutil/wwivutil  .
+cd /home/wwiv/wwiv-master
+cp -v bbs/bbs init/init wwivd/wwivd network/network network1/network1 network2/network2 network3/network3 networkb/networkb networkc/networkc networkf/networkf wwivutil/wwivutil /home/wwiv/
 ```
-**(don't forget the ".")**
 
 ##### Run Setup
 Run ```sh install.sh``` </br>

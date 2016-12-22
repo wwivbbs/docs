@@ -6,7 +6,8 @@ This will cover information on setting that up, ways you can use it to your adva
 impacts it may have on other parts of your BBS.
 
 ## Dedicated NODE for WWIVnet Connectivity
-You can dedicate a node for connecting to [WWIVnet](wwivnet.md) (or [OtherNets](other_nets.md)) so your BBS can connect and 
+You can dedicate a node for connecting to [WWIVnet](network/wwivnet.md) 
+(or [FTN Networks](network/ftn_nets.md)) so your BBS can connect and 
 share files without taking the system down to users.
 
 ## Impact on Doors

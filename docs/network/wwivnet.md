@@ -1,11 +1,11 @@
-# WWIVnet
+# WWIVnet Overview
 ***
-
+ 
 ## What's a WWIVnet?
 WWIVnet refers to a WWIV BBS based Net that uses WWIV's message and network 
 packet system to share email and sub messages. There are and have been other 
 WWIVnet based networks, similiar to how there are more than one FidoNet 
-Technology based net. All of these nets are covered on the [Other Nets](other_nets.md) page.
+Technology based net. All of these nets are covered on the [FTN Nets](ftn_nets.md) page.
 
 For the purpose of this page, WWIVnet refers to the specific instance of a 
 WWIVnet that is the primary network for WWIV BBSes called WWIVnet.
@@ -103,5 +103,5 @@ Again, be sure to coordinate changes with 1@1 or you will be dropped off the net
 ***
 Within the Net37.zip there are two documents and I've also posted them on the wiki. They have a lot of technical information if you'd like to read it.
 
-* [NET37.DOC](net37_docs.md) <- Has all the installation information (Must Read!)
-* [NET37TEC.DOC](net37_tec_docs.md) <- Good technical read on the inner workings of WWIVnet (optional)
+* [NET37.DOC](../net37_docs.md) <- Has all the installation information (Must Read!)
+* [NET37TEC.DOC](../net37_tec_docs.md) <- Good technical read on the inner workings of WWIVnet (optional)

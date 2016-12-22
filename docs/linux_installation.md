@@ -158,12 +158,14 @@ If you've gotten this far, Your BBS should be up and running. Everything below t
 
 DOSEMU is used for a number of things that can't be handled directly. Here are some config details: 
 
-* [DOSEMU common settings](linux_dosemu_settings.md) - general settings for DOSEMU  
-* [DOSEMU for system scripts](linux_dosemu_scripts.md) - specific settings for system scripts (wwivnet, etc)
+* [DOSEMU common settings](linux_dosemu_settings.md) - 
+  general settings for DOSEMU  
+* [DOSEMU for system scripts](linux_dosemu_scripts.md) - 
+  specific settings for system scripts (wwivnet, etc)
 * [DOSEMU for doors] - specific settings for different doors  
 
 ### Configuring WWIVnet 
-See [WWIVnet Config on Linux](wwivnet_linux.md) for details on configuring WWIVnet and subscribing to subs
+See [WWIVnet Config on Linux](network/wwivnet_linux.md) for details on configuring WWIVnet and subscribing to subs
 
 ### Things that are "hinky" 
 

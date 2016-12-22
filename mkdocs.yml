@@ -1,8 +1,8 @@
 site_name: WWIV BBS
 repo_url: https://github.com/wwivbbs/docs/
-copyright: 2014+ WWIV Software Services, LLC
+copyright: 2014+ WWIV Software Services
 docs_dir: docs
-theme: readthedocs
+theme: mkdocs
 pages:
     - 'Home': index.md
     - Installation:
@@ -33,10 +33,10 @@ pages:
             - 'SysOp Menu': sysop_menu.md
             - 'Event Management': eventmgmt.md
         - Networking:
-            - 'WWIVnet Overview': wwivnet.md
-            - 'WWIVnet/Windows': wwivnet_windows.md
-            - 'WWIVnet/Linux': wwivnet_linux.md
-            - 'Other Networks': other_nets.md
+            - 'WWIVnet Overview': network/wwivnet.md
+            - 'WWIVnet/Windows': network/wwivnet_windows.md
+            - 'WWIVnet/Linux': network/wwivnet_linux.md
+            - 'FTN Networks': network/ftn_nets.md
             - 'USENET':  usenet.md
             - 'NET37 User Documentation': net37_docs.md
             - 'NET37 Technical Specification': net37_tec_docs.md

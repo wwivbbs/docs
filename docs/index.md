@@ -19,7 +19,8 @@ The WWIV Dev Team
 
 ## Get WWIV
 (Current production release)
-Pre-built WWIV 5.1 binaries for x86 Windows and Linux can be downloaded from build.wwivbbs.org.
+Pre-built WWIV 5.1 binaries for x86 Windows and Linux
+can be downloaded from http://build.wwivbbs.org.
 
 
 ### WWIV 5.1 (stable, production release) 
@@ -75,8 +76,8 @@ builtin Telnet Server and Net2BBS from PCMicro.
 ## Nets
 Nets are federation of BBSes which connect to share messages and\or files. 
 These pages will help you find WWIV compatible utilities and installation instructions.
-### [WWIVnet](wwivnet.md)
-### [Other Nets](other_nets.md)
+### [WWIVnet](network/wwivnet.md)
+### [FTN (FIDO) Networks](network/ftn_nets.md)
 ### [Usenet](usenet.md)
 
 ## Advanced Configuration

@@ -1,4 +1,4 @@
-#Messaging System
+# Messaging System
 ***
 
 Message bases are sometimes referred to as "subs".  These are areas on the BBS where messages related to particular subject areas may be kept.  Any topic you can imagine may be used for a sub. Common examples include politics, science fiction, entertainment, sports, trivia, etc.  WWIV based networks have subs on every imaginable topic.  You may want to join such a network to offer a more diverse array of topics in your message bases.
@@ -13,7 +13,7 @@ Message bases are setup by using the BOARDEDIT feature. This feature may be acce
 2. From the main menu, enter //BOARDEDIT and then enter the system password when prompted for it.
 3. From the main menu, enter //BE (short form for BOARDEDIT and the system password when prompted for it.
 
-**BoardEdit**  
+## BoardEdit  
 Using BoardEdit, you can delete, insert, and modify subs.  The default installation sets up one sub-board named General.
 
 The first thing that is seen when BoardEdit is accessed is a Substring? prompt. If you wish to go directly to an existing subboard, enter a portion of the name, otherwise hit enter for a complete listing.
@@ -221,3 +221,16 @@ entry in this field makes it possible for subs you host to
 be included in the SUBS.LST without your intervention; the
 only requirement is that the auto-info option in FLAGS be set
 when the sub is set up.
+
+## Taglines
+
+Taglines are similiar to email signature files, but they applied by the system (not users) on messages. Here's a list of .TAG files supported by WWIV BBS.
+
+Tag Filename | File Location | Description
+--- | --- | ---
+GENERAL.TAG |  | GENERAL.TAG is the default tag file used for all SUBs when SUBTYPE.TAG is absent.
+SUBTYPE.TAG |\wwiv\nets\wwivnet OR \wwiv\data | TAG files can also be customized on a per SUB basis. Hence, SUBTYPE.TAG. You replace SUBTYPE with the subtype for the networked SUB. For instance, for the WWIV Development WWIVnet sub, with the subtype "WWIVDEV" you'd use WWIVDEV.TAG. GENERAL.TAG is the default tag file used when <SUBTYPE>.TAG is absent.
+INTERNET.TAG | Define in NET.INI (typically in \wwiv\data or \wwiv\gfiles) | This defines your NEWS tagline for Usenet Newsgroups as SIGNATURE. Plain text only, no Leading ^D.
+BBS*.TAG | \wwiv\wwivedit | 
+
+Tag files are expected to be found in either NET_DATA or DATA directories.

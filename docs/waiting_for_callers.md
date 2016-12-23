@@ -1,32 +1,43 @@
 
-# Waiting for Call (WFC) and TOP Screen
+# Local Console Operation
 ***
 
-## Waiting For Call (WFC)
+## Waiting For Call (WFC) screen
 
-Orginally added in v4.30 is an optional full screen WFC that provides information to the sysop whenever the BBS is idle.  The screen looks as follows:
+Historically WWIV was single or multi-node, where each
+node would be at the WFC screen for that node until a modem
+call is received.  With WWIV 5, the Telnet and SSH sessions
+are terminated by wwivserver.exe on Windows or wwivd on Linux.
+
+The graphical WFC screen was orginally added in v4.30, as an 
+optional full screen WFC that provides information to the sysop
+whenever the BBS is idle. The only reason to use the WFC screen
+today is so that WWIV can automatically call out to WWIVnet
+network connections as defined in callout.net.
+
+The screen looks as follows:
 
 ```
 ┌──────────────────────────────────────┬───────────────────────────────────────┐
-│ Date: 08/18/2015    Time: 17:53:36   │OS: Windows 7                          │
+│ Date: 12/25/2016    Time: 12:52:52   │OS: Windows                            │
 └──────────────────────────────────────┴───────────────────────────────────────┘
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │               Activity and Statistics of My WWIV BBS Node 1                  │
 ├──────────────────────────────────────┬───────────────────────────────────────┤
-│ Calls Today....... 0                 │ WWIV Version.... v5.10 (Development)  │
-│ Feedback Waiting.. 1       New: 1    │ Net Version..... 0                    │
-│ Uploads Today..... 0                 │ Total Users..... 1                    │
-│ Messages Today.... 0                 │ Total Calls..... 0                    │
-│ Local Msgs Today.. 0                 │ Call/Day Ratio.. N/A                  │
-│ Email Today....... 0                 │ Chat Status..... Not Available        │
-│ Feedback Today.... 1                 │ Modem........... Local Mode           │
-│ Mins Used Today... 0 Mins (0.0%)     │ Modem Status.... Waiting For Command  │
+│ Calls Today....... 48                │ WWIV Version.... 5.2.0                │
+│ Feedback Waiting.. 1       New: 1    │ Net Version..... 51                   │
+│ Uploads Today..... 0                 │ Total Users..... 99                   │
+│ Messages Today.... 98                │ Total Calls..... 20167                │
+│ Local Msgs Today.. 12                │ Call/Day Ratio.. 52                   │
+│ Email Today....... 9                 │ Chat Status..... Not Available        │
+│ Feedback Today.... 4                 │                                       │
+│ Mins Used Today... 720 Mins (50.0%)  │                                       │
 ├──────────────────────────────┬───────┴───────────────────────────────────────┤
-│ Hard Disk Space Left:        │ Last User:                                    │
+│ Commands:                    │ Last User:                                    │
 │                              │ Newsysop #1                                   │
-│                              ├───────────────────────────────────────────────┤
-│                              │ Instance Monitor - Node 1                     │
-│                              │ User.... Nobody                               │
+│  SPACE) Local Log on         ├───────────────────────────────────────────────┤
+│  Q) Quit BBS                 │ Instance Monitor - Node 1                     │
+│  ?) Display Help             │ User.... Nobody                               │
 │                              │ Status.. Waiting for Call                     │
 └──────────────────────────────┴───────────────────────────────────────────────┘
 ┌──────────────────────────────────────────────────────────────────────────────┐
@@ -36,7 +47,7 @@ Orginally added in v4.30 is an optional full screen WFC that provides informatio
  Also included is a definable screen saver.  See WWIV.INI for enabling and disabling these features.
 
 **Logging on**  
-From the keyboard, local logons are initiated from the WFC using the SpaceBar.  You will see the "Logon?" prompt.  If this is your first logon, hit Y and follow the prompts to establish your account.  If you have already    established your account, hit F for a "fast" logon or Y to logon normally.  SL255 users numbered 1 through 10 may use a fast logon by hitting the SpaceBar and their user number.
+From the keyboard, local logons are initiated from the WFC using the SpaceBar.  You will see the "Logon?" prompt.  If this is your first logon, hit Y and follow the prompts to establish your account. If you have already established your account, hit F for a "fast" logon or Y to logon normally. SL255 users numbered 1 through 10 may use a fast logon by hitting the SpaceBar and their user number.
 **Note:** This feature only works for SL255 users. Once this logon process is complete, the last few callers and user information screens will be presented and you will be located at the Main Message Base prompt.
 
 **User Online keys**  
@@ -143,3 +154,8 @@ FS | Total feedback sent
 EX | User exemptions
 UL | Kilobytes uploaded
 DL | Kilobytes downloaded
+
+## Dedicated NODE for WWIVnet Connectivity
+You can dedicate a node for connecting to [WWIVnet](network/wwivnet.md) 
+(or [FTN Networks](network/ftn_nets.md)) so your BBS can connect and 
+share files without taking the system down to users.

@@ -327,3 +327,9 @@ for downloading on the WWIV Support Boards.
 We don't know if all the Doors on these lists work with WWIV or not. But let's try 'em!
 
 [The BBS Corner](http://www.bbscorner.com/doorgames/doorgamesites.htm)  
+
+
+## MultiNode Impact on Doors
+When you run multiple instances, your Doors need to be setup to run an instance for each node 
+that you use to grant access to users. You don't need to configure your games for Nodes that 
+you use for WWIVnet connectivity or other connectivity related tasks.

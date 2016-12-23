@@ -13,8 +13,6 @@ permissions are correct.
 Package | Comments
 ------- | ----------
 sudo | to allow more controlled access to root-owned tools
-xinetd | service manager to start telnet. This doc assumes xinetd, but you can also use inetd or systemd. That will be at your own risk, though.  
-telnetd | telnet service to handle starting the BBS  
 ncurses | any curses library, really. Needed for CLI tools display  
 dosemu | to run dos|based doors and utilities  
 dos2unix/unix2dos | for converting file types  
@@ -95,22 +93,32 @@ If running the pre-built binaries, skip down to "Run Setup", otherwise continue 
 There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution.  You are welcome to try them, but compiling is likely to work better.
   
 pull down the code from git (https://github.com/wwivbbs/wwiv.git) 
-In the source directory (e.g., ```/home/wwiv/wwiv-master```), run ```cmake . && make``` (don't forget the ".")
+Navigate to your source directory (e.g., ```/home/wwiv/wwiv-master```)   
+The first time you compile, you need to precompile cryptlib: 
+`` pushd deps/cl342; make; popd > /dev/null `` 
+
+Now that you have the pre-reqs compiled, it's time to compile WWIV itself.  
+run ```cmake . && make``` (don't forget the ".")  
+
 assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have as a result are:
 ```
 /home/wwiv/wwiv-master/bbs/bbs  
 /home/wwiv/wwiv-master/init/init  
-/home/wwiv/wwiv-master/nodemgr/nodemgr  
-/home/wwiv/wwiv-master/wwivutil/wwivutil  
+/home/wwiv/wwiv-master/wwivd/wwivd
 /home/wwiv/wwiv-master/network/network
+/home/wwiv/wwiv-master/network1/network1
+/home/wwiv/wwiv-master/network2/network2
+/home/wwiv/wwiv-master/network3/network3
 /home/wwiv/wwiv-master/networkb/networkb  
+/home/wwiv/wwiv-master/networkb/networkc  
+/home/wwiv/wwiv-master/networkb/networkf  
+/home/wwiv/wwiv-master/wwivutil/wwivutil  
 ```
 These should all be placed in your base WWIV directory. For example, if your WWIV base is /home/wwiv and your git base is /home/wwiv/wwiv-master, the following will copy all the compiled binaries to your base wwiv directory
 ```
-cd /home/wwiv  
-cp wwiv-master/bbs/bbs wwiv-master/init/init wwiv-master/nodemgr/nodemgr wwiv-master/wwivutil/wwivutil wwiv-master/network/network wwiv-master/networkb/networkb  . 
+cd /home/wwiv/wwiv-master
+cp -v bbs/bbs init/init wwivd/wwivd network/network network1/network1 network2/network2 network3/network3 networkb/networkb networkc/networkc networkf/networkf wwivutil/wwivutil /home/wwiv/
 ```
-**(don't forget the ".")**
 
 ##### Run Setup
 Run ```sh install.sh``` </br>
@@ -120,7 +128,7 @@ init takes care of the remaining WWIV-specific config files (e.g., config.dat)
 Your BBS basic local setup is complete. Run ./bbs and set up a new user to be the sysop (#1) account (ie, type NEW for the user and fill in the user info). Once you are done, log out.  
 Run ./init and set up all the details  
 select (G) "General System Configuration" to set up the BBS name, etc  
-select (P) "System Paths". You will want to set up relative pathing, not absolute paths, as tools that run under DOSEMU will conflict and get confused. 
+select (P) "System Paths". You will want to set up relative pathing, not absolute paths, as tools that run under dosemu will conflict and get confused. 
 
 example of relative pathing:
 
@@ -140,29 +148,51 @@ TEMP_DIRECTORY       = temp%n
 BATCH_DIRECTORY      = batch%n  
 ```
 
-Set up xinetd to handle telnet requests and run nodemgr 
+### Set up systemd to run the wwivd service
 
-Move ```${WWIVBASE}/wwiv-service``` to ```/etc/xinetd.d/wwiv```, change disable=yes to disable=no, and restart xinetd.  
+Systemd is the common standard on most current linux distributions.  We have created the wwivd service to manage connections to the bbs, and also to the BinkP subsystem that handles messages transfers between WWIV systems on WWIVnet.
 
-Depending on how xinetd is configured, you may also need to adjust access settings in ```/etc/xinetd.conf```. The no_access or only_from directives for example often are set up to not allow remote connections by default.
-If your system is using inetd instead, you will need to translate the wwiv-service file to an inetd.conf compatible format.  
+There are two files that manage the linux portion of the config.  When you run the install.sh script, it will create two files:
+```
+config 
+wwivd.service 
+```
+in the systemd directory.  
 
-**NOTE:** this will need to be created as the root user, since you are writing in the ```/etc/xinetd.d``` directory. Note we are using the user that we created above. Change the port, user and server_args values as appropriate (i.e., to match where you installed things, etc).
+As root, create the /etc/wwiv directory and copy config to /etc/wwiv/config; and copy wwivd.service to /etc/systemd/system
+
+To make the wwivd service active and start on system reboot, do the following as root:
+```
+systemctl daemon-reload
+systemctl enable wwivd.service
+```
+
+The config options for setting what ports to use and other command options are found in the wwivd.ini file in your WWIV directory.  A basic working file to get WWIV listening on a telnet port and ssh port looks like:
+
+```ini
+[WWIVD]
+telnet_port = 23
+ssh_port = 22
+```
+
+You will probably want to change the ssh port since it will likely conflict with your current ssh session.
+
+Once you have all the configs in place, you can start and stop wwivd with systemctl.  
+To start it: ```systemctl start wwivd.service```  
+To stop it: ```systemctl stop wwivd.service```  
+To check status: ```systemctl status wwivd.service```  
+
 
 
 ### After the install
 
 If you've gotten this far, Your BBS should be up and running. Everything below this point is details about more in-depth configuration (DOORs, WWIVnet, etc) and some of the current warts that linux has that you need to be aware of. If you come across anything that is not detailed here, please let us know.
 
-### DOSEMU config 
+### dosemu config 
 
-DOSEMU is used for a number of things that can't be handled directly. Here are some config details: 
+dosemu is used for a number of things that can't be handled natively in linux (ie, DOS binaries). Here are some config details: 
 
-* [DOSEMU common settings](linux_dosemu_settings.md) - 
-  general settings for DOSEMU  
-* [DOSEMU for system scripts](linux_dosemu_scripts.md) - 
-  specific settings for system scripts (wwivnet, etc)
-* [DOSEMU for doors] - specific settings for different doors  
+* [dosemu common settings](linux_dosemu_settings.md) - general settings for dosemu  
 
 ### Configuring WWIVnet 
 See [WWIVnet Config on Linux](network/wwivnet_linux.md) for details on configuring WWIVnet and subscribing to subs
@@ -193,31 +223,3 @@ _TERM settings_
 
 The Curses library being used for init gets confused on some terminal settings, and results in a borked display on exit. You may have to type a "reset" command to get it to behave normally again. In general, it appears that using a TERM setting in the xterm family works best (xterm, xterm-color, etc).
 
-### Troubleshooting
-
-_Hung bbs process_
-
-There have been some cases where the connection to the bbs will die for unknown reasons and it doesn't clean up properly. This leaves nodes hung up as in use and if a normal user was connected, they won't be able to reconnect. An easy way to simulate this is to connect with syncTERM and just close the syncTERM window instead of logging off.
-
-To clean up disconnected processes, use the ps command to find them and kill them. Let's look at an example:
-```
-wwiv@wdfs ~ $ ps axu | head -n 1
-USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
-    
-wwiv@wdfs ~ $ ps axu | grep "\./bbs\s" | grep -v grep
-wwiv     21546  6.1  0.4   5820  2508 ?        R    11:52   1:08 ./bbs /N1 /I1
-wwiv     21611  0.2  0.4   5820  2252 pts/10   S+   12:09   0:00 ./bbs /N2 /I2
-```
-If you look at the TTY column, you will see that one of the active nodes has "pts/10" while the other has "?". The one with the "?" is the disconnected one. Active terminal sessions have a TTY for user interaction. When the TTY goes away, it becomes an unusable node. So, the one we are interested in killing off is the one with "?" in the TTY column.
-
-so, we can use a shell script to clean these up:
-```shell
-for pid in `ps axu | grep "\./bbs\s" | grep -v grep | awk '{if($7 == "?") print $2}'`
-do
-    kill $pid
-done
-```
-
-This will find all the ps lines that match ./bbs and have "?" in column #7, loop through them and run a kill command on the process id in column #2. You can put this in a shell script and schedule it via cron if this is a big issue, otherwise, it's available for occasional cleanup.
-
-**NOTE:** You may need to change the field value references for your awk command to match your specific ps output.

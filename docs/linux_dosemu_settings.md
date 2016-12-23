@@ -1,22 +1,22 @@
-# DOSEMU common settings
+# dosemu common settings
 ***
 
-This relates to settings for using DOSEMU to run certain parts of the WWIV 
-BBS. The main things are system related (e.g., WWIVnet) and DOORs related. 
+This relates to settings for using dosemu to run certain parts of the WWIV 
+BBS. The main thing that requires DOS emulation is running old door programs.
 There are a number of things, however, that apply to all cases when using 
-DOSEMU. If you haven't installed WWIV for linux yet, please check out 
+dosemu. If you haven't installed WWIV for linux yet, please check out 
 [WWIV Install on Linux](linux_installation.md).
 
 ## Common Settings
 
 ###Overview
 
-Configuring DOSEMU is generally pretty straightforward. Most linux 
+Configuring dosemu is generally pretty straightforward. Most linux 
 distributions have it in their package repository in one form or another. 
 This page won't cover getting it installed; what it covers is specific 
 configuration items related to how to use it with WWIV.
 
-The fundamental components of DOSEMU are:
+The fundamental components of dosemu are:
 
 Component | Comments
 --------- | --------
@@ -29,7 +29,7 @@ can be handy to use for killing a dosemu that has hung for some reason.
 the home directory of the user running it.  
 dosemu.users | typically in /etc/dosemu. Defines user permissions  
 
-DOSEMU typically comes with FreeDOS; a DOS implementation that works pretty 
+dosemu typically comes with FreeDOS; a DOS implementation that works pretty 
 well. The only downside I've seen is that it's a bit wordy. You get a lot of 
 startup info when it's first called that can expose a bit more about your 
 setup than you might want, but it does work. If you have it available, it's 
@@ -38,14 +38,14 @@ the man pages for dosemu and dosemu.bin.
 
 ### User Permissions
 
-Your wwiv user should be restricted in its access while running DOSEMU. This 
+Your wwiv user should be restricted in its access while running dosemu. This 
 is found in the dosemu.users file (usually in /etc/dosemu). Just add a single 
 line to the end of the file:
 
 wwiv restricted  
 
 ### The .rc file  
-the .dosemurc file sets up the basic operating environment your DOSEMU session 
+the .dosemurc file sets up the basic operating environment your dosemu session 
 will be running under. There isn't much you need to do with this; a fairly 
 simple config will get you what you need. You should create a default 
 .dosemurc in your ${WWIV_DIR}. One that will work for most things will 
@@ -78,9 +78,9 @@ that will be referenced in the rest of this page.
 
 ### The model of a script
 
-When dealing with DOSEMU, you have to be able to pass information from WWIV 
-to DOSEMU. This is usually handled by calling a shell script in the linux 
-directory that runs a DOS batch file under DOSEMU. A typical script will 
+When dealing with dosemu, you have to be able to pass information from WWIV 
+to dosemu. This is usually handled by calling a shell script in the linux 
+directory that runs a DOS batch file under dosemu. A typical script will 
 look something like this:
 
 ```shell
@@ -109,7 +109,7 @@ dropped to a shell and they will have full access to every file your BBS user
 does. I'm not talking about every file in your BBS directory, I'm talking 
 every file on your linux system that user can see. This is another reason the 
 bbs user you create should be as limited as possible at the linux level. If 
-you run DOSEMU as root, that will be full access to EVERY SINGLE FILE on the 
+you run dosemu as root, that will be full access to EVERY SINGLE FILE on the 
 entire system. I can't stress enough that you have to be very careful with 
 this; it's not 1992 anymore.
 2. We are sourcing the .wwivrc file in the home directory. This is where we 
@@ -129,9 +129,9 @@ has a lot of stuff going on. Here is a breakdown of all the bits:
 more than one so we can have separate configurations for system scripts and 
 doors. By default, calling dosemu by itself will read .dosemurc in the user's 
 home directory. If you are using .dosemurc, this flag is NOT necessary
-3. -I "dosbanner 0" - This disables the startup text from DOSEMU (this is NOT 
+3. -I "dosbanner 0" - This disables the startup text from dosemu (this is NOT 
 settable in the rc file, so we do it at the time of calling dosemu
-4. -E "tw2002.bat ${NODE}" - defines the batch file we are calling once DOSEMU 
+4. -E "tw2002.bat ${NODE}" - defines the batch file we are calling once dosemu 
 starts up. In this case, we are passing the batch file for starting Trade Wars 
 and the instance node.
 5. 2>/dev/null - We are redirecting STDERR messages to /dev/null (ie, throwing 
@@ -153,7 +153,7 @@ exitemu
 ```
 
 This is all pretty typical. The important item is the last line: exitemu. That 
-closes the DOSEMU session and returns to the linux environment. Without it, 
+closes the dosemu session and returns to the linux environment. Without it, 
 your users will either become hung, or the process will drop into a DOS shell. 
 Dropping into a shell is VERY bad; that gives full access to all your files and 
 will likely let someone run rampant on your system.
@@ -177,7 +177,7 @@ install=d:\dosemu\lredir.com z: linux\fs\${DOSEMU_LIB_DIR}/drive_z ro
 shellhigh=z:\command.com /e:1024 /p
 ```
 
-The one interesting line is the install statement that establishes the Z: drive as the base location for the DOSEMU tools. This is a little weird, as they start out on the D: drive. This is the stock behavior, but you can disable that if you want. The main advantage to this is setting that drive read-only. It does add one extra line of output that you may not want to see.
+The one interesting line is the install statement that establishes the Z: drive as the base location for the dosemu tools. This is a little weird, as they start out on the D: drive. This is the stock behavior, but you can disable that if you want. The main advantage to this is setting that drive read-only. It does add one extra line of output that you may not want to see.
 
 _*autoexec.bat*_  
 
@@ -193,34 +193,34 @@ REM The following needs to be the LAST line in autoexec.bat
 unix -e
 ```
 
-About the only thing that is really new here is the unix command at the end of the autoexec.bat file. That tells DOSEMU to run the command that you passed with the -E argument to dosemu in your shell script. The break=off is related to the trap security issue I mentioned above, but this one is at the DOS level. You don't want people using ctrl-C to break out of batch files and gaining access to all your files.
+About the only thing that is really new here is the unix command at the end of the autoexec.bat file. That tells dosemu to run the command that you passed with the -E argument to dosemu in your shell script. The break=off is related to the trap security issue I mentioned above, but this one is at the DOS level. You don't want people using ctrl-C to break out of batch files and gaining access to all your files.
 
 ## Common gotchas
-1. vm.mmap_min_addr=0 - In recent linux kernels, being able to map to low memory addresses was disabled due to security concerns; this breaks DOSEMU for a lot of things. You will need to add vm.mmap_min_addr=0 to your /etc/sysctl.conf (and reboot, or reload as root with sysctl -p) if you want to be able to to run certain programs (TW2002 is one such program that suffers from this).
-2. DOS doesn't understand UNIX - This might sound obvious, but it will bite you a lot; especially if you use MS-DOS instead of FreeDOS. If the batch file you are running in your DOSEMU drive is not a DOS file format (i.e., lines do not end in \r\n), you may have issues with your batch files not running properly. Convert all batch files with something like unix2dos to solve this problem.
+1. vm.mmap_min_addr=0 - In recent linux kernels, being able to map to low memory addresses was disabled due to security concerns; this breaks dosemu for a lot of things. You will need to add vm.mmap_min_addr=0 to your /etc/sysctl.conf (and reboot, or reload as root with sysctl -p) if you want to be able to to run certain programs (TW2002 is one such program that suffers from this).
+2. DOS doesn't understand UNIX - This might sound obvious, but it will bite you a lot; especially if you use MS-DOS instead of FreeDOS. If the batch file you are running in your dosemu drive is not a DOS file format (i.e., lines do not end in \r\n), you may have issues with your batch files not running properly. Convert all batch files with something like unix2dos to solve this problem.
 Filename case matters (but only to linux) - Especially with system scripts, you will find instances where your DOS programs are creating uppercase files, but it's looking for lowercase files on the linux side (or vice versa, or some mix in-between).
 Path references are picky - Yet another DOS/UNIX compatibility issue. DOS expects a backslash for a directory separator, while linux expects a forward slash. You will find yourself converting things back and forth to make sure the current environment has the proper separator defined.
-3. File location matters - You need to make sure you have all your scripts in the right place for things to find them. Typically, your shell files will be defined relative to the base WWIV directory and your DOS batch files will be in the corresponding C: drive in the DOSEMU environment. It's not necessary to do that, but it makes things easier to find.
+3. File location matters - You need to make sure you have all your scripts in the right place for things to find them. Typically, your shell files will be defined relative to the base WWIV directory and your DOS batch files will be in the corresponding C: drive in the dosemu environment. It's not necessary to do that, but it makes things easier to find.
 
 ### System-Specific Cases
 
-Now that we have covered the basics of setting up DOSEMU, we have a couple advanced details regarding DOSEMU for our system scripts and WWIVnet and using DOSEMU for DOORs.
+Now that we have covered the basics of setting up dosemu, we have a couple advanced details regarding dosemu for our system scripts and WWIVnet and using dosemu for DOORs.
 
-You may not want the same configuration for all instances of DOSEMU. Maybe you want a different set of DOS disks, maybe you want to run MS-DOS 5 for one door, or MS-DOS 6.22 for another, or the default FreeDOS for something else. The key to running different configurations lies in using a different .dosemurc file to point to different drives.
+You may not want the same configuration for all instances of dosemu. Maybe you want a different set of DOS disks, maybe you want to run MS-DOS 5 for one door, or MS-DOS 6.22 for another, or the default FreeDOS for something else. The key to running different configurations lies in using a different .dosemurc file to point to different drives.
 
 In order to accomplish this, all you need to do is copy the standard .dosemurc to something else (e.g., .dosemurc_doors) and add a line that points to that directory. 
 `$_hdimage = "/bbs/wwiv/.dosemu/drive_c_doors drives/d"`
 
-The $_hdimage variable in the .rc file determines what "drives" the instance of DOSEMU will see, with the DOS drive letters being defined in order. The above example will end up with two drives:
+The $_hdimage variable in the .rc file determines what "drives" the instance of dosemu will see, with the DOS drive letters being defined in order. The above example will end up with two drives:
 
 C: = /bbs/wwiv/.dosemu/drive_c_doors  
 D: = drives/d  
 
-DOSEMU will typically put the C: drive in .dosemu/drive_c by default. That references the FreeDOS startup files, but will use the D: drive to load command.com and all the utility binaries. If you want a separate C: drive, just copy the drive_c directory to another location (e.g., drive_c_doors) and edit the config.sys, autoexec.bat and any other batch files as you see fit. 
+dosemu will typically put the C: drive in .dosemu/drive_c by default. That references the FreeDOS startup files, but will use the D: drive to load command.com and all the utility binaries. If you want a separate C: drive, just copy the drive_c directory to another location (e.g., drive_c_doors) and edit the config.sys, autoexec.bat and any other batch files as you see fit. 
 
 **NOTE:** There really shouldn't be a need to do this unless you have a case where a specific DOS application needs different startup parameters or a specific OS that conflicts with your defaults, but it is possible to do it. config.sys and autoexec.bat are usually generic enough and just hand off to your batch file for the specific invocation.
 
-### DOSEMU with real MS-DOS
+### dosemu with real MS-DOS
 
 To set up real MS-DOS, all you need to do is a few steps
 
@@ -232,4 +232,4 @@ To set up real MS-DOS, all you need to do is a few steps
 To use it, just reference it in your dosemu call in your linux scripts:  
 `dosemu -f ~/.dosemurc622 -I "dosbanner 0" -E "tw2002.bat ${NODE}" 2>/dev/null`
 
-The main gotcha doing this is you still need the FreeDOS tools that will exit DOSEMU, so make sure you have access to the D: drive like usual.
+The main gotcha doing this is you still need the FreeDOS tools that will exit dosemu, so make sure you have access to the D: drive like usual.

@@ -8,7 +8,6 @@ pages:
     - Installation:
         - 'Windows Installation': windows_installation.md
         - 'Linux Installation': linux_installation.md
-        - 'Linux dosemu scripts': linux_dosemu_scripts.md
         - 'Linux dosemu settings': linux_dosemu_settings.md
         - 'Upgrading WWIV 4.x': wwiv_4x_upgrade.md
     - Configuration:
@@ -19,6 +18,7 @@ pages:
         - '.log Files': logfiles.md
         - 'multinode': multinode.md
         - 'taglines': taglines.md
+        - 'fail2ban IP blocking': fail2ban.md
         - Connectivity:
             - 'WWIV Server': wwiv_5_telnet_server.md    
             - 'NET2BBS': net2bbs.md
@@ -42,8 +42,6 @@ pages:
             - 'NET37 Technical Specification': net37_tec_docs.md
         - Doors & Chains:
             - 'Doors & Chains Overview': doors.md
-            - 'Ambroshia': ambroshia.md
-            - 'Barron Realms Elite': barron_realms_elite.md
             - 'Darkness': darkness.md
             - 'DoorMUD': doormud.md
             - 'Planets: The Exploration of Space': doorteos.md

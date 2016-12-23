@@ -3,6 +3,9 @@ repo_url: https://github.com/wwivbbs/docs/
 copyright: 2014+ WWIV Software Services
 docs_dir: docs
 theme: readthedocs
+markdown_extensions:
+    - toc:
+        permalink: True
 pages:
     - 'Home': index.md
     - Installation:

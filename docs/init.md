@@ -4,6 +4,11 @@
 These are the SysOp tools and WWIV BBS settings which can be configured 
 when you run INIT.EXE from the command prompt.
 
+The following steps will get you up and running quickly, but I would not say
+you're ready to go live and open up to users. After you complete these installation 
+steps, see the full details on related INIT settings, WWIV.INI and other Advanced 
+configuration topics.
+
 ## General System Configuration
 **System PW**  
 

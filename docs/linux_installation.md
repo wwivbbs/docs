@@ -1,4 +1,4 @@
-# Installing WWIV 5 on Linux
+# Installing WWIV on Linux
 ***
 
 These are some rough details for the steps necessary to get a working linux-based system.
@@ -44,7 +44,8 @@ Create WWIV user
 as root:  
 
 1. create the wwiv group: ```groupadd wwiv```
-2. create the wwiv user: ```useradd -g wwiv -c "WWIV BBS Service Account" -d /home/wwiv -s /sbin/nologin -m wwiv```
+2. create the wwiv user: 
+   ```useradd -g wwiv -c "WWIV BBS Service Account" -d /home/wwiv -s /sbin/nologin -m wwiv```
 3. lock wwiv user: ```usermod -L wwiv```
 
 This creates a wwiv group and user that has a home directory of

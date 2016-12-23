@@ -2,30 +2,37 @@
 
 ## Prerequisites
 
-#### Minimum Version of Windows
+** Windows7 (or Later) **
+
 The project officially supports Windows 7 or Windows Server 2012 or later.
 
-#### 32bit x86 Windows
-WWIV BBS will start and run on Windows 10 x64 but none of the 16-bit DOS
-programs and utilities you use with WWIV will work on 64-bit windows.
-For the best experience, we recomment you use a 32bit x86 version of Windows.
+** 32bit x86 Windows **
 
-#### Windows Updates and .Net 4.6
-You should have ALL high priority updates on your Windows machine. This might mean running windows update several times. As a part of this, you should also have installed Microsoft .Net Framework 4.6 or newer.
+Although WWIV BBS will start and run on 64-bit (x64), 
+none of the 16-bit DOS programs and utilities you use 
+with WWIV will work on 64-bit windows. For the best
+experience, we recomment you use a 32bit x86 version of Windows.
 
-## Installation Steps
+**Windows Updates and .Net 4.6**
+
+You should have ALL high priority updates on your Windows
+machine. This might mean running windows update several
+times. As a part of this, you should also have installed
+*Microsoft .Net Framework 4.6* (or newer).
+
+## Installation
 
 Take the build of WWIV you downloaded and extract all the  files 
-into c:\wwiv (or c:\bbs). To make it easy on the author(s) we'll 
-just say c:\wwiv from now on.
+into ```c:\wwiv``` (or c:\bbs). To make it easy on the author(s) we'll 
+just say ```c:\wwiv``` from now on.
 
-You must copy  ```sbbsexec.dll``` to ```\windows\system32```.
+You must copy  ```sbbsexec.dll``` to ```\%WINDIR%\system32```.
 
 ### Initial Configuration
 From a command prompt run INIT.EXE  
 You will see this:  
 
-    WWIV v5.1.0 (Build ####) Initialization/Configuration Program.
+    WWIV v5.2.0 (Build ####) Initialization/Configuration Program.
     Copyright (c) 1998-2016, WWIV Software Services
     CONFIG.DAT NOT FOUND.
     Perform initial installation?
@@ -106,31 +113,33 @@ connections for outside users.
 
 This is the Waiting For Caller (WFC) Screen.
 
-    ┌──────────────────────────────────────┬───────────────────────────────────────┐
-    │ Date: 08/18/2015    Time: 01:27:16   │OS: Windows 8                          │
-    └──────────────────────────────────────┴───────────────────────────────────────┘
-    ┌──────────────────────────────────────────────────────────────────────────────┐
-    │               Activity and Statistics of My WWIV BBS Node 1                  │
-    ├──────────────────────────────────────┬───────────────────────────────────────┤
-    │ Calls Today....... 0                 │ WWIV Version.... v5.10 (Development)  │
-    │ Feedback Waiting.. 1       New: 1    │ Net Version..... 0                    │
-    │ Uploads Today..... 0                 │ Total Users..... 1                    │
-    │ Messages Today.... 0                 │ Total Calls..... 0                    │
-    │ Local Msgs Today.. 0                 │ Call/Day Ratio.. N/A                  │
-    │ Email Today....... 0                 │ Chat Status..... Not Available        │
-    │ Feedback Today.... 1                 │ Modem........... Local Mode           │
-    │ Mins Used Today... 0 Mins (0.0%)     │ Modem Status.... Waiting For Command  │
-    ├──────────────────────────────┬───────┴───────────────────────────────────────┤
-    │ Hard Disk Space Left:        │ Last User:                                    │
-    │                              │ Newsysop #1                                   │
-    │                              ├───────────────────────────────────────────────┤
-    │                              │ Instance Monitor - Node 1                     │
-    │                              │ User.... Nobody                               │
-    │                              │ Status.. Waiting for Call                     │
-    └──────────────────────────────┴───────────────────────────────────────────────┘
-    ┌──────────────────────────────────────────────────────────────────────────────┐
-    │                                                                              │
-    └──────────────────────────────────────────────────────────────────────────────┘
+```
+┌──────────────────────────────────────┬───────────────────────────────────────┐
+│ Date: 12/25/2016    Time: 12:52:52   │OS: Windows                            │
+└──────────────────────────────────────┴───────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│               Activity and Statistics of My WWIV BBS Node 1                  │
+├──────────────────────────────────────┬───────────────────────────────────────┤
+│ Calls Today....... 48                │ WWIV Version.... 5.2.0                │
+│ Feedback Waiting.. 1       New: 1    │ Net Version..... 51                   │
+│ Uploads Today..... 0                 │ Total Users..... 99                   │
+│ Messages Today.... 98                │ Total Calls..... 20167                │
+│ Local Msgs Today.. 12                │ Call/Day Ratio.. 52                   │
+│ Email Today....... 9                 │ Chat Status..... Not Available        │
+│ Feedback Today.... 4                 │                                       │
+│ Mins Used Today... 720 Mins (50.0%)  │                                       │
+├──────────────────────────────┬───────┴───────────────────────────────────────┤
+│ Commands:                    │ Last User:                                    │
+│                              │ Newsysop #1                                   │
+│  SPACE) Local Log on         ├───────────────────────────────────────────────┤
+│  Q) Quit BBS                 │ Instance Monitor - Node 1                     │
+│  ?) Display Help             │ User.... Nobody                               │
+│                              │ Status.. Waiting for Call                     │
+└──────────────────────────────┴───────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                                                                              │
+└──────────────────────────────────────────────────────────────────────────────┘
+```
 
 * Hit the SPACE bar and answer Yes to logon to your WWIV BBS.  
 * At the logon prompt enter NEW to create a new account.  
@@ -143,6 +152,7 @@ grant it the SysOp security levels.
 
 * Hit F1 and the WWIV User Editor will appear over the top of the 
 screen you were just at.
+
 ```
     ┌────────────────────────────────────────────────────────────────────┐
     │ WWIV User Editor                                    [Newsysop #-1] │
@@ -163,6 +173,7 @@ screen you were just at.
     │    (ENTER) Next Field   (UP-ARROW) Previous Field    (ESC) Exit    │
     └────────────────────────────────────────────────────────────────────┘
 ```
+
 * Change the Security Level (SL) to 255.
 * Change the DL Sec. Level (DSL) to 255.  
 

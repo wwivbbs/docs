@@ -9,8 +9,6 @@ interpreter MOD from the early 1990s.
 
 WWIVbasic is implemented using [MY-BASIC](https://github.com/paladin-t/my_basic).  MY-BASIC is an open source project under the MIT license, written by Wang Renxin. 
 
-## MY-BASIC
-
 WWIVbasic supports the entire syntax of MY-BASIC.  The MY-BASIC
 documentation can be found in the 
 [MY-BASIC Quick Reference](https://github.com/paladin-t/my_basic/blob/master/MY-BASIC%20Quick%20Reference.pdf) document.  In addition to the core language, WWIVbasic includes several package to interact with the WWIV BBS.

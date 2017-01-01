@@ -37,6 +37,7 @@ The WWIV Dev Team
     - [Displaying Text](displaying_text.md)
     - [Other Config Files](config_files.md)
     - [Log Files](logfiles.md)
+    - [WWIVbasic Reference](wwivbasic.md)
     - Connectivity
         - [WWIV Server](wwiv_5_telnet_server.md)
         - [NET2BBS](net2bbs.md)

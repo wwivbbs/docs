@@ -2,12 +2,12 @@
 # WWIV BBS Software Documentation
 ***
 ```
-              WWW     WWW WWW     WWW III VVV   VVV   555555    2222222
-              WWW     WWW WWW     WWW III VVV   VVV   55             22
-              WWW     WWW WWW     WWW III VVV   VVV   555555    2222222
-              WWW  W  WWW WWW  W  WWW III  VVV VVV        55    22
-              WWW WWW WWW WWW WWW WWW III   VVVVV         55 .. 22
-               WWW   WWW   WWW   WWW  III    VVV      555555 .. 2222222
+            WWW     WWW WWW     WWW III VVV   VVV   555555    3333333
+            WWW     WWW WWW     WWW III VVV   VVV   55             33
+            WWW     WWW WWW     WWW III VVV   VVV   555555    3333333
+            WWW  W  WWW WWW  W  WWW III  VVV VVV        55         33
+            WWW WWW WWW WWW WWW WWW III   VVVVV         55 ..      33
+             WWW   WWW   WWW   WWW  III    VVV      555555 .. 3333333
 ```
 
 WWIV BBS SOFTWARE has a long [history](history.md),

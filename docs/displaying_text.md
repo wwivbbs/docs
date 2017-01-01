@@ -96,10 +96,6 @@ White on Red, for example, you can use ```|15|20```
 | 23 | | Gray
 
 
-**Note:** WWIV 5.0 supports background color setting as ```|B##```, but since no other
-  BBS does too, use of this code is deprecated in 5.1 and will be removed in WWIV 5.2.
-
-
 #### Pipe Code Macros
 
 

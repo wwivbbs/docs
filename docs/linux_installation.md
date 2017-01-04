@@ -10,14 +10,26 @@ permissions are correct.
 
 ### Prerequisites
 
+#### Critical packages
+Without these packages, the system won't function correctly
+
 Package | Comments
 ------- | ----------
 sudo | to allow more controlled access to root-owned tools
 ncurses | any curses library, really. Needed for CLI tools display  
+zip/unzip | Archive tools needed for handling zip files
+
+#### Optional Packages
+You can still have a working system without these, but more complicated setups (DOORS, for example)
+will probably not work.
+
+Package | Comments
+------- | ----------
 dosemu | to run dos|based doors and utilities  
 dos2unix/unix2dos | for converting file types  
 
-Compile things you will need  
+#### Compile packages
+If you plan to compile the binaries yourself, you will need these
 
 Package | Comments
 ------- | ----------
@@ -27,11 +39,6 @@ cmake |
 make | 
 g++ 4.9 or later | 
 
-(really) Optional Linux Things
-
-Package | Comments
-------- | ----------
-fpc (FreePascal) | for building old Pascal things like WWIVedit  
 
 ### Pre-install steps
 
@@ -82,8 +89,7 @@ NOTE All references to init refer to the WWIV init program in the WWIVBASE, NOT 
 Make WWIV directory (this should be the same as the home directory of the wwiv user above)
 
 1. Download the latest wwiv-build-linux-release.tar.gz to your wwiv directory  
-  [WWIV 5.0 Stable](https://build.wwivbbs.org/jenkins/job/wwiv_5.0.0/label=linux/lastStableBuild/)</br>
-  [WWIV 5.1 Development](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/)
+  [WWIV 5.2 Stable](https://build.wwivbbs.org/jenkins/job/wwiv52/label=linux/lastStableBuild/)</br>
 2. Extract wwiv-build-linux-release.tar.gz into your wwiv directory 
 
 If running the pre-built binaries, skip down to "Run Setup", otherwise continue with "Compile Manually"
@@ -93,6 +99,9 @@ If running the pre-built binaries, skip down to "Run Setup", otherwise continue 
 
 There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution.  You are welcome to try them, but compiling is likely to work better.
   
+**NOTE: Currently, grabbing from source will get you the latest version of development code, not the 5.2 binaries.**  
+
+
 pull down the code from git (https://github.com/wwivbbs/wwiv.git) 
 Navigate to your source directory (e.g., ```/home/wwiv/wwiv-master```)   
 The first time you compile, you need to precompile cryptlib: 
@@ -137,6 +146,7 @@ example of relative pathing:
 * GFiles : gfiles/  
 * Menus : gfiles/menus/  
 * Data : data/  
+* Scripts: scripts/
 * Downloads : dloads/  
 
 ### Setting up multiple instances 

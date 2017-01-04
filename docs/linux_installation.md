@@ -39,7 +39,6 @@ Luckily, we have an installer script that will take care of most of the details 
 
 1. Make a wwiv directory and cd into it (e.g., /home/wwiv)   
 2. Download the latest wwiv-linux-release.tar.gz to your wwiv directory  
-  [WWIV 5.2 Stable](https://build.wwivbbs.org/jenkins/job/wwiv52/label=linux/lastStableBuild/)  
   [WWIV 5.3 Development](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/)  
 3. Extract wwiv-linux-release.tar.gz into your wwiv directory ( e.g, ``tar zxvf wwiv-linux-release.tar.gz``) 
 4. Run ``sudo ./install.sh`` and follow the prompts.  You must run this as root becasue it takes care of

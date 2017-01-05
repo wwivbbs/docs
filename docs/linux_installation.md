@@ -1,22 +1,25 @@
 # Installing WWIV on Linux
 ***
 
-### Prerequisites
+## Prerequisites
 
-#### Critical Items
+### Critical Items
 These are items that are needed for proper functionality.
+**NOTE** The installer **will halt** and ask you to address these if they are not found
 
 Package | Comments
 ------- | ----------
 sudo | to allow more controlled access to root-owned tools
 zip/unzip | needed for system setup, and really any BBS should have it
-ncurses | any curses library, really. Needed for CLI tools display  
-awk | core OS tool
+ncurses (libncurses5)| Needed for CLI tools GUI display (libncurses5 is the debian version)
+awk, grep, sed | core OS tools for line parsing (these are _really_ basic)
 
 
-#### Optional Items
+### Optional Items
 These are items that are not needed for proper functionality of a basic BBS, but will make things
 a lot easier (and potentially necessary for certain advanced configurations).
+
+**NOTE** The installer will warn you about these, but will continue.
 
 Package | Comments
 ------- | ----------
@@ -24,7 +27,7 @@ dosemu | to run dos|based doors and utilities
 dos2unix/unix2dos | for converting file types  
 
 
-### Steps to install the precompiled binaries
+## Steps to install the precompiled binaries
 
 These are the steps for using the precompiled binaries.  These are the
 recommended ones to use if you have a debian-based system (eg, debian 8,
@@ -49,26 +52,20 @@ Luckily, we have an installer script that will take care of most of the details 
 If you have any issues, check the install_date_time.log file that was created during the install.  
 If you still can't tell what happened, come and find us in IRC.
 
-#### Customization
-There are several INI files that manage details about your install.  The main ones are:
-
-1. wwiv.ini - the primary config file.  Most of your settings are here
-2. wwivd.ini - tells the wwivd service what ports to monitor
-3. net.ini - manages details for how to connect to wwivnet for message transfers
 
 
-### Steps to install Manually Compiled binaries
+## Steps to install Manually Compiled binaries
 
-#### Compile things you will need  
+### Compile things you will need  
 If you are going to be compiling your own BBS binaries, these are a must-have
 
 Package | Comments
 ------- | ----------
 git |  to grab the source code for compiling  
-ncurses-devel (libncurses5-dev) | development headers, etc.  libncurses5-dev is the debian version
-cmake | 
-make | 
-g++ 4.9 or later | 
+ncurses-devel (libncurses5-dev) | development headers, etc.  (libncurses5-dev is the debian version)
+cmake | used to control the software compilation process
+make | runs the compile steps
+g++ 4.9 or later | the actual compiler tool
 
 
 All the steps for installing manually compiled biniaries are the same as the prebuilt
@@ -118,10 +115,16 @@ Now that we have the new binaries in place, we can pick up where we left off...
    the systemd service file, etc.  
 5. log into the new wwiv user ``(e.g, sudo -u wwiv -s)`` and run ./init to configure the BBS 
 
-### After the install
+## After the install
 
 If you've gotten this far, Your BBS should be up and running. Everything below this point is details about more in-depth configuration (DOORs, WWIVnet, etc) and some of the current warts that linux has that you need to be aware of. If you come across anything that is not detailed here, please let us know.
 
+### Customization
+There are several INI files that manage details about your install.  The main ones are:
+
+1. wwiv.ini - the primary config file.  Most of your settings are here
+2. wwivd.ini - tells the wwivd service what ports to monitor
+3. net.ini - manages details for how to connect to wwivnet for message transfers
 ### dosemu config 
 
 dosemu is used for a number of things that can't be handled natively in linux (ie, DOS binaries). Here are some config details: 

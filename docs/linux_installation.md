@@ -47,7 +47,7 @@ Luckily, we have an installer script that will take care of most of the details 
 4. Run ``sudo ./install.sh`` and follow the prompts.  You must run this as root becasue it takes care of
    all the setup items for you: creating the WWIV user, setting up sudo access for a standard user, installing
    the systemd service file, etc.  
-5. log into the new wwiv user ``(e.g, sudo -u wwiv -s)`` and run ./init to configure the BBS 
+5. log into the new wwiv user ``(e.g, sudo su - wwiv -s /bin/bash)`` and run ./init to configure the BBS 
 
 If you have any issues, check the install_date_time.log file that was created during the install.  
 If you still can't tell what happened, come and find us in IRC.
@@ -113,7 +113,7 @@ Now that we have the new binaries in place, we can pick up where we left off...
 4. Run ``sudo ./install.sh`` and follow the prompts.  You must run this as root becasue it takes care of
    all the setup items for you: creating the WWIV user, setting up sudo access for a standard user, installing
    the systemd service file, etc.  
-5. log into the new wwiv user ``(e.g, sudo -u wwiv -s)`` and run ./init to configure the BBS 
+5. log into the new wwiv user ``(e.g, sudo su - wwiv -s /bin/bash)`` and run ./init to configure the BBS 
 
 ## After the install
 

@@ -23,9 +23,9 @@ Package | Comments
 ------- | ----------
 git |  to grab the source code for compiling  
 ncurses-devel (libncurses5-dev) | development headers, etc.  libncurses5-dev is the debian version
-cmake | 
-make | 
-g++ 4.9 or later | 
+cmake | used to control the software compilation process
+make | runs the compile steps
+g++ 4.9 or later | the actual compiler tool
 
 (really) Optional Linux Things
 
@@ -81,36 +81,42 @@ NOTE All references to init refer to the WWIV init program in the WWIVBASE, NOT 
 Make WWIV directory (this should be the same as the home directory of the wwiv user above)
 
 1. Download the latest wwiv-build-linux-release.tar.gz to your wwiv directory  
-  [WWIV 5.0 Stable](https://build.wwivbbs.org/jenkins/job/wwiv_5.0.0/label=linux/lastStableBuild/)</br>
-  [WWIV 5.1 Development](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/)
-2. Extract wwiv-build-linux-release.tar.gz into your wwiv directory 
+  [WWIV 5.1 Stable](https://build.wwivbbs.org/jenkins/job/wwiv_5.1/lastStableBuild/label=linux/) 
+2. Extract wwiv-linux-release.tar.gz into your wwiv directory 
 
 If running the pre-built binaries, skip down to "Run Setup", otherwise continue with "Compile Manually"
 
 ##### Compile Manually
 **NOTE:** Do these steps as a non-root user; your BBS user would be the easiest from a file permissions perspective later on.
 
-There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution.  You are welcome to try them, but compiling is likely to work better.
+There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution. The pre-built binaries were compiled on debian, so they will probably work on debian-related distros (ubuntu, etc). You are welcome to try them, but compiling is likely to work better, especially if you are not using debian.
+
+1. pull down the code archive from git [WWIV 5.1 Source archive zip](https://github.com/wwivbbs/wwiv/archive/wwiv51.zip) 
+2. unzip wwiv-wwiv51.zip 
+3. Navigate to your source directory (e.g., /home/wwiv/wwiv-wwiv51) 
   
-pull down the code from git (https://github.com/wwivbbs/wwiv.git) 
-In the source directory (e.g., ```/home/wwiv/wwiv-master```), run ```cmake . && make``` (don't forget the ".")
-assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have as a result are:
+In the source directory (e.g., ```/home/wwiv/wwiv-wwiv51```), run ```cmake . && make``` (don't forget the ".")
+assuming you built in ```/home/wwiv/wwiv-wwiv51```, the binaries you will have as a result are:
+
 ```
-/home/wwiv/wwiv-master/bbs/bbs  
-/home/wwiv/wwiv-master/init/init  
-/home/wwiv/wwiv-master/wwivd/wwivd
-/home/wwiv/wwiv-master/network/network
-/home/wwiv/wwiv-master/network1/network1
-/home/wwiv/wwiv-master/network2/network2
-/home/wwiv/wwiv-master/network3/network3
-/home/wwiv/wwiv-master/networkb/networkb  
-/home/wwiv/wwiv-master/wwivutil/wwivutil  
+/home/wwiv/wwiv-wwiv51/bbs/bbs  
+/home/wwiv/wwiv-wwiv51/init/init  
+/home/wwiv/wwiv-wwiv51/wwivd/wwivd
+/home/wwiv/wwiv-wwiv51/network/network
+/home/wwiv/wwiv-wwiv51/network1/network1
+/home/wwiv/wwiv-wwiv51/network2/network2
+/home/wwiv/wwiv-wwiv51/network3/network3
+/home/wwiv/wwiv-wwiv51/networkb/networkb  
+/home/wwiv/wwiv-wwiv51/wwivutil/wwivutil  
 ```
-These should all be placed in your base WWIV directory. For example, if your WWIV base is /home/wwiv and your git base is /home/wwiv/wwiv-master, the following will copy all the compiled binaries to your base wwiv directory
+
+These should all be placed in your base WWIV directory. For example, if your WWIV base is /home/wwiv and your git base is /home/wwiv/wwiv-wwiv51, the following will copy all the compiled binaries to your base wwiv directory
+
 ```
-cd /home/wwiv  
-cp wwiv-master/bbs/bbs  wwiv-master/init/init  wwiv-master/wwivd/wwivd wwiv-master/network/network wwiv-master/network1/network1 wwiv-master/network2/network2 wwiv-master/network3/network3 wwiv-master/networkb/networkb  wwiv-master/wwivutil/wwivutil  .
+cd /home/wwiv/wwiv-wwiv51
+cp bbs/bbs  init/init  wwivd/wwivd network/network network1/network1 network2/network2 network3/network3 networkb/networkb  wwivutil/wwivutil  .
 ```
+
 **(don't forget the ".")**
 
 ##### Run Setup

@@ -91,7 +91,7 @@ If running the pre-built binaries, skip down to "Run Setup", otherwise continue 
 
 There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution. The pre-built binaries were compiled on debian, so they will probably work on debian-related distros (ubuntu, etc). You are welcome to try them, but compiling is likely to work better, especially if you are not using debian.
 
-1. pull down the code archive from git [WWIV 5.2 Source archive zip](https://github.com/wwivbbs/wwiv/archive/wwiv51.zip) 
+1. pull down the code archive from git [WWIV 5.1 Source archive zip](https://github.com/wwivbbs/wwiv/archive/wwiv51.zip) 
 2. unzip wwiv-wwiv51.zip 
 3. Navigate to your source directory (e.g., /home/wwiv/wwiv-wwiv51) 
   

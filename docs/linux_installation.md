@@ -35,9 +35,9 @@ Package | Comments
 ------- | ----------
 git |  to grab the source code for compiling  
 ncurses-devel (libncurses5-dev) | development headers, etc.  libncurses5-dev is the debian version
-cmake | 
-make | 
-g++ 4.9 or later | 
+cmake | used to control the software compilation process
+make | runs the compile steps 
+g++ 4.9 or later | the actual compiler tool
 
 
 ### Pre-install steps
@@ -97,36 +97,38 @@ If running the pre-built binaries, skip down to "Run Setup", otherwise continue 
 ##### Compile Manually
 **NOTE:** Do these steps as a non-root user; your BBS user would be the easiest from a file permissions perspective later on.
 
-There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution.  You are welcome to try them, but compiling is likely to work better.
-  
-**NOTE: Currently, grabbing from source will get you the latest version of development code, not the 5.2 binaries.**  
+There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution.  The pre-built binaries were compiled on debian, so they will probably work on debian-related distros (ubuntu, etc).  You are welcome to try them, but compiling is likely to work better, especially if you are not using debian.
 
 
-pull down the code from git (https://github.com/wwivbbs/wwiv.git) 
-Navigate to your source directory (e.g., ```/home/wwiv/wwiv-master```)   
-The first time you compile, you need to precompile cryptlib: 
+1. pull down the code archive from git [WWIV 5.2 Source archive zip](https://github.com/wwivbbs/wwiv/archive/wwiv52.zip)
+2. unzip wwiv-wwiv52.zip
+3. Navigate to your source directory (e.g., ```/home/wwiv/wwiv-wwiv52```)   
+4. The first time you compile, you need to precompile cryptlib: 
 `` pushd deps/cl342; make; popd > /dev/null `` 
 
-Now that you have the pre-reqs compiled, it's time to compile WWIV itself.  
-run ```cmake . && make``` (don't forget the ".")  
+5. Now that you have the pre-reqs compiled, it's time to compile WWIV itself.  
+  run ```cmake . && make``` (don't forget the ".")  
 
-assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have as a result are:
+assuming you built in ```/home/wwiv/wwiv-wwiv52```, the binaries you will have as a result are:
+
 ```
-/home/wwiv/wwiv-master/bbs/bbs  
-/home/wwiv/wwiv-master/init/init  
-/home/wwiv/wwiv-master/wwivd/wwivd
-/home/wwiv/wwiv-master/network/network
-/home/wwiv/wwiv-master/network1/network1
-/home/wwiv/wwiv-master/network2/network2
-/home/wwiv/wwiv-master/network3/network3
-/home/wwiv/wwiv-master/networkb/networkb  
-/home/wwiv/wwiv-master/networkb/networkc  
-/home/wwiv/wwiv-master/networkb/networkf  
-/home/wwiv/wwiv-master/wwivutil/wwivutil  
+/home/wwiv/wwiv-wwiv52/bbs/bbs  
+/home/wwiv/wwiv-wwiv52/init/init  
+/home/wwiv/wwiv-wwiv52/wwivd/wwivd
+/home/wwiv/wwiv-wwiv52/network/network
+/home/wwiv/wwiv-wwiv52/network1/network1
+/home/wwiv/wwiv-wwiv52/network2/network2
+/home/wwiv/wwiv-wwiv52/network3/network3
+/home/wwiv/wwiv-wwiv52/networkb/networkb  
+/home/wwiv/wwiv-wwiv52/networkb/networkc  
+/home/wwiv/wwiv-wwiv52/networkb/networkf  
+/home/wwiv/wwiv-wwiv52/wwivutil/wwivutil  
 ```
-These should all be placed in your base WWIV directory. For example, if your WWIV base is /home/wwiv and your git base is /home/wwiv/wwiv-master, the following will copy all the compiled binaries to your base wwiv directory
+
+6. These should all be placed in your base WWIV directory. For example, if your WWIV base is /home/wwiv and your git base is /home/wwiv/wwiv-wwiv52, the following will copy all the compiled binaries to your base wwiv directory
+
 ```
-cd /home/wwiv/wwiv-master
+cd /home/wwiv/wwiv-wwiv52
 cp -v bbs/bbs init/init wwivd/wwivd network/network network1/network1 network2/network2 network3/network3 networkb/networkb networkc/networkc networkf/networkf wwivutil/wwivutil /home/wwiv/
 ```
 
@@ -146,7 +148,6 @@ example of relative pathing:
 * GFiles : gfiles/  
 * Menus : gfiles/menus/  
 * Data : data/  
-* Scripts: scripts/
 * Downloads : dloads/  
 
 ### Setting up multiple instances 

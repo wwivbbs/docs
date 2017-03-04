@@ -113,15 +113,23 @@ The wwivd filter is pretty simplistic.  Create the file: ```/etc/fail2ban/filter
 
 [INCLUDES]
 
-# Read common prefixes. If any customizations available -- read them
-from
-# common.local
+# Read common prefixes. If any customizations available -- 
+# read them from common.local
 before = common.conf
 
 [Definition]
 
-failregex = wwivd.*INFO\s+Connection from:\s+<HOST>$
+failregex = wwivd.*INFO\s+Accepted connection.*from:\s+<HOST>
+            wwivd.*INFO\s+Trashcan.*:\s+<HOST>
+
+# Older formats of the log files.  Uncomment this one if using 
+# an older wwivd
+#failregex = wwivd.*INFO\s+Connection from:\s+<HOST>$
+#            wwivd.*INFO\s+Accepted connection.*from:\s+<HOST>$
+#            wwivd.*INFO\s+Trashcan.*:\s+<HOST>
+
 ignoreregex =
+
 ```
 
 The important part is the failregex line.  What this is meant to do is
@@ -129,15 +137,15 @@ look for our connections.  Here is a sample of the syslog with lines
 that it would match against:
 
 ```syslog
-Oct 15 14:29:16 vps40748 wwivd[18207]: 2016-10-15 14:29:16,565 INFO [12307] Node #2 exited with error code: 0
-Oct 15 14:29:19 vps40748 wwivd[18207]: 2016-10-15 14:29:19,669 INFO Connection from: 81.184.208.6
-Oct 15 14:29:19 vps40748 wwivd[18207]: 2016-10-15 14:29:19,670 INFO Nodes in use: (1/5)
-Oct 15 14:29:19 vps40748 wwivd[18207]: 2016-10-15 14:29:19,676 INFO [12312] Invoking Command Line:./bbs -XT -H6 -N2
+Mar  3 20:11:46 vps118272 wwivd[4395]: 2017-03-03 19:11:46,347 INFO  Accepted connection on port: 23; from: 112.197.249.137; coutry code: 0
+Mar  3 20:11:46 vps118272 wwivd[4395]: 2017-03-03 19:11:46,347 INFO  [4395] Invoking Command Line (posix_spawn):./bbs -XT -H8 -N2
+Mar  3 20:11:50 vps118272 wwivd[4395]: 2017-03-03 19:11:50,146 INFO  Trashcan name entered from IP: 112.197.249.137; name: ADMIN
 ```
 
-Note the ```INFO Connection from: 81.184.208.6``` on the second line;
+Note the ```INFO  Accepted connection on port: 23; from: 112.197.249.137``` on the first line;
 that's what our filter is monitoring.  If that same IP address shows up
-3 times in 10 minutes, it will get banned.
+3 times in 10 minutes, it will get banned.  We also include the Trashcan entry as an extra
+match to fail them faster, since they are obviously not interested in being friendly.
 
 
 #### Start Blocking
@@ -242,6 +250,22 @@ root@mybbs# iptables -S
 -A fail2ban-wwivd-telnet -s 134.249.89.171/32 -j REJECT --reject-with icmp-port-unreachable
 -A fail2ban-wwivd-telnet -j RETURN
 ```
+
+## Using iptables to limit concurrent connections
+
+While not strictly a fail2ban setting, it's possible to use iptables to
+limit the number of connections coming from a single IP.  This will also
+help slow down spammers.  To do this on debian, do the following:
+
+1. disable fail2ban ``systemctl stop fail2ban`` (so you don't save the current fail2ban rules)
+2. apply new filters for your telnet and ssh sessions
+```
+iptables -A INPUT -p tcp --syn --dport 23 -m connlimit --connlimit-above 1 --connlimit-mask 32 -j REJECT --reject-with tcp-reset
+iptables -A INPUT -p tcp --syn --dport 2222 -m connlimit --connlimit-above 1 --connlimit-mask 32 -j REJECT --reject-with tcp-reset
+```
+3. install iptables-persistent ``apt-get install iptables-persistent`` This will also save your current rules at install time.  If you want to make further changes and resave them use ``dpkg-reconfigure iptables-persistent``
+4. enable fail2ban ``systemctl start fail2ban``
+
 
 ## Potential Issues and Further reading
 

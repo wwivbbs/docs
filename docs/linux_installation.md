@@ -1,98 +1,84 @@
 # Installing WWIV on Linux
 ***
 
-These are some rough details for the steps necessary to get a working linux-based system.
-As I get more details about each area, I will be fleshing things out.
+## Prerequisites
 
-**NOTE:** Unless specifically stated otherwise, assume all linux commands
-are run as the wwiv user created in section 1. This ensures the
-permissions are correct.
-
-### Prerequisites
+### Critical Items
+These are items that are needed for proper functionality.
+**NOTE** The installer **will halt** and ask you to address these if they are not found
 
 Package | Comments
 ------- | ----------
 sudo | to allow more controlled access to root-owned tools
-ncurses | any curses library, really. Needed for CLI tools display  
+zip/unzip | needed for system setup, and really any BBS should have it
+ncurses (libncurses5)| Needed for CLI tools GUI display (libncurses5 is the debian version)
+awk, grep, sed | core OS tools for line parsing (these are _really_ basic)
+
+
+### Optional Items
+These are items that are not needed for proper functionality of a basic BBS, but will make things
+a lot easier (and potentially necessary for certain advanced configurations).
+
+**NOTE** The installer will warn you about these, but will continue.
+
+Package | Comments
+------- | ----------
 dosemu | to run dos|based doors and utilities  
 dos2unix/unix2dos | for converting file types  
 
-Compile things you will need  
 
-Package | Comments
-------- | ----------
-git |  to grab the source code for compiling  
-ncurses-devel (libncurses5-dev) | development headers, etc.  libncurses5-dev is the debian version
-cmake | 
-make | 
-g++ 4.9 or later | 
+## Steps to install the precompiled binaries
 
-(really) Optional Linux Things
-
-Package | Comments
-------- | ----------
-fpc (FreePascal) | for building old Pascal things like WWIVedit  
-
-### Pre-install steps
+These are the steps for using the precompiled binaries.  These are the
+recommended ones to use if you have a debian-based system (eg, debian 8,
+ubuntu, etc).
 
 _**DO NOT RUN WWIV AS ROOT.**_ You are just asking to get screwed if you do.
 The root account is the linux equivalent of SYSOP. Also, don't run WWIV
 as your own user. Anything your user can do, the BBS can do. The best
 option is to create a dedicated user to run the BBS.
 
-Create WWIV user  
-as root:  
+Luckily, we have an installer script that will take care of most of the details for you.
 
-1. create the wwiv group: ```groupadd wwiv```
-2. create the wwiv user: 
-   ```useradd -g wwiv -c "WWIV BBS Service Account" -d /home/wwiv -s /sbin/nologin -m wwiv```
-3. lock wwiv user: ```usermod -L wwiv```
+1. Make a wwiv directory and cd into it (e.g., /home/wwiv)   
+2. Download the latest wwiv-linux-release.tar.gz to your wwiv directory  
+  [WWIV 5.3 Development](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/)  
+3. Extract wwiv-linux-release.tar.gz into your wwiv directory ( e.g, ``tar zxvf wwiv-linux-release.tar.gz``) 
+4. Run ``sudo ./install.sh`` and follow the prompts.  You must run this as root becasue it takes care of
+   all the setup items for you: creating the WWIV user, setting up sudo access for a standard user, installing
+   the systemd service file, etc.  
+5. log into the new wwiv user ``(e.g, sudo su - wwiv -s /bin/bash)`` and run ./init to configure the BBS 
 
-This creates a wwiv group and user that has a home directory of
-/home/wwiv (change this to whatever you want, but see the note below) 
-and sets the shell to /sbin/nologin, which makes it impossible to log 
-in as the wwiv user. The wwiv user should also be locked.
+If you have any issues, check the install_date_time.log file that was created during the install.  
+If you still can't tell what happened, come and find us in IRC.
 
-**NOTE:** If you see something like this:
-```useradd: cannot create directory /home/wwiv```
-It's probably because the base directory (/home) does not exist. You will 
-need to create that separately before running the user command. You should 
-not run into this unless you decide to use a directory location that's 
-different than a typical user setup (like a separate /bbs filesystem or something).
 
-Next, use sudo to grant your userid access to run stuff as the wwiv
-user, since you can't log in as the wwiv user. This will be important
-for manipulating files in the directory, since your userid won't own
-them.
 
-As root
-visudo add the following line to allow access to all commands as the wwiv user:
-youruserid ALL=(wwiv) ALL
-To use this, simply run:
-```sudo -u wwiv -s```
-it will ask for your password and then will start a shell as the wwiv user.
+## Steps to install Manually Compiled binaries
 
-You are now effectively the wwiv user. You can check this with the id command. For example:
-```yourid@yourserver ~ $ id uid=1001(wwiv) gid=1001(wwiv) groups=1001(wwiv)```
+### Compile things you will need  
+If you are going to be compiling your own BBS binaries, these are a must-have
 
-### Steps to install
+Package | Comments
+------- | ----------
+git |  to grab the source code for compiling  
+ncurses-devel (libncurses5-dev) | development headers, etc.  (libncurses5-dev is the debian version)
+cmake | used to control the software compilation process
+make | runs the compile steps
+g++ 4.9 or later | the actual compiler tool
 
-**NOTE:** run all commands from WWIV install directory as the wwiv user unless stated otherwise
-NOTE All references to init refer to the WWIV init program in the WWIVBASE, NOT the linux init command.
-Make WWIV directory (this should be the same as the home directory of the wwiv user above)
 
-1. Download the latest wwiv-build-linux-release.tar.gz to your wwiv directory  
-  [WWIV 5.0 Stable](https://build.wwivbbs.org/jenkins/job/wwiv_5.0.0/label=linux/lastStableBuild/)</br>
-  [WWIV 5.1 Development](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/)
-2. Extract wwiv-build-linux-release.tar.gz into your wwiv directory 
+All the steps for installing manually compiled biniaries are the same as the prebuilt
 
-If running the pre-built binaries, skip down to "Run Setup", otherwise continue with "Compile Manually"
+1. Make a wwiv directory and cd into it (e.g., /home/wwiv)   
+2. Download the latest wwiv-linux-release.tar.gz to your wwiv directory  
+  [WWIV 5.3 Development](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/)  
+3. Extract wwiv-linux-release.tar.gz into your wwiv directory ( e.g, ``tar zxvf wwiv-linux-release.tar.gz``) 
 
-##### Compile Manually
-**NOTE:** Do these steps as a non-root user; your BBS user would be the easiest from a file permissions perspective later on.
 
-There are currently pre-built binaries for linux available at http://build.wwivbbs.org, but they may not work on a given distribution.  You are welcome to try them, but compiling is likely to work better.
-  
+This is where things differ (we need to replace the prebuilt binaries with our new ones)
+
+
 pull down the code from git (https://github.com/wwivbbs/wwiv.git) 
 Navigate to your source directory (e.g., ```/home/wwiv/wwiv-master```)   
 The first time you compile, you need to precompile cryptlib: 
@@ -121,74 +107,24 @@ cd /home/wwiv/wwiv-master
 cp -v bbs/bbs init/init wwivd/wwivd network/network network1/network1 network2/network2 network3/network3 networkb/networkb networkc/networkc networkf/networkf wwivutil/wwivutil /home/wwiv/
 ```
 
-##### Run Setup
-Run ```sh install.sh``` </br>
-It will get system-specific settings configured and run init at the end; say Yes to initializing and log out of init. </br>
-init takes care of the remaining WWIV-specific config files (e.g., config.dat)  
-
-Your BBS basic local setup is complete. Run ./bbs and set up a new user to be the sysop (#1) account (ie, type NEW for the user and fill in the user info). Once you are done, log out.  
-Run ./init and set up all the details  
-select (G) "General System Configuration" to set up the BBS name, etc  
-select (P) "System Paths". You will want to set up relative pathing, not absolute paths, as tools that run under dosemu will conflict and get confused. 
-
-example of relative pathing:
-
-* Messages : msgs/ 
-* GFiles : gfiles/  
-* Menus : gfiles/menus/  
-* Data : data/  
-* Downloads : dloads/  
-
-### Setting up multiple instances 
-
-Managing your instance nodes is a setting in the wwiv.ini file. Find the following values and configure to your liking. The default setup gives you four nodes:  
-
-```INI
-NUM_INSTANCES        = 4  
-TEMP_DIRECTORY       = temp%n  
-BATCH_DIRECTORY      = batch%n  
-```
-
-### Set up systemd to run the wwivd service
-
-Systemd is the common standard on most current linux distributions.  We have created the wwivd service to manage connections to the bbs, and also to the BinkP subsystem that handles messages transfers between WWIV systems on WWIVnet.
-
-There are two files that manage the linux portion of the config.  When you run the install.sh script, it will create two files:
-```
-config 
-wwivd.service 
-```
-in the systemd directory.  
-
-As root, create the /etc/wwiv directory and copy config to /etc/wwiv/config; and copy wwivd.service to /etc/systemd/system
-
-To make the wwivd service active and start on system reboot, do the following as root:
-```
-systemctl daemon-reload
-systemctl enable wwivd.service
-```
-
-The config options for setting what ports to use and other command options are found in the wwivd.ini file in your WWIV directory.  A basic working file to get WWIV listening on a telnet port and ssh port looks like:
-
-```ini
-[WWIVD]
-telnet_port = 23
-ssh_port = 22
-```
-
-You will probably want to change the ssh port since it will likely conflict with your current ssh session.
-
-Once you have all the configs in place, you can start and stop wwivd with systemctl.  
-To start it: ```systemctl start wwivd.service```  
-To stop it: ```systemctl stop wwivd.service```  
-To check status: ```systemctl status wwivd.service```  
+Now that we have the new binaries in place, we can pick up where we left off...
 
 
+4. Run ``sudo ./install.sh`` and follow the prompts.  You must run this as root becasue it takes care of
+   all the setup items for you: creating the WWIV user, setting up sudo access for a standard user, installing
+   the systemd service file, etc.  
+5. log into the new wwiv user ``(e.g, sudo su - wwiv -s /bin/bash)`` and run ./init to configure the BBS 
 
-### After the install
+## After the install
 
 If you've gotten this far, Your BBS should be up and running. Everything below this point is details about more in-depth configuration (DOORs, WWIVnet, etc) and some of the current warts that linux has that you need to be aware of. If you come across anything that is not detailed here, please let us know.
 
+### Customization
+There are several INI files that manage details about your install.  The main ones are:
+
+1. wwiv.ini - the primary config file.  Most of your settings are here
+2. wwivd.ini - tells the wwivd service what ports to monitor
+3. net.ini - manages details for how to connect to wwivnet for message transfers
 ### dosemu config 
 
 dosemu is used for a number of things that can't be handled natively in linux (ie, DOS binaries). Here are some config details: 
@@ -198,27 +134,6 @@ dosemu is used for a number of things that can't be handled natively in linux (i
 ### Configuring WWIVnet 
 See [WWIVnet Config on Linux](network/wwivnet_linux.md) for details on configuring WWIVnet and subscribing to subs
 
-### Things that are "hinky" 
-
-* Filename Case mismatches   
-* The biggest issues right now are problems with filename case mismatching. One way to get around this is to use hard linking. Hard linking only works if the files are on the same filesystem (which shouldn't be a problem since everything is in the same directory anyway). hard links also don't work for directories. hard links are preferred over symlinks (soft links) where possible because they are actually references to the same inode (ie, they are the same file with different names), so any change to one is actually a change to both. You can verify they are the same inode by using the ls command with a -i:  
-```
-wwiv@wdfs ~/msgs $ ls -li *.dat
-173185 -rw-r--r-- 1 wwiv wwiv 200 May 11 23:50 GENERAL.dat
-173234 -rw-r--r-- 1 wwiv wwiv 100 May 11 23:48 TESTSUB.dat
-173387 -rw-r--r-- 1 wwiv wwiv 100 May 30 14:59 W4LINUX.dat 
-173239 -rw-r--r-- 2 wwiv wwiv 1000 May 30 15:14 wwivsys.dat
-173239 -rw-r--r-- 2 wwiv wwiv 1000 May 30 15:14 WWIVSYS.dat
-```
-**Note:** the inodes are the same in the first column, and the number of references to that inode is 2, rather than the usual 1.  
-To create a hard link, use the ln command. For example:  
-```'ln -P wwivsys.dat WWIVSYS.dat'```
-
-_List of known filename case mismatches_
-
-* Data  subs msgs files: msgs/*.dat should be UPPER.lower  
-* Display Files  
-* gfiles/  
 
 _TERM settings_
 

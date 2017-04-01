@@ -1,16 +1,9 @@
 # Net2BBS Telnet Server by PCMicro
 ***
 
-This is an alternative to the Fossil Driver and Telnet Server included in WWIV 5.0.
+This is an alternative to the Fossil Driver and Telnet Server included in WWIV.
 
-## Known Issues
-
-Issue | Comments
---- | ---
-You must also run SyncFoss and DOSXtrn | There are internal functions of WWIV 5.0 that rely on DOSXTRN
-Issues with Doors | There are some issues with launching doors while using NetFoss that do not happen with SynFoss
-
-## Additional Net2BBS information
+## Net2BBS information
 NetFoss is a Fossil Driver and other utilities including Net2BBS which 
 provides a Telnet server for 32bit BBSes
 
@@ -72,7 +65,7 @@ Use this to create NET2BBS.INI (this works on Windows 7 x86 (32-bit))
 | Save your changes, then restart Net2BBS for the changes to take effect.
 
 [Settings]
-Command=c:\netfoss\nf.bat /n*N /h*H c:\WWIV\bbs.exe -XT -h*H -n*N
+Command=C:\WWIV\bbs.exe -XT -h*H -n*N
 StartPath=c:\WWIV\
 Port=23
 Nodes=4

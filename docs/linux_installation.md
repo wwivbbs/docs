@@ -30,7 +30,7 @@ dos2unix/unix2dos | for converting file types
 ## Steps to install the precompiled binaries
 
 These are the steps for using the precompiled binaries.  These are the
-recommended ones to use if you have a debian-based system (eg, debian 8,
+recommended ones to use if you have a debian-based system (eg, debian 9,
 ubuntu, etc).
 
 _**DO NOT RUN WWIV AS ROOT.**_ You are just asking to get screwed if you do.
@@ -65,7 +65,7 @@ git |  to grab the source code for compiling
 ncurses-devel (libncurses5-dev) | development headers, etc.  (libncurses5-dev is the debian version)
 cmake | used to control the software compilation process
 make | runs the compile steps
-g++ 4.9 or later | the actual compiler tool
+g++ 6.3 or later | the actual compiler tool
 
 
 All the steps for installing manually compiled biniaries are the same as the prebuilt
@@ -84,40 +84,69 @@ Navigate to your source directory (e.g., ```/home/wwiv/wwiv-master```)
 The first time you compile, you need to precompile cryptlib: 
 `` pushd deps/cl342; make; popd > /dev/null `` 
 
-Now that you have the pre-reqs compiled, it's time to compile WWIV itself.  
-run ```cmake . && make``` (don't forget the ".")  
+Also if you haven't created a build-tree for cmake. In this documentation, we'll assume that
+the build tree will be in a ```_build``` sbubdirectory of the git repository root.
+You must do this too once. You can create this with the following command:
+```
+mkdir _build
+```
+
+Now that you have the prerequisites compiled, it's time to compile WWIV itself.  
+run the following: 
+```pushd _build; cmake .. && cmake --build .; popd>/dev/null``` (don't forget the ".")  
 
 assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have as a result are:
 ```
-/home/wwiv/wwiv-master/bbs/bbs  
-/home/wwiv/wwiv-master/init/init  
-/home/wwiv/wwiv-master/wwivd/wwivd
-/home/wwiv/wwiv-master/network/network
-/home/wwiv/wwiv-master/network1/network1
-/home/wwiv/wwiv-master/network2/network2
-/home/wwiv/wwiv-master/network3/network3
-/home/wwiv/wwiv-master/networkb/networkb  
-/home/wwiv/wwiv-master/networkb/networkc  
-/home/wwiv/wwiv-master/networkb/networkf  
-/home/wwiv/wwiv-master/wwivutil/wwivutil  
+/home/wwiv/wwiv-master/_build/bbs/bbs  
+/home/wwiv/wwiv-master/_build/init/init  
+/home/wwiv/wwiv-master/_build/wwivd/wwivd
+/home/wwiv/wwiv-master/_build/network/network
+/home/wwiv/wwiv-master/_build/network1/network1
+/home/wwiv/wwiv-master/_build/network2/network2
+/home/wwiv/wwiv-master/_build/network3/network3
+/home/wwiv/wwiv-master/_build/networkb/networkb  
+/home/wwiv/wwiv-master/_build/networkc/networkc  
+/home/wwiv/wwiv-master/_build/networkf/networkf  
+/home/wwiv/wwiv-master/_build/wwivd/wwivd  
+/home/wwiv/wwiv-master/_build/wwivutil/wwivutil  
 ```
-These should all be placed in your base WWIV directory. For example, if your WWIV base is /home/wwiv and your git base is /home/wwiv/wwiv-master, the following will copy all the compiled binaries to your base wwiv directory
+These should all be placed in your WWIV base directory. For example, if your WWIV base is 
+```/home/wwiv``` and your cmake build tree is ```/home/wwiv/wwiv-master/_build```, the following will
+copy all the compiled binaries to your base wwiv directory
+
 ```
-cd /home/wwiv/wwiv-master
-cp -v bbs/bbs init/init wwivd/wwivd network/network network1/network1 network2/network2 network3/network3 networkb/networkb networkc/networkc networkf/networkf wwivutil/wwivutil /home/wwiv/
+cd /home/wwiv/wwiv-master/_build
+cp -v bbs/bbs \
+      init/init \
+      wwivd/wwivd \
+      network/network \
+      network1/network1 \
+      network2/network2 \
+      network3/network3 \
+      networkb/networkb \
+      networkc/networkc \
+      networkf/networkf \
+      wwivd/wwivd \
+      wwivutil/wwivutil \
+   /home/wwiv/
 ```
 
 Now that we have the new binaries in place, we can pick up where we left off...
 
 
-4. Run ``sudo ./install.sh`` and follow the prompts.  You must run this as root becasue it takes care of
-   all the setup items for you: creating the WWIV user, setting up sudo access for a standard user, installing
-   the systemd service file, etc.  
-5. log into the new wwiv user ``(e.g, sudo su - wwiv -s /bin/bash)`` and run ./init to configure the BBS 
+4. Run ``sudo ./install.sh`` and follow the prompts.  You must run this as
+   root becasue it takes care of all the setup items for you: creating the WWIV 
+   user, setting up sudo access for a standard user, installing the systemd 
+   service file, etc.  
+5. Log into the new wwiv user (e.g, ```sudo su - wwiv -s /bin/bash```) and run 
+   ```./init``` to configure the BBS 
 
 ## After the install
 
-If you've gotten this far, Your BBS should be up and running. Everything below this point is details about more in-depth configuration (DOORs, WWIVnet, etc) and some of the current warts that linux has that you need to be aware of. If you come across anything that is not detailed here, please let us know.
+If you've gotten this far, Your BBS should be up and running. Everything below
+this point is details about more in-depth configuration (DOORs, WWIVnet, etc) 
+and some of the current warts that linux has that you need to be aware of. 
+If you come across anything that is not detailed here, please let us know.
 
 ### Customization
 There are several INI files that manage details about your install.  The main ones are:

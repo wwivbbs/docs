@@ -7,26 +7,25 @@ We prefer contributors to FORK WWIVBBS repositories to their account and work fr
 If you're on Windows this is likely in this folder: "Documents\GitHub\WWIV"
 
 ###Download Visual Studio
-WWIV is compiled with the VS2015 compiler for windows. You can download [Microsoft Visual Studio 2015 Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)
+WWIV is compiled with the VS2017 compiler for windows. You can download [Microsoft Visual Studio 2017 Community](https://www.visualstudio.com/en-us/downloads/download-visual-studio-vs.aspx)
 
-###Install VS2015
+###Install VS2017
 Choose a custom install and select the following components:
 ```
 C++
    Common Tools for C++
-   MFC for C++
-   Windows XP Support for C++
 Common Tools
    Git Fow Windows <- You should have this already
    GitHub for VS
 ```
 
 ##Build WWIV
-* From the VS2015 menu, select File and then Open from Source Control
+* From the VS2017 menu, select File and then Open from Source Control
 On the bottom, you should see your local GIT repositories already.
 Above that you will see Login to GitHub, do that.
-* Now in your Local repositories (Documents\GitHub\WWIV), open WWIV.SLN
-VS will now open the solution file and analyzed all the files in the solution.
+* Now in your Local repositories (Documents\GitHub\WWIV), open the
+  folder WWIV in Visual Studio. It should recognize the CMake build
+  and be able to build WWIV.
 * When VS says "READY" on the bottom, go to Build on the menu and select Build Solution(F7). If you have any build errors, run Build one more time and see if that resolves itself as there can be timing issues on some machines.
 * You select whether or not you are building DEBUG or RELEASE on the toolbar. Those binaries and other built files will be places in a \debug and \release folder along side your github source files. ex: ```Documents\GitHub\WWIV\debug``` or ```Documents\GitHub\WWIV\release```.
 
@@ -43,7 +42,7 @@ git | to grab the source code for compiling
 ncurses | ncurses-devel, libncurses5-dev, etc depending on your distro
 cmake | 
 make | 
-g++ 4.9 or later | 
+g++ 6.3 or later | 
 
 ### Build Steps
 There are two primary ways to get the files for building; download a zip of the project or clone the repo.  In both cases, you will end up with the following files in the build directory:  
@@ -81,5 +80,8 @@ If you plan to have an active repo, we prefer contributors to FORK WWIVBBS repos
 
 No matter which way you used (source zip or git repository), compiling WWIV is the same.
 
-* If you want to create a debug version, run ```./debug.sh```
-* run ```cmake . && make``` (don't forget the ".")
+* If you want to create a debug version, run ```./debug.sh``` instead of
+  ```cmake ..``` in the next step.
+* run the following:
+  ```mkdir _build && cd _build && cmake .. && cmake --build . -- -j8``` 
+  (don't forget the ".")

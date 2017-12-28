@@ -82,7 +82,7 @@ This is where things differ (we need to replace the prebuilt binaries with our n
 pull down the code from git (https://github.com/wwivbbs/wwiv.git) 
 Navigate to your source directory (e.g., ```/home/wwiv/wwiv-master```)   
 The first time you compile, you need to precompile cryptlib: 
-`` pushd deps/cl342; make; popd > /dev/null `` 
+`` pushd deps/cl342; make -j8; popd > /dev/null `` 
 
 Also if you haven't created a build-tree for cmake. In this documentation, we'll assume that
 the build tree will be in a ```_build``` sbubdirectory of the git repository root.
@@ -93,7 +93,7 @@ mkdir _build
 
 Now that you have the prerequisites compiled, it's time to compile WWIV itself.  
 run the following: 
-```pushd _build; cmake .. && cmake --build .; popd>/dev/null``` (don't forget the ".")  
+```pushd _build; cmake .. && cmake --build . -- -j8; popd>/dev/null``` (don't forget the ".")  
 
 assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have as a result are:
 ```

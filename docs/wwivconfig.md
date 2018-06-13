@@ -1,5 +1,4 @@
-# INIT Settings
-***
+
 
 These are the SysOp tools and WWIV BBS settings which can be configured 
 when you run INIT.EXE from the command prompt.
@@ -231,7 +230,7 @@ You may freely change DLOADS, TEMPx and BATCH to whatever you want without hurti
 └───────────────────────────────┘
 ```
 
-### SEXYZ
+#### SEXYZ
 This is a modern (and maintained) implementation of XMODEM, YMODEM, ZMODEM that is part of 
 SynchroNet BBS's tools and maintained by it's author Rob Swindle. 
 [read more](http://wiki.synchro.net/util:sexyz). Download sexyzNNN.zip where NNN is the 

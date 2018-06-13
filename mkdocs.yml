@@ -7,65 +7,63 @@ markdown_extensions:
     - toc:
         permalink: True
 pages:
-    - 'Home': index.md
-    - Installation:
-        - 'Windows Installation': windows_installation.md
-        - 'Linux Installation': linux_installation.md
-        - 'Linux dosemu Settings': linux_dosemu_settings.md
-        - 'Upgrading from WWIV 4.x': wwiv_4x_upgrade.md
-    - Configuration:
-        - 'init': init.md
-        - 'wwiv.ini': wwivini.md
-        - 'Displaying Text': displaying_text.md
-        - 'Other Config Files': config_files.md
-        - 'Log Files': logfiles.md
-        - 'WWIVbasic Reference': wwivbasic.md
-        - Connectivity:
-            - 'WWIV Server': wwiv_5_telnet_server.md    
-            - 'NET2BBS': net2bbs.md
-            - 'fail2ban IP blocking': fail2ban.md
-        - Menus and Features:
-            - 'Main Menu': main_menu.md
-            - 'Messaging System': messaging_system.md
-            - 'User Preferences': user_preferences.md
-            - 'G-Files': gfiles.md
-            - 'File Transfers': transfers.md
-            - 'Local Console Operation': waiting_for_callers.md
-            - 'Slash Menu': slash_menu.md
-            - 'SysOp Menu': sysop_menu.md
-            - 'Event Management': eventmgmt.md
-        - Networking:
-            - 'WWIVnet Overview': network/wwivnet.md
-            - 'WWIVnet (Windows)': network/wwivnet_windows.md
-            - 'WWIVnet (Linux)': network/wwivnet_linux.md
-            - 'FTN (Fido) Networks': network/ftn_nets.md
-            - 'UseNet': usenet.md
-            - 'NET37 User Documentation': net37_docs.md
-            - 'NET37 Technical Documentation': net37_tec_docs.md
-        - Doors and Chains:
-            - 'Doors (Chains) Overview': doors.md
-            - 'Darkness': darkness.md
-            - 'DoorMUD': doormud.md
-            - 'Planets: The Exploration of Space': doorteos.md
-            - 'LORD': lord.md
-            - 'LORD2': lord2.md
-            - 'MechWars': mechwars.md
-            - 'TradeWars2002': tradewars2002.md
-        - Editors:
-            - 'WWIVEdit': wwivedit.md
-            - 'QuickBBS-Editors': quickbbs-editors.md
-        - Tools and Utilities:
-            - 'clients': clients.md
-            - 'FIX.exe Utility': fix.md
-    - About:
-      - 'WWIV BBS list': wwiv_bbs_list.md
-      - 'License': license.md
-      - History of WWIV:
-          - 'In the Beginning....': history.md
-          - 'WWIV Open Source Announcement': wwiv_open_source_announcement.md
-          - 'New SysOps Guide': newsysop.md
-          - 'links': links.md
-      - Development:
-          - 'How to Build WWIV 5': build_wwiv_5.md
-          - 'WWIV Releases & Versioning': wwiv_releases_and_versioning.md
-        
+  - 'Home': index.md
+  - Installation:
+      - 'Windows Installation': windows_installation.md
+      - 'Linux Installation': linux_installation.md
+      - 'Linux dosemu Settings': linux_dosemu_settings.md
+      - 'Upgrading from WWIV 4.x': wwiv_4x_upgrade.md
+  - Basic Configuration:
+      - 'wwivconfig': wwivconfig.md
+      - 'wwiv.ini': wwivini.md
+      - 'Displaying Text': displaying_text.md
+      - 'Other Config Files': config_files.md
+      - 'Log Files': logfiles.md
+      - 'WWIVbasic Reference': wwivbasic.md
+  - Connectivity:
+    - 'WWIV Server': wwiv_5_telnet_server.md    
+    - 'NET2BBS': net2bbs.md
+    - 'fail2ban IP blocking': fail2ban.md
+  - Menus and Features:
+    - 'Main Menu': main_menu.md
+    - 'Messaging System': messaging_system.md
+    - 'User Preferences': user_preferences.md
+    - 'G-Files': gfiles.md
+    - 'File Transfers': transfers.md
+    - 'Local Console Operation': waiting_for_callers.md
+    - 'Slash Menu': slash_menu.md
+    - 'SysOp Menu': sysop_menu.md
+    - 'Event Management': eventmgmt.md
+  - Networking:
+    - 'WWIVnet Overview': network/wwivnet.md
+    - 'WWIVnet (Windows)': network/wwivnet_windows.md
+    - 'WWIVnet (Linux)': network/wwivnet_linux.md
+    - 'FTN (Fido) Networks': network/ftn_nets.md
+    - 'UseNet': usenet.md
+    - 'NET37 User Documentation': net37_docs.md
+    - 'NET37 Technical Documentation': net37_tec_docs.md
+  - Doors and Chains:
+    - 'Doors (Chains) Overview': doors.md
+    - 'Darkness': darkness.md
+    - 'DoorMUD': doormud.md
+    - 'Planets: The Exploration of Space': doorteos.md
+    - 'LORD': lord.md
+    - 'LORD2': lord2.md
+    - 'MechWars': mechwars.md
+    - 'TradeWars2002': tradewars2002.md
+  - Editors:
+    - 'WWIVEdit': wwivedit.md
+    - 'QuickBBS-Editors': quickbbs-editors.md
+  - Tools and Utilities:
+    - 'clients': clients.md
+    - 'FIX.exe Utility': fix.md
+  - About:
+    - 'WWIV BBS list': wwiv_bbs_list.md
+    - 'License': license.md
+    - History of WWIV:
+      - 'In the Beginning....': history.md
+      - 'WWIV Open Source Announcement': wwiv_open_source_announcement.md
+      - 'New SysOps Guide': newsysop.md
+      - 'links': links.md
+    - Development:
+      - 'WWIV Releases & Versioning': wwiv_releases_and_versioning.md

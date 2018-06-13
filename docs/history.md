@@ -109,7 +109,7 @@ Company with a full corporate posture. Craig Dooley was appointed Support
 Coordinator and supervises the Support Board System and Source Distribution 
 Sites.
 
-## WWIV 5.0 
+## WWIV 5 
 WWIV 5.0 was started in 1999 with moderate progress which picked up in 
 earnest in 2003. On going development and daily build releases continue 
 to this day.
@@ -128,16 +128,5 @@ Wayne Bell | Random | WWIVnet @1 | The creator of WWIV
 Dean Nash | Trader Jack | | WWIV Software Services
 Adam Caldwell | The Emporer |  | WWIVEdit
 Craig Dooley | | | WWIVToss
-
-##WWIVCon
-WWIVCon was the official WWIV Convention. Here's the information we 
-have found year by year.
-
-[WWIVCon 1994- New Orleans 1-3 July](wwivcon_1994.md)  
-[WWIVCon 1995 - Buffalo](wwivcon_1995.md)  
-[WWIVCon 1996 - Minneapolis](wwivcon_1996.md)  
-[WWIVCon 1997 - Washington DC 25-27 July](wwivcon_1997.md)  
-[WWIVCon 1998 - Pigeon Forge 21-23 August](wwivcon_1998.md)  
-[WWIVCon 1999 - Los Angeles](wwivcon_1999.md)  
 
 ## [Other WWIV Pages](links.md)

@@ -65,5 +65,3 @@ pages:
       - 'WWIV Open Source Announcement': wwiv_open_source_announcement.md
       - 'New SysOps Guide': newsysop.md
       - 'links': links.md
-    - Development:
-      - 'WWIV Releases & Versioning': wwiv_releases_and_versioning.md

@@ -308,7 +308,7 @@ USE_SIMPLE_ASV                  = N         ; Use Simple ASV?
 ;
 USE_ADVANCED_ASV                = N         ; Use Advanced ASV?
 ;
-;Advanced ASV values correspond to auto-val settings in INIT minus one, e.g.
+;Advanced ASV values correspond to auto-val settings in wwivconfig minus one, e.g.
 ;Alt-[F1] auto-validation would be set to '0', Alt-[F2] to '1', etc.
 ;
 ;ADVANCED_ASV[REG_WWIV]         = 0         ; Alt-[F1] for Registered WWIV

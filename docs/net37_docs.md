@@ -363,8 +363,8 @@ NETWORKS.LST file included with this documentation to
 determine if a "contact person" has been designated for the 
 network you are interested in.
 
-    The node number should be entered in INIT under Option  
-N.  You may wish to enter information in INIT for a "Net
+    The node number should be entered in wwivconfig under Option  
+N.  You may wish to enter information in wwivconfig for a "Net
 low time" and "Net high time".  If you do this, it means    
 that beginning at the low time and ending with the high     
 time, a user who attempts to log in will receive a message  
@@ -377,7 +377,7 @@ during that time period.  For example,
 would indicate that the network time period is from 3am to  
 5am.  Military times are used to indicate time periods in   
 the network.                                                
-    Also, in INIT option 1, you should insure that your     
+    Also, in wwivconfig option 1, you should insure that your     
 board name and telephone number are entered exactly as they 
 are shown in the BBSLIST.### or the BBSLIST.NET file which  
 are also discussed later.                                   
@@ -590,7 +590,7 @@ BBSLIST and CONNECT files.  All of these files should be
 placed in the DATA directory if your board is only on one   
 network.  If you are on more than one network, then the     
 files for a particular network should be in its separate    
-directory as you defined it in INIT option N.               
+directory as you defined it in wwivconfig option N.               
                                                             
    BBSLIST.NET -  For a small network, this file can list   
 all nodes participating in the network.  The general format 
@@ -1134,11 +1134,11 @@ executable to work with a specific network.  If no "dot
 command" is used, the program defaults to using the network 
 executable with data in the DATA directory.  On the         
 other hand, if you are on more than one network, Option N   
-in INIT will create a file called NETWORKS.DAT in the DATA  
+in wwivconfig will create a file called NETWORKS.DAT in the DATA  
 directory.  Dot commands work by using data from the        
 networks in the order listed in the NETWORKS.DAT file which 
 is the same order that you see when you use option N in     
-INIT.  The first network listed is associated with .0; the  
+wwivconfig.  The first network listed is associated with .0; the  
 second with .1, etc.                                        
                                                             
    For example, to force LNET to run on the DEAD.NET file   
@@ -1161,7 +1161,7 @@ The steps involved are recruiting another node, creating
 the nodelist files which are common to all systems in your  
 network, creating unique callout.net files for each node    
 in your network (usually done by each sysop), adding the    
-network information in section N of INIT, adding the        
+network information in section N of wwivconfig, adding the        
 networking software to both boards, analyzing the network   
 (automatically done by WWIV or can be manually done), and   
 making a network connection via modem to the other node.    
@@ -1182,7 +1182,7 @@ you need to create two network files:
                                                             
 Each node has both these files in their network data        
 directories.  To establish the network data directory, go   
-into INIT, section N, and add in the information as         
+into wwivconfig, section N, and add in the information as         
 requested in the menu there (Network Name, node number,     
 data directory).                                            
                                                             
@@ -2062,7 +2062,7 @@ the documentation for WWIV v4.22.  Key things to remember
 about multi-networking:                                     
                                                             
      a)  Each network should be in its own data directory.  
-     b)  Each network should be setup in INIT option N      
+     b)  Each network should be setup in wwivconfig option N      
      c)  All files unique to a network should be put in     
          that network's DATA directory.                     
      d)  Network directories should be DOS legal names.     
@@ -2412,7 +2412,7 @@ should e-mail WSS directly.
 software entitles the user to the source code to the BBS.  If,
 at any time in the future, it becomes impossible or too difficult
 to control the distribution of source code, this policy may be
-rescinded.  FOR SECURITY REASONS, THE SOURCE CODE TO INIT.EXE,
+rescinded.  FOR SECURITY REASONS, THE SOURCE CODE TO 4.x INIT.EXE,
 NETWORK SOFTWARE OR NETUP IS NOT AVAILABLE TO ANYONE.  Source
 code to the current version of WWIV may be obtained on disk
 directly by sending a completed registration form and $10.00 (US)

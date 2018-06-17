@@ -42,10 +42,10 @@ You may either rename sample wwivini.5xx to wwin.ini or you may simply edit your
 ####WWIV.INI sample that is included in the archive.
 [wwivini.5xx](wwivini.md)
 
-#### Update your configuration files using the new INIT
-From an elevated Command Prompt session, run INIT and verify all settings.
+#### Update your configuration files using the new wwivconfig
+From an elevated Command Prompt session, run wwivconfig and verify all settings.
 Please note, as mentioned above there have been many changes. One such change is that the instance configuration is now 
-in wwiv.ini and no longer requires configuring each instance from INIT.
+in wwiv.ini and no longer requires configuring each instance from wwivconfig.
 
 #### WWIVServer
 If you are using a 3rd party Telnet Server like Net2BBS, you may need to edit some parameters to launch the BBS.

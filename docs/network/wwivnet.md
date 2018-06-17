@@ -58,12 +58,12 @@ Coordinator, Weatherman 1@1 WWIVnet or email mark@weather-station.org
 
 Setting up WWIVnet on Windows and Linux is essentially the same.  All the examples here will use the Windows version of pathing, just remember in linux the path separator is the forward slash, not the back slash.
 
-Anywhere you see a command to run (init, network3, etc), remember this assumes you are in your WWIV installation directory.
+Anywhere you see a command to run (wwivconfig, network3, etc), remember this assumes you are in your WWIV installation directory.
 
 * Create a ```nets\wwivnet``` directory in your WWIV directory.
 * Get the latest version of [WWIVNET-##.zip](http://build.wwivbbs.org/job/wwivnet/) on the build server. 
 * Put all of the contents of the zip in ```\wwiv\nets\wwivnet```
-* run ```init``` and select N. Network Configuration
+* run ```wwivconfig``` and select N. Network Configuration
 ```
 ┌───────────────────────────────────────── Network Configuration ┐
 │ Net Type  : WWIVnet                                            │

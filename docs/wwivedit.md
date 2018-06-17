@@ -20,7 +20,7 @@ and overwrite the existing file.
 Your install is done. To set WWIVEdit as your editor, at the Main Menu go to "D" defaults and using
 option "9" change your fullscreen editor.
 
-When you run install, this will be added to your external editors section in INIT.EXE
+When you run install, this will be added to your external editors section in wwivconfig.exe
 ```
 ┌───────────────────────────────────────────── External Editor Configuration ┐
 │ Description       : WWIVEdit -- Highly Recommended                         │

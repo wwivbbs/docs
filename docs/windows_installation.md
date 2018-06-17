@@ -29,17 +29,17 @@ just say ```c:\wwiv``` from now on.
 You must copy  ```sbbsexec.dll``` to ```\%WINDIR%\system32```.
 
 ### Initial Configuration
-From a command prompt run INIT.EXE  
+From a command prompt run wwivconfig.exe  
 You will see this:  
 
-    WWIV v5.2.0 (Build ####) Initialization/Configuration Program.
-    Copyright (c) 1998-2016, WWIV Software Services
+    WWIV v5.3.0 (Build ####) Configuration Program.
+    Copyright (c) 1998-2018, WWIV Software Services
     CONFIG.DAT NOT FOUND.
     Perform initial installation?
 
-Type Y & INIT will install all the files need & create all the directories. You will then be prompted for the SysOp password. The default password is SYSOP.
+Type Y & wwivconfig will install all the files need & create all the directories. You will then be prompted for the SysOp password. The default password is SYSOP.
 
-You will then see the main INIT screen.
+You will then see the main wwivconfig screen.
 
     ┌────────────────────────────────── Main Menu ┐
     │ G. General System Configuration             │
@@ -83,7 +83,7 @@ Select G. General System Configuration
     │ Days active      : 0                                    │
     └─────────────────────────────────────────────────────────┘
 
-You navigate these INIT forms with the arrow keys and ENTER key.
+You navigate these wwivconfig forms with the arrow keys and ENTER key.
 Hit ESC to Exit the forms and save your changes.  
 **NOTE:** All the changes you make are saved when you exit.  
 But, you can always change it back later.
@@ -95,7 +95,7 @@ For a Quick Setup change the following fields to your preferences.
 * Sysop Name  
 
 Type ESC to exit back to the main menu  
-On the Main Menu hit ESC or Q to exit INIT
+On the Main Menu hit ESC or Q to exit wwivconfig
 
 From the command prompt at c:\wwiv  
 
@@ -182,7 +182,7 @@ screen you were just at.
 You will be back at your normal user session screen and can complete the
 new account setup. You can change your password or use the one provided.
 It does not have to be (should not be for security) the same as your 
-System Password you setup in INIT.
+System Password you setup in wwivconfig.
 
 _**Congratulations! You are now the SysOp of a WWIV BBS!**_
 

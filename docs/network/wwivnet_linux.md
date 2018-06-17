@@ -84,7 +84,7 @@ and should be placed in your base WWIV directory saved as network0
 # Grab all our wwiv location info
 source ~/.wwivrc
 
-# This will be the network number according to your init setup
+# This will be the network number according to your wwivconfig setup
 # for example, your first network will be .0, your second .1, etc
 NET=$1
 
@@ -122,14 +122,14 @@ _**Configuring WWIVnet details and directories**_
  * Make a file with a single line containing the @1 node (it's the only active node relaying messages, atm).  The format is:
  * @1 & "yourpassword"
  * "yourpassword" is the one you provided to 1@1 and the file must include the double-quotes.
-4. use init to set up network info (select "N")
+4. use wwivconfig to set up network info (select "N")
  * Network type : WWIVnet
  * Network name : WWIVnet
  * Node number : -your node number-
  * Data Directory : nets/wwivnet/
 5. run network3 (the shell script) - Now that all the WWIVnet config bits are in place, we can run the network3 program to validate our setup.  If everything goes as expected, you should get a network report mailed to you on your board locally.  The command to run is:
- * network3 y .-your network position in INIT-  
- for example, your list of nets in INIT starts with 0, so your first network is .0, the second is .1, etc.  Since this is probably your first network, the command is probably network3 y .0
+ * network3 y .-your network position in wwivconfig-  
+ for example, your list of nets in wwivconfig starts with 0, so your first network is .0, the second is .1, etc.  Since this is probably your first network, the command is probably network3 y .0
  * If no network number is given, .0 is assumed, so network3 y is the same as network3 y .0
 
 
@@ -142,7 +142,7 @@ network --network=(name of your network) --node=(number of target)
 
 You want to make sure network is run from your ${WWIV_DIR}
 
-(name of your network) = whatever you named your network in init (typically wwivnet)
+(name of your network) = whatever you named your network in wwivconfig (typically wwivnet)
 
 (number of target) = the number of the system you get/send messages from/to (typically 1)
 
@@ -166,7 +166,7 @@ program arguments:
 --phone_number         Network number to use (only used by legacy network0)
 --speed                Modem Speedto use (only used by legacy network0)
 /N####     Network node number to dial.
-.####      Network number (as defined in INIT)
+.####      Network number (as defined in wwivconfig)
 ```
 
 

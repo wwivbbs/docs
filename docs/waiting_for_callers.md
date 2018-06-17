@@ -104,7 +104,7 @@ Ctrl  + F9 |
 F10 | Enter Chat Mode.  This key activates the selected chat mode.  You may select "split screen" chat by setting the 2WAY_CHAT INI option to Y. 
 Shift + F10 | DOS Shell. Invokes a local DOS shell while user is online.  A [WAIT] prompt will be displayed to the user and all remote user input is suspended.
 Ctrl  + F10 | Change Chat User.  Allows the sysop to change the name used in chat mode then invokes the chat session.
-Alt-F Keys |  Hitting any Alt-F key combination while a user is online will apply the validation template assigned in INIT to the users account. **CAUTION:** An Alt-F key combination while you are online will apply the template to your account.  No permanent damage will be done, but you will have to reset all access levels for yourself manually.
+Alt-F Keys |  Hitting any Alt-F key combination while a user is online will apply the validation template assigned in wwivconfig to the users account. **CAUTION:** An Alt-F key combination while you are online will apply the template to your account.  No permanent damage will be done, but you will have to reset all access levels for yourself manually.
 Home | While in chat mode, you can use the Home key to capture the entire chat session to GFILES\CHAT.TXT.
 
 ## Top Menu

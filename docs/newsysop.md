@@ -53,7 +53,7 @@ or totally lacking.
 Once you have determined the type of BBS that you are going to run,
 you should give some thought to the types of security levels that
 you will have on your board and the amounts of time that you will
-allow each user and/or security level.  By looking in INIT, you can
+allow each user and/or security level.  By looking in wwivconfig, you can
 determine the predefined or default levels for certain security
 levels.  My advice would be to (a) use no more security levels than
 you absolutely need and (b) to try to keep things as simple as

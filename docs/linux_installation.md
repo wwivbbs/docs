@@ -47,7 +47,7 @@ Luckily, we have an installer script that will take care of most of the details 
 4. Run ``sudo ./install.sh`` and follow the prompts.  You must run this as root becasue it takes care of
    all the setup items for you: creating the WWIV user, setting up sudo access for a standard user, installing
    the systemd service file, etc.  
-5. log into the new wwiv user ``(e.g, sudo su - wwiv -s /bin/bash)`` and run ./init to configure the BBS 
+5. log into the new wwiv user ``(e.g, sudo su - wwiv -s /bin/bash)`` and run ./wwivconfig to configure the BBS 
 
 If you have any issues, check the install_date_time.log file that was created during the install.  
 If you still can't tell what happened, come and find us in IRC.
@@ -98,7 +98,7 @@ run the following:
 assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have as a result are:
 ```
 /home/wwiv/wwiv-master/_build/bbs/bbs  
-/home/wwiv/wwiv-master/_build/init/init  
+/home/wwiv/wwiv-master/_build/wwivconfig/wwivconfig  
 /home/wwiv/wwiv-master/_build/wwivd/wwivd
 /home/wwiv/wwiv-master/_build/network/network
 /home/wwiv/wwiv-master/_build/network1/network1
@@ -117,7 +117,7 @@ copy all the compiled binaries to your base wwiv directory
 ```
 cd /home/wwiv/wwiv-master/_build
 cp -v bbs/bbs \
-      init/init \
+      wwivconfig/wwivconfig \
       wwivd/wwivd \
       network/network \
       network1/network1 \
@@ -139,7 +139,7 @@ Now that we have the new binaries in place, we can pick up where we left off...
    user, setting up sudo access for a standard user, installing the systemd 
    service file, etc.  
 5. Log into the new wwiv user (e.g, ```sudo su - wwiv -s /bin/bash```) and run 
-   ```./init``` to configure the BBS 
+   ```./wwivconfig``` to configure the BBS 
 
 ## After the install
 
@@ -166,5 +166,5 @@ See [WWIVnet Config on Linux](network/wwivnet_linux.md) for details on configuri
 
 _TERM settings_
 
-The Curses library being used for init gets confused on some terminal settings, and results in a borked display on exit. You may have to type a "reset" command to get it to behave normally again. In general, it appears that using a TERM setting in the xterm family works best (xterm, xterm-color, etc).
+The Curses library being used for wwivconfig gets confused on some terminal settings, and results in a borked display on exit. You may have to type a "reset" command to get it to behave normally again. In general, it appears that using a TERM setting in the xterm family works best (xterm, xterm-color, etc).
 

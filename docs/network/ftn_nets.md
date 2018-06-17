@@ -25,7 +25,7 @@ from a FTN packet or bundle into a WWIVnet style packet (S*.net or local.net).
 
 ## Setup
 
-Using INIT, you need to create a new network type.  Change the type to Fido (the default
+Using wwivconfig, you need to create a new network type.  Change the type to Fido (the default
 is WWIVnet), by pressing the space bar to toggle the type.
 
 You must name your network. This name will be used as the domain for both
@@ -100,7 +100,7 @@ The packet password is what you and your uplink have defined.  It should be
 all upper case.
 
 Routing in FTN now works, uou need to define a route string for nodes
-  in the address list in INIT for the network.  The format is space
+  in the address list in wwivconfig for the network.  The format is space
   separated list of routes.  A route is a partial address ending in *
   as a wildcard. Optionally starting with ! to be a negative match.
   Example "11:* !11:2/*" would match everything in zone 11, except

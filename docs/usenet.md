@@ -11,7 +11,7 @@ Change this number as required to work with your BBS.
 * If you do not have a WWIVnet style network already configured, you will also need net37 or newer.
 
 ## Create your new network
-* Run INIT and select N. Network Configuration
+* Run wwivconfig and select N. Network Configuration
 * Insert a new WWIVnet network and provide the name, node number and path:
 ```
  Net Type  : WWIVnet                                                      
@@ -19,7 +19,7 @@ Change this number as required to work with your BBS.
  Node #    : 1                                                            
  Directory : C:\WWIV\NETS\USENET\   
 ```
-* Esc - Exit and quit INIT
+* Esc - Exit and quit wwivconfig
 
 ## Create and configure the Network Files
 * Create \wwiv\nets\usenet\address.net 

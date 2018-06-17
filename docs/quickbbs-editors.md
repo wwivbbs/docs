@@ -2,7 +2,7 @@
 WWIV includes support for QuickBBS MSGTMP/MSGINF editors such as **Open!EDIT** and **Tide**.  
 QuickBBS editors bring more choices for you and your users in writing messages on your system.
 
-### Configuring the editor in INIT:
+### Configuring the editor in wwivconfig:
 Type or scroll to E for **External Editor Configuration**. 
 
 ####[Open!EDIT](http://www.tinysbbs.com/OpenEDIT.html) by Shawn Highfield 

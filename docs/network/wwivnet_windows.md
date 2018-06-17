@@ -6,8 +6,7 @@
 * Submit your WWIVnet Node Application to 1@1 Weather Station BBS - telnet://bbs.weather-station.org/
 * Get the latest version of [WWIVNET-##.zip](http://build.wwivbbs.org/job/wwivnet/) on the build server. 
 * Put all of the contents of the zip in ```\wwiv\nets\wwivnet```
-* [Net38b.zip](http://www.wwiv.us/net38b6.zip) put all of the *.EXE files in \WWIV. The rest of the files are not needed.
-* Setup your node in WWIV INIT.EXE
+* Setup your node in WWIV wwivconfig.exe
 ```
 ┌─────────────────────────────────────────────────── Network Configuration ┐
 │ Net Type  : WWIVnet                                                      │
@@ -22,25 +21,10 @@
 **Note:** The default config of WWIV5TelentServer runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run Network3.
 * Login as #1 and Check your email on the BBS. You should see a pretty email and it should say "Everything is Fine" along with other details.
 
-###Create BINKP.CMD
-Create \wwiv\bink.cmd with the following commands:
-```
-@ Echo OFF
-rem NetworkB controller
-cls
 
-:start
-C:
-cd \wwiv
-echo Starting NetworkB to Receive Inbound Connections
-echo.
-networkb --receive
-
-goto start
-```
 
 ####Verify Network Mail
-* With \wwiv\bbs.exe -m & BINKP.CMD running:
+* With \wwiv\bbs.exe -m & either wwivd or networkb --receive running:
 * Login to your BBS and send an email to 1@1
 * You will be prompted to pick the net (WWVIVnet) and confirm the system (Weather Station).
 * Give it a subject. Send the Net Coordinator a love note and hit /S to save and send.

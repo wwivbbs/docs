@@ -1,11 +1,11 @@
 
 
 These are the SysOp tools and WWIV BBS settings which can be configured 
-when you run INIT.EXE from the command prompt.
+when you run wwivconfig.exe from the command prompt.
 
 The following steps will get you up and running quickly, but I would not say
 you're ready to go live and open up to users. After you complete these installation 
-steps, see the full details on related INIT settings, WWIV.INI and other Advanced 
+steps, see the full details on related wwivconfig settings, WWIV.INI and other Advanced 
 configuration topics.
 
 ## General System Configuration
@@ -206,7 +206,7 @@ Data files used by the BBS are stored here.
 This directory is used to set the default directory for new file sections.
 
 **TEMPx Directories**  
-This area is used to temporarily store files for the BBS.  In a multi-instance setup you will need a separate temporary directory for each instance that you have.  The INIT program will create a temporary directory for each instance the first time it is run for that instance.	The default name is TEMP<inst num>. You may change this, but remember to create the directory as INIT will not automatically do this for you. Please note also that any files found in the temporary directory when the BBS is run will be DELETED. If you point the temporary directory to your root directory, or the BBS directory, ALL THE FILES IN THAT DIRECTORY WILL BE ERASED. Therefore, have the temporary directory be one that doesn't contain any files you care about.
+This area is used to temporarily store files for the BBS.  In a multi-instance setup you will need a separate temporary directory for each instance that you have.  The wwivconfig program will create a temporary directory for each instance the first time it is run for that instance.	The default name is TEMP<inst num>. You may change this, but remember to create the directory as wwivconfig will not automatically do this for you. Please note also that any files found in the temporary directory when the BBS is run will be DELETED. If you point the temporary directory to your root directory, or the BBS directory, ALL THE FILES IN THAT DIRECTORY WILL BE ERASED. Therefore, have the temporary directory be one that doesn't contain any files you care about.
 
 **BATCH Directory**  
 This directory is used to temporarily store files that are batch uploaded (defaults to the defined TEMPx directory).  Make sure this directory has adequate disk space for files being batch uploaded (at least 5 MB recommended). After batch uploads are completed, the BBS will automatically move the files into the appropriate drive and directory and delete the uploaded files.
@@ -237,7 +237,7 @@ SynchroNet BBS's tools and maintained by it's author Rob Swindle.
 newest version from the [SynchroFTP Site}(ftp://ftp.synchro.net/).
 
 Once downloaded, extract SEXYZ.EXE from SEXYZNN.zip into c:\wwiv\.  
-From the command prompt, run INIT and to to the `External Transfer Protocol Configuration` screen.  
+From the command prompt, run wwivconfig and to to the `External Transfer Protocol Configuration` screen.  
 Select INSERT and enter the highest number offered to place a new entry at the end of the list.  
 Fill in the next screen so it matches this one.  
 

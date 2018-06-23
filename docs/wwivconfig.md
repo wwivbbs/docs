@@ -12,10 +12,11 @@ configuration topics.
 
 **wwivconfig** has several commandline parameter to launch specific editors.
 
-**--user_editor** Launches directly into the WWIV User Editor.
-**--menu_editor** Launches directly into the WWIV Menu Editor.
-**--network_editor** Launches directly into the WWIV Network Editor.  This is
-also allows WWIV 4.x to use the Net51+ network stack.
+Commandline Parameter | Description
+:---: | ---
+**--user_editor** | Launches directly into the WWIV User Editor.
+**--menu_editor** | Launches directly into the WWIV Menu Editor.
+**--network_editor** | Launches directly into the WWIV Network Editor.  This is also allows WWIV 4.x to use the Net51+ network stack.
 
 
 ## General System Configuration
@@ -50,7 +51,7 @@ users. If there is no Newuser password, anyone may log on as a new user.
 This should only be used if you wish to operate a "private" system where 
 you only allow people you know to log on.
 
-**Newuser restrict : LCMA*PEVKNU01234**  
+**Newuser restrict : LCMA\*PEVKNU01234**
 
 These settings are used to restrict new users from certain features of the system.
 
@@ -244,7 +245,7 @@ You may freely change DLOADS, TEMPx and BATCH to whatever you want without hurti
 This is a modern (and maintained) implementation of XMODEM, YMODEM, ZMODEM that is part of 
 SynchroNet BBS's tools and maintained by it's author Rob Swindle. 
 [read more](http://wiki.synchro.net/util:sexyz). Download sexyzNNN.zip where NNN is the 
-newest version from the [SynchroFTP Site}(ftp://ftp.synchro.net/).
+newest version from the [SynchroFTP Site](ftp://ftp.synchro.net/).
 
 Once downloaded, extract SEXYZ.EXE from SEXYZNN.zip into c:\wwiv\.  
 From the command prompt, run wwivconfig and to to the `External Transfer Protocol Configuration` screen.  
@@ -271,8 +272,8 @@ Fill in the next screen so it matches this one.
     ¦ NOTE: Batch protocols >MUST< correctly support DSZLOG.       ¦
     +--------------------------------------------------------------+
 
-The X in SX\RX indicated XMODEM. TO add YMODEM and ZMODEM, Insert 
-two more entries to the list and just change the "SX\RX" to "SY\RY" or "SZ\RZ" on each line.
+The X in SX/RX indicated XMODEM. TO add YMODEM and ZMODEM, Insert 
+two more entries to the list and just change the "SX/RX" to "SY/RY" or "SZ/RZ" on each line.
 
 ## External Editor Configuration 
 
@@ -373,7 +374,8 @@ The sysop can set the Alt-F keys (Alt-F1 through Alt-F10) to set certain data fo
 └─────────────────────────┘
 ```
 
-You may configure up to 15 supporting archiver formats. ZIP, ARJ, PAK, LHA, and RAR are pre-configured on first installation. The first archiver record is the default archive on the system. The first four are also copied into the pre 4.30 archiver structure for backward compatibility with other supporting programs.	For most users, you will not need to adjust these settings. The standard DOS replacement parameters %1 and %2 are used for source and destination filenames. To navigate through the archiver records, use the bracket keys [ and ].  To edit a record, hit enter.
+You may configure up to 15 archiver formats. ZIP, ARJ, PAK, LHA, and RAR are pre-configured on first installation. The first archiver record is the default archive on the system. The first four are also copied into the pre 4.30 archiver structure for backward compatibility with other supporting programs.	
+For most users, you will not need to adjust these settings. The standard DOS replacement parameters %1 and %2 are used for source and destination filenames. To navigate through the archiver records, use the bracket keys [ and ].  To edit a record, hit enter.
 
 **CAUTION:** It is *HIGHLY* recommended that you edit the command lines of all archivers and specify a complete path and filename to the program to run (i.e. c:\bat\pkzip.exe -a %1 %2). It is possible, though very unlikely, that malicious user could upload a batch file or compiled executable with an archiver name that may do harm to your system if run.
 
@@ -381,7 +383,8 @@ You may configure up to 15 supporting archiver formats. ZIP, ARJ, PAK, LHA, and 
 This is a recognizable name you canassign to the archive type.
 
 **Archive Extension**  
-This is the three letterextension applied to files of this particular type. Thissetting is how the BBS identifies archives.
+This is the three letterextension applied to files of this particular type.
+This setting is how the BBS identifies archives.
 
 **Archive List**  
 This command lists the archive tothe screen without actually extracting the files.
@@ -396,7 +399,8 @@ This command adds a file to anarchive.
 This command deletes a specifiedfile or list of files from the current archive.
 
 **Archive Comment**  
-This command applies a BBScomment to the selected archive. %K substitutesGFILES\COMMENT.TXT for commenting.
+This command applies a BBScomment to the selected archive. 
+**%K** substitutes GFILES\COMMENT.TXT for commenting.
 
 **Archive Test**  
 This command tests the selectedarchive for validity and integrity.
@@ -427,36 +431,47 @@ This command tests the selectedarchive for validity and integrity.
 └────────────────────────────────────────────────────────────────────────────┘
 ``` 
 
-WWIV has the ability to offer users multiple languages through the use of string files. To configure languages, all that is required is to define the directory where the language string and menu files are located. See Chapter 9 for more information.
-
 ## Network Configuration  
 
-If you have installed the NETxx.ZIP archive in the BBS directory, this option will allow configuration of networks. The prompts are self explanatory. For details on network configuration, see NETxx.DOC in the distribution archive.
+This option will allow configuration of networks. The prompts are self explanatory. 
 
-The only setting that affects the BBS itself is the Network Type.  This setting tells the BBS and the network software how to handle the particular network. There are currently three network types: WWIV, Fido, and Internet.
+The only setting that affects the BBS itself is the Network Type.
+This setting tells the BBS and the network software how to handle the 
+particular network. There are currently three network types: 
+WWIV, Fido, and Internet.
 
 **WWIV network type**  
-This type is processednormally and entirely by the NETxx package.
+This type is processed normally and entirely by the NET5x package.
 
-**Fido and Internet network types**  
-These typesimplement internal hooks for pre-processors and tosserssuch as WWIVtoss and the PPP Project to convert nativetype messages and email to WWIV format and vice versa.
+**Fido network type**  
+Use with net5x FTN support to attach WWIV subs as FTN echo areas.
+
+**Internet network type**  
+Implements internal hooks for pre-processors and tossers such the PPP
+Project to convert native type messages and email to WWIV format and
+vice versa.
 
 **NOTE:** Network configuration is discussed at length as part of setting up Nets to which your BBS 
 joins. See [NETS on the Home page of the wiki](index.md#Nets).
 
 ## Registration Information  
 
-WWIV does not require a registration number. If you have a 4.x number you can put it in here though for 
-nostalgic purposes.
+WWIV does not require a registration number. If you have a 4.x number you can put it in here though for nostalgic purposes.
 
 ## User Editor  
 
 ## Update Sub/Directory Maximums
 
-This is a system tuning parameter.  These items require runtime memory thus the higher they are set, the less memory is available when shelling to DOS or running external programs.  You should NOT select more than you think that you will actually need, for more memory is required as the number is increased.  This setting may be modified later if you require more subs or directories.
+This is a system tuning parameter.  These items require runtime memory thus
+the higher they are set, the less memory is available when shelling to DOS
+or running external programs.  You should NOT select more than you think
+that you will actually need, for more memory is required as the number
+is increased.  This setting may be modified later if you require more
+subs or directories.
 
 ## Dial-Up Modem Access
 
-The ability to support Modems and Dial-up Access was removed in early WWIV 5.0 builds. 
-You may use an utility like [SexPOTS](http://wiki.synchro.net/util:sexpots) to support
-dial-up access.
+The ability to support Modems and Dial-up Access was removed in the early
+WWIV 5.0 builds (since it was known not to work and Rushfan had no real
+phone line to test with).  You may use an utility like 
+[SexPOTS](http://wiki.synchro.net/util:sexpots) to support dial-up access.

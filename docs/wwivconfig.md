@@ -8,6 +8,16 @@ you're ready to go live and open up to users. After you complete these installat
 steps, see the full details on related wwivconfig settings, WWIV.INI and other Advanced 
 configuration topics.
 
+## Commandline Parameters
+
+**wwivconfig** has several commandline parameter to launch specific editors.
+
+**--user_editor** Launches directly into the WWIV User Editor.
+**--menu_editor** Launches directly into the WWIV Menu Editor.
+**--network_editor** Launches directly into the WWIV Network Editor.  This is
+also allows WWIV 4.x to use the Net51+ network stack.
+
+
 ## General System Configuration
 **System PW**  
 

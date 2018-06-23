@@ -149,20 +149,20 @@ and some of the current warts that linux has that you need to be aware of.
 If you come across anything that is not detailed here, please let us know.
 
 ### Customization
-There are several INI files that manage details about your install.  The main ones are:
+In addition to the settings configured using **wwivconfig**, there are also 
+several INI files that manage details about your install.  The main ones are:
 
 1. wwiv.ini - the primary config file.  Most of your settings are here
-2. wwivd.ini - tells the wwivd service what ports to monitor
-3. net.ini - manages details for how to connect to wwivnet for message transfers
+1. net.ini - manages details for how to connect to wwivnet for message transfers
+
 ### dosemu config 
 
-dosemu is used for a number of things that can't be handled natively in linux (ie, DOS binaries). Here are some config details: 
+**dosemu** is used for a number of things that can't be handled natively in linux (ie, DOS binaries). Here are some config details: 
 
 * [dosemu common settings](linux_dosemu_settings.md) - general settings for dosemu  
 
 ### Configuring WWIVnet 
 See [WWIVnet Config on Linux](network/wwivnet_linux.md) for details on configuring WWIVnet and subscribing to subs
-
 
 _TERM settings_
 

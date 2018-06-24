@@ -21,7 +21,7 @@ Fido Technology Network (FTN) as well as the traditional WWIVnet style
 networking.  
 
 The bridge to FTN is implemented in ```networkf```.  networkf handles importing
-from a FTN packet or bundle into a WWIVnet style packet (S*.net or local.net).
+from a FTN packet or bundle into a WWIVnet style packet (S\*.net or local.net).
 
 ## Setup
 
@@ -32,7 +32,7 @@ You must name your network. This name will be used as the domain for both
 WWIVnet binkp transfers as well as later on when ```networkb``` (the wwiv
 binkp'ish transport command) supports FTN.
 
-You must leave your node number as 1 for Fido.  It's not used externally
+You must leave your node number as **1** for Fido.  It's not used externally
 and is needed by the WWIV networking tools to properly import and export
 packets.
 
@@ -55,12 +55,14 @@ Example:
 └──────────────────────────────────────────────────────────────────────────┘
 ```
 
-These are the default settings for all nodes in this network.  In this example
-I'm using D'Bridge as my FTN mailer.  My inbound and outbound directories
-map to those in D'Bridge.  The temp directories are relative to the network
-directory defined on the previous screen.
+### Setup using ATTACH style
 
-Note: So far only ATTACH has been tested, and only with D'Bridge.
+These are the default settings for all nodes in this network.  Here is an
+example of using D'Bridge as the FTN mailer.  The inbound and outbound
+directories map to those in D'Bridge.  The temp directories are relative
+to the network directory defined on the previous screen.
+
+Note: When using ATTACH, only using D'bridge has been tested.
 
 ```
 ┌──────────────────────────────────────────────────────── Network Settings ┐
@@ -138,6 +140,9 @@ will be named ```nWWIV_TEST.net``` and will contain the follow line:
 11:1/100
 ```
 
+Please note that on case sensitive file systems, the echo tag is all uppercase, but the
+```n``` prefix and ```.net``` suffix is lower case.
+
 ## Sending FTN NetMail
 
 FTN Netmail works much like WWIVnet netmail. The difference is addressing. The format
@@ -171,7 +176,7 @@ FTN support is still in experimental status, however it's being nominally used o
 ### What works?
 
 * Directory transport (i.e. copy the bundle into a directory).
-* ATTACH mailer (tested with D'Bridge) (i.e. create *.MSG file in the netmail dir as a file attach).
+* ATTACH mailer (tested with D'Bridge) (i.e. create \*.MSG file in the netmail dir as a file attach).
 * FLO mailer support (tested with NetworkB and IREX)
 * Using NetworkB to call out to MysticBBS's MIS
 * Using NetworkB to call out to BinkD (D'Bridge)
@@ -179,7 +184,7 @@ FTN support is still in experimental status, however it's being nominally used o
 
 ### What may work
 
-* ARC compression support (not tested, only ZIP)
+* ARC compression support (not tested, only tested with ZIP)
 
 ### What doesn't work
 
@@ -197,17 +202,18 @@ FTN support is still in experimental status, however it's being nominally used o
 * Manually copying packets to MysticBBS
 
 ## Other Known FTNs with URLs
-[AdventureNet](http://www.kofobbs.dk/adventurenet/)  
-[AgoraNet](http://time.synchro.net:81/l10l.ssjs)  
-[AmigaNet]()  
-[JustaXNet](http://www.justaxnet.com/)  
-[LinuxNet](http://www.kofobbs.dk/linuxnet/)  
-[MicroNet](http://outpostbbs.net/micronet.html) 
-[Pascal-Net](http://www.pascalnet.org)  
-SportNet  
-[SysOp Tech Net](http://www.sysoptech.net)  
-WhispNet  
+* [AdventureNet](http://www.kofobbs.dk/adventurenet/)  
+* [AgoraNet](http://time.synchro.net:81/l10l.ssjs)  
+* [AmigaNet]()  
+* [fsxNet](http://bbs.nz/#fsxNet)
+* [JustaXNet](http://www.justaxnet.com/)  
+* [LinuxNet](http://www.kofobbs.dk/linuxnet/)  
+* [MicroNet](http://outpostbbs.net/micronet.html) 
+* [Pascal-Net](http://www.pascalnet.org)  
+* SportNet  
+* [SysOp Tech Net](http://www.sysoptech.net)  
+* WhispNet  
 
-# Notes
+# Other Links
 http://www.bbscorner.com/bbsnetworks/  
 http://www.net229.org/dbridge.htm  

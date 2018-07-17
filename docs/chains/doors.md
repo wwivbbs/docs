@@ -32,7 +32,8 @@ The description of the chain, printed out for callers. For example, you might ha
 **B) Filename**  
 The filename actually executed. The program to be used can have either an EXE, COM, or BAT extension. Programs with a BAS or CHN extension cannot be run from WWIV.
 
-If the game requires a dropfile as a parameter, you can use one of the following replacement parameters:
+If the game requires a dropfile as a parameter, you usually use one of these common
+replacement parameters:
 ```
     %1 - CHAIN.TXT
     %A - CALLINFO.BBS
@@ -42,6 +43,8 @@ If the game requires a dropfile as a parameter, you can use one of the following
     %R - DOOR.SYS
 ```
 These parameters are replaced with a full path and filename of the specified text file the bulletin board creates holding data about that caller, such as the caller's name, security level, time left, etc.  For most programs explicitly written for WWIV v4, the parameter should be placed after the filename. If you do not, you will see a "Parameter file not found" error message. If you see that message when running a chain, add the parameter as in "tw2002 %C".  If the program is not specifically made for WWIV, it may be necessary to run it from a batch file to setup other environment variables or settings.  See the game documentation for more information.
+
+In addition to these, the full list of replacable parameters is [Here](parameters.md)
 
 **C) SL**  
 The SL (security level) required in order to run the chain. Most sysops will set this at the level of validated users or higher.
@@ -94,13 +97,13 @@ These doors are known to work on WWIV because one of the SysOps is running them.
 
 | Doors with Installation Steps |
 |-------------------------------|
-[Darkness](Darkness)|
-[DoorMUD](DoorMUD)  |
-[Legend of the Red Dragon](LORD) |
-[LORD II - The New World](LORD2) |
-[MechWars](MechWars) |
-[Planets: The Exploration of Space (TEOS)](doorteos) |
-[TradeWars 2002](TradeWars2002) |
+[Darkness](darkness.md)|
+[DoorMUD](doormud.md)  |
+[Legend of the Red Dragon](lord.md) |
+[LORD II - The New World](lord2.md) |
+[MechWars](mechwars.md) |
+[Planets: The Exploration of Space (TEOS)](doorteos.md) |
+[TradeWars 2002](rradewars2002.md) |
 
 
 | Doors Running on WWIV BBSes (no specific guides) |

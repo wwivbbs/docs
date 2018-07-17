@@ -45,14 +45,15 @@ pages:
     - 'NET37 User Documentation': net37_docs.md
     - 'NET37 Technical Documentation': net37_tec_docs.md
   - Doors and Chains:
-    - 'Doors (Chains) Overview': doors.md
-    - 'Darkness': darkness.md
-    - 'DoorMUD': doormud.md
-    - 'Planets: The Exploration of Space': doorteos.md
-    - 'LORD': lord.md
-    - 'LORD2': lord2.md
-    - 'MechWars': mechwars.md
-    - 'TradeWars2002': tradewars2002.md
+    - 'Doors (Chains) Overview': chains/doors.md
+    - 'Replacable Parameters': chains/parameters.md
+    - 'Darkness': chains/darkness.md
+    - 'DoorMUD': chains/doormud.md
+    - 'Planets: The Exploration of Space': chains/doorteos.md
+    - 'LORD': chains/lord.md
+    - 'LORD2': chains/lord2.md
+    - 'MechWars': chains/mechwars.md
+    - 'TradeWars2002': chains/tradewars2002.md
   - Editors:
     - 'WWIVEdit': wwivedit.md
     - 'QuickBBS-Editors': quickbbs-editors.md

@@ -153,9 +153,12 @@ administration, the network may be split up into Groups,
 each with their own coordinator.  Node numbers are an
 unsigned short int, so that nodes may be assigned a value
 from 1 to 65535. Node numbers from 32000 to 32767 are 
-reserved for internal use by WWIV.  For example 32767
-is reserved for Internet network Gateway, and 32765 is
-reserved for native FTN style networking.
+reserved for internal use by WWIV.  
+
+The following network numbers are reserved:
+* 32765: Net5x Native FTN Networking
+* 32766: Net5x Natie NNTP
+* 32767: Legacy PPP Project/WINS and Net5x Native Internet Email
 
 The lists of nodes are distributed in two sets of files:
 BBSLIST.NET and CONNECT.NET.  The CONNECT.NET file

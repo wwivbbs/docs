@@ -42,8 +42,8 @@ pages:
     - 'WWIVnet (Linux)': network/wwivnet_linux.md
     - 'FTN Networks': network/ftn_nets.md
     - 'UseNet': usenet.md
-    - 'NET37 User Documentation': net37_docs.md
-    - 'NET37 Technical Documentation': net37_tec_docs.md
+    - 'NET37 User Documentation': archive/net37_docs.md
+    - 'NET37 Technical Documentation': archive/net37_tec_docs.md
   - Doors and Chains:
     - 'Doors (Chains) Overview': chains/doors.md
     - 'Replacable Parameters': chains/parameters.md

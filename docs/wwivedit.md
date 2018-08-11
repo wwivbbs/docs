@@ -41,7 +41,7 @@ When you run install, this will be added to your external editors section in wwi
 └────────────────────────────────────────────────────────────────────────────┘
 ```
 
-Using your favorite text editor open c:\wwiv\wwivedit\config\default.dep and 
+Using your favorite text editor open c:\wwiv\wwivedit\config\default.def and 
 edit the file so has the following changes:
 
 ```

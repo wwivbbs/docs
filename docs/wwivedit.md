@@ -41,7 +41,7 @@ When you run install, this will be added to your external editors section in wwi
 └────────────────────────────────────────────────────────────────────────────┘
 ```
 
-Using your favorite text editor open c:\wwiv\wwivedit\config\default.dep and 
+Using your favorite text editor open c:\wwiv\wwivedit\config\default.def and 
 edit the file so has the following changes:
 
 ```
@@ -70,13 +70,13 @@ WARNTIME: [90] Number of seconds before user is beeped at (0=Never)
 ABORTTIME: [180] Number of seconds before message auto-aborts
 ESCTICKS: [50] Increase this if [A [B [C etc starts appearing remotely]
 WWIVEDITMACROS:[Y] Whether or not WWIVEdit (MACROS.LCL) macros are allowed
-QUOTER: [0] 0 = None, 1=Goose's Quote 3.01 or greater, 2=WWIV 4.21a
+QUOTER: [2] 0 = None, 1=Goose's Quote 3.01 or greater, 2=WWIV 4.21a
 PERSONALDICT: [Y] Whether or not personal dictionaries should be kept
 COLORTITLE: [Y] Whether or not Color Changes are allowed in the title
 MOUSE: [N] Y=Allow Mouse Locally
 DIRECTVIDEO: [N] Must be set to 0/N for Remote use
 SCROLL: [N] Smooth Scrolling (won't work remotely);
-PREFIX: [9] This is the character which will be inserted before each quoted line.
+PREFIX: [>] This is the character which will be inserted before each quoted line.
 BBSDISABLE: [1] If Disable Taglines is set in boardedit, and this is 1,
             then User taglines will still work. If set to 2, user
             taglines wont work, but bbs taglines will.

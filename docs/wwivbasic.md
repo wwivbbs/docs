@@ -3,7 +3,7 @@
 
 ## About
 
-WWIV 5.3 supports extending the BBS using WWIVbasic.  WWIVbasic
+WWIV supports extending the BBS using WWIVbasic.  WWIVbasic
 is a modern implementation of the classical WWIV basic 
 interpreter MOD from the early 1990s.
 
@@ -29,7 +29,7 @@ belong to a module.  All of the WWIV BBS functions will belong to
 a module starting with ```wwiv```.  
 
 You may always invoke a function using it's fully-qualified
-name (such as ``wwiv.version```) or you may import the package
+name (such as ```wwiv.version```) or you may import the package
 and then invoke it using it's name without the package prefix.
 
 For example: the two calls to puts are the same:

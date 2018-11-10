@@ -11,18 +11,18 @@ The project officially supports Windows 7 or Windows Server 2012 or later.
 Although WWIV BBS will start and run on 64-bit (x64), 
 none of the 16-bit DOS programs and utilities you use 
 with WWIV will work on 64-bit windows. For the best
-experience, we recomment you use a 32bit x86 version of Windows.
+experience, we recommend you use a 32bit x86 version of Windows.
 
 **Windows Updates and .Net 4.6**
 
 You should have ALL high priority updates on your Windows
-machine. This might mean running windows update several
+machine. This might mean running Windows Update several
 times. As a part of this, you should also have installed
 *Microsoft .Net Framework 4.6* (or newer).
 
 ## Installation
 
-Take the build of WWIV you downloaded and extract all the  files 
+Take the build of WWIV you downloaded and extract all the files 
 into ```c:\wwiv``` (or c:\bbs). To make it easy on the author(s) we'll 
 just say ```c:\wwiv``` from now on.
 

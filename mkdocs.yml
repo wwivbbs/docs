@@ -17,9 +17,9 @@ pages:
   - Basic Configuration:
       - 'wwivconfig': wwivconfig.md
       - 'wwiv.ini': wwivini.md
-      - 'Displaying Text': displaying_text.md
       - 'Other Config Files': config_files.md
       - 'Log Files': logfiles.md
+      - 'Displaying Text': displaying_text.md
       - 'WWIVbasic Reference': wwivbasic.md
   - Connectivity:
     - 'WWIV Server': wwiv_5_telnet_server.md    

@@ -180,11 +180,12 @@ BBS has been active here.
 ## System Paths  
 ```
 ┌──────────────────────────────────────────────────────────── System Paths ┐
-│ Messages  : C:\wwiv\msgs\                                                │
-│ GFiles    : C:\wwiv\gfiles\                                              │
-│ Menus     : C:\wwiv\gfiles\menus\                                        │
-│ Data      : C:\wwiv\data\                                                │
-│ Downloads : C:\wwiv\dloads\                                              │
+│ Messages  : msgs\                                                        │
+│ GFiles    : gfiles\                                                      │
+│ Menus     : gfiles\menus\                                                │
+│ Data      : data\                                                        │
+│ Logs      : logs\                                                        │
+│ Downloads : dloads\                                                      │
 │                                                                          │
 │                                                                          │
 │ CAUTION: ONLY EXPERIENCED SYSOPS SHOULD MODIFY THESE SETTINGS.           │
@@ -212,6 +213,9 @@ The Directory where the BBS text files are stored. These files can be read by us
 
 **DATA Directory**  
 Data files used by the BBS are stored here.
+
+**LOGS Directory**  
+Log files (\*.log) produced by the BBS and other executables are stored here.
 
 **DLOADS Directory**  
 This directory is used to set the default directory for new file sections.

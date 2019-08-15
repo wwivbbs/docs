@@ -2,9 +2,10 @@
 
 ## Prerequisites
 
-** Windows7 (or Later) **
+** Windows Versions **
 
-The project officially supports Windows 7 or Windows Server 2012 or later.
+The project officially supports Windows 8.1 or 
+Windows Server 2012 or later. (NT 6.3)
 
 ** 32bit x86 Windows **
 
@@ -13,12 +14,11 @@ none of the 16-bit DOS programs and utilities you use
 with WWIV will work on 64-bit windows. For the best
 experience, we recommend you use a 32bit x86 version of Windows.
 
-**Windows Updates and .Net 4.6**
+**Windows Updates**
 
 You should have ALL high priority updates on your Windows
 machine. This might mean running Windows Update several
-times. As a part of this, you should also have installed
-*Microsoft .Net Framework 4.6* (or newer).
+times.
 
 ## Installation
 

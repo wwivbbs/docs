@@ -283,7 +283,7 @@ two more entries to the list and just change the "SX/RX" to "SY/RY" or "SZ/RZ" o
 
 A full screen editor (FSED) allows you and your callers (with ANSI) to write email and posts using an editor that is not restricted to the line-by-line approach used by the internal line editor.  Some editors allow the use of function and arrow keys to move the cursor about the screen, in much the same manner as a regular word processor.  Full screen editors tend to be awkward for callers to use, however, as while the sysop might use the arrow keys to move the cursor, the caller must almost always use control-key combinations to achieve the same thing.  Still, there are some great advantages to using a full screen editor, especially from the sysop's point of view, and so provision is made in WWIV for their use.  The full screen editor must do all I/O through DOS calls.
 
-WWIVedit, another WSS product, is probably the most preferred FSED and is written specifically for use on WWIV BBS systems. WWIVedit is self installing and requires very little intervention during installation. WWIVedit is available on all Support Boards and on the Internet FTP site. [More information about WWIVEdit on WWIV](wwivedit.md)
+WWIVedit, another WSS product, is probably the most preferred FSED and is written specifically for use on WWIV BBS systems. WWIVedit is self installing and requires very little intervention during installation. WWIVedit is available on all Support Boards and on the Internet FTP site. [More information about WWIVEdit on WWIV](/editors/wwivedits)
  
 ## Security Level Configuration  
 ```
@@ -456,7 +456,7 @@ Project to convert native type messages and email to WWIV format and
 vice versa.
 
 **NOTE:** Network configuration is discussed at length as part of setting up Nets to which your BBS 
-joins. See [NETS on the Home page of the wiki](index.md#Nets).
+joins. See [NETS on the Home page of the wiki](/index.md#Nets).
 
 ## Registration Information  
 

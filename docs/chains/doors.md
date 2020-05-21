@@ -103,7 +103,7 @@ These doors are known to work on WWIV because one of the SysOps is running them.
 [LORD II - The New World](lord2.md) |
 [MechWars](mechwars.md) |
 [Planets: The Exploration of Space (TEOS)](doorteos.md) |
-[TradeWars 2002](rradewars2002.md) |
+[TradeWars 2002](tradewars2002.md) |
 
 
 | Doors Running on WWIV BBSes (no specific guides) |

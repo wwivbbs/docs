@@ -159,10 +159,10 @@ several INI files that manage details about your install.  The main ones are:
 
 **dosemu** is used for a number of things that can't be handled natively in linux (ie, DOS binaries). Here are some config details: 
 
-* [dosemu common settings](linux_dosemu_settings.md) - general settings for dosemu  
+* [dosemu common settings](/cfg/dosemu.md) - general settings for dosemu  
 
 ### Configuring WWIVnet 
-See [WWIVnet Config on Linux](network/wwivnet_linux.md) for details on configuring WWIVnet and subscribing to subs
+See [WWIVnet Config on Linux](/network/wwivnet_linux.md) for details on configuring WWIVnet and subscribing to subs
 
 _TERM settings_
 

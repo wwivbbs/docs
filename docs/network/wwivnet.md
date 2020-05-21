@@ -165,5 +165,5 @@ Again, be sure to coordinate changes with 1@1 or you will be dropped off the net
 ***
 Even though we are no longer using the old DOS version of NETXX, the documentation for net37 has a lot of technical information if you'd like to read it that is still relevant to how the data packets are processed.
 
-* [NET37.DOC](../net37_docs.md) <- Has all the installation information (Must Read!)
-* [NET37TEC.DOC](../net37_tec_docs.md) <- Good technical read on the inner workings of WWIVnet (optional)
+* [NET37.DOC](/archive/net37_docs.md) <- Has all the installation information (Must Read!)
+* [NET37TEC.DOC](/archive/net37_tec_docs.md) <- Good technical read on the inner workings of WWIVnet (optional)

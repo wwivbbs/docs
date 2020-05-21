@@ -5,7 +5,7 @@
 
 
 Before attempting an upgrade, please follow the 
-[WWIV 5 Installation on Windows](windows_installation.md)
+[WWIV 5 Installation on Windows](win.md)
 to install prerequisites.
 
 # Did I say BACKUP your existing WWIV BBS? 
@@ -29,7 +29,7 @@ you should also have installed Microsoft .Net Framework 4.6 or newer.
 ##Upgrade Steps:
 
 ####Download the current WWIV version
-Read [the GET WWIV instructions](index.md#get-wwiv-50) 
+Read [the GET WWIV instructions](/index.md#get-wwiv-50) 
 
 ####Install new EXEs
 Take the build of WWIV you downloaded and extract the files into: ```c:\wwiv```.
@@ -40,7 +40,7 @@ You must copy  ```sbbsexec.dll``` to ```\windows\system32```.
 There have been many changes to WWIV since 4.x so we are providing a detailed sample.ini.
 You may either rename sample wwivini.5xx to wwin.ini or you may simply edit your existing wwiv.ini based on the sample.
 ####WWIV.INI sample that is included in the archive.
-[wwivini.5xx](wwivini.md)
+[wwivini.5xx](/cfg/wwivini.md)
 
 #### Update your configuration files using the new wwivconfig
 From an elevated Command Prompt session, run wwivconfig and verify all settings.
@@ -51,7 +51,7 @@ in wwiv.ini and no longer requires configuring each instance from wwivconfig.
 If you are using a 3rd party Telnet Server like Net2BBS, you may need to edit some parameters to launch the BBS.
 
 Launch WWIVServer and set your preferences as outlined here: 
-[WWIVServer](wwiv_5_telnet_server.md)
+[WWIVServer](/conn/telnet.md)
 
 Start WWIVServer and test by telnetting or sshing to your bbs on localhost!
 

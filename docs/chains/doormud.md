@@ -30,5 +30,28 @@ L) Registered by: AVAILABLE
 M) Usage        : 64
 N) Age limit    : 0 - 255
 ```
+## 32-bit Setup
+
+ * DMUD099D.ZIP is the last Windows/Door32 edition the author released and was used to install the game.
+ * Tested under Windows 10 32-bit
+ * Will work when users telnet into the bbs, but will not work locally via the bbs.
+ * Extract the files to \wwiv\doors\dmud\
+ * Run dmud32d.exe -local where you can configure the game and reset at the same time.
+ * Now set up a new entry in Chain Edit
+ ```
+ A) Description  : Door Mud
+ B) Filename     : c:\wwiv\door\dm\dmud32d.exe -n %N -d %E -socket %H
+ C) SL           : 10
+ D) AR           : None.
+ E) ANSI         : Optional
+ F) Exec Mode      none
+ I) Launch From  : Temp/Node Directory
+ J) Local only   : No
+ K) Multi user   : Yes
+ L) Registered by: Available
+ M) Usage        : 
+ N) Age limit    : 0-255
+```
+ 
 
 * That is it.

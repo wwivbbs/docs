@@ -1,4 +1,4 @@
-#SR Doors (Barren Realms Elite, Falcon's Eye, Falcon's Honor and The Arcadian Legends)
+# SR Doors (Barren Realms Elite, Falcon's Eye, Falcon's Honor and The Arcadian Legends)
 ***
 These are instructions universal to the four game series that run under the same door software that John Dailey took over. If you want
 Barren Realms Elite, Falcon's Eye, Falcon's Honor and The Arcadian Legends Installed these instructions will be helpful.
@@ -12,7 +12,7 @@ Grab your desired doorgame in this example we are installing Falcon's Eye.
 * After you configure your settings from INSTALL, run the unpack batch file
 * RUN FE RESET after unpacking to configure your game settings
 * You will also need to edit your setup.sr file, most likely you will be running more than one node.
-
+```
 c:\wwiv\temp\1\DOOR.SYS
 10   <- Line # of Username or First name
 0   <- Line # of Last name (0 if prev line was full name)
@@ -24,7 +24,7 @@ c:\wwiv\temp\1\DOOR.SYS
 19   <- Line # of time left (minutes)
 0   <- Line # of Real Name
 Enter 0 for any value not supported.
-
+```
 You will need to make a new file for each node, this would be SETUP.1 if you want node 2, change the node number on the first line
 of SETUP.SR and save it as setup.2
 
@@ -32,6 +32,7 @@ You also will need to make a batch file to call the game.
 
 The batch file I use on my system is here:
 
+```
 @ECHO OFF
 C:
 CD\WWIV\DOOR\FE
@@ -40,12 +41,13 @@ FE
 c:
 CD \wwiv
 EXIT
+```
 
 the -f switch is used to load a config file for each node you run.
 
 Your WWIV Door Configuration Settings would be as follows:
 
-
+```
 A) Description  : Falcon's Eye
 B) Filename     : c:\wwiv\door\fe\falc.bat %n
 C) SL           : 10
@@ -58,3 +60,4 @@ K) Multi user   : No
 L) Registered by: AVAILABLE
 M) Usage     	: 
 N) Age limit	: 0 - 255
+```

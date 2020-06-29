@@ -1,9 +1,9 @@
 # SR Doors (Barren Realms Elite, Falcon's Eye, Falcon's Honor and The Arcadian Legends)
 ***
 These are instructions universal to the four game series that run under the same door software that John Dailey took over. If you want
-Barren Realms Elite, Falcon's Eye, Falcon's Honor and The Arcadian Legends Installed these instructions will be helpful.
+Barren Realms Elite, Falcon's Eye, Falcon's Honor and The Arcadian Legends installed these instructions will be helpful.
 
-You can find BRE/FE/TAL/FH at John Dailey Software
+You can find BRE/FE/TAL/FH at [John Dailey Software] (http://johndaileysoftware.com/download/index.asp)
 
 Grab your desired doorgame in this example we are installing Falcon's Eye.
 

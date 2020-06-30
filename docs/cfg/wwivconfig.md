@@ -257,16 +257,16 @@ Select INSERT and enter the highest number offered to place a new entry at the e
 Fill in the next screen so it matches this one.  
 
     +-------------------------------------- Protocol Configuration +
-    ¦ Description    : XMODEM (SE-XYZ)                             ¦
+    ¦ Description    : ZMODEM (SE-XYZ)                             ¦
     ¦ Xfer OK code   : 0                                           ¦
     ¦ Receive command line:                                        ¦
-    ¦ C:\WWIV\SEXYZ.EXE %H -TELNET RX %3                           ¦
-    ¦ Send command line   :                                        ¦
-    ¦ C:\WWIV\SEXYZ.EXE %H -TELNET SX %3                           ¦
+    ¦ \WWIV\SEXYZ.EXE %H rz %B                                     ¦
+    ¦ Send command line:                                           ¦
+    ¦ \WWIV\SEXYZ.EXE %H sz %3                                     ¦
     ¦ Receive batch command line:                                  ¦
-    ¦ C:\WWIV\SEXYZ.EXE %H -TELNET RX %3                           ¦
+    ¦ \WWIV\SEXYZ.EXE %H rz %B                                     ¦
     ¦ Send batch command line:                                     ¦
-    ¦ C:\WWIV\SEXYZ.EXE %H -TELNET SX @%3                          ¦
+    ¦ \WWIV\SEXYZ.EXE %H sz @%3                                    ¦
     ¦                                                              ¦
     ¦ %1 = com port baud rate                                      ¦
     ¦ %2 = port number                                             ¦
@@ -276,8 +276,8 @@ Fill in the next screen so it matches this one.
     ¦ NOTE: Batch protocols >MUST< correctly support DSZLOG.       ¦
     +--------------------------------------------------------------+
 
-The X in SX/RX indicated XMODEM. TO add YMODEM and ZMODEM, Insert 
-two more entries to the list and just change the "SX/RX" to "SY/RY" or "SZ/RZ" on each line.
+The z in sz/rz indicated ZMODEM. TO add XMODEM and YMODEM, Insert 
+two more entries to the list and just change the "Ssz/rz" to "sx/rx" or "sy/ry" on each line.
 
 ## External Editor Configuration 
 

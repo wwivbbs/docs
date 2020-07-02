@@ -42,6 +42,14 @@ pages may also refer to specific settings in wwiv.ini.
 ; COMIO        Intercept DOS interrupts (Win32 Only)
 ; FOSSIL       Emulate the FOSSIL for DOS applications (Win32 Only)
 ; NETPROG      Tries to run program in network data dir first.
+; BINARY       Don't expand telnet IAC or LF -> CR/LF Translation when doing local IO
+;              through STDIO mode.
+; STDIO        Use STDIO based doors for Linux. This will set the stdin/stdout
+;              file descriptors to the socket before spawning the binary
+; TEMP_DIR     Sets the working directory to the instance temp directory.
+; BATCH_DIR    Sets the working directory to the instance batch directory.
+; QWK_DIR      Sets the working directory to the instance QWK directory
+;              (this is currently the batch directory but may change in the future)
 ;
 ; Options can be combined like so:
 ;

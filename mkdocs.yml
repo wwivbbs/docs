@@ -58,6 +58,7 @@ nav:
     - 'MechWars': chains/mechwars.md
     - 'TradeWars2002': chains/tradewars2002.md
   - Editors:
+    - 'Internal Editor' : editors/internal.md
     - 'WWIVEdit': editors/wwivedit.md
     - 'QuickBBS-Editors': editors/quickbbs.md
   - Miscelaneous:

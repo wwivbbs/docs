@@ -27,11 +27,10 @@ dosemu | to run dos|based doors and utilities
 dos2unix/unix2dos | for converting file types  
 
 
-## Steps to install the precompiled binaries
+## Steps to install the software
 
-These are the steps for using the precompiled binaries.  These are the
-recommended ones to use if you have a debian-based system (eg, debian 9,
-ubuntu, etc).
+These are the steps for installing WWIV.  You should do this step to setup
+a base system, even if you plan on compiling the binaries from source to use.
 
 _**DO NOT RUN WWIV AS ROOT.**_ You are just asking to get screwed if you do.
 The root account is the linux equivalent of SYSOP. Also, don't run WWIV
@@ -42,104 +41,28 @@ Luckily, we have an installer script that will take care of most of the details 
 
 1. Make a wwiv directory and cd into it (e.g., /home/wwiv)   
 2. Download the latest wwiv-linux-release.tar.gz to your wwiv directory  
-  [WWIV 5.3 Development](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/)  
-3. Extract wwiv-linux-release.tar.gz into your wwiv directory ( e.g, ``tar zxvf wwiv-linux-release.tar.gz``) 
-4. Run ``sudo ./install.sh`` and follow the prompts.  You must run this as root becasue it takes care of
-   all the setup items for you: creating the WWIV user, setting up sudo access for a standard user, installing
-   the systemd service file, etc.  
-5. log into the new wwiv user ``(e.g, sudo su - wwiv -s /bin/bash)`` and run ./wwivconfig to configure the BBS 
+  [WWIV 5.5 Development](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/)  
+3. Extract wwiv-linux-release.tar.gz into your wwiv directory ( e.g, ``tar zxvf wwiv-linux-release.tar.gz``)  (please note that the filename will be different)
+4. If you plan on using binaries you compiled yourself, please follow the instructions on the
+   [WWIV readme.md file on GitHub](https://github.com/wwivbbs/wwiv#building-on-linux) and then
+   return here before running the next step.
+4. From the wwiv directory (i.e. /home/wwiv), run ``sudo ./install.sh`` and follow the prompts.
+   You must run this as root becasue it takes care of all the setup items for you:
+     * creating the WWIV user/GROUP
+     * setting up sudo access for a standard user
+     * installing the systemd service file.  
+5. Log into the new wwiv user ``(e.g, sudo -u wwiv -s)`` and run ./wwivconfig to configure the BBS.
+   (If that first sudo command doesn't work on your system, try ```sudo su - wwiv -s /bin/bash```)
 
 If you have any issues, check the install_date_time.log file that was created during the install.  
 If you still can't tell what happened, come and find us in IRC.
 
 
-
 ## Steps to install Manually Compiled binaries
 
-### Compile things you will need  
-If you are going to be compiling your own BBS binaries, these are a must-have
-
-Package | Comments
-------- | ----------
-git |  to grab the source code for compiling  
-ncurses-devel (libncurses5-dev) | development headers, etc.  (libncurses5-dev is the debian version)
-cmake | used to control the software compilation process
-make | runs the compile steps
-g++ 6.3 or later | the actual compiler tool
-
-
-All the steps for installing manually compiled biniaries are the same as the prebuilt
-
-1. Make a wwiv directory and cd into it (e.g., /home/wwiv)   
-2. Download the latest wwiv-linux-release.tar.gz to your wwiv directory  
-  [WWIV 5.3 Development](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux/lastSuccessfulBuild/)  
-3. Extract wwiv-linux-release.tar.gz into your wwiv directory ( e.g, ``tar zxvf wwiv-linux-release.tar.gz``) 
-
-
-This is where things differ (we need to replace the prebuilt binaries with our new ones)
-
-
-pull down the code from git (https://github.com/wwivbbs/wwiv.git) 
-Navigate to your source directory (e.g., ```/home/wwiv/wwiv-master```)   
-The first time you compile, you need to precompile cryptlib: 
-`` pushd deps/cl342; make -j8; popd > /dev/null `` 
-
-Also if you haven't created a build-tree for cmake. In this documentation, we'll assume that
-the build tree will be in a ```_build``` sbubdirectory of the git repository root.
-You must do this too once. You can create this with the following command:
-```
-mkdir _build
-```
-
-Now that you have the prerequisites compiled, it's time to compile WWIV itself.  
-run the following: 
-```pushd _build; cmake .. && cmake --build . -- -j8; popd>/dev/null``` (don't forget the ".")  
-
-assuming you built in ```/home/wwiv/wwiv-master```, the binaries you will have as a result are:
-```
-/home/wwiv/wwiv-master/_build/bbs/bbs  
-/home/wwiv/wwiv-master/_build/wwivconfig/wwivconfig  
-/home/wwiv/wwiv-master/_build/wwivd/wwivd
-/home/wwiv/wwiv-master/_build/network/network
-/home/wwiv/wwiv-master/_build/network1/network1
-/home/wwiv/wwiv-master/_build/network2/network2
-/home/wwiv/wwiv-master/_build/network3/network3
-/home/wwiv/wwiv-master/_build/networkb/networkb  
-/home/wwiv/wwiv-master/_build/networkc/networkc  
-/home/wwiv/wwiv-master/_build/networkf/networkf  
-/home/wwiv/wwiv-master/_build/wwivd/wwivd  
-/home/wwiv/wwiv-master/_build/wwivutil/wwivutil  
-```
-These should all be placed in your WWIV base directory. For example, if your WWIV base is 
-```/home/wwiv``` and your cmake build tree is ```/home/wwiv/wwiv-master/_build```, the following will
-copy all the compiled binaries to your base wwiv directory
-
-```
-cd /home/wwiv/wwiv-master/_build
-cp -v bbs/bbs \
-      wwivconfig/wwivconfig \
-      wwivd/wwivd \
-      network/network \
-      network1/network1 \
-      network2/network2 \
-      network3/network3 \
-      networkb/networkb \
-      networkc/networkc \
-      networkf/networkf \
-      wwivd/wwivd \
-      wwivutil/wwivutil \
-   /home/wwiv/
-```
-
-Now that we have the new binaries in place, we can pick up where we left off...
-
-
-4. Run ``sudo ./install.sh`` and follow the prompts.  You must run this as
-   root becasue it takes care of all the setup items for you: creating the WWIV 
-   user, setting up sudo access for a standard user, installing the systemd 
-   service file, etc.  
-5. Log into the new wwiv user (e.g, ```sudo su - wwiv -s /bin/bash```) and run 
-   ```./wwivconfig``` to configure the BBS 
+Please follow the instructions on the 
+[WWIV readme.md file on GitHub](https://github.com/wwivbbs/wwiv#building-one-linux) after you
+installed the base system as described above (making sure to have completed all of the steps.)
 
 ## After the install
 

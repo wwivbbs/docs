@@ -31,6 +31,7 @@ nav:
   - Basic Use:
     - 'WFC Screen (Local Console)': wfc.md
   - Menus:
+    - 'Commands' : menus/commands.md
     - 'Main Menu': menus/main.md
     - 'Messaging System': menus/message.md
     - 'User Preferences': menus/defaults.md
@@ -57,6 +58,7 @@ nav:
     - 'LORD2': chains/lord2.md
     - 'MechWars': chains/mechwars.md
     - 'TradeWars2002': chains/tradewars2002.md
+    - 'SR Doors (SRE, BRE, etc)' : chains/srdoor.md
   - Editors:
     - 'Internal Editor' : editors/internal.md
     - 'WWIVEdit': editors/wwivedit.md

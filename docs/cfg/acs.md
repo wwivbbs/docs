@@ -26,13 +26,14 @@ determines if access is granted.
 
 WWIV's ACS grammar is comprised of:
 
-* Object Attributes
 * Comparison Operators
 * Logical Operators
 * Object Attributes
 * Expressions 
 
-#### Data Types
+<br/>
+
+### Data Types
 
 ACS support the following datatypes:
 
@@ -42,19 +43,17 @@ ACS support the following datatypes:
 * ACSSet (contains the set of ACS values, supports equality checks against single 
   ACS value specified as a string.)
 
-#### Object Attributes
-WWIV ACS supports attributes in the form 
-Object.Attribute. For example "user.sl" is the current user's security level.<br>
-*Note:* Object and attribute names are case-insensitive, so 
-both ```user.name``` and ```USER.NAME``` are equivalent.
+<br/>
 
-#### Operators
+### Operators
     OP ::= COMPARE_OP | LOGICAL_OP
 
 Only Binary Operators are supported in ACS.  The operators may be either a comparison
 operator or a logical operator.
 
-##### Comparison Operators
+<br/>
+
+#### Comparison Operators
 		LHS COMPARE_OP RHS
 
 
@@ -79,8 +78,10 @@ Example:
 
       user.sl > 100
 
+<br/>
 
-##### Logical Operators
+
+#### Logical Operators
 		LHS LOGICAL_OP RHS
 
 The name logical comes from boolean logic, although the operands on either side of
@@ -99,8 +100,9 @@ Example:
 
       user.sl > 100 || user.ar == 'A'
 
+<br/>
 
-#### Expression
+### Expression
     OP ::= COMPARE_OP | LOGICAL_OP
 		EXPRESSION ::= EXPRESSION (OP EXPRESSION)?
 
@@ -108,7 +110,24 @@ The language is designed to evaluate a single expression.  An expression may be
 a compound expression with multiple expressions combined using logical 
 AND ```&&``` or OR ```||``` operators.
 
+<br/>
 
+### Object Attributes
+WWIV ACS supports attributes in the form 
+Object.Attribute. For example "user.sl" is the current user's security level.<br>
+*Note:* Object and attribute names are case-insensitive, so 
+both ```user.name``` and ```USER.NAME``` are equivalent.
+
+
+| Attribute |  Description
+| --------- | -----------
+| user.sl   | User's message area security level
+| user.dsl  | User's download area security level
+| user.ar   | Users' download area Access Rights/Flag
+| user.dar  | Users' download area Access Rights
+| user.name | User's name or handle (not real name)
+
+<br/>
 
 ## Examples
 

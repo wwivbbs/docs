@@ -40,8 +40,8 @@ ACS support the following datatypes:
 * Number (an integer value of 32 bits in size)
 * String (a variable length set of CP437 characters)
 * Boolean (support either true of false)
-* ACSSet (contains the set of ACS values, supports equality checks against single 
-  ACS value specified as a string.)
+* Ar (contains the set of Ar values, supports equality checks against single 
+  Ar value specified as a string or character.)
 
 <br/>
 

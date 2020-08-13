@@ -17,7 +17,8 @@ documentation can be found in the
 
 | Name    | Description |
 | ------- | ----------- |
-| Integer | A standard integer (whole number) datatype. The range of this is that of an ```int32_t``` |
+| Boolean | Implicitly support either TRUE of FALSE. Convertible to Numbers as 0 and 1 |
+| Number  | A standard integer (whole number) datatype. The range of this is that of an ```int32_t``` |
 | Real    | Floating point number, same as C++ ```float``` |
 | String  | A standard string, a list of characters |
 
@@ -101,6 +102,18 @@ wwiv.command("BBSList")
 
 ```
 
+
+### wwiv.eval()
+
+Evaluates a WWIV ACS Expression and return a boolean value that may
+be compared against 1 or TRUE for true values and 0 or FALSE for
+false values.
+
+Example:
+```
+if wwiv.eval("user.sl > 200") = FALSE then wwiv.io.puts("Hello high level SL caller!")
+
+```
 
 ### wwiv.printfile(string filename)
 

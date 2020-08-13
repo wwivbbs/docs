@@ -37,11 +37,13 @@ WWIV's ACS grammar is comprised of:
 
 ACS support the following datatypes:
 
-* Number (an integer value of 32 bits in size)
-* String (a variable length set of CP437 characters)
-* Boolean (support either true of false)
-* Ar (contains the set of Ar values, supports equality checks against single 
-  Ar value specified as a string or character.)
+
+| Name    | Description |
+| ------- | ----------- |
+| Number  | An integer value of 32 bits in size |
+| String  | A variable length set of CP437 characters |
+| Boolean | Support either true of false. Convertible to Numbers as 0 and 1 |
+| Ar      | Contains the set of Ar values, supports equality checks against single Ar value specified as a string or character. |
 
 <br/>
 

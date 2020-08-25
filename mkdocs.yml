@@ -23,7 +23,7 @@ nav:
       - 'WWIVbasic Reference': cfg/wwivbasic.md
       - 'Linux dosemu Settings': linux/dosemu.md
       - 'Event Management': cfg/eventmgmt.md
-      - 'ACS Reference': cfg/acs.md
+#      - 'ACS Reference': cfg/acs.md
   - Connectivity:
     - 'WWIV Server': conn/telnet.md    
     - 'NET2BBS': conn/net2bbs.md

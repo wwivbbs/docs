@@ -4,21 +4,19 @@
 
 ** Windows Versions **
 
-The project officially supports Windows 8.1 or 
-Windows Server 2012 or later. (NT 6.3)
+The windows version of WWIV is developed and tested on Windows 10, however
+should also run on Windows 8.1 or Windows Server 2012R2 (NT 6.3) or later. 
 
 ** 32bit x86 Windows **
 
-Although WWIV BBS will start and run on 64-bit (x64), 
-none of the 16-bit DOS programs and utilities you use 
-with WWIV will work on 64-bit windows. For the best
-experience, we recommend you use a 32bit x86 version of Windows.
+Although WWIV BBS will start and run on 64-bit (x64), none of the 16-bit DOS
+programs and utilities you use with WWIV will work on 64-bit windows. For 
+the best experience, you may want to use a 32bit x86 version of Windows.
 
 **Windows Updates**
 
-You should have ALL high priority updates on your Windows
-machine. This might mean running Windows Update several
-times.
+You should have ALL high priority updates on your Windows machine. This may
+mean running Windows Update several times.
 
 ## Installation
 
@@ -37,7 +35,7 @@ You will see this:
     CONFIG.DAT NOT FOUND.
     Perform initial installation?
 
-Type Y & wwivconfig will install all the files need & create all the directories. You will then be prompted for the SysOp password. The default password is SYSOP.
+Type Y & wwivconfig will install all the files need & create all the directories. You will also be prompted for the SysOp handle, real name, and password.
 
 You will then see the main wwivconfig screen.
 
@@ -55,59 +53,31 @@ You will then see the main wwivconfig screen.
     │ R. Registration Information                 │
     │ U. User Editor                              │
     │ X. Update Sub/Directory Maximums            │
+    │ W. wwivd Configuration                      │
     │ Q. Quit                                     │
     └─────────────────────────────────────────────┘
 
-You can navigate this menu with the arrow keys and hit Enter,
-or type the letter of the menu option to go to the next screen.
-
-Select G. General System Configuration
-
-    ┌─────────────────────────────────── System Configuration ┐
-    │ System PW        : SYSOP                                │
-    │ System name      : My WWIV BBS                          │
-    │ System phone     :    -   -                             │
-    │ Closed system    : No                                   │
-    │ Newuser PW       :                                      │
-    │ Newuser restrict :   M                                  │
-    │ Newuser SL       : 10                                   │
-    │ Newuser DSL      : 0                                    │
-    │ Newuser gold     : 0                                    │
-    │ Sysop name       : The New Sysop                        │
-    │ Sysop time: from : 00:00     00:00                      │
-    │ Net time  : from : 00:00 to: 00:00                      │
-    │ Ratios    :  U/D : 0.000  Post/Call: 0.000              │
-    │ Max waiting      : 50                                   │
-    │ Max users        : 500                                  │
-    │ Caller number    : 0                                    │
-    │ Days active      : 0                                    │
-    └─────────────────────────────────────────────────────────┘
 
 You navigate these wwivconfig forms with the arrow keys and ENTER key.
 Hit ESC to Exit the forms and save your changes.  
+
 **NOTE:** All the changes you make are saved when you exit.  
-But, you can always change it back later.
-
-For a Quick Setup change the following fields to your preferences.
-
-* System Password  
-* System Name  
-* Sysop Name  
 
 Type ESC to exit back to the main menu  
 On the Main Menu hit ESC or Q to exit wwivconfig
 
 From the command prompt at c:\wwiv  
 
-* Run WWIVServer.exe & The WWIV Server application will start.  
-* Under the Server Menu select Preferences.  
-* Change WWIV Executable to: c:\wwiv\bbs.exe  
-* Change Home Directory to c:\wwiv  
-* Click OK to close the Preferences dialog.  
+* Run wwivd.exe & The WWIV Server daemon will start.
+* If you need to make changes, please use wwivconfig to do so in the (W)
+  menu item for wwivd.
 
-### Create the SYSOP account
+### Log on to the BBS
 
-Under the Server menu, select Run Local Node  
+From a command prompt run: ```bbs``` to launch the bbs's Waiting for Caller
+screen.  Note that the name is for historical reasons, and the BBS isn't 
+actually waiting for a call anymore, wwivd handles the inbound telnet sessions.
+
 **NOTE:** This starts a local copy of the WWIV BBS without opening up 
 connections for outside users.
 
@@ -142,51 +112,12 @@ This is the Waiting For Caller (WFC) Screen.
 ```
 
 * Hit the SPACE bar and answer Yes to logon to your WWIV BBS.  
-* At the logon prompt enter NEW to create a new account.  
-* Fill out out all the information. Yes some of it seems odd,
-* you can modify these things.  
-**When you are prompted to accept or change your password, stop.**
-
-You are going to use the Waiting For Caller (WFC) commands to edit this user and
-grant it the SysOp security levels.
-
-* Hit F1 and the WWIV User Editor will appear over the top of the 
-screen you were just at.
-
-```
-    ┌────────────────────────────────────────────────────────────────────┐
-    │ WWIV User Editor                                    [Newsysop #-1] │
-    ├────────────────────────────────────────────────────────────────────┤
-    │ Security Level(SL): ░░░             Message AR:                    │
-    │ DL Sec. Level(DSL): 0              Download AR:                    │
-    │    User Exemptions: 0             Restrictions:                    │
-    ├────────────────────────────────────────────────────────────────────┤
-    │          Sysop Sub: 999              Time Bank: 0                  │
-    │         Ass Points: 0              Gold Points: 0.                 │
-    ├────────────────────────────────────────────────────────────────────┤
-    │        KB Uploaded: 0            KB Downloaded: 0                  │
-    │     Files Uploaded: 0         Files Downloaded: 0                  │
-    │    Messages Posted: 0         Number of Logons: 0                  │
-    ├────────────────────────────────────────────────────────────────────┤
-    │ Note:                                                              │
-    ├────────────────────────────────────────────────────────────────────┤
-    │    (ENTER) Next Field   (UP-ARROW) Previous Field    (ESC) Exit    │
-    └────────────────────────────────────────────────────────────────────┘
-```
-
-* Change the Security Level (SL) to 255.
-* Change the DL Sec. Level (DSL) to 255.  
-
-* Hit ESC to save the changes to this user.  
-
-You will be back at your normal user session screen and can complete the
-new account setup. You can change your password or use the one provided.
-It does not have to be (should not be for security) the same as your 
-System Password you setup in wwivconfig.
+* At the logon prompt enter ```F``` to log in as the sysop account created
+  in wwivconfig.
 
 _**Congratulations! You are now the SysOp of a WWIV BBS!**_
 
-Continue on to more advanced [WWIV Server](/conn/telnet.md) settings 
+Continue on to more advanced [wwivd](/conn/telnet.md) settings 
 to get on the Internet. But we suggest you read through the rest of the 
 documentation before you get too excited about that just yet. But don't worry, 
 it's not hard at all!

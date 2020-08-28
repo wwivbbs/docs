@@ -12,9 +12,8 @@ Client | Windows | Linux | Android | iOS | Windows Phone
 [AfterShock](https://play.google.com/store/apps/details?id=com.asvcorp.aftershock) |  |  | x |  |
 [EtherTerm](https://github.com/M-griffin/EtherTerm) | x | x |  |  |
 [JuiceSSH](https://juicessh.com/) |  |  | V |  |
-[Blank]() |  |  |  |  |
 
-Key:  
+*Key:*
 x = Known to exist  
 V = Verified to work  
 
@@ -46,23 +45,42 @@ and freeware clients I have used and can recommend:
 
 ###QWK Mail Readers
 
-In the days of dialup BBSes, on popular boards you frequently had less than you needed to read
-all the messages and reply, look for files, etc. To help optimize your time, tools to allow you 
-download messages, read offline, reply offline and then upload your replies were created. QWK was
-one such framework and is still supported in WWIV BBS.
+In the days of dialup BBSes, on popular boards you frequently had less than
+you needed to read all the messages and reply, look for files, etc. To help
+optimize your time, tools to allow you download messages, read offline, reply
+offline and then upload your replies were created. QWK was one such 
+framework and is still supported in WWIV BBS.
 
-To download the unread messages on a WWIV BBS use the //QWK command from the Main Menu. You will then be presented with the option to use the Internal WWIV Qek, downlaod an ASCII file of posts or Configure the Sub Scan. 
+To download the unread messages on a WWIV BBS use the //QWK command from the
+Main Menu. You will then be presented with the options to use QWK messaging.
 
-Configuring the Sub Scan let's you enable\disable downloading messages for particular subs and this is a first good place to start. Once that is done, you can use the Internal WWIV QWK to Download a QWK packet. Or if you are ready to Upload you can do that here as well.
+Here's the QWK menu:
 
-Once you have your file downloaded you will need a client to read the QWK file, here is information such clients:
+```
+                      WWIV QWK Off-Line Reader Menu
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+D)ownload Qwk Packet
+C)onfig Qwk settings
+U)pload Reply Packet
+S) Config Subs to include
+%) Set percent of all messages to download (Read OR Not)
+Q)uit to Main Menu
+```
+
+Configuring the "Subs to include" let's you enable/disable downloading
+messages for particular subs and this is a first good place to start.
+Once that is done, you can use the Internal WWIV QWK to Download a QWK
+packet. Or if you are ready to Upload you can do that here as well.
+
+Once you have your file downloaded you will need a client to read the
+QWK file, here is information such clients:
 
 Client | Windows | Linux | OSx | Android | iOS | Windows Phone
 ------ | :-----: | :---: | :-: | :-----: | :-: | :-----------:
 [MultiMail](http://multimail.sourceforge.net/) | X | X | X |  |
-[Blank]() |  |  |  |  |
 
-Key:  
+*Key:*
 X = Known to exist  
 V = Verified to work  
 

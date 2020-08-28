@@ -25,7 +25,7 @@ nav:
       - 'Event Management': cfg/eventmgmt.md
 #      - 'ACS Reference': cfg/acs.md
   - Connectivity:
-    - 'WWIV Server': conn/telnet.md    
+    - 'wwivd': conn/telnet.md    
     - 'NET2BBS': conn/net2bbs.md
     - 'fail2ban IP blocking': conn/fail2ban.md
     - 'Telnet/SSH Clients': conn/clients.md

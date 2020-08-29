@@ -6,8 +6,8 @@
 
 Historically WWIV was single or multi-node, where each
 node would be at the WFC screen for that node until a modem
-call is received.  With WWIV 5, the Telnet and SSH sessions
-are terminated by wwivserver.exe on Windows or wwivd on Linux.
+call is received.  With WWIV, the Telnet and SSH sessions
+are terminated by wwivd.
 
 The graphical WFC screen was orginally added in v4.30, as an 
 optional full screen WFC that provides information to the sysop
@@ -24,7 +24,7 @@ The screen looks as follows:
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │               Activity and Statistics of My WWIV BBS Node 1                  │
 ├──────────────────────────────────────┬───────────────────────────────────────┤
-│ Calls Today....... 48                │ WWIV Version.... 5.2.0                │
+│ Calls Today....... 48                │ WWIV Version.... 5.5.0                │
 │ Feedback Waiting.. 1       New: 1    │ Net Version..... 51                   │
 │ Uploads Today..... 0                 │ Total Users..... 99                   │
 │ Messages Today.... 98                │ Total Calls..... 20167                │
@@ -57,20 +57,22 @@ User online keys are used to perform certain actions on the system or the user w
 Pressing the F1 key while a user is online will produce a pop-up box containing the current users access levels, restrictions and other pertinent information. You can tab through the fields an edit this information as needed.  Pressing F1 again closes the pop up. A [WAIT] prompt is displayed to the user while editing and all caller input is ignored. This is the first User online key you will use.  After logging on and establishing your sysop account, hit this key and give yourself maximum values as displayed below:
 
 ```
-ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-³ SECURITY LEVEL    : 255           MESSAGE AR  : ABCDEFGHIJKLMNOP   ³
-³ D/L SECURITY LEVEL: 255           DOWNLOAD AR : ABCDEFGHIJKLMNOP   ³
-³ EXEMPTIONS        : 31            RESTRICTIONS:                    ³
-ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-³ SYSOP SUB : 999                   TIME BANK  : 0                   ³
-³ ASS POINTS: 0                     GOLD POINTS: 0                   ³
-ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-³ KB UPLOADED     : 0               KB DOWNLOADED   : 0              ³
-³ FILES UPLOADED  : 0               FILES DOWNLOADED: 7              ³
-³ MESSAGES POSTED : 0               NUMBER OF LOGONS: 1              ³
-ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´
-³ NOTE: The SysOp!!                                                  ³
-ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+┌────────────────────────────────────────────────────────────────────┐
+│ WWIV User Editor                                        [SYSOP #1] │
+├────────────────────────────────────────────────────────────────────┤
+│ Security Level(SL): 255             Message AR: ABCDEFGHIJKLMNOP   │
+│ DL Sec. Level(DSL): 255            Download AR: ABCDEFGHIJKLMNOP   │
+│    User Exemptions: 31            Restrictions:                    │
+├────────────────────────────────────────────────────────────────────┤
+│          Sysop Sub: 999              Time Bank: 0                  │
+│         Ass Points: 0              Gold Points: 0                  │
+├────────────────────────────────────────────────────────────────────┤
+│        KB Uploaded: 15316        KB Downloaded: 16859              │
+│     Files Uploaded: 21        Files Downloaded: 54                 │
+│    Messages Posted: 581       Number of Logons: 2555               │
+├────────────────────────────────────────────────────────────────────┤
+│ Note:                                                              │
+├────────────────────────────────────────────────────────────────────┤
 ```
 
 Command | Description
@@ -136,7 +138,7 @@ This flag appears when thesysop has pressed F3 to prevent the caller from typing
 **Available flag**  
 This flag is displayed when thesysop has toggled the sysop available for chat optionwith scroll|lock key.
 
-####Abbreviations used in the Topscreen Information.
+#### Abbreviations used in the Topscreen Information.
  
 Abv | Description
 :---: | ---

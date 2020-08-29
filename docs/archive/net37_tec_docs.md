@@ -207,8 +207,7 @@ below.
 Starting with With Net51, connections happen outside 
 of the network software. You use networkb to call out
 to another node or use networkb directly or use a
-proxy like wwivserver or wwivd to listen on BinkP and
-spawn networkb on demand.
+proxy wwivd to listen on BinkP and spawn networkb on demand.
                
 # 4.  MESSAGE PACKETS <a name="packets"></a>
 *** 

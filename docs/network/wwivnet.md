@@ -72,14 +72,18 @@ Anywhere you see a command to run (wwivconfig, network3, etc), remember this ass
 │ Directory : nets\wwivnet\                                      │
 └────────────────────────────────────────────────────────────────┘
 ```
-* Create \wwiv\nets\wwivnet\callout.net with ```@1 && /60 "password"``` replacing password with the one provided by 1@1. *NOTE* The double quotes are necessary in the file.
-* Run ```network3 y``` which will verify your configuration and files and send an email to your local #1 mailbox. If no network number is given, .0 is assumed, so ```network3 y``` is the same as ```network3 y .0``` 
-* run ```bbs -M``` to pickup and deliver the mail.  
-**Windows Note:** The default config of WWIVServer runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run network3.
-* Login as #1 and Check your email on the BBS. You should see a pretty email and it should say "Everything is Fine" along with other details.
+* Create \wwiv\nets\wwivnet\callout.net with ```@1 && /60 "password"``` 
+  replacing password with the one provided by 1@1. *NOTE* The double quotes
+  are necessary in the file.
+* Run ```network3 y``` which will verify your configuration and files and
+  send an email to your local #1 mailbox. If no network number is given, .0
+  is assumed, so ```network3 y``` is the same as ```network3 y .0``` 
+* Login as #1 and Check your email on the BBS. You should see a pretty email
+  and it should say "Everything is Fine" along with other details.
 
 
 ## Verify Network Mail
+
 * Login to your BBS and send an email to 1@1
 * You will be prompted to pick the net (WWVIVnet) and confirm the system (Weather Station).
 * Give it a subject. Send the Net Coordinator a love note and hit /S to save and send.
@@ -87,6 +91,7 @@ Anywhere you see a command to run (wwivconfig, network3, etc), remember this ass
 
 
 ## Maintaining your WWIVnet Connections
+
 When you setup WWIVnet you download WWIVNET-##.zip from the build server and put the files in ```\wwiv\nets\wwivnet```. Occasionally you need to update these files so your BBS knowns who the new nodes & SUBs are on the net as well as which ones have gone away. If you are NOT also setup to get a Usenet feed you can copy the new files from the zip to ```\wwiv\net\wwivnet``` each time they are updated.
 
 If you are also getting a feed from Usenet you have customized these files and you need to maintain your edits. These are the files you need to edit each time you get a new set of WWIVnet files.
@@ -148,7 +153,8 @@ If\when you are are ready to host your own WWIVnet sub here are the steps to tak
 * Then choose "J" Net Info and select WWIVnet
 * The SUBTYPE is the internal name of the sub in WWIVnet this must be unique (see SUBS.LST)
 * Select YES you will be hosting the SUB.
-* It is easiest and best to also allow auto add/drop requests. Unless your Sub is more exclusive.
+* It is easiest and best to also allow auto add/drop requests. Unless your Sub is
+  more exclusive.
 * Select YES to add it to SUBS.LST to make it public.  
 **Note:** Currently we have to manually share the subs.lst, that will be fixed in the future.
 * Add your Sub to the subs.lst or request help on the WWIV Sysops Sub
@@ -158,7 +164,7 @@ If\when you are are ready to host your own WWIVnet sub here are the steps to tak
 If you are running other BINKP protocol networks (like Fidonet), you might need to specify a custom port for WWIVnet. 
 To do this, the custom port needs to be specified in `binkp.net` by adding  `:port#` to your entry like so:  
 `@206 wwiv.cloudcitybbs.com:24555`
-This is managed by @1, the Network Coordinator. So you first contact them about this as you joing WWIVnet or if you need to make a change later. You will then also need to specify this custom port in the WWIVServer.exe config on Windows, or the wwivd.ini file for linux.
+This is managed by @1, the Network Coordinator. So you first contact them about this as you joing WWIVnet or if you need to make a change later. You will then also need to specify this custom port in wwivd config in wwivconfig.
 
 Again, be sure to coordinate changes with 1@1 or you will be dropped off the net.
 

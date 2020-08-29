@@ -4,12 +4,12 @@
 Darkness is available at [Demonic's download page](http://www.demonic.net/files.php?id=2).
 
 ## Known Issues
-Issue | OS | FOSSIL and Telnet | Resolution
+Issue | OS | FOSSIL | Resolution
 --- | --- | --- | ---
-Fossil disabled seems to work best and prevents NTVDM crashes. | Win7 | SYNC and WWIV5 Telnet | 
+Fossil disabled seems to work best and prevents NTVDM crashes. | Win7 | sbbsexec  | 
 
 
-## Installation on Windows 7
+## Installation on 32-bit Windows
 
 * Download the beta3 zip from the [Demonic Site](http://www.demonic.net/files.php?id=2).
 * Extract the zip file to c:\wwiv\doors\dark

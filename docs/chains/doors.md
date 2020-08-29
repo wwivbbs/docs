@@ -1,7 +1,7 @@
-# WWIV Chains \ Doors
+# WWIV Doors (aka Chains)
 ***
 
-##ChainEdit##
+## ChainEdit
 The ChainEdit function is also quite similar to the BoardEdit function.  The ChainEdit is a means of adding, deleting, or modifying on-line programs.  The information presented here should be sufficient to enable the sysop to setup many on-line programs.
 
 When ChainEdit is run, a summary of the chains currently available, if any, is presented as a listing. Available options are:  Insert, Delete, Modify and Quit. When a new chain is inserted or an old entry is modified, the sysop is given a chance to change the following data:
@@ -50,19 +50,21 @@ The AR required in order to run the chain.  The sysop can allow only certain peo
 If ANSI is required in order to run the chain. Because some games or on-line programs make extensive use of ANSI screens, those users who do not have ANSI may experience significant problems with the game.  This feature allows you to screen out the people who do not have ANSI capability.
 
 **F) Exec Mode**  
-Many programs run remotely will not have built in code for accessing the modem.   WWIV
-supports several modes for this:
+
+Many programs run remotely will not have built in code for accessing the
+modem. WWIV supports several modes for this:
 
 * Normal - Execute the program as a native binary.  Socket handles may be passed to
   the door using the ```%H``` parameter.
 * STDIO - **Linux Only** -   Execute the program as a native binary that use the
   stdin, stdout natively and WWIV pipes that input/output to the BBS caller.
-* Emulate DOS Interrupts - **Win32 only** Requires the sbbsexec.dll to be 
-  placed in the WINDOWS\syste32 directory and uses the that DLL to emulate
-  DOS IO redirection.
 * Emulate DOS FOSSIL - **Win32 only** Requires the sbbsexec.dll to be placed
   in the WINDOWS\syste32 directory and uses the that DLL to emulate a DOS
-  FOSSIL driver.
+  FOSSIL driver.  Instead of this, you should enable [NetFoss](./nf.md) instead.
+* Emulate DOS Interrupts - **Win32 only** Requires the sbbsexec.dll to be 
+  placed in the WINDOWS\syste32 directory and uses the that DLL to emulate
+  DOS IO redirection.  This is not likely to be used and will be removed
+  from a future release.
 
 **J) Local only**  
 This toggle defines the chain to be run in local mode only or unrestricted.

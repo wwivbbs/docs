@@ -50,8 +50,9 @@ nav:
     - 'NET37 User Documentation': archive/net37_docs.md
     - 'NET37 Technical Documentation': archive/net37_tec_docs.md
   - Chains (Doors):
-    - 'Chains (Documentationoors) Overview': chains/doors.md
-    - 'Replacable Parameters': chains/parameters.md
+    - 'Chains (Doors) Overview': chains/doors.md
+    - 'NetFoss': chains/nf.md
+    - 'Replaceable Parameters': chains/parameters.md
     - 'Darkness': chains/darkness.md
     - 'DoorMUD': chains/doormud.md
     - 'Planets: The Exploration of Space': chains/doorteos.md

@@ -10,8 +10,8 @@ Type or scroll to E for **External Editor Configuration**.
 * BBS Type: QuickBBS 
 * Dos Interupts: No 
 * Emulate Fossil: Yes 
-* File name to run remotely: c:\wwiv\oe\oedit.exe -n%n -pC:\WWIV\TEMP%N -1 
-* File name to run locally: c:\wwiv\oe\oedit.exe -n%n -pC:\WWIV\TEMP%N -1 
+* File name to run remotely: c:\wwiv\oe\oedit.exe -n%N -p%I -1 
+* File name to run locally: c:\wwiv\oe\oedit.exe -n%N -p%I -1 
 
 #### [TIDE](http://www.ros.com.au/~errol/tide.html) by Errol Smith
 * Description: Tide

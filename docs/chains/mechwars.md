@@ -4,9 +4,9 @@
 ## Known Issues
 
 
-Problem | OS | Fossil and Telnet Server | Resolution
+Problem | OS | Fossil Server | Resolution
 --- | --- | --- | ---
-NTVDM Crashes on the BBS Host after exiting door | Win7 32-bit | SYNCFOSS & WWIV5Telnet | Set compatibility mode on MECHWARS.EXE (right click properties) to Windows 95
+NTVDM Crashes on the BBS Host after exiting door | Win7 32-bit | SYNCFOSS | Set compatibility mode on MECHWARS.EXE (right click properties) to Windows 95
 
 
 
@@ -18,23 +18,26 @@ unzip mechwars into c:\wwiv\doors\mechwar\ (or similar) then in chainedit
 make it look like this  
 
     Editing Chain # 4
-    A) Description : MechWars
-    B) Filename : c:\wwiv\doors\mechwar\mech.bat %N
-    C) SL : 10
-    D) AR : None.
-    E) ANSI : Optional
-    F) DOS Interrupt: Not Used
-    G) Win32 FOSSIL : Yes
-    J) Local only : No
-    K) Multi user : No
-    Which (A-K,R,[,],Q) ?
+    A) Description  : MechWars
+    B) Filename     : c:\wwiv\doors\mechwar\mech.bat %N
+    C) SL           : 10
+    D) AR           : None.
+    E) ANSI         : Optional
+    F) Exec Mode:   : Emulate DOS FOSSIL
+    I) Launch From  : Temp/Node Directory
+    J) Local only   : No
+    K) Multi user   : No
+    L) Registered by: AVAILABLE
+    M) Usage        : 0
+    N) Age limit    : 0 - 255    
+    Which (A-K,N,[,],Q) ?
 
 then create c:\wwiv\doors\mechwar\mech.bat
 
 ```batch
+copy chain.txt c:\wwiv\doors\mechwar\chain.txt
 c:
 cd \wwiv\doors\mechwar
-copy c:\wwiv\temp%1\chain.txt c:\wwiv\doors\mechwar\chain.txt
 mechwars.exe /4 F+
 del chain.txt
 goto done

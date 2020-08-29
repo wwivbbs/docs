@@ -180,12 +180,13 @@ BBS has been active here.
 ## System Paths  
 ```
 ┌──────────────────────────────────────────────────────────── System Paths ┐
-│ Messages  : msgs\                                                        │
-│ GFiles    : gfiles\                                                      │
-│ Menus     : gfiles\menus\                                                │
-│ Data      : data\                                                        │
-│ Logs      : logs\                                                        │
-│ Downloads : dloads\                                                      │
+│   Messages: msgs\                                                        │
+│     GFiles: gfiles\                                                      │
+│      Menus: gfiles\menus\                                                │
+│       Data: data\                                                        │
+│       Logs: logs\                                                        │
+│    Scripts: scripts\                                                     │
+│  Downloads: dloads\                                                      │
 │                                                                          │
 │                                                                          │
 │ CAUTION: ONLY EXPERIENCED SYSOPS SHOULD MODIFY THESE SETTINGS.           │
@@ -202,8 +203,7 @@ If you have more than one hard disk, you may wish to split up the BBS files amon
 **NOTE:** Changing any of the options here will only change where the BBS looks for the data; IT WILL NOT ACTUALLY MOVE ANY FILES OR DIRECTORIES. The following rules should be observed when assigning or changing directories:
 
 1. Never use the root directory of any drive to store BBS files; the root directory can only hold a fixed number of files, while any sub-directories may hold an unlimited number of files in them.
-2. Always have a backslash on the end of the path/directory name. The software will normally add this backslash for you but there may be occasions where it is required.
-3. The directory may be specified relative to the main BBS directory, or as a full pathname. In other words, "MSGS\" is recognized as a sub-directory of the main BBS dir.  In most instances, however, you won't need to change the default directories.   For security reasons, you are strongly advised to use complete paths to these directories. If you choose to have directories located on another drive, you MUST include a drive letter in the pathname.
+2. The directory may be specified relative to the main BBS directory, or as a full pathname. In other words, "MSGS\" is recognized as a sub-directory of the main BBS dir.  In most instances, however, you won't need to change the default directories.   For security reasons, you are strongly advised to use complete paths to these directories. If you choose to have directories located on another drive, you MUST include a drive letter in the pathname.
 
 **Messages Directory**  
 Information regarding all e-mail and posts is stored here.
@@ -217,16 +217,13 @@ Data files used by the BBS are stored here.
 **LOGS Directory**  
 Log files (\*.log) produced by the BBS and other executables are stored here.
 
+**Scripts Directory**  
+WWIVbasic scripts are stored here.
+
 **DLOADS Directory**  
 This directory is used to set the default directory for new file sections.
 
-**TEMPx Directories**  
-This area is used to temporarily store files for the BBS.  In a multi-instance setup you will need a separate temporary directory for each instance that you have.  The wwivconfig program will create a temporary directory for each instance the first time it is run for that instance.	The default name is TEMP<inst num>. You may change this, but remember to create the directory as wwivconfig will not automatically do this for you. Please note also that any files found in the temporary directory when the BBS is run will be DELETED. If you point the temporary directory to your root directory, or the BBS directory, ALL THE FILES IN THAT DIRECTORY WILL BE ERASED. Therefore, have the temporary directory be one that doesn't contain any files you care about.
-
-**BATCH Directory**  
-This directory is used to temporarily store files that are batch uploaded (defaults to the defined TEMPx directory).  Make sure this directory has adequate disk space for files being batch uploaded (at least 5 MB recommended). After batch uploads are completed, the BBS will automatically move the files into the appropriate drive and directory and delete the uploaded files.
-
-You may freely change DLOADS, TEMPx and BATCH to whatever you want without hurting anything. HOWEVER, the TEMPx and BATCH directories MUST exist. You may choose to have the temporary directory exist as a RAM disk. If the TEMPx directory is a sub-directory of a RAM disk, MAKE SURE that the directory is created BEFORE the BBS is run. In other words, run the BBS in a batch file that first creates the temp directory. The others (messages, gfiles, data), however, will have files in them that the BBS needs to find in the appropriate directories.  If you change the Messages, GFILES, or DATA directories, you must:
+If you change the Messages, GFILES, or DATA directories, you must:
 
 1. Go to DOS and create the new directory.
 2. Move all files from the old to the new directory.
@@ -281,9 +278,21 @@ two more entries to the list and just change the "Ssz/rz" to "sx/rx" or "sy/ry" 
 
 ## External Editor Configuration 
 
-A full screen editor (FSED) allows you and your callers (with ANSI) to write email and posts using an editor that is not restricted to the line-by-line approach used by the internal line editor.  Some editors allow the use of function and arrow keys to move the cursor about the screen, in much the same manner as a regular word processor.  Full screen editors tend to be awkward for callers to use, however, as while the sysop might use the arrow keys to move the cursor, the caller must almost always use control-key combinations to achieve the same thing.  Still, there are some great advantages to using a full screen editor, especially from the sysop's point of view, and so provision is made in WWIV for their use.  The full screen editor must do all I/O through DOS calls.
+WWIV supports external editors in addition to the internal line editor and an 
+internal full screen editor. A full screen editor (FSED) allows you and your
+callers (with ANSI) to write email and posts using an editor that is not
+restricted to the line-by-line approach used by the internal line editor.
+Some editors allow the use of function and arrow keys to move the cursor about
+the screen, in much the same manner as a regular word processor. There are
+some great advantages to using a full screen editor, especially from the
+sysop's point of view, and so provision is made in WWIV for their use.  The
+full screen editor must do all I/O through DOS or socket calls.
 
-WWIVedit, another WSS product, is probably the most preferred FSED and is written specifically for use on WWIV BBS systems. WWIVedit is self installing and requires very little intervention during installation. WWIVedit is available on all Support Boards and on the Internet FTP site. [More information about WWIVEdit on WWIV](/editors/wwivedits)
+WWIVedit, another WSS product, is the most popular DOS based FSED that is
+written specifically for use on WWIV BBS systems. WWIVedit is self installing
+and requires very little intervention during installation. WWIVedit is
+available on all Support Boards and on the Internet FTP site.
+[More information about WWIVEdit on WWIV](/editors/wwivedits)
  
 ## Security Level Configuration  
 ```
@@ -409,19 +418,7 @@ This command applies a BBScomment to the selected archive.
 **Archive Test**  
 This command tests the selectedarchive for validity and integrity.
 
-## Instance Configuration  
-```
-┌─────────────────────────────────────── Temporary Directory Configuration ┐
-│ Temporary Dir Pattern : temp%n                                           │
-│ Batch Dir Pattern     : batch%n                                          │
-│ Number of Instances:  : 4                                                │
-│                                                                          │
-│ To change these values please edit 'wwiv.ini'                            │
-│                                                                          │
-│ Press Any Key                                                            │
-│                                                                          │
-└──────────────────────────────────────────────────────────────────────────┘
-```
+
 ## Language Configuration 
 ```
 ┌──────────────────────────────────────────────────── Language Configuration ┐
@@ -455,27 +452,25 @@ Implements internal hooks for pre-processors and tossers such the PPP
 Project to convert native type messages and email to WWIV format and
 vice versa.
 
-**NOTE:** Network configuration is discussed at length as part of setting up Nets to which your BBS 
-joins. See [NETS on the Home page of the wiki](/index.md#Nets).
+**NOTE:** Network configuration is discussed at length as part of setting up
+Nets to which your BBS  joins. See [NETS on the Home page of 
+the wiki](/index.md#Nets).
 
 ## Registration Information  
 
-WWIV does not require a registration number. If you have a 4.x number you can put it in here though for nostalgic purposes.
+WWIV does not require a registration number. If you have a 4.x number you 
+can put it in here though for nostalgic purposes.
 
 ## User Editor  
 
 ## Update Sub/Directory Maximums
 
 This is a system tuning parameter.  These items require runtime memory thus
-the higher they are set, the less memory is available when shelling to DOS
-or running external programs.  You should NOT select more than you think
-that you will actually need, for more memory is required as the number
-is increased.  This setting may be modified later if you require more
-subs or directories.
+the higher they are set, the less memory is available. This setting may be
+modified later if you require more subs or directories.
 
 ## Dial-Up Modem Access
 
-The ability to support Modems and Dial-up Access was removed in the early
-WWIV 5.0 builds (since it was known not to work and Rushfan had no real
-phone line to test with).  You may use an utility like 
+The ability to support Modems and Dial-up Access was removed with WWIV 5.0
+You may use an utility like 
 [SexPOTS](http://wiki.synchro.net/util:sexpots) to support dial-up access.

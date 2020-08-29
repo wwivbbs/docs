@@ -13,7 +13,7 @@ Grab your desired doorgame in this example we are installing Falcon's Eye.
 * RUN FE RESET after unpacking to configure your game settings
 * You will also need to edit your setup.sr file, most likely you will be running more than one node.
 ```
-c:\wwiv\temp\1\DOOR.SYS
+c:\wwiv\e\1\temp\DOOR.SYS
 10   <- Line # of Username or First name
 0   <- Line # of Last name (0 if prev line was full name)
 20   <- Line # of IBM charaters (1/Y/G = yes)
@@ -53,8 +53,8 @@ B) Filename     : c:\wwiv\door\fe\falc.bat %n
 C) SL           : 10
 D) AR           : None
 E) ANSI         : Optional
-F) Exec Mode:     FOSSIL
-I) Launch From  : Temp/Node Directory
+F) Exec Mode:   : Emulate DOS FOSSIL
+I) Launch From  : BBS Root Directory
 J) Local only   : No
 K) Multi user   : No
 L) Registered by: AVAILABLE

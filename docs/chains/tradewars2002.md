@@ -10,7 +10,7 @@ version it is a standalone game server.
 Known Issue | Workaround  or Description
 --- | ---
 NTVDM.EXE Crashes when launching TW2002 on Windows7 | This can happen if your PATH is wrong in ChainEdit. Make sure the path to TW.BAT is correct. In these examples steps ```c:\wwiv\doors\tw.bat %N``` would cause a crash. ```c:\wwiv\doors\tw\tw.bat %N``` is correct and fixes that.
-Unregistered versions will only work locally with WWIV5TelnetServer & Default TW2002 Configuration | Unregistered versions of TW2002 only let you use 1 Node. WWIV5TelnetServer reserves Instance 1 of WWIV for the Local Node. To workaround this: Go into the Preferences and change the value of "Use Nodes" from 2 through 4 to 1 through 4.
+Unregistered versions will only work locally with wwivd & Default TW2002 Configuration | Unregistered versions of TW2002 only let you use 1 Node. By default, wwuivd reserves Instance 1 of WWIV for the Local Node. To workaround this: Go into the Preferences and change the value of "Use Nodes" from 2 through 4 to 1 through 4.
 
 ## Installation Steps
 
@@ -19,16 +19,16 @@ Unregistered versions will only work locally with WWIV5TelnetServer & Default TW
 * Insert a new chain aka door & make your chain look like this:
 ```
 Editing Chain # 2
-A) Description : TradeWars 2002
-B) Filename : c:\wwiv\doors\tw\tw.bat %N
-C) SL : 10
-D) AR : None.
-E) ANSI : Optional
-F) DOS Interrupt: NOT Used
-G) Win32 FOSSIL : Yes
-J) Local only : No
-K) Multi user : Yes
-Which (A-K,R,[,],Q) ? 
+A) Description  : TradeWars 2002
+B) Filename     : c:\wwiv\doors\tw\tw.bat %N
+C) SL           : 10
+D) AR           : None.
+E) ANSI         : Optional
+F) Exec Mode:   : Emulate DOS FOSSIL
+I) Launch From  : BBS Root Directory
+J) Local only   : No
+K) Multi user   : Yes
+Which (A-K,[,],Q) ? 
 ```
 
 * In ```c:\wwiv\door\tw``` create ```tw.bat``` and add the following:  
@@ -105,11 +105,11 @@ Node number: 1
 
 Node editor: (?) (<>) (X=Exit) [X] :
 ```
-* You need to edit B the Path to the Drop File and C the Type of drop file. Set the path to ```c:\wwiv\temp1\``` and select WWIV for the Type. After you edit the Type you will see new options to edit.
+* You need to edit B the Path to the Drop File and C the Type of drop file. Set the path to ```c:\wwiv\e\1\temp\``` and select WWIV for the Type. After you edit the Type you will see new options to edit.
 ```
 Node number: 1
 <A> Path to Data files  : <Default Directory>
-<B> Path to Drop file   : c:\wwiv\temp1\
+<B> Path to Drop file   : c:\wwiv\e\1\temp
 <C> BBS Drop file type  : WWIV
 <D> Hardware Handshaking: Yes
 <E> Active Node         : Yes
@@ -126,7 +126,7 @@ Your configuration for Node 1 should now look like this:
 ```
 Node number: 1
 <A> Path to Data files  : <Default Directory>
-<B> Path to Drop file   : c:\wwiv\temp1\
+<B> Path to Drop file   : c:\wwiv\e\1\temp
 <C> BBS Drop file type  : WWIV
 <D> Hardware Handshaking: Yes
 <E> Active Node         : Yes
@@ -138,5 +138,5 @@ Node editor: (?) (<>) (X=Exit) [X] :
          Welcome to Trade Wars 2002 ver 3.09.  Game now in Local Mode.
 ```
 
-* **NOTE:** At ths point, if you've followed other door installation guids, you would configure the other nodes. You cannot do this with TW2002 unless you have the registered version. If you have a registered copy of TW2002 go ahead and configure the other nodes. The only difference is the path to the drop file will be ```\wwiv\temp#``` where # is equal to the Node Number.
+* **NOTE:** At ths point, if you've followed other door installation guids, you would configure the other nodes. You cannot do this with TW2002 unless you have the registered version. If you have a registered copy of TW2002 go ahead and configure the other nodes. The only difference is the path to the drop file will be ```\wwiv\e\#\temp``` where # is equal to the Node Number.
 * Exit the BBS Node Editor using "X" and then Exit TEDIT using "Q"

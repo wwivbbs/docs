@@ -6,24 +6,18 @@ The ChainEdit function is also quite similar to the BoardEdit function.  The Cha
 
 When ChainEdit is run, a summary of the chains currently available, if any, is presented as a listing. Available options are:  Insert, Delete, Modify and Quit. When a new chain is inserted or an old entry is modified, the sysop is given a chance to change the following data:
 ```
-ÚÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ¿
-³   A. Description  : ** NEW CHAIN **              ³
-³   B. Filename     : REM                          ³
-³   C. SL           : 10                           ³
-³   D. AR           : None.                        ³
-³   E. ANSI         : Optional                     ³
-³   F. DOS Interrupt: Used                         ³
-³   G. 300 Baud     : Allowed                      ³
-³   H. Shrink       : No                           ³
-³   I. Disable pause: No                           ³
-³   J. Local only   : No                           ³
-³   K. Multi user   : No                           ³
-³   L. Registered by: AVAILABLE                    ³
-³   M. Usage        : 0                            ³
-³   N. Age limit    : 0 - 255                      ³
-³                                                  ³
-³   Which (A-N,[,],Q)?                             ³
-ÀÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÙ
+A) Description  : ** NEW CHAIN **
+B) Filename     : REM
+C) SL           : 10
+D) AR           : None.
+E) ANSI         : Optional
+F) Exec Mode:     Normal
+I) Launch From  : BBS Root Directory
+J) Local only   : No
+K) Multi user   : No
+L) Registered by: AVAILABLE
+M) Usage        : 0
+N) Age limit    : 0 - 255
 ```
 
 **A) Description**  
@@ -55,13 +49,20 @@ The AR required in order to run the chain.  The sysop can allow only certain peo
 **E) ANSI**  
 If ANSI is required in order to run the chain. Because some games or on-line programs make extensive use of ANSI screens, those users who do not have ANSI may experience significant problems with the game.  This feature allows you to screen out the people who do not have ANSI capability.
 
-**F) DOS Interrupt**  
-Many programs run remotely will not have built in code for accessing the modem.  For these programs, the BBS should be set to intercept the DOS calls, and "re-direct" the output to go to the modem, as well as the screen. It is possible, however, that you will have a program that will do its own modem access, in which case it should be set so that the BBS won't intercept DOS calls.  In most cases, you WILL want the BBS to intercept DOS calls. 
+**F) Exec Mode**  
+Many programs run remotely will not have built in code for accessing the modem.   WWIV
+supports several modes for this:
 
-If the game does not seem to operate properly, you may need to experiment with this setting.  As a general rule, you should try having the BBS intercept DOS calls for those games designed specifically for WWIV and try having the BBS not intercept DOS calls for those games designed to be run on other systems.  These settings may still need to be changed, but the general rule is sound advice for what to try as the initial setting for this variable.
-
-**G) Win32 FOSSIL**  
-TODO: Need a good description from RushFan :-)
+* Normal - Execute the program as a native binary.  Socket handles may be passed to
+  the door using the ```%H``` parameter.
+* STDIO - **Linux Only** -   Execute the program as a native binary that use the
+  stdin, stdout natively and WWIV pipes that input/output to the BBS caller.
+* Emulate DOS Interrupts - **Win32 only** Requires the sbbsexec.dll to be 
+  placed in the WINDOWS\syste32 directory and uses the that DLL to emulate
+  DOS IO redirection.
+* Emulate DOS FOSSIL - **Win32 only** Requires the sbbsexec.dll to be placed
+  in the WINDOWS\syste32 directory and uses the that DLL to emulate a DOS
+  FOSSIL driver.
 
 **J) Local only**  
 This toggle defines the chain to be run in local mode only or unrestricted.

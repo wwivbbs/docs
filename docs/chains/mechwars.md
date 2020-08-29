@@ -24,7 +24,7 @@ make it look like this
     D) AR           : None.
     E) ANSI         : Optional
     F) Exec Mode:   : Emulate DOS FOSSIL
-    I) Launch From  : Temp/Node Directory
+    I) Launch From  : BBS Root Directory
     J) Local only   : No
     K) Multi user   : No
     L) Registered by: AVAILABLE

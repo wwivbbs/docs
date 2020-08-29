@@ -290,8 +290,8 @@ USE_INTERNAL_QWK       = Y                  ; Use internal QWK support
 ;                        TEMPORARY DIRECTORY SETTING
 ;=============================================================================
 NUM_INSTANCES        = 4
-TEMP_DIRECTORY       = temp%n
-BATCH_DIRECTORY      = batch%n
+TEMP_DIRECTORY       = e/%n/temp
+BATCH_DIRECTORY      = e/%n/batch
 ;
 ;
 ;=============================================================================

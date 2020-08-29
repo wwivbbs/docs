@@ -19,12 +19,12 @@ Issue | OS
 * Now setup a new entry in Chain Edit
 ```
 A) Description  : Door MUD
-B) Filename     : c:\wwiv\doors\dmud\runmud.bat -n %N -d c:\wwiv\temp%N
+B) Filename     : c:\wwiv\doors\dmud\runmud.bat -n %N -d %I
 C) SL           : 10
 D) AR           : None.
 E) ANSI         : Optional
-F) DOS Interrupt: NOT Used
-G) Win32 FOSSIL : Yes
+F) Exec Mode    : Normal
+I) Launch From  : Temp/Node Directory
 J) Local only   : No
 K) Multi user   : Yes
 L) Registered by: AVAILABLE
@@ -45,7 +45,7 @@ N) Age limit    : 0 - 255
  C) SL           : 10
  D) AR           : None.
  E) ANSI         : Optional
- F) Exec Mode      none
+ F) Exec Mode    : Normal
  I) Launch From  : Temp/Node Directory
  J) Local only   : No
  K) Multi user   : Yes

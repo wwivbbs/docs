@@ -42,7 +42,7 @@
 √ (1) Node Number      : 1
   (2) BBS Name         : YOUR BBS
   (3) BBS Software     : WWIV
-  (4) Path To Drop File: C:\WWIV\TEMP1
+  (4) Path To Drop File: C:\WWIV\E\1\TEMP
   (5) Fossil/Internal  : Using Regular Fossil Driver
   (6) Locked Port Speed: Port Not Locked
   (7) Comport          : Read From Drop File
@@ -66,9 +66,8 @@ B) Filename     : c:\wwiv\teos\start.bat %N
 C) SL           : 10
 D) AR           : None.
 E) ANSI         : Optional
-F) DOS Interrupt: NOT Used
-G) Win32 FOSSIL : Yes
-J) Local only   : No
+F) Exec Mode:     Emulate DOS FOSSIL
+I) Launch From  : BBS Root Directory
 K) Multi user   : Yes
 L) Registered by: AVAILABLE
 M) Usage        : 0

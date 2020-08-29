@@ -24,9 +24,8 @@ B) Filename     : c:\wwiv\lord\lord.bat %N
 C) SL           : 10
 D) AR           : None.
 E) ANSI         : Optional
-F) DOS Interrupt: NOT Used
-G) Win32 FOSSIL : Yes
-J) Local only   : No
+F) Exec Mode:     Emulate DOS FOSSIL
+I) Launch From  : BBS Root Directory
 K) Multi user   : Yes
 L) Registered by: AVAILABLE
 M) Usage        : 0
@@ -91,7 +90,7 @@ Here are your choices:
        => (1) Node Number                 : 1
           (2) BBS Name                    : A Pretty Cool BBS
           (3) BBS Software                : WWIV
-          (4) Path to dropfile            : C:\WWIV\TEMP1
+          (4) Path to dropfile            : C:\WWIV\e\1\TEMP
           (5) Fossil / Internal           : Using regular fossil driver
           (6) Locked port speed           : Port not locked
           (7) Comport                     : Read from dropfile

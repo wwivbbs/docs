@@ -292,7 +292,7 @@ WWIVedit, another WSS product, is the most popular DOS based FSED that is
 written specifically for use on WWIV BBS systems. WWIVedit is self installing
 and requires very little intervention during installation. WWIVedit is
 available on all Support Boards and on the Internet FTP site.
-[More information about WWIVEdit on WWIV](/editors/wwivedits)
+[More information about WWIVEdit on WWIV](../editors/wwivedits)
  
 ## Security Level Configuration  
 ```
@@ -454,7 +454,7 @@ vice versa.
 
 **NOTE:** Network configuration is discussed at length as part of setting up
 Nets to which your BBS  joins. See [NETS on the Home page of 
-the wiki](/index.md#Nets).
+the wiki](../index.md#Nets).
 
 ## Registration Information  
 

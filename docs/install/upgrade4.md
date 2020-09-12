@@ -36,7 +36,7 @@ This might mean running windows update several times.
 
 #### Download the current WWIV version
 
-Read the [GET WWIV instructions](/index.md) 
+Read the [GET WWIV instructions](../index.md) 
 
 #### Install new EXEs
 
@@ -50,7 +50,7 @@ There have been many changes to WWIV since 4.x so we are providing a new wwiv.in
 You may either simply edit your existing wwiv.ini, bringing over any customizations
 you have in your wwiv 4.x wwiv.ini file.
 
-See [wwivini.5xx](/cfg/wwivini.md)
+See [wwivini.5xx](../cfg/wwivini.md)
 
 #### Update your configuration files using the new wwivconfig
 
@@ -64,7 +64,7 @@ instance from wwivconfig.
 
 wwivd is the telnet server bundled with WWIV. 
 
-Configure wwivd as outlined here:  [wwivd](/conn/telnet.md)
+Configure wwivd as outlined here:  [wwivd](../conn/telnet.md)
 
 Start wwivd and test by telnetting or sshing to your bbs on localhost
 port 23 on Windows or 2323 on UNIX by default.  You can change this in

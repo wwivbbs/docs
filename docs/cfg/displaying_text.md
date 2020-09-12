@@ -29,14 +29,14 @@ and has been around along as WWIV has.  It may be used in any place WWIV is disp
 By using the //COLORS menu option, users can customize how color codes are displayed to them and only
 them. For example, by default |#5 is GREEN on BLACK. A User can change to MAGENTA on WHITE and anywhere |#5 or CTRL-P+5 have been used .MSG files or SUB messages it will display the users chosen color instead. Here is a screen shot of //COLORS. The character in the cell is the one you press to customize that color.
 
-![ColorEditor](/screenshots/wwivbbs/ColorEditor.png)
+![ColorEditor](../screenshots/wwivbbs/ColorEditor.png)
 
 ### Extended Editor Heart Codes
 These are the color codes you can use when posting messages, sending feedback and email on WWIV BBS. To use
 a particular color type CTRL-P + the letter or number that represents the color you want. You can then use 
 CTRL-P+0 to return to the default color.
 
-![WWIVBBSColors](/screenshots/wwivbbs/COLORS.png)
+![WWIVBBSColors](../screenshots/wwivbbs/COLORS.png)
 
 
 ### Pipe Codes
@@ -52,7 +52,7 @@ These are the default 0-9 Pipe colors used in the menu system and other UI pages
 ```|#5``` when you want to start GREEN and then ```|#0``` to switch back to GRAY. Look in some of the .MSG files
 in \wwiv\gfiles for more samples.
 
-![defPipeColors](/screenshots/wwivbbs/defaultPipeColors.png)
+![defPipeColors](../screenshots/wwivbbs/defaultPipeColors.png)
 
 
 #### Pipe Colors

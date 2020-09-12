@@ -117,7 +117,7 @@ This is the Waiting For Caller (WFC) Screen.
 
 _**Congratulations! You are now the SysOp of a WWIV BBS!**_
 
-Continue on to more advanced [wwivd](/conn/telnet.md) settings 
+Continue on to more advanced [wwivd](../conn/telnet.md) settings 
 to get on the Internet. But we suggest you read through the rest of the 
 documentation before you get too excited about that just yet. But don't worry, 
 it's not hard at all!

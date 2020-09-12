@@ -5,7 +5,7 @@ This relates to settings for using dosemu to run certain parts of the WWIV
 BBS. The main thing that requires DOS emulation is running old door programs.
 There are a number of things, however, that apply to all cases when using 
 dosemu. If you haven't installed WWIV for linux yet, please check out 
-[WWIV Install on Linux](/install/linux.md).
+[WWIV Install on Linux](../install/linux.md).
 
 ## Common Settings
 

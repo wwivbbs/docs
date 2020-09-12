@@ -10,7 +10,7 @@
              WWW   WWW   WWW   WWW  III    VVV      555555 .. 555555
 ```
 
-WWIV BBS SOFTWARE has a long [history](/misc/history.md),
+WWIV BBS SOFTWARE has a long [history](misc/history.md),
 this project is to give WWIV a strong future.
 
 Were working hard to bring you the best bbs software we can.
@@ -24,12 +24,12 @@ The WWIV Dev Team
 Use one of the following sections to install WWIV on either
 Windows or Linux:
 
-- [Windows WWIV Installation](/install/win.md)  
-- [Linux WWIV Installation](/install/linux.md)  
+- [Windows WWIV Installation](install/win.md)  
+- [Linux WWIV Installation](install/linux.md)  
 
 If you are upgrading from WWIV 4.x then check out:
 
-- [Upgrading from WWIV 4.x'](/install/upgrade4.md)
+- [Upgrading from WWIV 4.x'](install/upgrade4.md)
 
 # Links
 

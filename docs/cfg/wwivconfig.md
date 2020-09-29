@@ -8,7 +8,7 @@ you're ready to go live and open up to users. After you complete these installat
 steps, see the full details on related wwivconfig settings, WWIV.INI and other Advanced 
 configuration topics.
 
-## Commandline Parameters
+# Commandline Parameters
 
 **wwivconfig** has several commandline parameter to launch specific editors.
 
@@ -18,8 +18,13 @@ Commandline Parameter | Description
 **--menu_editor** | Launches directly into the WWIV Menu Editor.
 **--network_editor** | Launches directly into the WWIV Network Editor.  This is also allows WWIV 4.x to use the Net51+ network stack.
 
+****
 
-## General System Configuration
+# General System Configuration
+
+This is where the basic configuration options and values including system name, sysop name
+and other options are specified.
+
 **System PW**  
 
 The system password defaults to SYSOP, but you should be sure to change it to 
@@ -30,12 +35,16 @@ password it will show on screen as XXXXX.
 
 **System Name**  
 
-The name of the BBS.
+The name of the BBS.  It should be unique within the network if possible,
+so try to look at the wwivnet bbs lists, as well as the network files
+for any other networks you plan on joining to see if the name you would
+like to use it already taken.
 
 **System Phone**  
 
-This is where you would put the phone number for your BBS if you had one. WWIV doesn't support dial-up
-so its been the practice of current SysOps to put their proper AREA CODE and then NET-ONLY (e.g.: 206-NET-ONLY).
+This is where you would put the phone number for your BBS if you had one. 
+WWIV doesn't support dial-up so its been the practice of current SysOps to 
+put their proper AREA CODE and then NET-ONLY (e.g.: 206-NET-ONLY).
 
 **Closed System**  
 
@@ -44,6 +53,7 @@ your system, set this to Yes.  If someone does dial up a closed system, they
 will be presented with a short message telling them it is a closed system and 
 does not accept new users.
 
+
 **Newuser PWD**  
 
 This is the password users will have to enter in order to log on as new 
@@ -51,9 +61,11 @@ users. If there is no Newuser password, anyone may log on as a new user.
 This should only be used if you wish to operate a "private" system where 
 you only allow people you know to log on.
 
+
 **Newuser restrict : LCMA\*PEVKNU01234**
 
 These settings are used to restrict new users from certain features of the system.
+
 
 Restriction | Description
 :---: | ---
@@ -162,10 +174,10 @@ available, but will still only show the first 254 pieces at the mail prompt.
 
 The BBS requires you set the maximum number of users that can be on the 
 system. This defaults to 500, but you may increase or decrease it. The 
-absolute maximum is 32,767, but 2,000 is probably about the limit for 
-performance reasons (i.e., the system slows down the more users you have).
+absolute maximum is 32,767, but 2,000 is probably more than enough for
+a BBS now-a-days.
 
-**Caller number**  
+**Total Calls**  
 
 If you have converted to WWIV v4 from another BBS (possibly an earlier version 
 of WWIV), you may set the current caller number with this option. This counter 
@@ -176,6 +188,36 @@ remote caller is the sysop.
 
 Again, if you converted from another BBS, you can set the number of days your 
 BBS has been active here.
+
+**Max backups**
+
+When WWIV saves critical datafiles such as subs.json, it retains backup copies
+of this datafile in case of corruption or misconfiguration.  The backups
+are of the format:
+
+```FILENAME.backup.DATE```
+
+The date is the YYYYMMDDHHmmSS of the timestamp the file was backed up.
+
+For example:
+```subs.json.backup.20200927073046``` 
+
+The limits the number of backups to keep when making new datafile backups, and
+by default the value is 0 which means do not remove old backups when making
+new ones.
+
+** 4.x Reg Number **
+
+WWIV 5.x is open source software and is free to use in accordance with it's
+very liberal Apache 2 license.  WWIV does not require a registration number,
+however if you have a 4.x number you may enter it here though entirely for
+nostalgic purposes.  It will be displayed in the post-logon system information
+ (lilo) when a user logs in.
+
+
+
+****
+
 
 ## System Paths  
 ```
@@ -456,10 +498,6 @@ vice versa.
 Nets to which your BBS  joins. See [NETS on the Home page of 
 the wiki](../index.md#Nets).
 
-## Registration Information  
-
-WWIV does not require a registration number. If you have a 4.x number you 
-can put it in here though for nostalgic purposes.
 
 ## User Editor  
 

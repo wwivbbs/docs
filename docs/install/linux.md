@@ -12,6 +12,7 @@ Package | Comments
 sudo | to allow more controlled access to root-owned tools
 zip/unzip | needed for system setup, and really any BBS should have it
 ncurses (libncurses5)| Needed for CLI tools GUI display (libncurses5 is the debian version)
+zlib1g | Needed for SSH (called zlib on centos)
 awk, grep, sed | core OS tools for line parsing (these are _really_ basic)
 
 

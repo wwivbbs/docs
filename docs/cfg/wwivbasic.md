@@ -13,7 +13,7 @@ WWIVbasic supports the entire syntax of MY-BASIC.  The MY-BASIC
 documentation can be found in the 
 [MY-BASIC Quick Reference](https://github.com/paladin-t/my_basic/blob/master/MY-BASIC%20Quick%20Reference.pdf) document.  In addition to the core language, WWIVbasic includes several package to interact with the WWIV BBS.
 
-## DataTypes supported
+### DataTypes supported
 
 | Name    | Description |
 | ------- | ----------- |
@@ -23,7 +23,7 @@ documentation can be found in the
 | String  | A standard string, a list of characters |
 
 
-## Invoking Functions
+### Invoking Functions
 
 Functions may exist in the global namespace (like PRINT), or may
 belong to a module.  All of the WWIV BBS functions will belong to
@@ -43,7 +43,7 @@ puts("Hello |@N, How are you?")
 
 ``` 
 
-## Importing Packages
+### Importing Packages
 
 Packages are imported using the ```IMPORT``` statement in WWIVbasic.  
 Starting the name of a package with a ```@``` character means that
@@ -111,23 +111,8 @@ false values.
 
 Example:
 ```
-if wwiv.eval("user.sl > 200") = FALSE then wwiv.io.puts("Hello high level SL caller!")
-
-```
-
-### wwiv.printfile(string filename)
-
-Displays the content of ```filename``` using the same logic
-as the ```printfile``` C++ function. It'll automatically
-choose the best suffix for a file matching the name
-```filename``` from the ```GFILES``` directory of the BBS.
-
-*Note: This method will move to wwiv.io shortly*
-
-Example:
-```basic
-
-wwiv.printfile("oneliners")
+if wwiv.eval("user.sl > 200") = FALSE then 
+  wwiv.io.puts("Hello high level SL caller!")
 
 ```
 
@@ -318,9 +303,9 @@ wwiv.io.pause()
 
 ```
 
-## Package wwiv.io.data
+## Package wwiv.data
 
-The ```wwiv.io.data``` package is responsible for loading and saving data to
+The ```wwiv.data``` package is responsible for loading and saving data to
 the datastore for WWIV.  Currently only GLOBAL data is supported.
 
 ### wwiv.data.load("GLOBAL", list l)
@@ -350,9 +335,164 @@ wwiv.data.save("GLOBAL", l)
 
 ```
 
+## Package wwiv.io.file
+
+The ```wwiv.io.file``` package is responsible file IO in specifically
+allowed directories for WWIV.  Currently only the GFILES directory
+is supported.
+
+### wwiv.io.file.open_options(location)
+
+Creates the set of options used when locating and opening a file.
+
+Params:
+
+* location: This is the location of that open is allowed to use. 
+  They can be one of the following values:
+    * "GFILES": currently any file type is allowed in the GFILES dir.
+
+Returns:
+
+* value a wwiv.io.file.open_option.
+
+Example:
+```basic
+opt = wwiv.io.file.open_options("GFILES")
+```
+
+### wwiv.io.file.open(opt, NAME, MODE)
+
+Opens a file and returns a file handle for the opened file.
+
+Params:
+
+* opt: This is the open options from wwiv.io.file.open_options(loc)
+* NAME: the filename without any path.
+* MODE: "R" or "W" for read or write
+
+Returns:
+
+* value a wwiv.io.file.handle.
+
+Example:
+```basic
+opt = wwiv.io.file.open_options("GFILES")
+h = wwiv.io.file.open(opt, NAME, MODE)
+```
+
+### wwiv.io.file.readintostring(handle)
+
+Read all of the lines of a file into a single string.
+
+Params:
+
+* handle is a file handle returned from ```wwiv.io.file.open```
+
+Returns: 
+
+* returns all of the lines from handle as a string
+
+Example:
+```basic
+s = wwiv.io.file.readintostring(handle)
+```
+
+
+### wwiv.io.file.readlines(handle, list)
+
+Read lines of a file into a list collection.
+
+Params:
+
+* handle is a file handler returned from ```wwiv.io.file.open```
+* [OUT] all of the lines from handle into 
+
+Example:
+```basic
+l = list()
+wwiv.io.file.readlines(handle, l)
+```
+
+### wwiv.io.file.last_modified(OPT, NAME)
+
+Gets the file's last modified
+
+Params:
+
+* OPT: a wwiv.io.file.open_option reference
+* NAME: The filename without path
+
+Returns:
+
+* the last modified time as a unix time_t value
+
+Example:
+```basic
+opt = wwiv.io.file.open_options("GFILES")
+wwiv.io.file.last_modified(opt, NAME)
+```
+
+
+## Package wwiv.os (TBD)
+
+package wwiv.os
+
+### wwiv.os.exec_options(OPT, DIR, DROPFILE)
+
+Execute command
+
+```
+opt = wwiv.os.exec_options("DOOR32", "TEMP", "chain.txt")
+opt.type = "DOOR32"
+opt.dropfile = "chain.txt"
+opt.dir = "TEMP"
+```
+Options are (in order): 
+- TYPE (one of "DOOR32", "STDIO", "FOSSIL")
+- DIR
+- dir is one of
+  - "TEMP": Temp directory for node
+  - "BBS" : BBS Root Directory
+- DROPFILE (one of "CHAIN.TXT", "DOOR.SYS")
+
+wwiv.exec(opt, cmd)
+```
+- opt is an exec_options struture
+- cmd is the commandline to execute.
+```
+
+## Package wwiv.time
+
+The ```wwiv.time``` package is responsible supporting date and
+time within WWIV.
+
+### wwiv.time.format(UT, FMT)
+
+Returns time UT formatted using the format specified in FMT
+
+Params:
+
+* UT: The time in UNIX time_t format.
+* FMT: The format string to use. This is the same format as
+  specified by POSIX strftime
+
+Returns:
+
+* value a wwiv.io.file.open_option.
+
+Example:
+```basic
+o = wwiv.io.file.open_options("GFILES")
+h2 = wwiv.io.file.open(o, "logon.msg", "R")
+lm = wwiv.io.file.last_modified(h2)
+print wwiv.time.format(lm, "%Y-%m-%d %H:%M:%S")
+```
+
 
 ## Samples
 
 WWIV includes several sample scripts bundled in ```sample.zip``` or in the
-```samples/``` directory in your WWIV install. You may also find these
-scripts in [GitHub](https://github.com/wwivbbs/wwiv/tree/master/bbs/admin/scripts).
+```samples/``` directory in your WWIV install. 
+
+You may also find these scripts in 
+[GitHub](https://github.com/wwivbbs/wwiv/tree/master/bbs/admin/scripts).

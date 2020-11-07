@@ -149,7 +149,7 @@ FTN Netmail works much like WWIVnet netmail. The difference is addressing. The f
 (right now, this will change to become easier) is:
 
 ```
-Username (zone:net/node) @32765
+Username (zone:net/node)
 ```
 
 If you have more than 1 FTN network, you'll need to select the network from the list.

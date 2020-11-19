@@ -112,6 +112,44 @@ several INI files that manage details about your install.  The main ones are:
 1. wwiv.ini - the primary config file.  Most of your settings are here
 1. net.ini - manages details for how to connect to wwivnet for message transfers
 
+### Directory Permissions
+
+It is possible to let your "regular" user write and create files in the WWIV 
+directory though clever use of permissions, based off [this solution](https://askubuntu.com/questions/647392/user-access-to-ftp-and-at-same-time-set-www-data-as-owner-group).  
+
+These instructions assume that your installation is in `~/wwiv`; adjust paths appropriately.
+
+1. Add your regular or FTP user to the wwiv group: 
+
+`sudo usermod -a -G wwiv USERNAME`
+
+2. To ensure everything is owned properly to start: 
+
+`sudo chown -R wwiv:wwiv ~/wwiv`
+
+3. Set the permission for the main folder: `sudo chmod 2775 ~/wwiv`
+
+The chmod values are: 2=set group id, 7=rwx for owner (wwiv), 7=rwx for group 
+(wwiv), 5=rx for world.  Setting group ID (SETGID) bit (2) causes the group 
+(wwiv) to be copied to all new files/folders created in that folder. 
+
+4. Use `find` to do the same process for all subdirectories: 
+
+`sudo find ~/wwiv -type d -exec chmod 2775 {} +`
+
+5. Make sure all other files are read/write for group: 
+
+`sudo find ~/wwiv -type f -perm 664 -exec chmod 0664 {} +`  
+`sudo find ~/wwiv -type f -perm 644 -exec chmod 0664 {} +`  
+`sudo find ~/wwiv -type f -perm 646 -exec chmod 0664 {} +`  
+`sudo find ~/wwiv -type f -perm 666 -exec chmod 0664 {} +`  
+
+6. Change the umask for your users to 0002 by adding this line to the bottom of /etc/profile
+
+`umask 0002`
+
+7. Reboot and profit.
+
 ### dosemu config 
 
 **dosemu** is used for a number of things that can't be handled natively in

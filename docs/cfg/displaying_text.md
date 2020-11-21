@@ -226,6 +226,13 @@ Then you can add the color codes in notepad.
 [Pablo Draw](http://picoe.ca/products/pablodraw/) is a great tool for doing full
 color ANSI artwork, used by many of the top artists.  
 
+## Old MenuPacks
+
+Old menupacks for WWIV - such as [these](http://www.oocities.org/siliconvalley/pines/2722/#menus) are a 
+great place to draw inspiration. *Please note*: The file structure and names of these 
+menu sets is different than the current menu system!  
+
+
 ## Known Issues
 * Microsoft stopped including [ANSI.SYS](https://en.wikipedia.org/wiki/ANSI.SYS)
   in Windows VISTA.  

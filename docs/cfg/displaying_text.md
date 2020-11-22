@@ -54,10 +54,19 @@ CTRL-P+0 to return to the default color.
 Pipe codes are a newer invention on the BBS scene, only around for 20 years
 or so (maybe longer), and is supported by the majority of BBS software still
 in existence.  Pipe code support was added to WWIV in 5.0 beta-1 around
-October 2002.  It is a implemented as a vertical bar '|' followed by either
-numbers orletters to implemente either a color change, formatting change or
-even user macros.  Pipe codes may be used in any place WWIV is displaying text
-to the user in prompts, messages, even ANS, B&W or MSG files.
+October 2002.  It is a implemented as a vertical bar '|' followed by
+numbers,letters, or some other characters such as '[' and '{' to implement 
+color changes, perform cursor movement perform display manipulation, include
+session, user or system information into the output. Pipe codes may be used in
+any place WWIV is displaying text to the user in prompts, messages, even 
+in .ANS, .B&W and .MSG files.
+
+
+#### Pipe Color Codes
+
+Two-digit pipe colors are a more widely-accepted "normal" way to define
+colors.  If you use them in your messages, they are the most likely to be
+displayed properly on other systems that might see them (gated subs, etc).
 
 These are the default 0-9 Pipe colors used in the menu system and other UI 
 pages. You uses them by specifying ```|#5``` when you want to start GREEN
@@ -65,13 +74,6 @@ and then ```|#0``` to switch back to GRAY. Look in some of the .MSG files
 in \wwiv\gfiles for more samples.
 
 ![defPipeColors](../screenshots/wwivbbs/defaultPipeColors.png)
-
-
-#### Pipe Colors
-
-Two-digit pipe colors are a more widely-accepted "normal" way to define
-colors.  If you use them in your messages, they are the most likely to be
-displayed properly on other systems that might see them (gated subs, etc).
 
 Let NN be a 2 digit color code, and 
 
@@ -108,72 +110,133 @@ White on Red, for example, you can use ```|15|20```
 | 23 | | Gray
 
 
-#### Pipe Code Macros
+#### Pipe Display Macros
 
 
-WWIV pipe macros are the canonical way to embed session information into
-display text.
+WWIV pipe macros are the canonical way to embed system, session and user
+information into display text.
 
 Let X be a single digit character, and @ be a literal '@' character
 
-```|@X ``` is the way to display a pipe code macro to display session information.
+```|@X ``` is the way to display a pipe code macro to display session 
+information.
 
 | Code | Information to display |
 |------|------------------------|
-~ | Total e-mails and feedbacks sent.
-/ | Today's Date
-% | Time remaining
-# | User number
-$ | File points
-* | WWIV registration num
-- | A$$ points
-! | Display a pause.
-& | status of ANSI or ASCII
+@~ | Total e-mails and feedbacks sent.
+@/ | Today's Date
+@% | Time remaining
+@# | User number
+@$ | File points
+@* | WWIV registration num
+@- | A$$ points
+@! | Display a pause.
+@& | status of ANSI or ASCII
 @ | Current directory name
-: | Current Message area #
-; | Current File area #
-A | User's age
-a | User' language
-B | User's Birthday
-b | Minutes available in the TimeBank
-C | User's city           
-c | User's country
-D | Number of files downloaded    
-d | User's DSL         
-E | # of E-mails sent
-e | # of network E-mails sent    
-F | # of Feedbacks sent      
-f | Date of first call
-G | # of Messages read       
-g | # of gold                
-I | User's callsIgn
-i | # of Illegal log-ons     
-J | Current message conference name   
-j | Current File conference name
-K | Kb uploaded
-k | Kb downloaded
-L | Date of last call
-l | Total number of logons    
-M | # of e-mail waiting        
-m | # of messages posted
-N | User's name         
-n | Sysop's note        
-O | Times on today
-o | Minutes on          
-P | BBS phone number          
-p | User's phone number
-R | User's real name    
-r | Last baud rate connected      
-S | User's SL
-s | User's street addr. 
-T | User's state        
-t | Current time
-U | # of files uploaded      
-V | # messages in sub   
-X | User's gender
-Y | This BBS Name       
-y | User Computer type  
-Z | User's zip code
+@: | Current Message area #
+@; | Current File area #
+@A | User's age
+@a | User' language
+@B | User's Birthday
+@b | Minutes available in the TimeBank
+@C | User's city           
+@c | User's country
+@D | Number of files downloaded    
+@d | User's DSL         
+@E | # of E-mails sent
+@e | # of network E-mails sent    
+@F | # of Feedbacks sent      
+@f | Date of first call
+@G | # of Messages read       
+@g | # of gold                
+@I | User's callsIgn
+@i | # of Illegal log-ons     
+@J | Current message conference name   
+@j | Current File conference name
+@K | Kb uploaded
+@k | Kb downloaded
+@L | Date of last call
+@l | Total number of logons    
+@M | # of e-mail waiting        
+@m | # of messages posted
+@N | User's name         
+@n | Sysop's note        
+@O | Times on today
+@o | Minutes on          
+@P | BBS phone number          
+@p | User's phone number
+@R | User's real name    
+@r | Last baud rate connected      
+@S | User's SL
+@s | User's street addr. 
+@T | User's state        
+@t | Current time
+@U | # of files uploaded      
+@V | # messages in sub   
+@X | User's gender
+@Y | This BBS Name       
+@y | User Computer type  
+@Z | User's zip code
+
+#### Pipe Screen and Cursor Control
+
+
+WWIV pipe screen and cursor codes allow simple display manipulation to be
+embedded in text without needing to implement ANSI codes, nor checking for
+ANSI support from the user.
+
+
+```|[nnX ``` is the way to display a pipe code macro to display session 
+information.  
+
+In all cases nn is optional and defaults to 1
+
+
+| Code  | Information to display |
+|-------|------------------------|
+[nnA    | Moves the cursor up nn lines
+[nnB    | Moves the cursor down nn lines
+[nnC    | Moves the cursor right nn lines
+[nnD    | Moves the cursor left nn lines
+[xx;yyH | Goto screen position xx, yy
+[K      | Clears the line from cursor position to end of line
+[1K     | Clears the line from beginning of line to cursor position
+[2K     | Clears the entire line, leaves the cursor position the same
+[nnN    | Performs nn newlines (same as bout.nl(nn) in code)
+
+
+#### Pipe Expression Language
+
+
+WWIV pipe expression language allows more functions to be executed in the context
+of displaying text.  All text that is not part of a string literal (i.e.
+enclosed in double quotes) must be lower case.
+
+These are of the format ```|{xxxxx}``` whre xxxxx is the expression text.
+
+| Expression  | Action |
+|-------------|------------------------|
+set           | sets the next variable to the value that follows.  Example: set pause off
+| pause       | displays the system pause.
+
+Set can manipulate the values of several system variables.  The values can be
+strings that must be enclosed on double quotes, numbers, or truthy values.  
+
+Truthy values are for true are: 'true', 'yes', 'on'.  Every other value is false.
+
+| Variable    | Meaning |
+|-------------|------------------------|
+pause         | sets the pause on page on or off
+lines         | sets the number of lines displayed, this is used for pause calculation.  Currently only 0 is supported for a value.
+
+
+Examples:
+```
+  |{set pause=off}
+  |{set lines=0}
+  Hello |@N! How are you today?
+  |{pause}
+```
 
 
 ## Files

@@ -73,6 +73,11 @@ IMPORT "helper.bas"
 
 ## WWIV Packages
 
+Please note that WWIVbasic may be enabled or disabled in WWIVconfig under
+menu item (R) [Scripting Config].  Additionally WWIVbasic packages may be
+selectively enabled and disabled. By default wwiv.io.file and wwiv.os 
+are disabled. Please use wwivconfig to enable these packages.
+
 ## package wwiv
 
 The ```wwiv``` package is the core package of interacting with WWIV. 

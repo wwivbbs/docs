@@ -6,7 +6,8 @@ theme: readthedocs
 #google_analytics: ['UA-71826946-2', 'docs.wwivbbs.org']
 markdown_extensions:
   - toc:
-#    permalink: True
+      permalink: True
+      anchorlink: True
 nav:
   - Home: index.md
   - Installation:
@@ -24,13 +25,14 @@ nav:
       - 'Linux dosemu Settings': linux/dosemu.md
       - 'Event Management': cfg/eventmgmt.md
       - 'ACS Reference': cfg/acs.md
+  - Basic Use:
+    - 'WFC Screen (Local Console)': wfc.md
+    - 'Frequently Asked Questions (FAQ)': faq.md
   - Connectivity:
     - 'wwivd': conn/telnet.md    
     - 'NET2BBS': conn/net2bbs.md
     - 'fail2ban IP blocking': conn/fail2ban.md
     - 'Telnet/SSH Clients': conn/clients.md
-  - Basic Use:
-    - 'WFC Screen (Local Console)': wfc.md
   - Menus:
     - 'Commands' : menus/commands.md
     - 'Main Menu': menus/main.md

@@ -1,5 +1,11 @@
+# WWIVconfig
+***
 
+## Table of Contents
 
+[TOC]
+
+***
 These are the SysOp tools and WWIV BBS settings which can be configured 
 when you run wwivconfig.exe from the command prompt.
 
@@ -8,7 +14,7 @@ you're ready to go live and open up to users. After you complete these installat
 steps, see the full details on related wwivconfig settings, WWIV.INI and other Advanced 
 configuration topics.
 
-# Commandline Parameters
+## Commandline Parameters
 
 **wwivconfig** has several commandline parameter to launch specific editors.
 
@@ -20,7 +26,7 @@ Commandline Parameter | Description
 
 ****
 
-# General System Configuration
+## General System Configuration
 
 This is where the basic configuration options and values including system name, sysop name
 and other options are specified.

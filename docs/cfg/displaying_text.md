@@ -1,6 +1,10 @@
 #  Displaying Text
 ***
+## Table of Contents
 
+[TOC]
+
+***
 When you logged in, you saw several places where some placeholder messages
 were displayed. These messages are all specified in files located at 
 ```\wwiv\gfiles```. In this directory, there are a number of .MSG and .ANS

@@ -10,22 +10,17 @@ is not.
 
 ## Setup
 
-NetFoss is bundled with WWIV on Windows and available in the ```NF```
-subdirectory under WWIV's install. i.e. C:\wwiv\nf
+NetFoss is bundled with WWIV on Windows and available in the ```NETFOSS```
+subdirectory under WWIV's install. i.e. C:\wwiv\netfoss
 
-* Follow the install instructions that come with netfoss in
-  C:\wwiv\nf\netfoss.txt
-* Make sure to copy netfoss.dll to the Windows system32 directory, 
-  otherwise netfoss will not be able to load it as a VDD.
-* Edit C:\wwiv\nf\nf.bat to fix the paths from ```C:\netfoss``` to
-  the right location (i.e. ```C:\wwiv\nf```)
-
+**IMPORTANT** Make sure to copy netfoss.dll to the Windows system32 directory, 
+otherwise netfoss will not be able to load it as a VDD.
+*This has to happen using an administrative command prompt.*
 
 ## Use
 
-To use netfoss use the ```Normal``` exec mode (do not use Emulate DOS FOSSIL)
-as nf.bat will do that for you.  Then prepend C:\wwiv\nf\nf.bat in front
-of the normal commandline used to run the door.  In the future release this
-will be more automated as it is today for sbbsexec.dll.
+To use netfoss use the ```NetFoss``` exec mode in ChainEdit or for an external
+message editor. You do not need to prepend C:\wwiv\nf\nf.bat in front
+of the normal commandline used to run the door. 
 
 That's it.

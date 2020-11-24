@@ -1,6 +1,12 @@
 # WWIVbasic
 ***
 
+## Table of Contents
+
+[TOC]
+
+***
+
 ## About
 
 WWIV supports extending the BBS using WWIVbasic.  WWIVbasic

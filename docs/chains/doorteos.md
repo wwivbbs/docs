@@ -55,7 +55,7 @@
   (]) Go forward a node
   (Q) Quit To Main
 ```
-* Go to c:\wwiv\teos\start.bat and edit the dive and path in the beginning of the file and uncomment those two lines. (Remove the "REM " from the beginning of those two lines.
+* Go to c:\wwiv\teos\start.bat and edit the drive and path in the beginning of the file and uncomment those two lines. (Remove the "REM " from the beginning of those two lines.
 * Login into your bbs and use chainedit //ce at the main menu OR at the Waiting for Call (WFC) type C. Either way then select Insert door and configure it like this:
 
 ```ANSIIDOC

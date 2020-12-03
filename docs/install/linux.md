@@ -15,9 +15,7 @@ ncurses (libncurses5)| Needed for CLI tools GUI display (libncurses5 is the debi
 zlib1g | Needed for SSH (called zlib on centos)
 awk, grep, sed | core OS tools for line parsing (these are _really_ basic)
 
-
-
-
+<br/>
 ### Optional Items
 These are items that are not needed for proper functionality of a basic BBS, but will make things
 a lot easier (and potentially necessary for certain advanced configurations).
@@ -31,7 +29,7 @@ dos2unix/unix2dos | for converting file types
 
 
 
-
+<br/>
 ## Installation Steps
 
 These are the steps for installing WWIV.  You should do this step to setup
@@ -51,34 +49,42 @@ option is to create a dedicated user to run the BBS.
 Luckily, we have an installer script that will take care of most of the
 details for you.
 
-1. Make a wwiv directory and cd into it (e.g., /home/wwiv)   
-
+1. Make a wwiv directory and cd into it (e.g., /opt/wwiv).
+   Example:<br/> 
+   ```
+   sudo mkdir -p /opt/wwiv && sudo chown "$(id -u):$(id -g)" /opt/wwiv
+   ```
+   <br/>
 2. Download the latest wwiv-linux-release.tar.gz to your wwiv directory.
    Here are some links: 
-     * [WWIV 5.5 Development: Debian10](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux-debian10/lastSuccessfulBuild/)
-     * [WWIV 5.5 Development: Centos7](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux-centos7/lastSuccessfulBuild/)  
+     * [Debian10](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux-debian10/lastSuccessfulBuild/)
+     * [Ubuntu 20.04](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux-ubuntu2004/lastSuccessfulBuild/)
+     * [Centos7](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux-centos7/lastSuccessfulBuild/)  
+   <br/>
 3. Extract wwiv-????.tar.gz into your wwiv directory.
    *(please note that the filename will be different)* 
        ```
-		   tar zxvf wwiv-linux-debian10-5.5.0-1234.tar.gz```   
+		   tar zxvf wwiv-linux-debian10-5.5.0-1234.tar.gz
+       ```   
+   <br/>
 4. If you plan on using binaries you compiled yourself, please follow the
    instructions on the [WWIV readme.md file on GitHub](https://github.com/wwivbbs/wwiv#building-on-linux)
    and then return here before running the next step.
 
-5. From the wwiv directory (i.e. /home/wwiv), run ``sudo ./install.sh`` and
+5. From the wwiv directory (i.e. /opt/wwiv), run ``sudo ./install.sh`` and
    follow the prompts.
-
+   <br/>
    There are many options available for install.sh,
    please run ```sudo ./install.sh  --help``` for the full list of options. 
    By default the script expects the username and groupname to both be 
    ```wwiv``` and not yet exist.
-
+   <br/>
    **You must run this as root**.  The script performs the following tasks
    for you:
 
-   * creating the WWIV user and group
-   * setting up sudo access for a standard user
-   * installing the systemd service file.  
+       * creating the WWIV user and group
+       * setting up sudo access for a standard user
+       * installing the systemd service file.  
 
 Now, you may log into the new wwiv user ``(e.g, sudo -u wwiv -s)`` and run ./wwivconfig
 to configure the BBS.
@@ -117,7 +123,7 @@ several INI files that manage details about your install.  The main ones are:
 It is possible to let your "regular" user write and create files in the WWIV 
 directory though clever use of permissions, based off [this solution](https://askubuntu.com/questions/647392/user-access-to-ftp-and-at-same-time-set-www-data-as-owner-group).  
 
-These instructions assume that your installation is in `~/wwiv`; adjust paths appropriately.
+These instructions assume that your installation is in `/opt/wwiv`; adjust paths appropriately.
 
 1. Add your regular or FTP user to the wwiv group: 
 
@@ -125,9 +131,9 @@ These instructions assume that your installation is in `~/wwiv`; adjust paths ap
 
 2. To ensure everything is owned properly to start: 
 
-`sudo chown -R wwiv:wwiv ~/wwiv`
+`sudo chown -R wwiv:wwiv /opt/wwiv`
 
-3. Set the permission for the main folder: `sudo chmod 2775 ~/wwiv`
+3. Set the permission for the main folder: `sudo chmod 2775 /opt/wwiv`
 
 The chmod values are: 2=set group id, 7=rwx for owner (wwiv), 7=rwx for group 
 (wwiv), 5=rx for world.  Setting group ID (SETGID) bit (2) causes the group 
@@ -135,14 +141,16 @@ The chmod values are: 2=set group id, 7=rwx for owner (wwiv), 7=rwx for group
 
 4. Use `find` to do the same process for all subdirectories: 
 
-`sudo find ~/wwiv -type d -exec chmod 2775 {} +`
+`sudo find /opt/wwiv -type d -exec chmod 2775 {} +`
 
 5. Make sure all other files are read/write for group: 
 
-`sudo find ~/wwiv -type f -perm 664 -exec chmod 0664 {} +`  
-`sudo find ~/wwiv -type f -perm 644 -exec chmod 0664 {} +`  
-`sudo find ~/wwiv -type f -perm 646 -exec chmod 0664 {} +`  
-`sudo find ~/wwiv -type f -perm 666 -exec chmod 0664 {} +`  
+```
+sudo find /opt/wwiv -type f -perm 664 -exec chmod 0664 {} +
+sudo find /opt/wwiv -type f -perm 644 -exec chmod 0664 {} + 
+sudo find /opt/wwiv -type f -perm 646 -exec chmod 0664 {} +
+sudo find /opt/wwiv -type f -perm 666 -exec chmod 0664 {} +
+```
 
 6. Change the umask for your users to 0002 by adding this line to the bottom of /etc/profile
 

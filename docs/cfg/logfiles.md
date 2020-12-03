@@ -6,7 +6,7 @@ catalogs the files, their purpose and some tips for managing log files.
 ##File Path Locations
 File Path          | Description
 ------------------ | --------------------------------------
-```WWIV_DIR```     | BBS Root directory, such as ```C:\\wwiv``` or ```/wwiv```
+```WWIV_DIR```     | BBS Root directory, such as ```C:\\wwiv``` or ```/opt/wwiv```
 ```WWIV_LOG_DIR``` | Location defined in ```wwivcofig``` for the ```Logs Dir``` or may be set with the environment variable ```WWIV_LOG_DIR``` or the ```--logdir``` command line argument. They will override this setting from wwivconfig.  Like all other paths, if specified as a relative path, it is relative to the bbsdir (aka ```WWIV_DIR``` or ```--bbsdir```). 
 ```NETWORK_DIR```  | Directory for the network defined in INIT, it could either be  a WWIVnet style network or a FTN network.  Each network will have it's own network directory.
 ```GFILES_DIR```   | WWIV GFiles directory. Typically ```\wwiv\gfiles```

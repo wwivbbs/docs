@@ -24,6 +24,30 @@ Commandline Parameter | Description
 **--menu_editor** | Launches directly into the WWIV Menu Editor.
 **--network_editor** | Launches directly into the WWIV Network Editor.  This is also allows WWIV 4.x to use the Net51+ network stack.
 
+
+&nbsp;
+
+## Keybindings and Key Handling
+
+**wwivconfig** uses curses (ncurses on Linux and PDCurses on Windows).  Most keyboard bindings
+follow along with standard legacy DOS keyboard handling with a few additions:
+
+Key | Description
+:---: | ---
+CTRL-A    | Moves cursor to beginning of the line
+CTRL-D    | Deletes the character to the right of the caret
+CTRL-E    | Moves cursor to end of the line
+ALT-I     | Toggle Insert/Overwrite mode
+HOME      | Moves cursor to beginning of the line
+BACKSPACE | Deletes the character to the left of the caret
+DELETE    | Deletes the character to the right of the caret
+END       | Moves cursor to end of the line
+INSERT    | Toggle Insert/Overwrite mode
+
+
+
+
+
 ****
 
 ## General System Configuration

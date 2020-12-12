@@ -129,6 +129,32 @@ both ```user.name``` and ```USER.NAME``` are equivalent.
 | user.dar  | Users' download area Access Rights
 | user.name | User's name or handle (not real name)
 
+### WWIV Security Attributes
+
+##### SL AND DSL
+
+Security Level (SL) and Download Security Level (DSL) are the primary ways
+to secure functionality in WWIV.  Historically new users will have  SL and DSL
+of 10, then validated users get 20 or 50 depending on the setup. Many modern
+setups grant 20-50 on the first call so people can see more of the BBS without
+needing to call back.
+
+##### AR AND DAR
+
+AR and DAR allow access specific activities (subboards, download subboards,
+chains, etc) when other attributes (like age, or security level), wouldn't
+be the choice, as that may apply to many more BBS callers than needed.
+
+For example:
+Let's say you have a group of OS/2 callers on your bbs, selecting them by
+age or security level (SL) would not be appropriate.  This is where 
+AR works perfectely. There are 16 AR and DAR flags (A-P) that  you can add
+as arestriction using the ACS language and also then grant this AR or DAR to 
+the BBS callers to grant access to this area.
+
+You use the user editor to grant AR and DAR to callers, and using ACS, add a
+condition requiring it for an area in the BBS.
+
 <br/>
 
 ## Examples

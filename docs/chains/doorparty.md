@@ -69,12 +69,23 @@ Additional command-line options for `doorparty-link.sh` are:
 * -s = Your SystemTag from DoorParty. Do NOT use brackets.
 * -f = The path to CHAIN.TXT
 * -a = The path to optional ANSI file splash screen
+* -d = The door code to use (defaults to the menu)
 
 If `doorparty.ans` is in the script directory and no other file is specified with 
 the `-a` switch, it will be shown automatically. You can specify another filename 
 by calling it like so: 
 
 `bash -c "./chains/doorparty/doorparty-link.sh -f %1 -s AA -a /path/to/file.ANS"`
+
+This feature may be of particular use if you use BBSLink as a "direct door" so 
+that there are different "loading" screens for each door.
+
+If you wish to use the script as a "direct door" link instead of going to the 
+menu, set up a new door entry, but modify the filename like so:
+
+`B) Filename     : bash -c "./chains/doorparty/doorparty-link.sh -f %1 -d DOORCODE"`
+
+A list of valid door codes is found on the [here](https://wiki.throwbackbbs.com/doku.php?id=doorcode).
 
 If you are using another BBS system that can pass the username, use the `-u` 
 switch followed by the username variable.  You can also use this from the 

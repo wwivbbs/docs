@@ -4,6 +4,10 @@ copyright: 2014+ WWIV Software Services
 docs_dir: docs
 theme: readthedocs
 #google_analytics: ['UA-71826946-2', 'docs.wwivbbs.org']
+source_suffix:
+  '.rst': 'restructuredtext'
+  '.txt': 'markdown'
+  '.md': 'markdown'
 markdown_extensions:
   - toc:
       permalink: True

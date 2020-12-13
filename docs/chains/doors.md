@@ -38,6 +38,8 @@ replacement parameters:
 ```
 These parameters are replaced with a full path and filename of the specified text file the bulletin board creates holding data about that caller, such as the caller's name, security level, time left, etc.  For most programs explicitly written for WWIV v4, the parameter should be placed after the filename. If you do not, you will see a "Parameter file not found" error message. If you see that message when running a chain, add the parameter as in "tw2002 %C".  If the program is not specifically made for WWIV, it may be necessary to run it from a batch file to setup other environment variables or settings.  See the game documentation for more information.
 
+If you are running under linux and are having trouble with the parameters being passed to the chain, it may be useful to try calling it in a subshell.  For example, instead of the filename field being `./chains/mydoor/mydoor.exe %R`, try `bash -c "./chains/mydoor/mydoor.exe %R`.
+
 In addition to these, the full list of replacable parameters is [Here](parameters.md)
 
 **C) SL**  
@@ -107,7 +109,8 @@ These doors are known to work on WWIV because one of the SysOps is running them.
 [MechWars](mechwars.md) |
 [Planets: The Exploration of Space (TEOS)](doorteos.md) |
 [TradeWars 2002](tradewars2002.md) |
-
+[Door Party](doorparty.md) |
+[BBSList](bbslist.md) |
 
 | Doors Running on WWIV BBSes (no specific guides) |
 | --------------------------- |

@@ -1,207 +1,129 @@
 # Configuring WWIVnet on Linux
+
 ***
 
-Setting up WWIVnet and subscribing to Subs isn't hard, but there are a few 
-gotchas; mostly due to filename inconsistencies and having to use DOSEMU 
-for some of the tools (NET38, et al)
+These directions supercede and replace the general directions for linux from 
+"Configuring WWIVnet" onward.  You absolutely have to get a WWIVnet node number 
+assigned; 1@1 will supply the password and node number.
 
-**STEP #1**  - Get a WWIVnet Node Number assigned.  
-You will need the Node Number for several steps in this setup.  
-**STEP #2**  - send a password to 1@1 for the binkp auth.
-You can do this at the same time as getting the Node Number.  You will need this for your callout.net file later.
+It's best to get that information **before** attempting to set up WWIVnet.
 
-**NOTE:** Please don't bother to try configuring things ahead of time; 
-it will just cause issues during setup.  
+Throughout, ${WWIV_DIR} refers to your WWIV base installation directory.
 
-_Where Stuff Goes_  
-This is some layout info so you have a handle on where everything belongs. 
-We will build up the associated structure as we go along. The surrounded by 
-"** **" are the ones specific to WWIVnet.
+## Configuring WWIVnet
 
-    ${WWIV_DIR}
-        .dosemurc
-        .wwivrc
-        in.nodemgr
-        **network0**
-        **network1** (symbolic link to network0)
-        **network2** (symbolic link to network0)
-        **network3** (symbolic link to network0)
-        data
-        nets
-            **wwivnet**    
-        .dosemu
-            drive_c
-                autoexec.bat
-                **network1.bat**
-                **network2.bat**
-                **network3.bat**
-
-### Installing Binaries
-
-1. Install NET38b6.ZIP binaries
-* unzip NET38b6.ZIP in ${WWIV_DIR}
-
-### Configuring WWIVnet
-
-**WWIVnet under dosemu**
-
-Since we need to run the NET38 binaries under dosemu, we will 
-get the dosemu parts going first. For a detailed explanation of how 
-to set up DOSEMU (in particular, the relationship between shell 
-scripts and batch files), check out [DOSEMU common settings] first. 
-We are going to talk about only the specifics of DOSEMU in the context 
-of WWIVnet in this section. We assume you already have DOSEMU running 
-successfully (have your .dosemurc configured and have manually run 
-dosemu).
-
-_dosemu config_
-
-1. copy the *.bat files from ${WWIV_DIR}/dosemu-batchfiles to your dosemu C: drive (e.g, ~/.dosemu/drive_c)
-2. edit files to suit your system (install.sh should have taken care of this already
-but if not, look for any occurance of "REPLACE-WWIVBASE" in the network*.bat files
-* make sure paths match your setup (e.g, in batch files)
-
-_network scripts_
-
-We have a common network shell script that can be used to reference 
-multiple DOS batch files in dosemu. The core script looks like this 
-and should be placed in your base WWIV directory saved as network0 
-(not network0.sh):
-
-```shell
-#!/bin/bash
-#
-# network[0123]
-#
-# This sets the pathname separator in networks.bat before calling the appropriate
-# DOS batch file with dosemu.  If we don't, the DOS version of the NETXX scripts
-# get confused because they can't find the path.  Once it's done processing, we
-# set it back so the linux binaries don't have the same problem.
-#
-# Symptoms that the path separator is wrong include the header in WWIVnet messages 
-# missing node location info and show up as Unknown.
-
-# Grab all our wwiv location info
-source ~/.wwivrc
-
-# This will be the network number according to your wwivconfig setup
-# for example, your first network will be .0, your second .1, etc
-NET=$1
-
-# Keep things like control-C from dropping out of the shell script
-trap "echo" SIGHUP SIGINT SIGTERM
-
-sed -i 's/\//\\/g' ${WWIVDATA_DIR}/networks.dat
-
-#This one throws away error messages sent to STDERR, but still shows most activity
-dosemu -dumb -quiet "$(basename ${0}).bat ${NET}" 2>/dev/null
-
-# You may want to uncomment the below line and comment the above one if you
-# want to make the output as quiet as possible.
-#dosemu -dumb -quiet "$(basename ${0}).bat ${NET}" >/dev/null 2>&1
-
-sed -i 's/\\/\//g' ${WWIVDATA_DIR}/networks.dat
-```   
-
-make it executable (chmod 755 network0)  
-symbolic links to network should also be created for network1 network2 
-and network3
-
-    ln -s network0 network1
-    ln -s network0 network2
-    ln -s network0 network3
-
-What this allows is for when calls to the WWIVnet binaries happens from 
-the BBS, it has someplace to go (i.e., run DOS binaries).
-
-_**Configuring WWIVnet details and directories**_
-
-1. create ${WWIV_DIR}/nets/wwivnet
-2. get network info files wwivnet.zip and extract into ${WWIV_DIR}/nets/wwivnet
-3. create ${WWIV_DIR}/nets/wwivnet/callout.net: 
- * Make a file with a single line containing the @1 node (it's the only active node relaying messages, atm).  The format is:
- * @1 & "yourpassword"
- * "yourpassword" is the one you provided to 1@1 and the file must include the double-quotes.
-4. use wwivconfig to set up network info (select "N")
- * Network type : WWIVnet
- * Network name : WWIVnet
- * Node number : -your node number-
- * Data Directory : nets/wwivnet/
-5. run network3 (the shell script) - Now that all the WWIVnet config bits are in place, we can run the network3 program to validate our setup.  If everything goes as expected, you should get a network report mailed to you on your board locally.  The command to run is:
- * network3 y .-your network position in wwivconfig-  
- for example, your list of nets in wwivconfig starts with 0, so your first network is .0, the second is .1, etc.  Since this is probably your first network, the command is probably network3 y .0
- * If no network number is given, .0 is assumed, so network3 y is the same as network3 y .0
-
-
-**Basic Mail Processing Workflow**  
-WWIVnet uses BinkP to transfer messages between systems.  In most cases, all you need to do is schedule the network binary to run periodically to push/pull messages.  It will call networkb as a sub-process to handle the BinkP connection.  If it finds any message files on your system to send out, it will pick them up and send to the target node.  After it is done sending, it will then grab anything on the target system that is destined for your board and insert them into the local mesg files. 
-
-The basic command to invoke the message transport is:
-
-network --network=(name of your network) --node=(number of target)
-
-You want to make sure network is run from your ${WWIV_DIR}
-
-(name of your network) = whatever you named your network in wwivconfig (typically wwivnet)
-
-(number of target) = the number of the system you get/send messages from/to (typically 1)
-
-
-So, a command for a typical setup will look like this:
-
-```network --network=wwivnet --node=1```
-
-Full networkb usage looks like:
-```
-./network [args]
-
-program arguments:
---allow_sendback       Allow sendback (only used by legacy network0)
---bbsdir               (optional) BBS directory if other than current directory
---callout_time         Start time of the callout (only used by legacy network0)
---help                 displays help.
---network              Network name to use (i.e. wwivnet).
---network_number       Network number to use (i.e. 0).
---node                 Network node number to dial.
---phone_number         Network number to use (only used by legacy network0)
---speed                Modem Speedto use (only used by legacy network0)
-/N####     Network node number to dial.
-.####      Network number (as defined in wwivconfig)
-```
-
-
-Full networkb (the command that network calls to do the work) usage looks like:
+* Create a directory for WWIVnet: `mkdir -p ${WWIV_DIR}/nets/wwivnet` .
+* Get the latest version of [WWIVNET-###.zip](https://build.wwivbbs.org/jenkins/job/wwivnet/lastStableBuild/label=windows/) on the build server.  Do not worry that the build tag says "windows"; it's the same information.  
+* Put all of the contents of the zip in `${WWIV_DIR}/nets/wwivnet`
+* run ```wwivconfig``` and select N. Network Configuration
 
 ```
-Usage: networkb [flags]
-Flags:
---network  Network name to use (i.e. wwivnet)
---bbsdir   (optional) BBS directory if other than current directory 
---send     Send network traffic to --node
---receive  Receive from any node
---node     Node number (only used when sending)
---port     Port number to use (receiving only)
---skip_net Skip invoking network1/network2/network3
+┌───────────────────────────────────────── Network Configuration ┐
+│ Net Type  : WWIVnet                                            │
+│ Net Name  : WWIVnet                                            │
+│ Node #    : YOURNODE                                           │
+│ Directory : nets\wwivnet\                                      │
+└────────────────────────────────────────────────────────────────┘
 ```
 
-If you want to allow your system to listen for incoming connections to BinkP, that's possible to do with the --receive flag; but it's a one-shot service, so it needs to be put in a loop (more details to come on this).  Most people will be perfectly fine with just running the network command on a schedule.
+`wwivconfig` will create `${WWIV_DIR}/nets/wwivnet/callout.net`. It is 
+best practice to edit it in the Network Configuration portion of `wwivconfig`.
+For WWIVNet, there should only be one line in it: 
 
-_**Putting it all together**_
+`@1 && /60 "yourpassword"` 
 
-How often you schedule mail checks is entirely up to you, but every 15 minutes or so is probably more than sufficient.  Just adding the network command to cron should work nicely.
+## Verify Local Setup
+  
+* We will use `network3` to validate our setup.  From ${WWIV_DIR}, you will run 
+`network3 y .${network-position}`.  ${network-position} depends on your setup.
+ If WWIVNet is the first network you are setting up, it is first in the list of 
+ networks, and therefore has position 0.  The next (second) network will have 
+ position 1, and so on.  So if this is your first network, the command is 
+ 
+ `network3 y .0`
+ 
+ If you leave out the network number, .0 is assumed.
 
-At this point, WWIVnet should be working well enough to handle sending mail between systems. If you are still having issues, you will need to resolve them before moving on to Message Subs. Look for help in the irc channel if you are stuck.
+* `network3` will send you an email to verify your setup. In order for the BBS 
+to pick it up, you should run `bbs -M`.  **NOTE** While the local node defaults to
+running with -M, it will *only* pick the mail up if the local node is started 
+after you have run `network3`.
 
-_**Subscribing to Message Subs**_
+* Login as #1 and Check your email on the BBS. You should see a pretty email
+  and it should say "Everything is Fine" along with other details.
 
-This is abbreviated information (and some gotchas for Linux). Please see the Full WWIV Docs for detailed information on setting up subs if this isn't enough info.
-Now that we've gotten through all of the setup and tested with some netmail, it's time to actually add some subs. The first thing you need to do is look at your ${WWIV_DIR}/nets/wwivnet/subs.lst to see all the available WWIVnet subs. For example, a few of the core subs are:
-1 1 R WWIVnet Sysop Area
-GENCHAT 1 R WWIVnet General Chat
-WWIVDEV 1 R WWIV Development
-WWIVNET 1 R WWIV Networking
-The important bit is the first and second field. This is the "Subtype" and host that you will enter in //BE. Typically, you will just use the Subtype as the Filename, too (it just makes it easier to keep track). In order to add a WWIVnet sub, you will use option "J" in the edit section to set up the Net parameters for the sub. Here's an example:
 
+## Verify Network Mail
+
+* Login to your BBS and send an email to `1@1`
+* You will be prompted to pick the net (WWVIVnet) and confirm the system (Weather Station).
+* Give it a subject. Send the Net Coordinator a love note and hit /S to save and send.
+* If you and 1@1 are chatting in IRC, you can confirm and troubleshoot all at once. 
+Otherwise, please give 1@1 at least several hours to read and reply.  
+
+## Mail Processing
+
+The simplest way is to have `wwivd` take care of it for you. In `wwivconfig`, 
+under *wwivd configuration* are these settings:
+
+```
+Net Callouts: No      
+Net Callout Cmd: ./networkb --send --net=@T --node=@N 
+```
+
+Toggle "No" to "Yes" by hitting the spacebar, then exiting `wwivconfig`.  Restart 
+the `wwivd` daemon.
+
+### Manual Mail Processing
+
+If you'd rather do it manually, network mail processing **must** be done from ${WWIV_DIR}.  The basic command 
+to invoke message transport is:
+
+`network --net=(name or position of your network) --node=(number of target)`
+
+So to continue with the example above, it could be:
+
+`network --net=wwivnet --node=1`
+
+OR
+
+`network --net=0 --node=1`
+
+OR 
+
+`network --net=.0`
+
+OR EVEN
+
+`network -n1`  (as the node is presumed with WWIVnet)
+
+You should call this at a regular but decently spread out interval. (Every quarter 
+hour is *more* than sufficient.)  You can use [cron](https://linuxconfig.org/using-cron-scheduler-on-linux-systems), 
+[systemd](https://linuxconfig.org/how-to-schedule-tasks-with-systemd-timers-in-linux), or 
+another process to call this command from ${WWIV_DIR}.
+
+## Networked Messaging
+
+Now that we've gotten through all of the setup and tested with some netmail, 
+it's time to actually add some subs. The first thing you need to do is look at 
+your ${WWIV_DIR}/nets/wwivnet/subs.lst to see all the available WWIVnet subs. 
+For example, a few of the core subs are:  
+
+```
+WWIVSYS 1 1 R WWIVnet Sysop Area  
+GENCHAT 1 R WWIVnet General Chat  
+WWIVDEV 1 R WWIV Development  
+WWIVNET 1 R WWIV Networking  
+```
+
+The important bits are the first and second fields. This is the "Subtype" and 
+host that you will enter in //BE (boardedit). Typically, you will just use the 
+Subtype as the Filename, too (it just makes it easier to keep track). 
+In order to add a WWIVnet sub, you will use option "J" in the edit section to 
+set up the Net parameters for the sub. Here's an example:
+
+
+```
     A) Name       : WWIVnet General Chat
     B) Filename   : genchat
     C) Key        : None.
@@ -229,38 +151,120 @@ The important bit is the first and second field. This is the "Subtype" and host 
 
     Automated add request sent to @1
 
-**Note:** that in the example, the sub type is "GENCHAT" and the Host is "1"
+```
 
-**NOTE:** When putting in a filename (option B), **use all lowercase**. There is an issue where dosemu and WWIV get disagreeable about filename case. If you don't follow this, you will be dealing with the "Gotchas" section below and doing hard links (you really want to avoid this if possible).
-After you finish adding a new sub and the automated request is generated, it will take some time for the request to make it to the host node and for it to auto-subscribe your node. Assuming your net tossing is working, the BBS will attempt to run network1 when you log out. Once it has generated the necessary files, it will be sent as part of the callout process listed above. If you have already gotten it working for normal user netmail, this should "just work."
+In this example, the Subtype is GENCHAT and the host is "1". 
+If you just fill out the Subtype information under "J", WWIV will offer to fill 
+the host and the Name fields from subs.lst. 
 
-_**Gotchas**_  
+**NOTE:** When putting in a filename (option B), **use all lowercase**. There is 
+a potential issue with filename case that can be avoided by using lowercase for the names.  
 
-**NOTE:** You should not need this section unless you ignored the warning about using lowercase filenames; in which case, shame on you.  Go back and do it right.
- 
-The Main issue is with filename mismatches. Sub files are in two places; the dat files are in ${WWIV_DIR}/data and the message contents are in ${WWIV_DIR}/msgs. Because of how PPP and DOSemu work, there is a conflict with the msgs/*dat files. You will need to create links between the files. You can get ahead of the issue by doing in the following:
+## Hosting your own WWIVnet SUB
 
-1. cd ${WWIV_DIR}/msgs
-2. touch lower.lower filename (e.g, touch genchat.dat)
-3. link UPPER.lower to lower.lower (e.g., ln -P genchat.dat GENCHAT.dat)
+If and when you are are ready to host your own WWIVnet sub here are the steps to take:
 
-That will prep the dat file to be accessible by both the bbs and the DOS-based tools (this will eventually be fixed). One symptom of this will be missing information in the message header:
+* Set up your sub locally in your BBS first. This is harmless.
+* Get to the Sub Editor in //SYSOP, from the menu with //BE or "B" from the WFC screen.
+* Choose to Insert a new SUB and fill-out the Name, and Filename fields at a minimum.
+* Then choose "J" Net Info and select WWIVnet
+* The SUBTYPE is the internal name of the sub in WWIVnet this must be unique (see SUBS.LST)
+* Select YES you will be hosting the SUB.
+* It is easiest and best to also allow auto add/drop requests. Unless your Sub is
+  more exclusive.
+* Select YES to add it to SUBS.LST to make it public.  
+**Note:** Currently we have to manually share the subs.lst, that will be fixed in the future.
+* Add your Sub to the subs.lst or request help on the WWIV Sysops Sub
+* Post an announcement on the WWIVnet Sub Yellow Pages to advertise your new sub
 
-    Msg: [1/2] WWIVnet General Chat
-    Subj: Re: Seasonal...
-    Name:
-    Date:
-    From: aliens' abode! [910-473-INET]
-    Loc:  Unknown prefix code (910)
+## Maintaining your WWIVnet Connections
 
-_**The Nitty-Gritty**_
+When you setup WWIVnet you had downloaded WWIVNET-###.zip from the build server 
+and put the files in `${WWIV_DIR}/nets/wwivnet`. Occasionally you need to update 
+these files so your BBS knowns who the new nodes & SUBs are on the net as well 
+as which ones have gone away. If you are NOT also setup to get a Usenet feed you 
+can copy the new files from the zip to `${WWIV_DIR}/nets/wwivnet` each time they are updated.
+
+If you are also getting a feed from Usenet you have customized these files and 
+you need to maintain your edits. These are the files you need to edit each time you get a new set of WWIVnet files.
+
+**TODO** This in progress. See [Issue 229](https://github.com/wwivbbs/wwiv/issues/229).  
+
+## Custom Ports for BINKP
+
+If you are running other BINKP protocol networks (like Fidonet), you might 
+need to specify a custom port for WWIVnet. 
+
+To do this, the custom port needs to be specified in `binkp.net` by adding 
+`:port#` to your entry like so:  `@206 wwiv.cloudcitybbs.com:24555`
+
+This is managed by @1, the Network Coordinator. So you **must** first contact them 
+about this when you are joining WWIVnet or if you need to make a change later. 
+You will then also need to specify this custom port in wwivd config in wwivconfig.
+
+**Again, be sure to coordinate changes with 1@1 or you will be dropped off the net.**
+
+## How it works
+
+WWIVnet uses BinkP to transfer messages between systems.  In most cases, all 
+you need to do is schedule the network binary to run periodically to push/pull 
+messages.  It will call networkb as a sub-process to handle the BinkP connection.  
+If it finds any message files on your system to send out, it will pick them up 
+and send to the target node.  After it is done sending, it will then grab anything 
+on the target system that is destined for your board and insert them into the local 
+message files. 
+
+Full `network` usage looks like:
+
+```
+./network [args]
+
+program arguments:
+--allow_sendback       Allow sendback (only used by legacy network0)
+--bbsdir               (optional) BBS directory if other than current directory
+--callout_time         Start time of the callout (only used by legacy network0)
+--help                 displays help.
+--network              Network name to use (i.e. wwivnet).
+--network_number       Network number to use (i.e. 0).
+--node                 Network node number to dial.
+--phone_number         Network number to use (only used by legacy network0)
+--speed                Modem Speedto use (only used by legacy network0)
+/N####     Network node number to dial.
+.####      Network number (as defined in wwivconfig)
+```  
+
+
+Full `networkb` (the command that network calls to do the work) usage looks like:
+
+```
+Usage: networkb [flags]
+Flags:
+--network  Network name to use (i.e. wwivnet)
+--bbsdir   (optional) BBS directory if other than current directory 
+--send     Send network traffic to --node
+--receive  Receive from any node
+--node     Node number (only used when sending)
+--port     Port number to use (receiving only)
+--skip_net Skip invoking network1/network2/network3
+```  
+
+If you want to allow your system to listen for incoming connections to BinkP, 
+that's possible to do with the --receive flag; but it's a one-shot service, 
+so it needs to be put in a loop (more details to come on this).  Most people 
+will be perfectly fine with just running the network command on a schedule.
 
 This is information about exactly what the Network*.exe files are doing. You don't need to understand this to install WWIVnet, but it can be useful info.
-The processing of the net files comes from page 38 of
-NET37TEC.DOC. 
+The processing of the net files comes from page 38 of [NET37TEC.DOC](../archive/net37_tec_docs.md). 
 
 1. Convert network.dat's path separator with sed 
 * uudecode the incoming file to SNN.NET, where NN is your node # where the file ultimately needs to end up is your wwivnet directory. 
 * dosemu NETWORK3.EXE to analyze the packets. This should create the P.EXE file from the SNN.NET file.
 * After the P.EXE file is created process it with NETWORK2.EXE
 * Convert network.dat's path separator back with sed. This conversion is really dependent on how the network.dat file is being processed. If it's in dosemu, the separator needs to be \, if it's linux, it needs to be /. Example of how this affects you: if the separator is a /, then the NETXX EXE files can't find the path and fail on processing; if the separator is a \, then parts of your message info (like where the message came from) will be missing.
+
+***
+
+Even though we are no longer using the old DOS version of NETXX, the documentation for net37 has a lot of technical information if you'd like to read it that is still relevant to how the data packets are processed.
+
+* [NET37.DOC](../archive/net37_docs.md) <- Has all the installation information (Must Read!)
+* [NET37TEC.DOC](../archive/net37_tec_docs.md) <- Good technical read on the inner workings of WWIVnet (optional)

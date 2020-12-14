@@ -9,60 +9,10 @@ assigned; 1@1 will supply the password and node number.
 It's best to get that information **before** attempting to set up WWIVnet.
 
 Throughout, ${WWIV_DIR} refers to your WWIV base installation directory.
-    
-## Installing Network Scripts
-
-We have a common network shell script that can be used to reference 
-multiple executables and batch files.  It should be placed in your base WWIV 
-directory and saved as `network0` and **NOT**  `network0.sh`:
-
-```shell
-#!/bin/bash
-#
-# network[0123]
-#
-# This sets the pathname separator in networks.bat before calling the appropriate
-# DOS batch file with dosemu.  If we don't, the DOS version of the NETXX scripts
-# get confused because they can't find the path.  Once it's done processing, we
-# set it back so the linux binaries don't have the same problem.
-#
-# Symptoms that the path separator is wrong include the header in WWIVnet messages 
-# missing node location info and show up as Unknown.
-
-# Grab all our wwiv location info
-source ~/.wwivrc
-
-# This will be the network number according to your wwivconfig setup
-# for example, your first network will be .0, your second .1, etc
-NET=$1
-
-# Keep things like control-C from dropping out of the shell script
-trap "echo" SIGHUP SIGINT SIGTERM
-
-sed -i 's/\//\\/g' ${WWIVDATA_DIR}/networks.dat
-
-#This one throws away error messages sent to STDERR, but still shows most activity
-dosemu -dumb -quiet "$(basename ${0}).bat ${NET}" 2>/dev/null
-
-# You may want to uncomment the below line and comment the above one if you
-# want to make the output as quiet as possible.
-#dosemu -dumb -quiet "$(basename ${0}).bat ${NET}" >/dev/null 2>&1
-
-sed -i 's/\\/\//g' ${WWIVDATA_DIR}/networks.dat
-```   
-
-* Make it executable: `chmod 755 network0`
-* Create symbolic links the other `network` files: 
-
-    `ln -s network0 network1`
-    `ln -s network0 network2`
-    `ln -s network0 network3`
-
-This allows calls from the BBS to the WWIVnet binaries to have somewhere to go.
 
 ## Configuring WWIVnet
 
-* Create a directory for WWIVnet: `mkdir -p ${WWIV_DIR}\nets\wwivnet` .
+* Create a directory for WWIVnet: `mkdir -p ${WWIV_DIR}/nets/wwivnet` .
 * Get the latest version of [WWIVNET-###.zip](https://build.wwivbbs.org/jenkins/job/wwivnet/lastStableBuild/label=windows/) on the build server.  Do not worry that the build tag says "windows"; it's the same information.  
 * Put all of the contents of the zip in `${WWIV_DIR}/nets/wwivnet`
 * run ```wwivconfig``` and select N. Network Configuration
@@ -76,15 +26,11 @@ This allows calls from the BBS to the WWIVnet binaries to have somewhere to go.
 └────────────────────────────────────────────────────────────────┘
 ```
 
+`wwivconfig` will create `${WWIV_DIR}/nets/wwivnet/callout.net`. It is 
+best practice to edit it in the Network Configuration portion of `wwivconfig`.
+For WWIVNet, there should only be one line in it: 
 
-* Create `callout.net` with `touch ${WWIV_DIR}/nets/wwivnet/callout.net`
-* Edit `callout.net` with your favorite editor. There should only be *one* line 
-in the file: 
-
-`@1 && /60 "password"` 
-
-* Remember to replace `"password"` with the one provided by 1@1. The double quotes
-  are **necessary** in the file.
+`@1 && /60 "yourpassword"` 
 
 ## Verify Local Setup
   
@@ -117,7 +63,20 @@ Otherwise, please give 1@1 at least several hours to read and reply.
 
 ## Mail Processing
 
-Network mail processing **must** be done from ${WWIV_DIR}.  The basic command 
+The simplest way is to have `wwivd` take care of it for you. In `wwivconfig`, 
+under *wwivd configuration* are these settings:
+
+```
+Net Callouts: No      
+Net Callout Cmd: ./networkb --send --net=@T --node=@N 
+```
+
+Toggle "No" to "Yes" by hitting the spacebar, then exiting `wwivconfig`.  Restart 
+the `wwivd` daemon.
+
+### Manual Mail Processing
+
+If you'd rather do it manually, network mail processing **must** be done from ${WWIV_DIR}.  The basic command 
 to invoke message transport is:
 
 `network --net=(name or position of your network) --node=(number of target)`
@@ -129,6 +88,14 @@ So to continue with the example above, it could be:
 OR
 
 `network --net=0 --node=1`
+
+OR 
+
+`network --net=.0`
+
+OR EVEN
+
+`network -n1`  (as the node is presumed with WWIVnet)
 
 You should call this at a regular but decently spread out interval. (Every quarter 
 hour is *more* than sufficient.)  You can use [cron](https://linuxconfig.org/using-cron-scheduler-on-linux-systems), 

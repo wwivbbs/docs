@@ -82,7 +82,7 @@ Anywhere you see a command to run (wwivconfig, network3, etc), remember this ass
   send an email to your local #1 mailbox. If no network number is given, .0
   is assumed, so ```network3 y``` is the same as ```network3 y .0``` 
 * From the \wwiv run ```bbs.exe -M``` to pickup and deliver the mail.  
-**Note:** The default config of WWIV5TelentServer runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run Network3.
+**Note:** The default config runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run Network3.
 * Login as #1 and Check your email on the BBS. You should see a pretty email
   and it should say "Everything is Fine" along with other details.
 
@@ -166,6 +166,7 @@ If\when you are are ready to host your own WWIVnet sub here are the steps to tak
 * Post an announcement on the WWIVnet Sub Yellow Pages to advertise your new sub
 
 ## Custom Ports for BINKP
+
 If you are running other BINKP protocol networks (like Fidonet), you might need to specify a custom port for WWIVnet. 
 To do this, the custom port needs to be specified in `binkp.net` by adding  `:port#` to your entry like so:  
 `@206 wwiv.cloudcitybbs.com:24555`

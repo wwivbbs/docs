@@ -34,6 +34,21 @@ This might mean running windows update several times.
 
 ## Upgrade Steps:
 
+#### Upgrade to 4.30.
+
+If you are using a version of WWIV prior to 4.30, you must upgrade to 4.30 first.
+This will add the default menus and other new files.  Alternatively you can unzip
+the files listed in upgrade.bat or unzip the following wwiv distribution archives
+that come with 5.x using -n to not overwrite files.
+
+i.e:
+```
+unzip -qq -n gfiles.zip -d gfiles
+unzip -qq -n data.zip -d data
+unzip -qq -o regions.zip -d data
+unzip -qq -o zip-city.zip -d data
+```
+
 #### Download the current WWIV version
 
 Read the [GET WWIV instructions](../index.md) 

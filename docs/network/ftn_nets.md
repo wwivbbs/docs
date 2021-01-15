@@ -112,12 +112,12 @@ Routing in FTN now works, uou need to define a route string for nodes
 
 Example:
 ```
-┌─────────────────────────────────────── Address: 21:2/100 ┐
+┌─────────────────────────────────────── Address: 11:2/100 ┐
 │     BinkP Host: networkhost.ddns.net                     │
 │     BinkP Port: 24555                                    │
 │     Session PW: PASSWORD                                 │
 │                                                          │
-│         Routes: 21:*                                     │
+│         Routes: 11:*                                     │
 │    Packet Type: FSC-0039 Type 2+                         │
 │    Compression: ZIP                                      │
 │   Max Arc Size: 0                                        │

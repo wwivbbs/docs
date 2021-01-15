@@ -16,21 +16,19 @@ I'm purposefully being vague about that. Read the Policy doc. ;-)
 Links will be provided below as they are identified.
 
 ## About WWIV FTN Networking 
-Net52 (aka the native network stack in WWIV 5.2) recently started supporting
-Fido Technology Network (FTN) as well as the traditional WWIVnet style
-networking.  
+Net5x (aka the native network stack in WWIV 5+) supports Fido Technology 
+Network (FTN) as well as the traditional WWIVnet style networking.  
 
 The bridge to FTN is implemented in ```networkf```.  networkf handles importing
 from a FTN packet or bundle into a WWIVnet style packet (S\*.net or local.net).
 
 ## Setup
 
-Using wwivconfig, you need to create a new network type.  Change the type to Fido (the default
-is WWIVnet), by pressing the space bar to toggle the type.
+Using wwivconfig, you need to create a new network type.  Change the type to 
+Fido (the default is WWIVnet), by pressing the space bar to toggle the type.
 
 You must name your network. This name will be used as the domain for both
-WWIVnet binkp transfers as well as later on when ```networkb``` (the wwiv
-binkp'ish transport command) supports FTN.
+WWIVnet binkp transfers as well.
 
 You must leave your node number as **1** for Fido.  It's not used externally
 and is needed by the WWIV networking tools to properly import and export
@@ -47,43 +45,45 @@ Example:
 ```
 ┌─────────────────────────────────────────── Network Configuration; Net #4 ┐
 │ Net Type  : Fido                                                         │
-│ Net Name  : wwivnet-ftn                                                  │
+│ Net Name  : MyNet                                                        │
 │ Node #    : 1                                                            │
-│ Directory : ftn\                                                         │
+│ Directory : mynet\                                                       │
 │ Settings  : [Enter to Edit]                                              │
 │ Addresses : [Enter to Edit]                                              │
 └──────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Setup using ATTACH style
+### Setup using BSO style
 
 These are the default settings for all nodes in this network.  Here is an
-example of using D'Bridge as the FTN mailer.  The inbound and outbound
-directories map to those in D'Bridge.  The temp directories are relative
-to the network directory defined on the previous screen.
+example of using BSO style with thw built-in BinkP.  All of the directory
+names are relative to the network directory defined on the previous screen.
 
-Note: When using ATTACH, only using D'bridge has been tested.
 
 ```
-┌──────────────────────────────────────────────────────── Network Settings ┐
-│ FTN Address  : 11:1/211                                                  │
-│ Inbound Dir  : C:\db\inbound\                                            │
-│ Temp In Dir  : temp\                                                     │
-│ Temp Out Dir : temp\                                                     │
-│ Outbound Dir : C:\db\outbound\                                           │
-│ NetMail Dir  : C:\db\messages\                                           │
-│ BadPacket Dir: badpackets\                                               │
-│ Mailer       : NetMail (ATTACH)         Max Arc Size : 0                 │
-│ Transport    : Directory                Max Pkt Size : 0                 │
-│ Packet Type  : FSC-0039 Type 2+         Bundle Status: Immediate         │
-│ Compression  : ZIP                                                       │
-│ Packet PW    : PASSWORD                                                  │
-│ AreaFix PW   : PASSWORD                                                  │
+┌─────────────────────────────────────────────────── [Press Enter to Edit] ┐
+│    FTN Address: 11:2/115                                                 │
+│  Nodelist Base: MYNET                                                    │
+│    Inbound Dir: in\                                                      │
+│    Temp In Dir: tempin\                                                  │
+│   Temp Out Dir: tempout\                                                 │
+│   Outbound Dir: out\                                                     │
+│    NetMail Dir: netmail\                                                 │
+│  BadPacket Dir: badpkt\                                                  │
+│        TIC Dir: tic\                                                     │
+│    Unknown Dir: unknown\                                                 │
+│    Origin Line: Mystic Rhythms BBS                                       │
+│         Mailer: BSO (FLO) [Recommended]   Process TIC  : Yes             │
+│      Transport: WWIV BinkP                Cvt Hearts   : No              │
+│                                           Cvt WWIV Pipe: Yes             │
 └──────────────────────────────────────────────────────────────────────────┘
+
 ```
 
 One the Addresses page, you can select the address from the list.  You may
-also press A to add an address or D to delete an address.
+also press A to add an address or D to delete an address. You will need to
+define an address to set the packet types and passwords to use for that
+address.
 
 Example:
 
@@ -112,23 +112,29 @@ Routing in FTN now works, uou need to define a route string for nodes
 
 Example:
 ```
-┌─────────────────────────────────────────────────────── Address: 11:1/100 ┐
-│ Routes       : 11:*                                                      │
-│ Packet Type  : FSC-0039 Type 2+                                          │
-│ Compression  : ZIP                                                       │
-│ Packet PW    : PASSWORD                                                  │
-│ AreaFix PW   : PASSWORD                                                  │
-│ Max Arc Size : 0                                                         │
-│ Max Pkt Size : 0                                                         │
-│ Bundle Status: Normal                                                    │
-└──────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────── Address: 21:2/100 ┐
+│     BinkP Host: networkhost.ddns.net                     │
+│     BinkP Port: 24555                                    │
+│     Session PW: PASSWORD                                 │
+│                                                          │
+│         Routes: 21:*                                     │
+│    Packet Type: FSC-0039 Type 2+                         │
+│    Compression: ZIP                                      │
+│   Max Arc Size: 0                                        │
+│   Max Pkt Size: 0                                        │
+│  Bundle Status: Crash                                    │
+│                                                          │
+│      Packet PW: PASSWORD   Auto Callout: Yes             │
+│         Tic PW: PASSWORD            Every N min: 60      │
+│     AreaFix PW: PASSWORD          Min K: 0               │
+└──────────────────────────────────────────────────────────┘
 ```
 
 ## Adding FTN Subs
 
 You add subs normally.  To enable it for networking, use (J) from BoardEdit to add a network.
 Add the FTN network as your would any other.  Instead of a WWIVnet subtype, you will
-add it using the ECHOTAG.  You will need to manually create a file called nECHOTAG.net
+add it using the ECHOTAG. You may need to manually create a file called nECHOTAG.net
 (where ECHOTAG is the echo tag for the networked message area) in your network directory.
 This file contains all of the fidonet addresses to export this message area to. 
 
@@ -167,24 +173,12 @@ WWIV networking has the following command line tools:
 | networkb | WWIVnet binkp tool (like binkd, but only for WWIVnet |
 | networkc | Cleanup tool, runs network{1-3} as needed. |
 | networkf | WWIV FTN tool, imports mail from FTN bundles to s32675.net or exports s32765.net to FTN bundles. |
+| networkt | processes TIC files in FTN networks |
 
 
 ## Current Status
 
-FTN support is still in experimental status, however it's being nominally used on several systems.  Here's the most recent known state.
-
-### What works?
-
-* Directory transport (i.e. copy the bundle into a directory).
-* ATTACH mailer (tested with D'Bridge) (i.e. create \*.MSG file in the netmail dir as a file attach).
-* FLO mailer support (tested with NetworkB and IREX)
-* Using NetworkB to call out to MysticBBS's MIS
-* Using NetworkB to call out to BinkD (D'Bridge)
-
-
-### What may work
-
-* ARC compression support (not tested, only tested with ZIP)
+FTN support works for leaf nodes, it is not currently expected to be used by mail hubs.
 
 ### What doesn't work
 
@@ -195,7 +189,7 @@ FTN support is still in experimental status, however it's being nominally used o
 * 5d Addressing
 * Packet type other than 2+
 
-### What did we test with
+### What has net5x been tested with?
 
 * D'Bridge
 * MysticBBS's MIS

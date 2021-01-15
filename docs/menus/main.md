@@ -1,10 +1,10 @@
-# WWIV 5.0 Main Menus
+# WWIV Main Menu
 ***
 
 ## Main Menu
 
 ```
-                             WWIV v5.00 Main Menu
+                               WWIV v5 Main Menu
 ╔═══════════════════════════════════════════════════════════════════════════╗
 ╟──────Message Center──────┬────Miscellaneous─────┬────────E-Mail───────────╢
 ║N> New Msgs, All Subs     │A> Auto-Message       │E> E-mail User           ║

@@ -30,8 +30,8 @@ You must copy  ```sbbsexec.dll``` to ```\%WINDIR%\system32```.
 From a command prompt run wwivconfig.exe  
 You will see this:  
 
-    WWIV v5.5.0 (Build ####) Configuration Program.
-    Copyright (c) 1998-2020, WWIV Software Services
+    WWIV v5.6.0 (Build ####) Configuration Program.
+    Copyright (c) 1998-2021, WWIV Software Services
     CONFIG.DAT NOT FOUND.
     Perform initial installation?
 
@@ -90,7 +90,7 @@ This is the Waiting For Caller (WFC) Screen.
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │               Activity and Statistics of My WWIV BBS Node 1                  │
 ├──────────────────────────────────────┬───────────────────────────────────────┤
-│ Calls Today....... 48                │ WWIV Version.... 5.5.0                │
+│ Calls Today....... 48                │ WWIV Version.... 5.6.0                │
 │ Feedback Waiting.. 1       New: 1    │ Net Version..... 51                   │
 │ Uploads Today..... 0                 │ Total Users..... 99                   │
 │ Messages Today.... 98                │ Total Calls..... 20167                │
@@ -121,3 +121,7 @@ Continue on to more advanced [wwivd](../conn/telnet.md) settings
 to get on the Internet. But we suggest you read through the rest of the 
 documentation before you get too excited about that just yet. But don't worry, 
 it's not hard at all!
+
+### Configuring WWIVnet 
+See [WWIVnet](../network/wwivnet.md) for details on configuring WWIVnet and 
+subscribing to subboards (aka message areas).

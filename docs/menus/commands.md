@@ -8,8 +8,33 @@ out by category.
 ## Category: AutoMessage
 ***
 
-### AutoMessage
+### amsg:delete
+    Deletes the auto message (cosysop required)
+
+
+### amsg:email
+    E-mail the author of the automessage
+
+
+### amsg:lock
+    Locks the automessage (cosysop required)
+
+
+### amsg:read
     Read the auto message
+    [use automessage:read instead]
+
+
+### amsg:unlock
+    Unlocks the automessage (cosysop required)
+
+
+### amsg:write
+    Writes a new auto message
+
+
+### AutoMessage
+    Displays the legacy automessage menu
 
 
 ### ReadAutoMessage
@@ -19,7 +44,27 @@ out by category.
 ## Category: BBSList
 ***
 
-### BBSList
+### bbslist
+    Legacy BBSList Menu
+
+
+### bbslist:add
+    Adds a new BBS to the BBSList
+
+
+### bbslist:bbslist
+    Legacy BBSList Menu
+
+
+### bbslist:delete
+    Deletes a new BBS from the BBSList
+
+
+### bbslist:net
+    Read the network bbs lists
+
+
+### bbslist:read
     Read the bbslist
 
 
@@ -98,9 +143,6 @@ out by category.
 ***
 
 ### AttachFile
-
-
-### InternetEmail
 
 
 ### KillEMail
@@ -293,20 +335,34 @@ out by category.
 ***
 
 ### DisplayHelp
-    <filename>
-    An alias for DisplayMenu. This alias is deprecated, please use DisplayMenu.
+    An alias for DisplayMenu.
+    This alias is deprecated, please use menu:display.
 
 
 ### DisplayMenu
-    <filename>
     Prints the 'novice menus' for the current menu set, or if one doesn't exist,
-    it will generate one using the menu definitions.
+    it will generate one using command "menu:generate_short"
 
 
 ### MENU
     <menu>
     Loads up and starts running a new menu set, where <menu> equals the name of
     the menu to load.
+
+
+### menu:display
+    Prints the 'novice menus' for the current menu set, or if one doesn't exist,
+    it will generate one using command "menu:generate_short"
+
+
+### menu:generate_long
+    Generates the long form (one cmd per line) help text/menu for the current menu set.
+    This command does not attempt to display a .msg/.ans file.
+
+
+### menu:generate_short
+    Generates the short form 'novice menus' for the current menu set.
+    This command does not attempt to display a .msg/.ans file.
 
 
 ### ReturnFromMenu
@@ -420,7 +476,27 @@ out by category.
 ***
 
 ### Packers
-    Executes the QWK menu.
+    Executes the QWK menu. (Legacy, use qwk: commands now)
+
+
+### qwk:config_sysop
+    Configures SysOp Settings for QWK
+
+
+### qwk:config_user
+    Configures User Settings for QWK
+
+
+### qwk:download
+    Download a QWK Message Packet
+
+
+### qwk:menu
+    Executes the default QWK menu.
+
+
+### qwk:upload
+    Upload a QWK Reply Packet
 
 
 ## Category: SYSOP
@@ -539,7 +615,7 @@ out by category.
     <filename>
     Prints a file, first checking to see if you specified an absolute path,
     then the language dir, then the gfilesdir.  It will use the usual checks to
-    determin .ANS, or .MSG if not specified.
+    determine .ANS, or .MSG if not specified.
 
 
 ### PrintFileNA

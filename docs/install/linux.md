@@ -64,7 +64,7 @@ details for you.
 3. Extract wwiv-????.tar.gz into your wwiv directory.
    *(please note that the filename will be different)* 
        ```
-		   tar zxvf wwiv-linux-debian10-5.5.0-1234.tar.gz
+		   tar zxvf wwiv-linux-debian10-5.6.0-1234.tar.gz
        ```   
    <br/>
 4. If you plan on using binaries you compiled yourself, please follow the
@@ -166,10 +166,13 @@ linux (ie, DOS binaries). Here are some config details:
 * [dosemu common settings](../cfg/dosemu.md) - general settings for dosemu  
 
 ### Configuring WWIVnet 
-See [WWIVnet Config on Linux](../network/wwivnet_linux.md) for details on
-configuring WWIVnet and subscribing to subs
+See [WWIVnet](../network/wwivnet.md) for details on configuring WWIVnet and 
+subscribing to subboards (aka message areas).
 
 _TERM settings_
+
+WWIV expects UTF-8 character encoding for local IO on all platforms. Please
+make sure your terminal is set for UTF-8 and not CP437.
 
 The Curses library being used for wwivconfig gets confused on some terminal
 settings, and results in a borked display on exit. You may have to type a

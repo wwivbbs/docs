@@ -47,9 +47,7 @@ nav:
     - 'Slash Menu': menus/slash.md
     - 'SysOp Menu': menus/sysop.md
   - Networking:
-    - 'WWIVnet Overview': network/wwivnet.md
-    - 'WWIVnet (Windows)': network/wwivnet_windows.md
-    - 'WWIVnet (Linux)': network/wwivnet_linux.md
+    - 'WWIVnet': network/wwivnet.md
     - 'FTN Networks': network/ftn_nets.md
     - 'UseNet': network/usenet.md
     - 'Semaphore Files Used' : network/semaphores.md

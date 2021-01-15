@@ -57,13 +57,18 @@ Coordinator, Weatherman 1@1 WWIVnet or email mark@weather-station.org
     
 ## Configuring WWIVnet
 
-Setting up WWIVnet on Windows and Linux is essentially the same.  All the examples here will use the Windows version of pathing, just remember in linux the path separator is the forward slash, not the back slash.
+Setting up WWIVnet on Windows and Linux is essentially the same.  All the 
+examples here will use the Windows version of pathing, just remember in linux 
+the path separator is the forward slash, not the back slash.
 
-Anywhere you see a command to run (wwivconfig, network3, etc), remember this assumes you are in your WWIV installation directory.
+Anywhere you see a command to run (wwivconfig, network3, etc), remember this 
+assumes you are in your WWIV installation directory.
 
-* Create a ```nets\wwivnet``` directory in your WWIV directory.
-* Get the latest version of [WWIVNET-###.zip](https://build.wwivbbs.org/jenkins/job/wwivnet/lastStableBuild/label=windows/) on the build server. 
-* Put all of the contents of the zip in ```\wwiv\nets\wwivnet```
+* Create a ```net\wwivnet``` directory in your WWIV directory.
+* Get the latest version of 
+  [WWIVNET-###.zip](https://build.wwivbbs.org/jenkins/job/wwivnet/lastStableBuild/label=windows/)
+  on the build server. 
+* Put all of the contents of the zip in ```\wwiv\net\wwivnet```
 * run ```wwivconfig``` and select N. Network Configuration
 
 ```
@@ -82,7 +87,9 @@ Anywhere you see a command to run (wwivconfig, network3, etc), remember this ass
   send an email to your local #1 mailbox. If no network number is given, .0
   is assumed, so ```network3 y``` is the same as ```network3 y .0``` 
 * From the \wwiv run ```bbs.exe -M``` to pickup and deliver the mail.  
-**Note:** The default config runs the local node with the -M command so if you run the local node to check your mail this will happen anyway, but you have to launch the local node AFTER you run Network3.
+**Note:** The default config runs the local node with the -M command so 
+  if you run the local node to check your mail this will happen anyway, 
+  but you have to launch the local node AFTER you run Network3.
 * Login as #1 and Check your email on the BBS. You should see a pretty email
   and it should say "Everything is Fine" along with other details.
 
@@ -94,14 +101,46 @@ Anywhere you see a command to run (wwivconfig, network3, etc), remember this ass
 * Give it a subject. Send the Net Coordinator a love note and hit /S to save and send.
 * Ideally you and 1@1 are chatting in IRC while you do this. ;-) then you can confirm and troubleshoot all at once. If not, wait a couple of hours for 1@1 to read or reply.
 
+## Mail Processing
 
-## Maintaining your WWIVnet Connections
+The simplest way is to have `wwivd` take care of it for you. In `wwivconfig`, 
+under *wwivd configuration* are these settings:
 
-When you setup WWIVnet you download WWIVNET-##.zip from the build server and put the files in ```\wwiv\nets\wwivnet```. Occasionally you need to update these files so your BBS knowns who the new nodes & SUBs are on the net as well as which ones have gone away. If you are NOT also setup to get a Usenet feed you can copy the new files from the zip to ```\wwiv\net\wwivnet``` each time they are updated.
+```
+Net Callouts: No      
+Net Callout Cmd: ./networkb --send --net=@T --node=@N 
+```
 
-If you are also getting a feed from Usenet you have customized these files and you need to maintain your edits. These are the files you need to edit each time you get a new set of WWIVnet files.
+Toggle "No" to "Yes" by hitting the spacebar, then exiting `wwivconfig`.  Restart 
+the `wwivd` daemon.
 
-**TODO** This in progress. See [Issue 229](https://github.com/wwivbbs/wwiv/issues/229).  
+### Manual Mail Processing
+
+If you'd rather do it manually, network mail processing **must** be done from ${WWIV_DIR}.  The basic command 
+to invoke message transport is:
+
+`network --net=(name or position of your network) --node=(number of target)`
+
+So to continue with the example above, it could be:
+
+`network --net=wwivnet --node=1`
+
+OR
+
+`network --net=0 --node=1`
+
+OR 
+
+`network --net=.0`
+
+OR EVEN
+
+`network -n1`  (as the node is presumed with WWIVnet)
+
+You should call this at a regular but decently spread out interval. (Every quarter 
+hour is *more* than sufficient.)  You can use [cron](https://linuxconfig.org/using-cron-scheduler-on-linux-systems), 
+[systemd](https://linuxconfig.org/how-to-schedule-tasks-with-systemd-timers-in-linux), or 
+another process to call this command from ${WWIV_DIR}.
 
 
 ## Subscribing to Message Subs
@@ -150,7 +189,7 @@ After you finish adding a new sub and the automated request is generated, it wil
 
 ## Hosting your own WWIVnet SUB
 
-If\when you are are ready to host your own WWIVnet sub here are the steps to take:
+When you are are ready to host your own WWIVnet sub, here are the steps:
 
 * Set up your sub locally in your BBS first. This is harmless.
 * Get to the Sub Editor in //SYSOP, from the menu with //BE or "B" from the WFC screen.
@@ -167,15 +206,23 @@ If\when you are are ready to host your own WWIVnet sub here are the steps to tak
 
 ## Custom Ports for BINKP
 
-If you are running other BINKP protocol networks (like Fidonet), you might need to specify a custom port for WWIVnet. 
-To do this, the custom port needs to be specified in `binkp.net` by adding  `:port#` to your entry like so:  
-`@206 wwiv.cloudcitybbs.com:24555`
-This is managed by @1, the Network Coordinator. So you first contact them about this as you joing WWIVnet or if you need to make a change later. You will then also need to specify this custom port in wwivd config in wwivconfig.
+If you are running other BINKP protocol networks (like Fidonet), you might
+need to specify a custom port for WWIVnet. 
+To do this, the custom port needs to be specified in `binkp.net` by adding  
+`:port#` to your entry like so:  `@206 wwiv.cloudcitybbs.com:24555`
+
+This is managed by @1, the Network Coordinator. So you first contact them 
+about this as you joing WWIVnet or if you need to make a change later. You 
+will then also need to specify this custom port in wwivd config in wwivconfig.
 
 Again, be sure to coordinate changes with 1@1 or you will be dropped off the net.
 
 ***
-Even though we are no longer using the old DOS version of NETXX, the documentation for net37 has a lot of technical information if you'd like to read it that is still relevant to how the data packets are processed.
+Even though we are no longer using the old DOS version of NETXX, the 
+documentation for net37 has a lot of technical information if you'd like to 
+read it that is still relevant to how the data packets are processed.
 
-* [NET37.DOC](../archive/net37_docs.md) <- Has all the installation information (Must Read!)
-* [NET37TEC.DOC](../archive/net37_tec_docs.md) <- Good technical read on the inner workings of WWIVnet (optional)
+* [NET37.DOC](../archive/net37_docs.md) <- Has all the installation 
+  information (Must Read!)
+* [NET37TEC.DOC](../archive/net37_tec_docs.md) <- Good technical read on the 
+  inner workings of WWIVnet (optional)

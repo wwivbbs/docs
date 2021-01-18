@@ -317,7 +317,10 @@ If you change the Messages, GFILES, or DATA directories, you must:
 #### SEXYZ
 This is a modern (and maintained) implementation of XMODEM, YMODEM, ZMODEM that is part of 
 SynchroNet BBS's tools and maintained by it's author Rob Swindle. 
-[read more](http://wiki.synchro.net/util:sexyz). Download sexyzNNN.zip where NNN is the 
+[read more](http://wiki.synchro.net/util:sexyz).  If you wish to use SEXYZ under 
+Linux, you will need to build it from source and modify your paths.  
+
+For Windows, download sexyzNNN.zip where NNN is the 
 newest version from the [SynchroFTP Site](ftp://ftp.synchro.net/).
 
 Once downloaded, extract SEXYZ.EXE from SEXYZNN.zip into c:\wwiv\.  

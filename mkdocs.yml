@@ -38,6 +38,7 @@ nav:
     - 'fail2ban IP blocking': conn/fail2ban.md
     - 'Telnet/SSH Clients': conn/clients.md
   - Menus:
+    - 'Customizing' : menus/customizing.md
     - 'Commands' : menus/commands.md
     - 'Main Menu': menus/main.md
     - 'Messaging System': menus/message.md

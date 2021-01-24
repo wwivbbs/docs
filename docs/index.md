@@ -29,7 +29,7 @@ Windows or Linux:
 
 If you are upgrading from WWIV 4.x then check out:
 
-- [Upgrading from WWIV 4.x'](install/upgrade4.md)
+- [Upgrading from WWIV 4.x'](install/upgrade.md)
 
 # Links
 

@@ -163,7 +163,7 @@ sudo find /opt/wwiv -type f -perm 666 -exec chmod 0664 {} +
 **dosemu** is used for a number of things that can't be handled natively in
 linux (ie, DOS binaries). Here are some config details: 
 
-* [dosemu common settings](../cfg/dosemu.md) - general settings for dosemu  
+* [dosemu common settings](../linux/dosemu.md) - general settings for dosemu  
 
 ### Configuring WWIVnet 
 See [WWIVnet](../network/wwivnet.md) for details on configuring WWIVnet and 

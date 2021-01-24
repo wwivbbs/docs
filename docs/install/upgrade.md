@@ -1,4 +1,4 @@
-# Upgrading WWIV 4.x to WWIV 5
+# Upgrading from previous versions.
 ***
 
 # BACKUP your existing WWIV BBS
@@ -8,10 +8,6 @@ Before attempting an upgrade, please follow the
 [WWIV 5 Installation on Windows](win.md)
 to install prerequisites.
 
-# Did I say BACKUP your existing WWIV BBS? 
-
-Also copy your wwiv.ini to another file, like wwiv4.ini, since the 
-wwiv 5.x includes a new wwiv.ini.
 
 ## Prerequisites
 
@@ -53,11 +49,15 @@ unzip -qq -o zip-city.zip -d data
 
 Read the [GET WWIV instructions](../index.md) 
 
-#### Install new EXEs
+#### Upgrading from previos versions of WWIV 5.x or 4.3
+
+Install new EXEs
 
 Take the build of WWIV you downloaded and extract the files into: ```c:\wwiv```.
 
-You must copy  ```sbbsexec.dll``` to ```\windows\system32```.
+You must copy  ```sbbsexec.dll``` and ```netfoss.dll``` to 
+```\windows\system32```. Note that netfoss.dll is contained in the netfossil
+zip file named something matching ```net\*.zip```)
 
 #### Update, edit or create your WWIV.INI file
 
@@ -69,11 +69,38 @@ See [wwivini.5xx](../cfg/wwivini.md)
 
 #### Update your configuration files using the new wwivconfig
 
-Run wwivconfig and verify all settings. **Please note**, as mentioned above 
+Run wwivconfig and verify all settings.  This has to happen every time
+we upgrade wwiv.
+
+**Please note**, as mentioned above 
 there have been many changes. One such change is that there is no longer
 per instance configuration, apart from the temp directory which is set using
 as pattern in wwiv.ini. Therefore WWIV no longer requires configuring each 
 instance from wwivconfig.
+
+#### Copy over newer datafiles
+
+The easiest way to do this is to unzip using ```-n``` on top of the existing
+datafiles.  -n tells unzip not to overwrite anything existing.  You can also
+use a diff tool (like windiff) to look at the changes and bring over any
+of the new changes while keeping your customizations.
+
+
+```
+unzip -qq -n gfiles.zip -d gfiles
+unzip -qq -n data.zip -d data
+unzip -qq -n scripts.zip -d scripts
+```
+
+The regions and zip-city are unlikely to have been edited by hand, so you 
+likely want to use ```-o``` to overwrite.
+
+Also if use windows, you should fix the path separators.
+
+```
+unzip -qq -o regions.zip -d data/regions
+unzip -qq -o zip-city.zip -d data/zip-city
+```
 
 #### wwivd
 

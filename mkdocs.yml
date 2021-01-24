@@ -18,7 +18,7 @@ nav:
       - 'Windows Installation': install/win.md
       - 'Linux Installation': install/linux.md
       - 'Linux dosemu Settings': linux/dosemu_scripts.md
-      - 'Upgrading from WWIV 4.x': install/upgrade4.md
+      - 'Upgrading from Previous Versions': install/upgrade.md
   - Basic Configuration:
       - 'wwivconfig': cfg/wwivconfig.md
       - 'wwiv.ini': cfg/wwivini.md
@@ -56,16 +56,18 @@ nav:
     - 'NET37 Technical Documentation': archive/net37_tec_docs.md
   - Chains (Doors):
     - 'Chains (Doors)': chains/doors.md
-    - 'NetFoss': chains/nf.md
-    - 'Replaceable Parameters': chains/parameters.md
+    - 'BBSlink': chains/bbslink.md
     - 'Darkness': chains/darkness.md
     - 'DoorMUD': chains/doormud.md
-    - 'Planets: The Exploration of Space': chains/doorteos.md
+    - 'DoorParty': chains/doorparty.md
     - 'LORD': chains/lord.md
     - 'LORD2': chains/lord2.md
     - 'MechWars': chains/mechwars.md
-    - 'TradeWars2002': chains/tradewars2002.md
+    - 'NetFoss': chains/nf.md
+    - 'Planets: The Exploration of Space': chains/doorteos.md
+    - 'Replaceable Parameters': chains/parameters.md
     - 'SR Doors (SRE, BRE, etc)' : chains/srdoor.md
+    - 'TradeWars2002': chains/tradewars2002.md
   - Editors:
     - 'Internal Editor' : editors/internal.md
     - 'WWIVEdit': editors/wwivedit.md

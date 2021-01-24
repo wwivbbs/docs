@@ -110,7 +110,7 @@ These doors are known to work on WWIV because one of the SysOps is running them.
 [Planets: The Exploration of Space (TEOS)](doorteos.md) |
 [TradeWars 2002](tradewars2002.md) |
 [Door Party](doorparty.md) |
-[BBSList](bbslist.md) |
+[BBSLink](bbslink.md) |
 
 | Doors Running on WWIV BBSes (no specific guides) |
 | --------------------------- |

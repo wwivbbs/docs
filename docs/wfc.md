@@ -24,7 +24,7 @@ The screen looks as follows:
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │               Activity and Statistics of My WWIV BBS Node 1                  │
 ├──────────────────────────────────────┬───────────────────────────────────────┤
-│ Calls Today....... 48                │ WWIV Version.... 5.5.0                │
+│ Calls Today....... 48                │ WWIV Version.... 5.6.1                │
 │ Feedback Waiting.. 1       New: 1    │ Net Version..... 51                   │
 │ Uploads Today..... 0                 │ Total Users..... 99                   │
 │ Messages Today.... 98                │ Total Calls..... 20167                │

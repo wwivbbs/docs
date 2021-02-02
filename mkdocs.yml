@@ -8,6 +8,7 @@ source_suffix:
   '.rst': 'restructuredtext'
   '.txt': 'markdown'
   '.md': 'markdown'
+extra_css: [extra.css]
 markdown_extensions:
   - toc:
       permalink: True
@@ -32,6 +33,7 @@ nav:
   - Basic Use:
     - 'WFC Screen (Local Console)': wfc.md
     - 'Frequently Asked Questions (FAQ)': faq.md
+    - 'wwivutil - WWIV Utility Program' : wwivutil.md
   - Connectivity:
     - 'wwivd': conn/telnet.md    
     - 'NET2BBS': conn/net2bbs.md

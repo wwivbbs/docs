@@ -94,10 +94,10 @@ Ctrl  + F5 | Timeout Hang up. Sends the user a "Call back when you are there." m
 F6 | Unused
 Shift + F6 |  Unused
 Ctrl  + F6 |  Unused
-F7 | Increase Time Online. Adds 5 minutes to users time.
+F7 | Decrease Time Online. Subtracts 5 minutes from users time.
 Shift + F7 | 
 Ctrl  + F7 | 
-F8 | Decrease Time Online. Subtracts 5 minutes from users time.
+F8 | Increase Time Online. Adds 5 minutes to users time.
 Shift + F8 | 
 Ctrl  + F8 | 
 F9 | Temp Sysop. Grants Temporary Sysop status to the user online.  Use caution with this key.  The SL of the user online is changed to 255 giving the user full access to the BBS. System passwords are still required just as if you were online. You may type in the system passwords where required but they will not be echoed to the users screen. The 255SL is terminated when you press the F9 key again or when the user logs off.  You may want to use this key in concert with the F3 key to disable com input.

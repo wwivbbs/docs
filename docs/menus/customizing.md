@@ -7,6 +7,28 @@
 
 ***
 
+## Names of a Menu
+
+All menus are stored under `gfiles/menus`.  Each menu must be in its own 
+directory and must **not** have a filename longer than 8 characters.  
+
+The file `descript.ion` gives information to the user when choosing their
+menu.  The format is 
+
+```
+dir_name Description of menu
+```
+
+with one on each line.  For example:
+
+```
+WWIV WWIV Stock Menus
+ASCII Generated menus, best for screen readers
+wombat3 ANSI/ASCII art menus, close to stock WWIV options
+fc Highly customized menus for Faith Collapsing
+
+```
+
 ## Parts of a Menu
 
 There are several files that go into making each WWIV menu, separated out by

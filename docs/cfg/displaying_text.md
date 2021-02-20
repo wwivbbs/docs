@@ -284,7 +284,7 @@ suedit.msg   | sysop menu in user editor
 swfc.msg     | sysop menu in WFC
 system.msg   | Contains system information to display to your callers.  Displayed after login.msg and after newuser.msg
 welcome.msg  | Displayed to every user before they LOGON or start the new user process.  Used to welcome people and show off the style of your board. Usually this has the name of your BBS, A LOGO, other artworks and something to lure people to sign up.  
-
+yourinfo.msg | Displayed to implement the YourInfo command (Y) by default from the main menu
 
 ## Art Tools
 [ASCII Art Studio](http://www.torchsoft.com/en/aas_information.html) is a great

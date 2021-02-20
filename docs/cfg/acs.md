@@ -121,13 +121,18 @@ Object.Attribute. For example "user.sl" is the current user's security level.<br
 both ```user.name``` and ```USER.NAME``` are equivalent.
 
 
-| Attribute |  Description
-| --------- | -----------
-| user.sl   | User's message area security level
-| user.dsl  | User's download area security level
-| user.ar   | Users' download area Access Rights/Flag
-| user.dar  | Users' download area Access Rights
-| user.name | User's name or handle (not real name)
+| Attribute    |  Description
+| ------------ | -----------
+| user.sl      | User's message area security level
+| user.dsl     | User's download area security level
+| user.ar      | Users' download area Access Rights/Flag
+| user.dar     | Users' download area Access Rights
+| user.name    | User's name or handle (not real name)
+| user.age     | Users age in years
+| user.regnum  | User's WWIV registration number
+| user.guest   | Is the user the guest account
+| user.sysop   | Does the user have sysop status
+| user.cosysop | Does the user have co-sysop status
 
 ### WWIV Security Attributes
 

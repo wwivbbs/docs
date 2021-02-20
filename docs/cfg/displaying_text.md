@@ -8,19 +8,19 @@
 When you logged in, you saw several places where some placeholder messages
 were displayed. These messages are all specified in files located at 
 ```\wwiv\gfiles```. In this directory, there are a number of .MSG and .ANS
-files which are the messages and menus displayed you users as they use your
+files which are the messages and menus displayed to calers as they use your
 WWIV BBS.
 
 You can customize all of these as you wish. They can be edited with NOTEPAD 
 or another text editor. .MSG files are used by default and .ANS files are 
-displayed to users if their client supports ANSI. You should definitely have
+displayed to callers if their client supports ANSI. You should definitely have
 an ANSI version wherever you want to show off some art or where you can
 enhance the look and feel of your board. This is one of the ways you can
 make your WWIV BBS your own. 
 
 ## Text
 
-WWIV supports multiple ways of displaying text to users.  You may use 
+WWIV supports multiple ways of displaying text to callers.  You may use 
 straight ASCII text, ANSI color codes (which most ANSI-BBS terminal programs
 support), Traditional WWIV Heart Codes, Extended Editor Heart Codes, or
 newer style pipe codes. 
@@ -251,8 +251,8 @@ it your own. WWIV supports displaying files at many places throughout the BBS.
 ### File Extensions For Files
 
 Here are the various file extensions WWIV will look for when displaying a text
-file to a user. This is the order in which they are checked, and if one
-doesn't exist or isn't applicable to the user because of a constraint
+file to a caller. This is the order in which they are checked, and if one
+doesn't exist or isn't applicable to the caller because of a constraint
 (like color), then the next one in the list will be checked.
 
 | Extension | Description |
@@ -263,28 +263,43 @@ doesn't exist or isn't applicable to the user because of a constraint
 
 
 ### File Names
+
 While there are many others, as a new SysOp, the following MSGs are where
-you should start.
+you should start.  These are the fils that may be displayed to callers.
 
 | FileName   | Description |
 |------------|-------------|
 chain.msg    | Displayed before listing chains (doors) in the chains menus.
 chat.msg     | Displayed in the chat room
+defaults.msg | Displayed before the user preferences (aka defaults) item is displayed
+upload.msg   | Displayed when a caller attempts to download a file.
 editor.msg   | Internal editor help screen
-email.msg    | user email menu
+email.msg    | Displayed as help for the email menu
 feedback.msg | Displayed before sending feedback to the sysop.
-logoff.msg   | Displayed after every user logs-off.  Used to say Goodbye, thank them for visiting, suggest another BBS they might visit. 
-logon.msg    |  Displayed after every logon. Contains anything you want users to see before they start using the board.  
-newuser.msg  | Displayed to new users after they have signed up for the bbs. Use it to thank them for signing up. Point them to anything in particular that is awesome. There is also a new user email, so be brief here.
+logoff.msg   | Displayed after every caller logs-off.  Used to say Goodbye, thank them for visiting, suggest another BBS they might visit. 
+logon.msg    | Displayed after every logon. Contains anything you want callers to see before they start using the board.  
+mbmain.msg   | Displayed when ? is pressed while scanning messages or listing titles.
+newuser.msg  | Displayed to new callers after they have signed up for the bbs. Use it to thank them for signing up. Point them to anything in particular that is awesome. There is also a new user email, so be brief here.
 noansi.msg   | Displayed to users who have clients that do not support ANSI. It should let them users know there are ANSI clients out there they 
-smain.msg    | sysop main menu (//sysop)
-smain.msg    | sysop menu
-sonline.msg  | sysop online command menu
-suedit.msg   | sysop menu in user editor
-swfc.msg     | sysop menu in WFC
 system.msg   | Contains system information to display to your callers.  Displayed after login.msg and after newuser.msg
-welcome.msg  | Displayed to every user before they LOGON or start the new user process.  Used to welcome people and show off the style of your board. Usually this has the name of your BBS, A LOGO, other artworks and something to lure people to sign up.  
+upload.msg   | Displayed when a caller attempts to upload a file.
+welcome.msg  | Displayed to every caller before they LOGON or start the new user process.  Used to welcome people and show off the style of your board. Usually this has the name of your BBS, A LOGO, other artworks and something to lure people to sign up.  
 yourinfo.msg | Displayed to implement the YourInfo command (Y) by default from the main menu
+
+<br/>
+
+These are the files that may be displayed to the sysop for help. The same file extensions 
+are valid for these files.
+
+| FileName    | Description |
+|-------------|-------------|
+sbmain.msg    | Co-Sysop and Sysop version of the message scan help.
+smain.msg     | sysop main menu (//sysop)
+sonline.msg   | sysop online command menu
+srestrict.msg | Displays help for what each of the user restrictions restrict or allow.
+swfc.msg      | sysop menu in WFC
+
+<br/>
 
 ## Art Tools
 [ASCII Art Studio](http://www.torchsoft.com/en/aas_information.html) is a great

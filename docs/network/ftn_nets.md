@@ -56,7 +56,7 @@ Example:
 ### Setup using BSO style
 
 These are the default settings for all nodes in this network.  Here is an
-example of using BSO style with thw built-in BinkP.  All of the directory
+example of using BSO style with the built-in BinkP.  All of the directory
 names are relative to the network directory defined on the previous screen.
 
 
@@ -85,6 +85,9 @@ also press A to add an address or D to delete an address. You will need to
 define an address to set the packet types and passwords to use for that
 address.
 
+This address is the host/hub that you connect to. This is not your
+FTN address.  Often it is in the format of NN:Z/100.
+
 Example:
 
 ```
@@ -101,12 +104,28 @@ will be updated to include the ```-j``` option (or just add that in yourself).
 The packet password is what you and your uplink have defined.  It should be
 all upper case.
 
-Routing in FTN now works, uou need to define a route string for nodes
-  in the address list in wwivconfig for the network.  The format is space
-  separated list of routes.  A route is a partial address ending in *
-  as a wildcard. Optionally starting with ! to be a negative match.
-  Example "11:* !11:2/*" would match everything in zone 11, except
-  for everything in net 11:2/*.
+Routing in FTN now works, you need to define a route string for nodes
+in the address list in wwivconfig for the network.  The format is space
+separated list of routes.  A route is a partial address ending in *
+as a wildcard. Optionally starting with ! to be a negative match.
+
+Example:
+
+```
+"11:* !11:2/*" would match everything in zone 11, except for everything in 
+net 11:2/*.
+```
+
+Typically, you will route everything for the network through the hub you
+connect to.  So you'd put the network number and a colon followed by a
+wildcard.
+
+Example:
+
+```
+21:* This would route everything for network 21 (fsxNet) through this
+address
+```
 
 ** NOTE: AreaFix isn't implemented yet. Neither is the max size fields.
 
@@ -140,7 +159,6 @@ This file contains all of the fidonet addresses to export this message area to.
 
 If your uplink is 11:1/100 and your ECHOTAG is ```WWIV_TEST``` then your file
 will be named ```nWWIV_TEST.net``` and will contain the follow line:
-
 
 ```
 11:1/100
@@ -196,17 +214,9 @@ FTN support works for leaf nodes, it is not currently expected to be used by mai
 * Manually copying packets to MysticBBS
 
 ## Other Known FTNs with URLs
-* [AdventureNet](http://www.kofobbs.dk/adventurenet/)  
-* [AgoraNet](http://time.synchro.net:81/l10l.ssjs)  
-* [AmigaNet]()  
-* [fsxNet](http://bbs.nz/#fsxNet)
-* [JustaXNet](http://www.justaxnet.com/)  
-* [LinuxNet](http://www.kofobbs.dk/linuxnet/)  
-* [MicroNet](http://outpostbbs.net/micronet.html) 
-* [Pascal-Net](http://www.pascalnet.org)  
-* SportNet  
-* [SysOp Tech Net](http://www.sysoptech.net)  
-* WhispNet  
+* [fsxNet](http://bbs.nz/#fsxNet) - One of the most active FTN type networks outside of Fido.
+* [WhisperNet](http://www.cr1mson.org/whispernet.html)     
+ 
 
 # Other Links
 http://www.bbscorner.com/bbsnetworks/  

@@ -202,7 +202,8 @@ In all cases nn is optional and defaults to 1
 [nnB    | Moves the cursor down nn lines
 [nnC    | Moves the cursor right nn lines
 [nnD    | Moves the cursor left nn lines
-[xx;yyH | Goto screen position xx, yy
+[xx;yyH | Goto screen position xx, yy. Upper left hand corner is 1;1
+[J      | Clears the screen
 [K      | Clears the line from cursor position to end of line
 [1K     | Clears the line from beginning of line to cursor position
 [2K     | Clears the entire line, leaves the cursor position the same
@@ -276,6 +277,8 @@ upload.msg   | Displayed when a caller attempts to download a file.
 editor.msg   | Internal editor help screen
 email.msg    | Displayed as help for the email menu
 feedback.msg | Displayed before sending feedback to the sysop.
+fs_msgread.msg | Displayed for the header at the top of the full screen message scan page.
+fs_msgscan.msg | Displayed for the header at the top of the full screen message scan page
 logoff.msg   | Displayed after every caller logs-off.  Used to say Goodbye, thank them for visiting, suggest another BBS they might visit. 
 logon.msg    | Displayed after every logon. Contains anything you want callers to see before they start using the board.  
 mbmain.msg   | Displayed when ? is pressed while scanning messages or listing titles.
@@ -300,6 +303,85 @@ srestrict.msg | Displays help for what each of the user restrictions restrict or
 swfc.msg      | sysop menu in WFC
 
 <br/>
+
+## Special context aware pipe variables
+
+** Global context variables**
+
+The following are available in all places where pipe variables may be used in expressions.
+
+Some files can have special context aware pipe variables used in expressions.
+
+| Variable         | Type    | Meaning |
+|------------------|---------|-----------------|
+user.name          | string  | User's name or handle
+user.sl            | number  | User's SL
+user.dsl           | number  | User's DSL
+user.age           | number  | User's Age
+user.regnum        | number  | User's WWIV registration number
+user.sysop         | boolean | Is the user a sysop
+user.cosysop       | boolean | Is the user a co-sysop
+user.guest         | boolean | Is the user logged on as a guest
+user.validated     | boolean | Is the user validates
+
+<p/>
+
+### fs_msgscan.msg
+
+| Variable         | Type   | Meaning |
+|------------------|--------|-----------------|
+cursub.subnum      | number | current sub #
+cursub.name        | string |current sub name
+cursub.desc        | string |current sub description
+cursub.filename    | string |current sub filename
+cursub.num_msgs    | number |current sub's number number of messages
+cursub.maxmsgs     | number |current sub max number of messages allowed
+
+<p/>
+
+**Return variables**
+
+| Variable         | Type   |  Meaning |
+|------------------|--------|---------------|
+| num_header_lines | number | how many lines does the header use.  Default 2
+
+<p/>
+
+### fs_msgread.msg
+
+| Variable            | Type    | Meaning |
+|---------------------|---------|--------------|
+msg.message_area      | string  | current message area #
+msg.message_number    | string  | current message number
+msg.total_messages    | string  | curent sub's max number of messages allowed
+msg.from              | string  | Message author
+msg.to                | string  | message receipient
+msg.date              | string  | Message date sent
+msg.title             | string  | Message title
+msg.sys               | string  | Sending system #
+msg.loc               | string  | Sending system's location
+msg.flags.local       | string  | Is this message local
+msg.flags.forced      | boolean | Is this message forced to be read
+msg.flags.not_net_val | boolean | Is this message not yet network validated
+msg.flags.not_val     | boolean | Is this message not yet validated
+msg.flags.permanent   | boolean | Is this message permanent (i.e. wont be auto deleted)
+msg.flags.ftn         | boolean | Is this message part of a FTN network
+msg.flags.wwivnet     | boolean | Is this message part of a WWIVnet type network
+msg.flags.private     | boolean | Is this message private
+net.name              | string  | Network display name
+net.node              | string  | WWIVnet node number or FTN address
+
+
+<p/>
+
+**Return variables**
+
+| Variable         | Type   |  Meaning |
+|------------------|--------|----------------|
+num_header_lines   | number | how many lines does the header use.  Default 5
+
+<br/>
+
 
 ## Art Tools
 [ASCII Art Studio](http://www.torchsoft.com/en/aas_information.html) is a great

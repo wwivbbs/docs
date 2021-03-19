@@ -222,7 +222,10 @@ These are of the format ```|{xxxxx}``` whre xxxxx is the expression text.
 | Expression  | Action |
 |-------------|------------------------|
 set           | sets the next variable to the value that follows.  Example: set pause off
-| pause       | displays the system pause.
+pausescr      | displays the system pause.
+if            | 'if "expr", "true value", "false value"'.  If expression is true, display true value, otherwise false value
+random        | 'random "1", "2", ...' picks a random string from the list of choices to display
+mpl           | display a textbox with a colorized background using color #4, like mpl() funtion in WWIV.
 
 Set can manipulate the values of several system variables.  The values can be
 strings that must be enclosed on double quotes, numbers, or truthy values.  
@@ -240,7 +243,7 @@ Examples:
   |{set pause=off}
   |{set lines=0}
   Hello |@N! How are you today?
-  |{pause}
+  |{pausescr}
 ```
 
 
@@ -270,8 +273,11 @@ you should start.  These are the fils that may be displayed to callers.
 
 | FileName   | Description |
 |------------|-------------|
+ar#.msg      | Displayed at logon for users with AR matching #
 chain.msg    | Displayed before listing chains (doors) in the chains menus.
 chat.msg     | Displayed in the chat room
+dar#.msg     | Displayed at logon for users with DAR matching #
+dsl###.msg   | Displayed at logon for users with DSL matching ###
 defaults.msg | Displayed before the user preferences (aka defaults) item is displayed
 upload.msg   | Displayed when a caller attempts to download a file.
 editor.msg   | Internal editor help screen
@@ -284,6 +290,7 @@ logon.msg    | Displayed after every logon. Contains anything you want callers t
 mbmain.msg   | Displayed when ? is pressed while scanning messages or listing titles.
 newuser.msg  | Displayed to new callers after they have signed up for the bbs. Use it to thank them for signing up. Point them to anything in particular that is awesome. There is also a new user email, so be brief here.
 noansi.msg   | Displayed to users who have clients that do not support ANSI. It should let them users know there are ANSI clients out there they 
+sl###.msg    | Displayed at logon for users with SL matching ###
 system.msg   | Contains system information to display to your callers.  Displayed after login.msg and after newuser.msg
 upload.msg   | Displayed when a caller attempts to upload a file.
 welcome.msg  | Displayed to every caller before they LOGON or start the new user process.  Used to welcome people and show off the style of your board. Usually this has the name of your BBS, A LOGO, other artworks and something to lure people to sign up.  
@@ -314,6 +321,14 @@ Some files can have special context aware pipe variables used in expressions.
 
 | Variable         | Type    | Meaning |
 |------------------|---------|-----------------|
+bbs.name           | string  | Name of the BBS
+bbs.sysopname      | string  | Name of the  SysOp
+bbs.phone          | string  | Phone Number of the BBS
+bbs.node           | string  | Node number for this BBS instance
+bbs.os             | string  | Operating System Name this node BBS is running on
+bbs.version        | string  | WWIV Version #
+bbs.reg            | string  | WWIV 4.x Registration Number
+bbs.compiletime    | string  | Date and time the BBS binary was compiled
 user.name          | string  | User's name or handle
 user.sl            | number  | User's SL
 user.dsl           | number  | User's DSL

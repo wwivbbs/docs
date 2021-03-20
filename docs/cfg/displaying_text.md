@@ -226,6 +226,10 @@ pausescr      | displays the system pause.
 if            | 'if "expr", "true value", "false value"'.  If expression is true, display true value, otherwise false value
 random        | 'random "1", "2", ...' picks a random string from the list of choices to display
 mpl           | display a textbox with a colorized background using color #4, like mpl() funtion in WWIV.
+sleep         | pauses the display for the # of millisecond specified. Example sleep 100
+spin          | spins the text of the next variable using the color that is the 2nd parameter. Example: spin "Hello", 1
+backprint     | args: text, color, per-char delay, delay at end of string. Example backprint "Invalid username", 1, 30, 500
+rainbow       | arg text; Displays text using a rainbow effect.
 
 Set can manipulate the values of several system variables.  The values can be
 strings that must be enclosed on double quotes, numbers, or truthy values.  

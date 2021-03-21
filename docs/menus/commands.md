@@ -525,10 +525,6 @@ out by category.
 ### MemStat
 
 
-### ReloadMenus
-    This is probably obsolete.
-
-
 ### Status
 
 
@@ -646,6 +642,7 @@ out by category.
 
 ### ToggleExpert
     Turn 'X'pert mode on or off (toggle)
+    Can optionally pass "quiet=on" as the command data to suppress displaying the expert mode state.
 
 
 ### TurnMCIOff
@@ -686,6 +683,71 @@ out by category.
 ### ConfigUserMenuSet
     Takes the user into the user menu config so they can select which menuset
     they want to use, etc...
+
+
+### user:address
+    Allows the user to change their address
+
+
+### user:ansistate
+    Allows the user to change their ANSI state
+
+
+### user:callsign
+    Allows the user to change their HAM callsign
+
+
+### user:city
+    Allows the user to change their city
+
+
+### user:comptype
+    Allows the user to change their computer type
+
+
+### user:country
+    Allows the user to change their country
+
+
+### user:dataphone
+    Allows the user to change their data phone number
+
+
+### user:editor
+    Allows the user to change their default editor
+
+
+### user:gender
+    Allows the user to change their gender
+
+
+### user:menus
+    Takes the user into the user menu config so they can select which menuset
+    they want to use, etc...
+
+
+### user:qscan
+    Allows the user to change their subs that are newscanned
+
+
+### user:realname
+    Allows the user to change their real name
+
+
+### user:regnum
+    Allows the user to change their WWIV 4.x registration number
+
+
+### user:screensize
+    Allows the user to change their screen size
+
+
+### user:state
+    Allows the user to change their state
+
+
+### user:zipcode
+    Allows the user to change their zipcode
 
 
 ## Category: Vote

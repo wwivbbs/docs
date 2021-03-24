@@ -341,7 +341,52 @@ user.regnum        | number  | User's WWIV registration number
 user.sysop         | boolean | Is the user a sysop
 user.cosysop       | boolean | Is the user a co-sysop
 user.guest         | boolean | Is the user logged on as a guest
-user.validated     | boolean | Is the user validates
+user.validated     | boolean | Is the user validated
+user.screenlines   | boolean | User's screen lines
+user.screenwidth   | boolean | User's screen width
+user.ansi          | boolean | Does the user have ansi enabled
+user.ansistr       | string  | describes user's ansi and color state
+user.color         | boolean | Is color enabled
+user.pause         | boolean | Is pause enabled
+user.mailbox_state | string  | Describes the mailbox state (i.e. forwarded to user ...)
+user.extcolors        | boolean | Are extra colors enabled
+user.optional_lines   | number  | Number of optional message lines
+user.conferencing     | boolean | Is conferencing enabled
+user.fs_reader        | boolean | Is the full screen message reader enabled
+user.email            | string  | User's internet email address
+user.ignore_msgs      | boolean | Ignore inter-instance messages
+user.clear_screen     | boolean | Clear screen before messages
+user.auto_quote       | boolean | Use WWIV auto-quote vs. standard quoting
+user.protocol         | number  | default protocol number
+user.callsign         | string  | User's HAM callsign (if provided)
+user.street           | string  | User's street address (if provided)
+user.city             | string  | User's city (if provided)
+user.state            | string  | User's state (if provided)
+user.zip_code         | string  | User's zipcode (if provided)
+user.last_ipaddress   | string  | Last IP addressed used
+user.last_bps         | number  | Last BPS rate (if over serial)
+user.laston           | string  | Date (MMDDYY) last on BBS
+user.voice_phone      | string  | User's voice phone (if provided)
+user.data_phone       | string  | User's data phone (if provided)
+user.gender           | char    | User's gender (as character, M/F) (if provided)
+user.menuset          | string  | curent menuset
+user.birthday_mmddyy  | string  | User's birthday (MMDDYY)  (if provided)
+user.email_waiting    | number  | Number of email waiting
+user.messages_posted  | number  | number of messages posted
+user.posts_today      | number  | number of messages posted today
+user.posts_net        | number  | number of messages posted on a network
+user.messages_read    | number  | number of messages read
+user.email_today      | number  | number of email sent today
+user.email_sent_local | number  | number of email sent locally today
+user.feedback_sent    | number  | number of feedback to sysop send
+user.email_sent_net   | number  | number of email sent to the network
+user.chains_run       | number  | number of chains execute
+user.uploaded         | number  | number of files uploaded
+user.uk               | number  | KB of files uploaded
+user.downloaded       | number  | number of files downloaded
+user.dk               | number  | KB of files downloaded
+user.editorname       | string  | Fullscreen editor name
+
 
 <p/>
 

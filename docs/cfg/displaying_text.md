@@ -387,6 +387,37 @@ user.downloaded       | number  | number of files downloaded
 user.dk               | number  | KB of files downloaded
 user.editorname       | string  | Fullscreen editor name
 
+## pipe variables formatting
+
+Pipe variables can be formatted using a format mask following the variable.  
+Example:
+```
+	|{user.name, ">35"}
+```
+
+Here's the format for the format mask:
+
+```
+	format ::= [[pad]align][width]
+	pad    ::= CP437 character other than '<', '^', '>', '{', or '}' 
+	align  ::=  "<" | ">" | "^"
+	width  ::=  number > 0
+```
+
+Format:
+	Fill format mask to specify
+
+Pad:
+	The padding character to use when filling in the text to be sized to width
+
+Align:
+	Alignment is one of the following:
+	'<' Left
+	'^' Centered
+	'>' Right
+
+Width:
+	How many characters to pad or trim the string to be.
 
 <p/>
 

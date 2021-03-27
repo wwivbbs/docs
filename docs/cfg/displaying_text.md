@@ -275,30 +275,30 @@ doesn't exist or isn't applicable to the caller because of a constraint
 While there are many others, as a new SysOp, the following MSGs are where
 you should start.  These are the fils that may be displayed to callers.
 
-| FileName   | Description |
-|------------|-------------|
-ar#.msg      | Displayed at logon for users with AR matching #
-chain.msg    | Displayed before listing chains (doors) in the chains menus.
-chat.msg     | Displayed in the chat room
-dar#.msg     | Displayed at logon for users with DAR matching #
-dsl###.msg   | Displayed at logon for users with DSL matching ###
-defaults.msg | Displayed before the user preferences (aka defaults) item is displayed
-upload.msg   | Displayed when a caller attempts to download a file.
-editor.msg   | Internal editor help screen
-email.msg    | Displayed as help for the email menu
-feedback.msg | Displayed before sending feedback to the sysop.
-fs_msgread.msg | Displayed for the header at the top of the full screen message scan page.
-fs_msgscan.msg | Displayed for the header at the top of the full screen message scan page
-logoff.msg   | Displayed after every caller logs-off.  Used to say Goodbye, thank them for visiting, suggest another BBS they might visit. 
-logon.msg    | Displayed after every logon. Contains anything you want callers to see before they start using the board.  
-mbmain.msg   | Displayed when ? is pressed while scanning messages or listing titles.
-newuser.msg  | Displayed to new callers after they have signed up for the bbs. Use it to thank them for signing up. Point them to anything in particular that is awesome. There is also a new user email, so be brief here.
-noansi.msg   | Displayed to users who have clients that do not support ANSI. It should let them users know there are ANSI clients out there they 
-sl###.msg    | Displayed at logon for users with SL matching ###
-system.msg   | Contains system information to display to your callers.  Displayed after login.msg and after newuser.msg
-upload.msg   | Displayed when a caller attempts to upload a file.
-welcome.msg  | Displayed to every caller before they LOGON or start the new user process.  Used to welcome people and show off the style of your board. Usually this has the name of your BBS, A LOGO, other artworks and something to lure people to sign up.  
-yourinfo.msg | Displayed to implement the YourInfo command (Y) by default from the main menu
+| FileName          | Description |
+|-------------------|-----------------------------------------------------------------------------|
+ar#.msg             | Displayed at logon for users with AR matching #
+chain.msg           | Displayed before listing chains (doors) in the chains menus.
+chat.msg            | Displayed in the chat room
+dar#.msg            | Displayed at logon for users with DAR matching #
+dsl###.msg          | Displayed at logon for users with DSL matching ###
+legacy_defaults.msg | Displayed before the user preferences (aka defaults) item is displayed
+upload.msg          | Displayed when a caller attempts to download a file.
+editor.msg          | Internal editor help screen
+email.msg           | Displayed as help for the email menu
+feedback.msg        | Displayed before sending feedback to the sysop.
+fs_msgread.msg      | Displayed for the header at the top of the full screen message scan page.
+fs_msgscan.msg      | Displayed for the header at the top of the full screen message scan page
+logoff.msg          | Displayed after every caller logs-off.  Used to say Goodbye, thank them for visiting, suggest another BBS they might visit. 
+logon.msg           | Displayed after every logon. Contains anything you want callers to see before they start using the board.  
+mbmain.msg          | Displayed when ? is pressed while scanning messages or listing titles.
+newuser.msg         | Displayed to new callers after they have signed up for the bbs. Use it to thank them for signing up. Point them to anything in particular that is awesome. There is also a new user email, so be brief here.
+noansi.msg          | Displayed to users who have clients that do not support ANSI. It should let them users know there are ANSI clients out there they 
+sl###.msg           | Displayed at logon for users with SL matching ###
+system.msg          | Contains system information to display to your callers.  Displayed after login.msg and after newuser.msg
+upload.msg          | Displayed when a caller attempts to upload a file.
+welcome.msg         | Displayed to every caller before they LOGON or start the new user process.  Used to welcome people and show off the style of your board. Usually this has the name of your BBS, A LOGO, other artworks and something to lure people to sign up.  
+yourinfo.msg        | Displayed to implement the YourInfo command (Y) by default from the main menu
 
 <br/>
 
@@ -386,6 +386,8 @@ user.uk               | number  | KB of files uploaded
 user.downloaded       | number  | number of files downloaded
 user.dk               | number  | KB of files downloaded
 user.editorname       | string  | Fullscreen editor name
+user.show_controlcodes  | boolean | Show message lines with WWIV control codes and FTN kludge
+user.twentyfour_clock   | boolean | Show time using 24hr clock (i.e. 18:00, not 06:00 PM)
 
 ## pipe variables formatting
 

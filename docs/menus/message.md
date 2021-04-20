@@ -224,13 +224,15 @@ when the sub is set up.
 
 ## Taglines
 
-Taglines are similiar to email signature files, but they applied by the system (not users) on messages. Here's a list of .TAG files supported by WWIV BBS.
+Taglines are similiar to email signature files, but they applied by the system (not users) on messages. 
+
+Here's a list of .TAG files supported by WWIV BBS and the order in which they are searched:
 
 Tag Filename | File Location | Description
---- | --- | ---
-GENERAL.TAG |  | GENERAL.TAG is the default tag file used for all SUBs when SUBTYPE.TAG is absent.
-SUBTYPE.TAG |\wwiv\nets\wwivnet OR \wwiv\data | TAG files can also be customized on a per SUB basis. Hence, SUBTYPE.TAG. You replace SUBTYPE with the subtype for the networked SUB. For instance, for the WWIV Development WWIVnet sub, with the subtype "WWIVDEV" you'd use WWIVDEV.TAG. GENERAL.TAG is the default tag file used when <SUBTYPE>.TAG is absent.
-INTERNET.TAG | Define in NET.INI (typically in \wwiv\data or \wwiv\gfiles) | This defines your NEWS tagline for Usenet Newsgroups as SIGNATURE. Plain text only, no Leading ^D.
-BBS*.TAG | \wwiv\wwivedit | 
+----------: | :------------------------------------: | -------
+SUBTYPE.tag | $NETWORK_DIR (i.e. /wwiv/nets/wwivnet) | TAG file for specific sub of SUBTYPE for the specific network.
+general.tag | $NETWORK_DIR (i.e. /wwiv/nets/wwivnet) | Default tag file used for all SUBs of this network if SUBTYPE.tag is not found.
+SUBTYPE.tag | $WWIV_HOME/data | TAG file for specific sub of SUBTYPE across all networks.
+general.tag | $WWIV_HOME/data | Default tag file used for all SUBs of this network if none other are found.
 
-Tag files are expected to be found in either NET_DATA or DATA directories.
+<br />

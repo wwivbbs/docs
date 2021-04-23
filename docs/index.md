@@ -1,24 +1,22 @@
 
-# WWIV BBS Software Documentation
-***
-```
-            WWW     WWW WWW     WWW III VVV   VVV   555555    66666
-            WWW     WWW WWW     WWW III VVV   VVV   55        66
-            WWW     WWW WWW     WWW III VVV   VVV   555555    666666
-            WWW  W  WWW WWW  W  WWW III  VVV VVV        55    66  66
-            WWW WWW WWW WWW WWW WWW III   VVVVV         55 .. 66  66
-             WWW   WWW   WWW   WWW  III    VVV      555555 .. 666666
-```
+# WWIV BBS Software Documentation 5.7.0
+*** 
 
-WWIV BBS SOFTWARE has a long [history](misc/history.md),
-this project is to give WWIV a strong future.
+<center>
+	<img src="img/wwiv.jpg" style="width:100%"/>
+</center>
 
-Were working hard to bring you the best bbs software we can.
-Welcome to the WWIV BBS Documentation
+Welcome to the WWIV BBS Documentation!
+
+WWIV BBS SOFTWARE has a long [history](misc/history.md) startng
+back from the 1980s.  We're happy to have been able to open source
+the code for WWIV and allow this project is to continue to give 
+WWIV a strong future.
 
 Thank you,  
 The WWIV Dev Team 
 
+***
 # Getting Started
 
 Use one of the following sections to install WWIV on either
@@ -27,12 +25,9 @@ Windows or Linux:
 - [Windows WWIV Installation](install/win.md)  
 - [Linux WWIV Installation](install/linux.md)  
 
-If you are upgrading from WWIV 4.x then check out:
+If you are upgrading from an earlier version please see
 
-- [Upgrading from WWIV 4.x'](install/upgrade.md)
-
-# Links
-
-* [WWIVBBS.org](https://www.wwivbbs.org)
-* [GitHub](http://www.github.com/wwivbbs/wwiv)
+- [Upgrading](install/upgrade.md)
+- Additional specific instructions for 5.7.0 are located
+  in the docs/upgrade-5.7.0.txt file in the release archive
 

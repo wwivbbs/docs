@@ -4,13 +4,17 @@
 # Overview
 
 The INI or Initialization file is probably the most enigmatic part of WWIV.
-It provides quick access to the core of configurable options and allows a
-quite diverse array of system tuning parameters. The file is well commented
-and should be fairly easy to adjust to your particular situation. The default
-file is setup for a generic BBS and should be sufficient for most 
-applications. The INI is the home to many core WWIV settings and occasionally
-3rd party add-ons append settings to the end of the file.
+It provides access to the core of configurable options that were new since 
+4.24 up until 5.5, and allows a quite diverse array of system tuning parameters. 
 
+Since WWIV 5.6, most new configuration options have been moving into the
+JSON configuration file ```config.json``` which is the modern version of the
+long-time ```config.dat``` file that contained the core of WWIV configuration.
+
+Over time we expect settings to move into other files and be configurable
+using the wwivconfig confuguration UI.
+
+<br />
 The comments should be adequate to explain the usage of the settings and other
 pages may also refer to specific settings in wwiv.ini.
 
@@ -21,14 +25,14 @@ pages may also refer to specific settings in wwiv.ini.
 ```INI
 ;=============================================================================
 ;
-;                 WWIV Version 5 Initialization File
+;                 WWIV Version 5.x Initialization File
 ;
 ;              Lines begining with a semi-colon are ignored
 ;=============================================================================
 ;
 ; WWIV ID Block for default / common BBS settings.  This ID *must* appear as
-; the first uncommented  line in the INI file.  See individual instance settings
-; at the end of this file
+; the first uncommented  line in the INI file.  See individual instance 
+: settings at the end of this file
 ;
 [WWIV]
 ;
@@ -42,14 +46,6 @@ pages may also refer to specific settings in wwiv.ini.
 ; COMIO        Intercept DOS interrupts (Win32 Only)
 ; FOSSIL       Emulate the FOSSIL for DOS applications (Win32 Only)
 ; NETPROG      Tries to run program in network data dir first.
-; BINARY       Don't expand telnet IAC or LF -> CR/LF Translation when doing local IO
-;              through STDIO mode.
-; STDIO        Use STDIO based doors for Linux. This will set the stdin/stdout
-;              file descriptors to the socket before spawning the binary
-; TEMP_DIR     Sets the working directory to the instance temp directory.
-; BATCH_DIR    Sets the working directory to the instance batch directory.
-; QWK_DIR      Sets the working directory to the instance QWK directory
-;              (this is currently the batch directory but may change in the future)
 ;
 ; Options can be combined like so:
 ;
@@ -57,9 +53,8 @@ pages may also refer to specific settings in wwiv.ini.
 ;
 ; Valid locations that can have spawn options specified are:
 ;
-; TIMED, NEWUSER, BEGINDAY, LOGON, LOGOFF ULCHK, PROT_SINGLE,
-; PROT_BATCH, CHAT, ARCH_E, ARCH_V, ARCH_A, ARCH_D, ARCH_K, ARCH_T,
-; NET_CMD1, NET_CMD2
+; NEWUSER, BEGINDAY, LOGON, LOGOFF ULCHK, PROT_SINGLE,
+; PROT_BATCH, ARCH_E, ARCH_V, ARCH_A, ARCH_D, ARCH_K, ARCH_T
 ;
 ; Values listed for lines commented out are the default settings.  Under
 ; normal conditions, you should not have to edit these settings.  If you
@@ -67,23 +62,21 @@ pages may also refer to specific settings in wwiv.ini.
 ; your supporting program, try adding COMIO.  These are
 ; the most commonly used settings.
 ;
-; -----------------------------------------------------------------------------
-;
+; ----------------------------------------------------------------------------
 ;
 ; Event spawn options
 ;
-;SPAWNOPT[TIMED]        =                               ; for timed event
-;SPAWNOPT[NEWUSER]      =                               ; for newuser event
-;SPAWNOPT[BEGINDAY]     =                               ; for beginday event
-;SPAWNOPT[LOGON]        =                               ; for logon event
-;SPAWNOPT[LOGOFF]       =                               ; for logoff event
-;SPAWNOPT[ULCHK]        = NOHUP                         ; for upload event
+;SPAWNOPT[NEWUSER]      =                         ; for newuser event
+;SPAWNOPT[BEGINDAY]     =                         ; for beginday event
+;SPAWNOPT[LOGON]        =                         ; for logon event
+;SPAWNOPT[LOGOFF]       =                         ; for logoff event
+;SPAWNOPT[CLEANUP]      =                         ; for cleanup event
+;SPAWNOPT[ULCHK]        = NOHUP                   ; for upload event
 ;
 ; External program spawn options
 ;
-;SPAWNOPT[PROT_SINGLE]  = NONE                          ; for single file xfers
-;SPAWNOPT[PROT_BATCH]   = NONE                          ; for batch xfers
-;SPAWNOPT[CHAT]         = NONE                          ; for wwivchat.exe
+;SPAWNOPT[PROT_SINGLE]  = NONE                    ; for single file xfers
+;SPAWNOPT[PROT_BATCH]   = NONE                    ; for batch xfers
 ;
 ; Archiver spawn settings
 ;
@@ -93,22 +86,6 @@ pages may also refer to specific settings in wwiv.ini.
 ;SPAWNOPT[ARCH_D]       =                         ; for deleting from archives
 ;SPAWNOPT[ARCH_K]       =                         ; for commenting archives
 ;SPAWNOPT[ARCH_T]       =                         ; for testing archives
-;
-;Network spawn options
-;
-; If NET_CLEANUP_CDM1 is defined below, the BBS will look for the file
-; in the main BBS directory.  To run a file from the network data
-; directory, add the NETPROG option.
-;
-;SPAWNOPT[NET_CMD1]     =                               ; for NET_CLEANUP_CMD1
-;
-; NET_CMD2 already has the NETPROG option set by default.
-;
-;SPAWNOPT[NET_CMD2]     = NETPROG                       ; for NET_CLEANUP_CMD2
-;
-; NETWORK is the setting to use when running network.exe
-;
-;SPAWNOPT[NETWORK]      =
 ;
 ;=============================================================================
 ;                               COLOR OPTIONS
@@ -136,10 +113,10 @@ pages may also refer to specific settings in wwiv.ini.
 : color values greater than 127 will result in blinking. In other words,
 ; you should probably restrict background colors to colors 0-7 above.
 ;
-; An example: if you want to find the value for, say, bright yellow on magenta,
-; it would be (5*16) + 14. This equates to (magenta * 16) + white.
+; An example: if you want to find the value for, say, bright yellow on 
+: magenta, it would be (5*16) + 14. This equates to (magenta * 16) + white.
 ;
-; -----------------------------------------------------------------------------
+; ----------------------------------------------------------------------------
 NUCOLOR[0]     = 7
 NUCOLOR[1]     = 11
 NUCOLOR[2]     = 14
@@ -163,30 +140,31 @@ NUCOLORBW[9]   = 7
 ;
 ; System Colors
 ;
-TOPCOLOR               = 27                 ; for topscreen info
-F1COLOR                = 9                  ; for F1 user editor
-EDITLINECOLOR          = 31                 ; current field in F1
-CHATSELCOLOR           = 11                 ; for selecting sysop
-MSG_COLOR              = 2                  ; for color msgs
+TOPCOLOR               = 27           ; for topscreen info
+F1COLOR                = 9            ; for F1 user editor
+EDITLINECOLOR          = 31           ; current field in F1
+CHATSELCOLOR           = 11           ; for selecting sysop
+MSG_COLOR              = 2            ; for color msgs
 ;
 ;=============================================================================
 ;                          EXTERNAL PROGRAM OPTIONS
 ;=============================================================================
 ;
-;UPLOAD_CMD     =                           ; upload event
-;BEGINDAY_CMD   =                           ; beginday even
-;NEWUSER_CMD    =                           ; newuser event
-;LOGON_CMD      =                           ; logon event
+;UPLOAD_CMD     =                     ; upload event
+;BEGINDAY_CMD   =                     ; beginday event
+; Node number to handle beginday event, this should be set if you
+; want to restrict executing the beginday event to your local
+; node number.  0 means that it may be executed on any node.
+BEGINDAYNODENUMBER     = 0            ; 
+;NEWUSER_CMD    =                     ; newuser event
+;LOGON_CMD      =                     ; logon event or script to run. 
+                                      ; use @basic:scriptname.bas for a script
+;LOGOFF_CMD     =                     ; logoff event or script to run. 
+                                      ; use @basic:scriptname.bas for a script
+;CLEANUP_CMD    =                     ; terminate cleanup event or script to
+                                      ; run. (executes after use logs off)
+;TERMINAL_CMD   = term.exe            ; WFC terminal command
 ;
-;
-;=============================================================================
-;                            NETWORK OPTIONS
-;=============================================================================
-;
-;NET_CLEANUP_CMD1   =                       ; cleanup event 1
-;NET_CLEANUP_CMD2   =                       ; cleanup event 2
-NET_CALLOUT        = Y                      ; allow net callouts this instance
-FIDO_PROCESS       = N                      ; process fido packets this instance
 ;
 ;=============================================================================
 ;                              SYSTEM FLAGS
@@ -195,109 +173,72 @@ FIDO_PROCESS       = N                      ; process fido packets this instance
 ; used settings are already set for you.  You may want to experiment with
 ; various settings to tailor your system to your needs.
 ;
-FORCE_FBACK            = N                  ; force newusers to send fback
-FORCE_NEWUSER          = N                  ; force newusers to read NEWUSER.MSG
-FORCE_SCAN             = N                  ; force user to scan sysop sub
-FORCE_SCAN_SUBNUM      = N                  ; sub to force scan on
-CHECK_DUP_PHONES       = N                  ; check newuser dupe phones
-HANGUP_DUP_PHONES      = N                  ; hangup on newuser dupe phone
-POSTTIME_COMPENS       = N                  ; compensate for time posting
-SHOW_HIER              = Y                  ; show conf details in //je
-IDZ_DESC               = Y                  ; 1st line of file_id.diz as descrip
-SETLDATE               = N                  ; set file date on nscan
-NEW_CHATSOUND          = Y                  ; use different chat alarm
-SLASH_SZ               = N                  ; enable "/s" and "/z" (Download Posts)
-READ_CD_IDZ            = N                  ; read file_id.diz from cdroms
-FSED_EXT_DESC          = Y                  ; allow fsed for extended descriptions
-FAST_TAG_RELIST        = Y                  ; don't show xfer dirs on tag relist
-MAIL_PROMPT            = Y                  ; fancy mail prompt
-SHOW_CITY_ST           = Y                  ; show city/state in laston info
-LOCAL_SYSOP            = Y                  ; allow F-keys, space-f, etc
-2WAY_CHAT              = Y                  ; 2-way local sysop chat
-OFF_HOOK               = Y                  ; phone offhook when sysop on
-LOG_DOWNLOADS          = N                  ; send SSM to uploader on file DL
-CLOSE_XFER             = N                  ; disable transfer section
-ALL_UL_TO_SYSOP        = Y                  ; all uploads go to sysop dir
-NO_EASY_DL             = N                  ; Disable WWIV4*.* DL ignorng time,ratio
-NEW_EXTRACT            = Y                  ; extended sysop-extract email/posts
-FAST_SEARCH            = Y                  ; quick check of dup uploads
-USER_REGISTRATION      = N                  ; allow account expirations
-MSG_TAG                = Y                  ; sysop post/email taglines
-CHAIN_REG              = Y                  ; user sponsoring of chains
-CAN_SAVE_SSM           = Y                  ; allow saving of SSMs
-BEEP_CHAT              = Y                  ; alert sysop of chat requests
-TWO_COLOR_CHAT         = Y                  ; dual color in non-2-way chat
-ALLOW_ALIASES          = Y                  ; allow users to use aliases
-USE_LIST               = N                  ; use list.com to show sysoplog, etc
-FREE_PHONE             = N                  ; allow any format phone #
-LOGON_PHONE            = Y                  ; check phone # at logon?
-EXTENDED_USERINFO      = N                  ; enable addr, etc info in userrec
-NEWUSER_MIN            = Y                  ; ask minimal new user information
-ALLOW_CC_BCC           = Y                  ; allow CC: and BCC: for email?
-THREAD_SUBS            = N                  ; activate threading message code
-DISABLE_PD             = Y                  ; disable Pulldown menu support
-TITLEBAR               = Y                  ; show user in console titlebar
-;
-;!!!NOTE: ENABLE_PIPES, EXTRA_COLOR AND ENABLE_MCI are always on in wwiv
+FORCE_FBACK            = N            ; force newusers to send fback
+FORCE_SCAN             = N            ; force user to scan sysop sub
+FORCE_SCAN_SUBNUM      = 1            ; sub to force scan on (as defined in boardedit)
+POSTTIME_COMPENS       = N            ; compensate for time posting
+IDZ_DESC               = Y            ; 1st line of file_id.diz as descrip
+READ_CD_IDZ            = N            ; read file_id.diz from cdroms
+FSED_EXT_DESC          = Y            ; allow fsed for extended descriptions
+MAIL_PROMPT            = Y            ; fancy mail prompt
+SHOW_CITY_ST           = Y            ; show city/state in laston info
+2WAY_CHAT              = Y            ; 2-way local sysop chat
+LOG_DOWNLOADS          = N            ; send SSM to uploader on file DL
+ALL_UL_TO_SYSOP        = Y            ; all uploads go to sysop dir
+MSG_TAG                = Y            ; sysop post/email taglines
+CAN_SAVE_SSM           = Y            ; allow saving of SSMs
+ALLOW_ALIASES          = Y            ; allow users to use aliases
+FREE_PHONE             = N            ; allow any format phone #
+LOGON_PHONE            = N            ; check phone # at logon?
+ALLOW_CC_BCC           = Y            ; allow CC: and BCC: for email?
+TITLEBAR               = Y            ; show user in console titlebar
 ;
 ;=============================================================================
 ;                           SYSTEM TUNING PARAMETERS
 ;=============================================================================
 ;
-MAIL_WHO_LEN           = 45                 ; max length of user name when
-;                                           ; reading mail
-;
-ATTACH_DIR             = ATTACH             ; dir for email attachments
+ATTACH_DIR             = attach       ; dir for email attachments
+NETFOSS_DIR            = netfoss      ; directory for netfoss install (Win32)
 ;
 ; AutoUserPurge purges the user base of all users who have not called in
 ; x days.  (Min Setting: 60) Users possessing the ADEL (bitwise:16)
 ; exemption are ignored.  USE CAUTION when setting this value as it
 ; could delete many dormant accounts.
 ;
-;AUTO_USER_PURGE        = 60                ; Purge user base of users who
-;                                           ; have not called within x days.
-;NO_PURGE_SL            = 75                ; This SL and higher are skipped
+;AUTO_USER_PURGE        = 60          ; Purge user base of users who
+;                                     ; have not called within x days.
+;NO_PURGE_SL            = 75          ; This SL and higher are skipped
 ;
-MAX_BATCH              = 50                 ; max files in batch queue
-MAX_EXTEND_LINES       = 10                 ; max extended description lines
-MAX_CHAINS             = 50                 ; max chains allowed
-MAX_GFILESEC           = 32                 ; max gfile sections allowed
-;RATIO                 =                    ; ratio required
+MAX_BATCH              = 50           ; max files in batch queue
+MAX_EXTEND_LINES       = 10           ; max extended description lines
+MAX_CHAINS             = 50           ; max chains allowed
+MAX_GFILESEC           = 32           ; max gfile sections allowed
 ;
 ; ANSI Callout and WFC Options
 ;
-CALLOUT_ANSI           = Y                  ; Use ANSI Callout Screen?
-CALLOUT_COLOR          = 9                  ; Screen color
-CALLOUT_HIGHLIGHT      = 30                 ; Highlight color
-CALLOUT_NORMAL         = 3                  ; Normal color
-CALLOUT_COLOR_TEXT     = 14                 ; Text Color
-WFC_SCREEN             = Y                  ; Use ANSI WFC screen?
-;                                           ; List sequentialy i.e. CDXYZ
-SCREEN_SAVER_TIME      = 120                ; Screen saver invoke time (min.)
+;                                     ; List sequentialy i.e. CDXYZ
+SCREEN_SAVER_TIME      = 120          ; Screen saver invoke time (min.)
+INTERNALZMODEM         = Y            ; Set to N to disable internal Zmodem
+EXEC_LOG_SYNCFOSS      = N            ; Verbose logging in wwivsync.log when 
+                                      ; using emulated FOSSIL.
+EXEC_CHILDWAITTIME     = 500          ; Time to wait for the DOOR to load
+                                      ; (used under Win9X)
+NEW_SCAN_AT_LOGIN      = Y            ; Ask the user to scan for new 
+                                      ; messages when they log in.
+FULL_SCREEN_READER     = Y            ; Enable the full screen message reader.
+USER_KEY_TIMEOUT       = 180          ; Timeout in seconds for non-sysops.
+SYSOP_KEY_TIMEOUT      = 600          ; Timeout in seconds for sysops.
+LOGON_KEY_TIMEOUT      = 130          ; Timeout in second for users logging in 
+                                      ; (i.e. They are at the NN: prompt.)
 
-BEGINDAYNODENUMBER     = 1                  ; Node number to handle beginday
-INTERNALZMODEM         = Y                  ; Set to N to disable internal Zmodem
-EXEC_LOGSYNCFOSS       = N                  ; Create wwivsync.log when 
-                                            ; executing a FOSSIL door.
-EXEC_CHILDWAITTIME     = 500                ; Time to wait for the DOOR to load
-                                            ; (used under Win9X)
-NEW_SCAN_AT_LOGIN      = Y                  ; Ask the user to scan for new 
-                                            ; messages when they log in.
-USE_WWIVMAIL           = N                  ; Add WWIVMail to the //QWK menu
-USE_INTERNAL_QWK       = Y                  ; Use internal QWK support
+SYSTEM_BPS             = 0            ; BPS to emulate when displaying
+                                      ; .MSG/.ANS files. To emulate 9600bps you
+                                      ; would use "SYSTEM_BPS = 9600"
 ;
 ;=============================================================================
-;                        TEMPORARY DIRECTORY SETTING
+;                           ASV OPTIONS
 ;=============================================================================
-NUM_INSTANCES        = 4
-TEMP_DIRECTORY       = e/%n/temp
-BATCH_DIRECTORY      = e/%n/batch
-;
-;
-;=============================================================================
-;                           ASV / CALLBACK OPTIONS
-;=============================================================================
-; Auto Sysop Validation (ASV) and Callback Validation Settings allow you
+; Auto Sysop Validation (ASV) Settings allow you
 ; to tailor your system to automatically validate certain users and
 ; upgrade access levels based on the settings below.  By default, all
 ; options are OFF.  In most cases, only systems specializing in support
@@ -313,53 +254,6 @@ USE_SIMPLE_ASV                  = N         ; Use Simple ASV?
 ;SIMPLE_ASV[AR]                 =           ; AR to assign
 ;SIMPLE_ASV[DAR]                =           ; DAR to assign
 ;SIMPLE_ASV[RESTRICT]           =           ; Restriction to assign
-;
-USE_ADVANCED_ASV                = N         ; Use Advanced ASV?
-;
-;Advanced ASV values correspond to auto-val settings in wwivconfig minus one, e.g.
-;Alt-[F1] auto-validation would be set to '0', Alt-[F2] to '1', etc.
-;
-;ADVANCED_ASV[REG_WWIV]         = 0         ; Alt-[F1] for Registered WWIV
-;ADVANCED_ASV[NONREG_WWIV]      = 1         ; Alt-[F2] for Unregistered WWIV
-;ADVANCED_ASV[NON_WWIV]         = 2         ; Alt-[F3] for Non-WWIV
-;ADVANCED_ASV[COSYSOP]          = 3         ; Alt-[F4] for Co-Sysops
-;
-USE_CALLBACK                    = N         ; Use Callback Verification?
-;
-; CALLBACK values
-;
-;CALLBACK[SL]                 = 20          ; SL to assign
-;CALLBACK[DSL]                = 20          ; DSL to assign
-;CALLBACK[EXEMPT]             = 0           ; Exemption to assign
-;CALLBACK[AR]                 =             ; AR to assign
-;CALLBACK[DAR]                =             ; DAR to assign
-;CALLBACK[RESTRICT]           = MA*N        ; Restriction to assign
-;CALLBACK[FORCED]             = Y           ; Force Callback?
-;CALLBACK[LONG_DISTANCE]      = Y           ; Make LD calls?
-;CALLBACK[REPEAT]             = 3           ; Number or retries
-;
-USE_VOICE_VAL                 = N           ; Voice validation
-;
-;
-;=============================================================================
-;                        INSTANCE SPECIFIC OPTIONS
-;=============================================================================
-; There are only a very few settings that would or should be used for
-; individual instances.  You may have an instance that does all network
-; callouts or one that does all processing of Fido or other network mail.
-; To define these instance specific settings, use an ID block [WWIV-<instance>]
-; as follows:
-;
-; Instance #1
-;[WWIV-1]
-;NET_CALLOUT            = Y                 ; allow net callouts this instance
-;FIDO_PROCESS           = N                 ; process fido packets this instance
-;
-; Instance #2
-;[WWIV-2]
-;NET_CALLOUT            = N                 ; allow net callouts this instance
-;FIDO_PROCESS           = Y                 ; process fido packets this instance
-;SCREEN_SAVER_TIME      = 120               ; Screen saver invoke time
 ;
 ;
 ;=============================================================================

@@ -1,5 +1,5 @@
 
-# WWIV BBS Software Documentation 5.7.0
+# WWIV BBS Software Documentation 5.7.1
 *** 
 
 <center>
@@ -24,6 +24,7 @@ Windows or Linux:
 
 - [Windows WWIV Installation](install/win.md)  
 - [Linux WWIV Installation](install/linux.md)  
+- [OS/2 Installation](install/os2.md)
 
 If you are upgrading from an earlier version please see
 

@@ -23,5 +23,6 @@ Why do I get a sigsegv at startup?
 
 Does WWIV support ARM64
 
-	WWIV seems to run on a Raspberry PI 4 without issue.
+	WWIV seems to run on a Raspberry PI 4 without issue. We have a pre-compiled binary
+	built on raspian
 

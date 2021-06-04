@@ -58,15 +58,23 @@ modem. WWIV supports several modes for this:
 
 * Normal - Execute the program as a native binary.  Socket handles may be passed to
   the door using the ```%H``` parameter.
-* STDIO - **Linux Only** -   Execute the program as a native binary that use the
+* STDIO - **Linux and WIN32 Only** -   Execute the program as a native binary that use the
   stdin, stdout natively and WWIV pipes that input/output to the BBS caller.
 * Emulate DOS FOSSIL - **Win32 only** Requires the sbbsexec.dll to be placed
   in the WINDOWS\syste32 directory and uses the that DLL to emulate a DOS
   FOSSIL driver.  Instead of this, you should enable [NetFoss](./nf.md) instead.
+* WWIVFoss OS/2 - **OS/2 only** Requires the DOS door is run using wwivfoss.exe
+  and the node number must be passed to wwivfoss using '/N%N'
 * Emulate DOS Interrupts - **Win32 only** Requires the sbbsexec.dll to be 
   placed in the WINDOWS\syste32 directory and uses the that DLL to emulate
   DOS IO redirection.  This is not likely to be used and will be removed
   from a future release.
+* Listen Socket Port - **Linux and WIN32 Only** Listens for the door to connect
+  back on a local TCP socket on a port specified by parameter %Z
+* Listen UNIX Socket- **Linux and WIN32 Only** Listens for the door to connect
+  back on a local UNIX domain socket on a path specified by parameter %Z.
+  Please note that Windows 10 17063 or later is needed for AF_UNIX support on Windows.
+  This is handy for using QEMU from within BBS to run DOS based doors.  
 
 **J) Local only**  
 This toggle defines the chain to be run in local mode only or unrestricted.

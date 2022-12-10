@@ -1,12 +1,12 @@
 # Event Management
 ***
 
-Since WWIV 5.5 the multiple event support from 4.30 has been removed.  Please
+Since WWIV 5.5, the multiple event support from 4.30 has been removed.  Please
 use cron or other eventing support from the host operating system.  The 4 system
 events (including beginday) are suppored and wwivd will execute the beginday
 event command specified in wwivconfig.
 
-###System Events
+### System Events
 
 There are four System Events you can use and are configured in WWIV.INI
 

@@ -1,9 +1,9 @@
-#Managing Log Files
+# Managing Log Files
 ***
 WWIV BBS has many processes which generate a lot of log files. This list
 catalogs the files, their purpose and some tips for managing log files.
 
-##File Path Locations
+## File Path Locations
 File Path          | Description
 ------------------ | --------------------------------------
 ```WWIV_DIR```     | BBS Root directory, such as ```C:\\wwiv``` or ```/opt/wwiv```
@@ -13,7 +13,7 @@ File Path          | Description
 
 
 
-##Log Files
+## Log Files
 Log filename  |  File Path | Description  
 --- | --- | ---  
 NETWORK*.LOG | ```WWIV_LOG_DIR``` | These log files are generated for each of the network*.exe executables. They contain information about the execution of the executable.

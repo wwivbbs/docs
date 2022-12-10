@@ -15,8 +15,10 @@ Evaluates an ACS expression for a user.
 |    --debug   | [boolean] Display expression evaluation at end of execution.
 | -? --help   | [boolean] Displays Help
 |    --user   | user number to use while evaluating the expression
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -29,8 +31,10 @@ WWIV conference system commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil conf convert
@@ -43,8 +47,10 @@ Converts 4.3x conferences to 5.6 format
 |    --conf_type   | The conference type ('subs' or 'dirs')
 | -? --help   | [boolean] Displays Help
 |    --menu_set   | The menuset to use
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -58,8 +64,10 @@ Displays the info about a conference
 |    --conf_type   | The conference type ('subs' or 'dirs')
 |    --full   | [boolean] Display full info about every command.
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -73,8 +81,10 @@ WWIV config commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil config convert
@@ -87,8 +97,10 @@ converts the config to either JSON or DAT format
 | -? --help   | [boolean] Displays Help
 |    --revision   | Configuration revision number
 |    --wwiv_version   | WWIV Version that created this config.dat
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -102,8 +114,10 @@ Sets or Gets the config version
 | -? --help   | [boolean] Displays Help
 |    --revision   | Configuration revision number
 |    --wwiv_version   | WWIV Version that created this config.dat
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -117,8 +131,10 @@ WWIV email commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil email add
@@ -133,8 +149,10 @@ Creates/Adds a new email.
 | -? --help   | [boolean] Displays Help
 |    --title   | email title
 |    --to   | user number to send the email to
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -147,8 +165,10 @@ Deletes email number specified by '--num'.
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
 |    --num   | Message Number to delete.
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -163,8 +183,10 @@ Displays message header and text information.
 |    --end   | Last message number.
 | -? --help   | [boolean] Displays Help
 |    --start   | Starting message number.
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -178,8 +200,10 @@ WWIV fido commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil fido dump
@@ -190,8 +214,10 @@ Dumps contents of a fido packet
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -203,8 +229,10 @@ Dumps contents of a fido nodelist
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -216,8 +244,10 @@ Dumps contents of a fido subscriber list
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -231,8 +261,10 @@ WWIV file commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil files allow
@@ -243,8 +275,10 @@ Manipulate allow.dat
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil files allow add
@@ -255,8 +289,10 @@ Add to the contents of allow.dat
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -268,8 +304,10 @@ Is the file allowed (i.e. not in the list)
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -281,8 +319,10 @@ Delete from the contents of allow.dat
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -294,8 +334,10 @@ Lists the contents of allow.dat
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -308,8 +350,10 @@ Manipulate archives
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil files arc cmd
@@ -320,8 +364,10 @@ Gets the commands to use for an archive.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -333,8 +379,10 @@ Views the contents of an archive.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -348,8 +396,10 @@ Lists the file areas
 | ------- | ----------- |
 |    --full   | [boolean] Display full info about every area.
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -362,8 +412,10 @@ Deleate a file in an area
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
 |    --num   | File Number to delete.
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -376,8 +428,10 @@ Lists the files in an area
 | ------- | ----------- |
 |    --ext   | [boolean] Display extended descriptions.
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -389,8 +443,10 @@ Manipulate TIC files
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil files tic validate
@@ -401,8 +457,10 @@ Validates the contents of a TIC file.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -417,8 +475,10 @@ WWIV fix commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil fix dirs
@@ -431,8 +491,10 @@ Fix File Directories.
 | -X --dry_run   | [boolean] Enable dry run mode (report errors, do not fix).
 | -? --help   | [boolean] Displays Help
 | -V --verbose   | [boolean] Enable verbose output.
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -446,8 +508,10 @@ Fix users.
 | -X --exp   | [boolean] Enable experimental features.
 | -? --help   | [boolean] Displays Help
 | -V --verbose   | [boolean] Enable verbose output.
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -463,8 +527,10 @@ Displays help on wwivutil and commands.
 |    --format   | The format of the help to use (text | markdown)
 |    --full   | [boolean] Display long format for help.
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -477,8 +543,10 @@ WWIV status commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil instance dump
@@ -489,8 +557,10 @@ Displays WWIV instance information.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -504,8 +574,10 @@ WWIV message commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil messages delete
@@ -517,8 +589,10 @@ Deletes message number specified by '--num'.
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
 |    --num   | Message Number to delete.
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -535,8 +609,10 @@ Displays message header and text information.
 | -? --help   | [boolean] Displays Help
 |    --start   | Starting message number.
 |    --start_date   | Date for starting message in format yyyy-mm-dd[ h:m:s].
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -550,8 +626,10 @@ Packs a WWIV type-2 message area.
 |    --backup   | [boolean] make a backup of the subs
 |    --delete_overflow   | Strategy for deleting excess messages when adding new ones. (none|one|all)
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -570,8 +648,10 @@ Posts a new message.
 |    --in_reply_to   | message sub name to post on
 |    --title   | message sub name to post on
 |    --to   | message sub name to post on
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -585,8 +665,10 @@ WWIV menu commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil menus convert
@@ -598,8 +680,10 @@ Converts a 4.3x menu to 5.6 format
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
 |    --menu_set   | The menuset to use
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -613,8 +697,10 @@ Displays the info of a menu
 |    --full   | [boolean] Display full info about every command.
 | -? --help   | [boolean] Displays Help
 |    --menu_set   | The menuset to use
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -628,8 +714,10 @@ WWIV network commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil net callout
@@ -640,8 +728,10 @@ Dumps parsed representation of callout.net
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -653,8 +743,10 @@ Dumps parsed representation of connect.net
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -668,8 +760,10 @@ Dumps parsed representation of contact.net
 |    --backup   | [boolean] make a backup of the contact.net files
 | -? --help   | [boolean] Displays Help
 |    --save   | [boolean] Save/cleanup contact.net in all subs
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -681,8 +775,10 @@ Dumps contents of a network packet
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -695,8 +791,10 @@ Dumps parsed representation of BBSDATA.*
 | ------- | ----------- |
 | -L --bbslist   | [boolean] Parse bbslist.net vs. bbsdata.net
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -708,8 +806,10 @@ List WWIV Networks
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -722,8 +822,10 @@ Add/Drop WWIVnet Sub
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
 |    --net   | Network number to use (i.e. 0).
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -736,8 +838,10 @@ Add/Drop WWIVnet Sub
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
 |    --net   | Network number to use (i.e. 0).
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -749,8 +853,10 @@ Dumps contents of a WWIVnet subscriber list
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -767,8 +873,10 @@ prints a textfile
 |    --bps   | What BPS to emulate
 | -? --help   | [boolean] Displays Help
 |    --io   | What type of IO to use, win32 | curses
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -781,8 +889,10 @@ WWIV status commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil status dump
@@ -793,8 +903,10 @@ Displays status.dat.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -806,8 +918,10 @@ Sets or Gets the qscan high water mark.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -821,8 +935,10 @@ WWIV subboard commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil subs areas
@@ -834,8 +950,10 @@ Lists the message areas
 | ------- | ----------- |
 |    --full   | [boolean] Display full info about every area.
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -849,8 +967,10 @@ Import wwiv subboards.
 | -D --defaults   | Specify an ini file with defaults to use when creating new subs.
 | -F --format   | must be 'backbone'
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 
@@ -864,8 +984,10 @@ WWIV user commands.
 | Arg     | Description |
 | ------- | ----------- |
 | -? --help   | [boolean] Displays Help
-
-<br/>
+
+
+<br/>
+
 
 
 ## wwivutil users asv
@@ -878,8 +1000,10 @@ Execute automatic sysop validation on a user.
 |    --asv   | user number to use while evaluating the expression
 | -? --help   | [boolean] Displays Help
 |    --user   | user number to use while evaluating the expression
-
-<br/>
+
+
+<br/>
+
 
 
 

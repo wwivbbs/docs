@@ -16,6 +16,7 @@ zlib1g | Needed for SSH (called zlib on centos)
 awk, grep, sed | core OS tools for line parsing (these are _really_ basic)
 
 <br/>
+
 ### Optional Items
 These are items that are not needed for proper functionality of a basic BBS, but will make things
 a lot easier (and potentially necessary for certain advanced configurations).
@@ -30,12 +31,15 @@ dos2unix/unix2dos | for converting file types
 
 
 <br/>
+
 ## Installation Steps
 
 These are the steps for installing WWIV.  You should do this step to setup
 a base system, even if you plan on compiling the binaries from source to use.
 
-_**DO NOT RUN WWIV AS ROOT.**_ This will cause many problems, please run it
+_**DO NOT RUN WWIV AS ROOT.**_ 
+
+This will cause many problems, please run it
 as a user account, and ideally a UNIX account that is not used by any
 user for interactive use.  The standard install name is ```wwiv``` with
 a group of ```wwiv``` and without the ability to login on it's own.  This
@@ -55,21 +59,25 @@ details for you.
    sudo mkdir -p /opt/wwiv && sudo chown "$(id -u):$(id -g)" /opt/wwiv
    ```
    <br/>
+
 2. Download the latest wwiv-linux-release.tar.gz to your wwiv directory.
    Here are some links: 
      * [Debian10](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux-debian10/lastSuccessfulBuild/)
      * [Ubuntu 20.04](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux-ubuntu2004/lastSuccessfulBuild/)
      * [Centos7](https://build.wwivbbs.org/jenkins/job/wwiv/label=linux-centos7/lastSuccessfulBuild/)  
    <br/>
+
 3. Extract wwiv-????.tar.gz into your wwiv directory.
    *(please note that the filename will be different)* 
        ```
 		   tar zxvf wwiv-linux-debian10-5.6.0-1234.tar.gz
        ```   
    <br/>
+
 4. If you plan on using binaries you compiled yourself, please follow the
    instructions on the [WWIV readme.md file on GitHub](https://github.com/wwivbbs/wwiv#building-on-linux)
    and then return here before running the next step.
+   <br/>
 
 5. From the wwiv directory (i.e. /opt/wwiv), run ``sudo ./install.sh`` and
    follow the prompts.
@@ -79,7 +87,10 @@ details for you.
    By default the script expects the username and groupname to both be 
    ```wwiv``` and not yet exist.
    <br/>
-   **You must run this as root**.  The script performs the following tasks
+   <br/>
+   **You must run this as root**.  
+   <br/>
+   The script performs the following tasks
    for you:
 
        * creating the WWIV user and group
@@ -166,10 +177,11 @@ linux (ie, DOS binaries). Here are some config details:
 * [dosemu common settings](../linux/dosemu.md) - general settings for dosemu  
 
 ### Configuring WWIVnet 
+
 See [WWIVnet](../network/wwivnet.md) for details on configuring WWIVnet and 
 subscribing to subboards (aka message areas).
 
-_TERM settings_
+### TERM settings
 
 WWIV expects UTF-8 character encoding for local IO on all platforms. Please
 make sure your terminal is set for UTF-8 and not CP437.
@@ -179,4 +191,3 @@ settings, and results in a borked display on exit. You may have to type a
 "reset" command to get it to behave normally again. In general, it appears
 that using a TERM setting in the xterm family works best (xterm, 
 xterm-color, etc).
-

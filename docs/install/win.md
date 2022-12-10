@@ -2,12 +2,13 @@
 
 ## Prerequisites
 
-** Windows Versions **
+**Windows Versions**
 
 The windows version of WWIV is developed and tested on Windows 10, however
-should also run on Windows 8.1 or Windows Server 2012R2 (NT 6.3) or later. 
+may also run on Windows 8.1 or Windows Server 2012R2 (NT 6.3) or later, however
+is not tested on anything older than Windows 10 currently. 
 
-** 32bit x86 Windows **
+**32bit x86 Windows**
 
 Although WWIV BBS will start and run on 64-bit (x64), none of the 16-bit DOS
 programs and utilities you use with WWIV will work on 64-bit windows. For 
@@ -27,6 +28,7 @@ just say ```c:\wwiv``` from now on.
 You must copy  ```sbbsexec.dll``` to ```\%WINDIR%\system32```.
 
 ### Initial Configuration
+
 From a command prompt run wwivconfig.exe  
 You will see this:  
 
@@ -35,9 +37,15 @@ You will see this:
     CONFIG.DAT NOT FOUND.
     Perform initial installation?
 
-Type Y & wwivconfig will install all the files need & create all the directories. You will also be prompted for the SysOp handle, real name, and password.
+Type **Y** and wwivconfig will install all the files need and create all of 
+the directories. 
 
-You will then see the main wwivconfig screen.
+You will also be prompted for the the following information:
+* SysOp Handle or Alias
+* Sysop Real Name
+* SysOp Password.
+
+You will then see the main wwivconfig screen that looks as follows:
 
     ┌────────────────────────────────── Main Menu ┐
     │ G. General System Configuration             │
@@ -90,7 +98,7 @@ This is the Waiting For Caller (WFC) Screen.
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │               Activity and Statistics of My WWIV BBS Node 1                  │
 ├──────────────────────────────────────┬───────────────────────────────────────┤
-│ Calls Today....... 48                │ WWIV Version.... 5.6.0                │
+│ Calls Today....... 48                │ WWIV Version.... 5.8.0                │
 │ Feedback Waiting.. 1       New: 1    │ Net Version..... 51                   │
 │ Uploads Today..... 0                 │ Total Users..... 99                   │
 │ Messages Today.... 98                │ Total Calls..... 20167                │
@@ -115,13 +123,15 @@ This is the Waiting For Caller (WFC) Screen.
 * At the logon prompt enter ```F``` to log in as the sysop account created
   in wwivconfig.
 
-_**Congratulations! You are now the SysOp of a WWIV BBS!**_
+**Congratulations! You are now the SysOp of a WWIV BBS!**
 
 Continue on to more advanced [wwivd](../conn/telnet.md) settings 
 to get on the Internet. But we suggest you read through the rest of the 
 documentation before you get too excited about that just yet. But don't worry, 
 it's not hard at all!
 
+
 ### Configuring WWIVnet 
+
 See [WWIVnet](../network/wwivnet.md) for details on configuring WWIVnet and 
 subscribing to subboards (aka message areas).

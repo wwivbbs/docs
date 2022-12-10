@@ -25,7 +25,7 @@ just say ```c:\wwiv``` from now on.
 From a command prompt run wwivconfig.exe  
 You will see this:  
 
-    WWIV v5.7.0 (Build ####) Configuration Program.
+    WWIV v5.7.2 (Build ####) Configuration Program.
     Copyright (c) 1998-2021, WWIV Software Services
     CONFIG.DAT NOT FOUND.
     Perform initial installation?

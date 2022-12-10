@@ -1,5 +1,5 @@
 
-# WWIV BBS Software Documentation 5.7.1
+# WWIV BBS Software Documentation 5.7.2
 *** 
 
 <center>
@@ -29,6 +29,6 @@ Windows or Linux:
 If you are upgrading from an earlier version please see
 
 - [Upgrading](install/upgrade.md)
-- Additional specific instructions for 5.7.0 are located
+- Additional specific instructions for 5.7 are located
   in the docs/upgrade-5.7.0.txt file in the release archive
 

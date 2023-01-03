@@ -238,12 +238,14 @@ Truthy values are for true are: 'true', 'yes', 'on'.  Every other value is false
 
 | Variable    | Meaning |
 |-------------|------------------------|
+bps           | Sets the current bits per second (BPS) rate to use for displaying this file, same as setting it from the arguments to printfile in the menu editor
 pause         | sets the pause on page on or off
 lines         | sets the number of lines displayed, this is used for pause calculation.  Currently only 0 is supported for a value.
 
 
 Examples:
 ```
+  |{set bps=2400}
   |{set pause=off}
   |{set lines=0}
   Hello |@N! How are you today?

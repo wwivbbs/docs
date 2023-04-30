@@ -32,8 +32,8 @@ You must copy  ```sbbsexec.dll``` to ```\%WINDIR%\system32```.
 From a command prompt run wwivconfig.exe  
 You will see this:  
 
-    WWIV v5.6.0 (Build ####) Configuration Program.
-    Copyright (c) 1998-2021, WWIV Software Services
+    WWIV v5.8.0 (Build ####) Configuration Program.
+    Copyright (c) 1998-2023, WWIV Software Services
     CONFIG.DAT NOT FOUND.
     Perform initial installation?
 
@@ -93,7 +93,7 @@ This is the Waiting For Caller (WFC) Screen.
 
 ```
 ┌──────────────────────────────────────┬───────────────────────────────────────┐
-│ Date: 12/25/2016    Time: 12:52:52   │OS: Windows                            │
+│ Date: 01/25/2023    Time: 12:52:52   │OS: Windows                            │
 └──────────────────────────────────────┴───────────────────────────────────────┘
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │               Activity and Statistics of My WWIV BBS Node 1                  │

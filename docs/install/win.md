@@ -25,7 +25,7 @@ Take the build of WWIV you downloaded and extract all the files
 into ```c:\wwiv``` (or c:\bbs). To make it easy on the author(s) we'll 
 just say ```c:\wwiv``` from now on.
 
-You must copy  ```sbbsexec.dll``` to ```\%WINDIR%\system32```.
+You must copy  ```sbbsexec.dll``` to ```%WINDIR%\system32```.
 
 ### Initial Configuration
 

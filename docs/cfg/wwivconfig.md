@@ -332,7 +332,7 @@ Fill in the next screen so it matches this one.
     ¦ Description    : ZMODEM (SE-XYZ)                             ¦
     ¦ Xfer OK code   : 0                                           ¦
     ¦ Receive command line:                                        ¦
-    ¦ \WWIV\SEXYZ.EXE %H rz %B                                     ¦
+    ¦ \WWIV\SEXYZ.EXE %H rz %3                                     ¦
     ¦ Send command line:                                           ¦
     ¦ \WWIV\SEXYZ.EXE %H sz %3                                     ¦
     ¦ Receive batch command line:                                  ¦
